@@ -1,0 +1,834 @@
+[
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:001",
+    "matched_terms": {
+      "parts": [
+        "parts"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 1,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-001.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Owner\u2019s Manual & Safety Instructions Save This Manual Keep this manual for the safety warnings and precautions, assembly, operating, inspection, maintenance and cleaning procedures. Write the product\u2019s Date Code in the back of the manual (or month and year of purchase if product has no number). Keep this manual and the receipt in a safe and dry place for future reference. 25e \u00ae OMNIPRO 220 MULTIPROCESS WELDING SYSTEM Visit our website at: https://www.harborfreight.com 57812 email our technical support at: productsupport@harborfreight.com When unpacking, make sure that the product is intact and undamaged. If any parts are missing or broken, please call 1-800-444-3353 as soon as possible. Copyright\u00a9 2022 by Harbor Freight Tools\u00ae. All rights reserved. No portion of this manual or any artwork contained herein may be reproduced in Read this material before using this product. any shape or for"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:002",
+    "matched_terms": {
+      "parts": [
+        "parts list",
+        "parts"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 2,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-002.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Table of Contents Safety.........................................................................2 Welding Tips..............................................................34 Specifications.............................................................7 Maintenance..............................................................41 Controls......................................................................8 Parts List and Diagram..............................................46 Safety MIG / Flux-Cored Wire Welding..................................10 Warranty....................................................................48 TIG / Stick Welding.....................................................24 WARNING SYMBOLS AND DEFINITIONS This is the Safety alert symbol. It is used to alert you to potential personal injury hazards. Obey all Safety messages that follow this symbol to avoid possible"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:003",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 3,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-003.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Fume and Gas Safety INHALATION HAZARD: Welding and Plasma Cutting produce toxic fumes. 1. Exposure to welding or cutting exhaust 3. Keep head out of fumes. Safety fumes can increase the risk of developing Do not breathe exhaust fumes. certain cancers, such as cancer of the larynx and lung cancer. Also, some diseases 4. Use enough ventilation, exhaust at arc, or that may be linked to exposure to welding both, to keep fumes and gases from breathing or plasma cutting exhaust fumes are: zone and general area. If engineering controls are not feasible, use an approved respirator. \u2022 Early onset of Parkinson\u2019s Disease \u2022 Heart disease 5. Work in a confined area only if it \u2022 Ulcers is well-ventilated, or while wearing \u2022 Damage to the reproductive organs an air-supplied respirator. \u2022 Inflammation of the small intestine or stomach 6. Have a recognized specialist in CONTROLS \u2022 Kidney damage Industria"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:004",
+    "matched_terms": {
+      "parts": [
+        "parts"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 4,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-004.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Electrical Safety ELECTRIC SHOCK can KILL. 1. Turn off, disconnect power, and 7. Do not abuse the cord. Never use the cord discharge electrode to ground before setting for carrying, pulling or unplugging the welder. Safety down torch/electrode holder and before service. Keep cord away from heat, oil, sharp edges or moving parts. Damaged or entangled 2. Do not touch energized electrical parts. cords increase the risk of electric shock. Wear dry, insulating gloves. Do not touch electrode holder, electrode, welding torch, or welding wire with 8. Do not use outdoors. bare hand. Do not wear wet or damaged gloves. 9. Insulate yourself from the workpiece and 3. Connect to grounded, GFCI\u2011protected ground. Use nonflammable, dry insulating power supply only. material if possible, or use dry rubber mats, dry wood or plywood, or other dry insulating 4. Do not use near water or damp objects. material"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:005",
+    "matched_terms": {
+      "parts": [
+        "parts"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 5,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-005.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Welder Use and Care 1. Do not use the welder if the switch does not turn 4. Store idle welders out of the reach of it on and off. Any welder that cannot be controlled children and do not allow persons unfamiliar with the switch is dangerous and must be repaired. with the welder or these instructions to operate the welder. Welders are dangerous Safety 2. Disconnect the plug from the power in the hands of untrained users. source before making any adjustments, changing accessories, or storing welders. 5. Use the welder and accessories in Such preventive Safety measures reduce the accordance with these instructions, taking risk of starting the welder accidentally. into account the working conditions and the work to be performed. Use of the welder 3. Prevent unintentional starting. for operations different from those intended Ensure the switch is in the off- could result in a hazardous situat"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:006",
+    "matched_terms": {
+      "parts": [
+        "parts"
+      ],
+      "settings": [
+        "voltage"
+      ],
+      "troubleshooting": [
+        "spatter",
+        "weld"
+      ]
+    },
+    "page": 6,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-006.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Grounding TO PREVENT ELECTRIC SHOCK AND DEATH Safety FROM INCORRECT GROUNDING WIRE CONNECTION: Check with a qualified electrician if you are in doubt as to whether the outlet is properly grounded. Do not use the welder if the power cord or plug is damaged. If damaged, have it repaired by a service facility before use. If the plug will not fit the outlet, have a proper outlet installed by a qualified electrician, do not use adapter plugs. 1. The green wire inside the cord is connected to 2. Make sure the tool is connected to an outlet having the grounding system in the Welder. The green the same configuration as the plug. If the tool must wire in the cord must be the only wire connected be reconnected for use on a different type of electric to the Welder\u2019s grounding system and must circuit, the reconnection should be made by qualified never be attached to an electrically \u201clive\u201d terminal. "
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:007",
+    "matched_terms": {
+      "duty_cycle": [
+        "duty cycle"
+      ],
+      "settings": [
+        "wire speed"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 7,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-007.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Specifications MIG Power Input 120 VAC / 60 Hz 240 VAC / 60 Hz Safety Current Input at Output 20.8 A at 100 A 25.5 A at 200 A Welding Current Range 30 \u2013140 A 30 \u2013220 A 40% @ 100 A 25% @ 200 A Rated Duty Cycles 100% @ 75 A 100% @ 115 A Maximum OCV 86 VDC Mild Steel, Stainless Steel Weldable Materials Aluminum (with optional Spool Gun) Solid Core: 0.025\" / 0.030\" / 0.035\" Welding Wire Capacity Flux Cored: 0.030\" / 0.035\" / 0.045\" CONTROLS Wire Speed 50 \u2013 500 IPM Wire Spool Capacity Up to 12 lb spool TIG Power Input 120 VAC / 60 Hz 240 VAC / 60 Hz Wire Current Input at Output 20.6 A at 125 A 15.6 A at 175 A Welding Current Range 10 A \u2013125 A 10 A \u2013175 A 40% @ 125 A 30% @ 175 A Rated Duty Cycles 100% @ 90 A 100% @ 105 A Maximum OCV 86 VDC Weldable Materials Mild Steel, Stainless Steel, Chrome Moly Stick / Stick Power Input 120 VAC / 60 Hz 240 VAC / 60 Hz TIG Current Input at Output 19.5 A at "
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:008",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 8,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-008.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Controls Front Panel Controls Safety Home Back Button Button CONTROLS \u00ae Control Knob LCD Wire Left Display Knob Right Power Knob Switch Storage TIG MIG Gun / Compartment/ Spool Gun Cable Socket Stick Positive Spool Gun Socket Gas Outlet Welding Tips Negative Wire Feed Socket Power Cable Note: When using an optional Spool Gun (sold separately), connect the Spool Gun gas hose to the Spool Gun Gas Outlet. MAINTENANCE Page 8 For technical questions, please call 1-800-444-3353. Item 57812"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:009",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 9,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-009.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Interior Controls Cold Wire Feed Switch Safety Feed Tensioner Wire Feed Mechanism Idler Wire Spool Arm CONTROLS Feed Spool Knob Roller Knob Wire Inlet Liner Wire Foot Pedal Wire Feed Socket Control Socket Stick / TIG Tips Welding MAINTENANCE Item 57812 For technical questions, please call 1-800-444-3353. Page 9"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:010",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 10,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-010.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "MIG / Flux-Cored Wire Welding Read the ENTIRE IMPORTANT SAFETY INFORMATION section at the beginning of this manual including all text under subheadings therein before set up or use of this product. Safety TO PREVENT SERIOUS INJURY FROM ACCIDENTAL OPERATION: Turn the Power Switch off and unplug the Welder before setup. Note: Remove the protective foam and cardboard from the Welder before setup. Wire Spool Installation / Wire Setup Power Switch 1. Turn the Power Switch OFF and unplug CONTROLS the Welder before proceeding. Wire 2. Pull up on the Door Latch, Door then open the Door. TIG / Door Latch Stick 3. 1-2 Pound Wire Spool Installation: Remove the Wingnut and Spacer. If replacing a Spool, remove the old Spool Wingnut Welding and all remaining wire from the liners. 1-2 lb Spacer Tips Spool Wire Spool 4. Place the new Wire Spool over the Spool Spindle Spindle and against the Spool Brake "
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:011",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 11,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-011.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "6. 10-12 Pound Wire Spool Installation: Spool Knob Remove the Wingnut and Spacer. If replacing a Spool, remove the old Spool and all remaining wire from the liners. Wingnut Safety Spacer 7. Place the Spool Adapter over the Spool Spindle and against the Spool Brake Pad as illustrated. 10-12 lb Wire Spool Spool Spindle CONTROLS 10-12 lb 8. Place the new Wire Spool over the Adapter and Spool Spool line up pin on Adapter with hole in Spool. Adapter Brake Pad To prevent wire feed problems, set the Welder Spool so that it will unwind clockwise. Wall 10-12 lb Spool Loading Wire 9. Replace the Spacer over the Spool Spindle and secure Spool in place with the Wingnut. Notice: If Wire Spool can spin freely, Wingnut is too loose. This will cause the welding wire to unravel and unspool which can cause tangling and feeding problems. Wire must Stick unwind / in this direction TIG10. Screw the Spool Kno"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:012",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 12,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-012.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Feed Roller Safety 12. Feed Roller Instructions: Knob Check that the Feed Roller is correct for the type of wire being used (solid core or flux- cored) and that it is turned to properly match the wire size marked on the Wire Spool: A CONTROLS a. Unscrew the Feed Roller Knob Solid Core counterclockwise. V-Groove Feed Roller B Wire 0.025 groove groove 0.030 / 0.035 b. Remove the Feed Roller Knob to expose the Feed Roller. 0.045 C TIG groove groove / 0.030 / 0.035 Stick c. Flip or replace the Feed Roller as needed Flux-Cored and confirm that it is the correct Roller Knurled Groove for the type of wire being used and that the number showing is the same as the wire diameter on the Spool. D Welding Tips d. Screw the Feed Roller Knob back into place to secure the Feed Roller. MAINTENANCE Page 12 For technical questions, please call 1-800-444-3353. Item 57812"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:013",
+    "matched_terms": {
+      "polarity": [
+        "polarity",
+        "dcen"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 13,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-013.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Wire Feed Mechanism 13. Loosen the Knob on the Wire Feed mechanism, then insert the Gun Cable Gun Cable Connector through the hole on the Welder Connector front and into the socket on the Wire Feed. Safety Knob 14. Ensure that the Gun Cable Connector is fully inserted into the socket on the Wire Feed mechanism as shown, Incorrect \u2013 ConnectorIncorrect \u2013 Connector notnot fullyfully insertedinserted then tighten the Knob securely. If Connector is not fully inserted, the gas CONTROLS connection will leak, preventing shielding gas from reaching the welding arc. NOTICE: To prevent damage, do not overtighten the Knob. Wire Feed Control Cable Wire 15. Insert the Wire Feed Control Cable through the hole on the Welder front and connect it to the Wire Feed Control Socket inside the machine, then tighten the lock ring on the Cable plug. Note that the plug on the Cable fits into the Socket in one spe"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:014",
+    "matched_terms": {
+      "duty_cycle": [
+        "200a",
+        "240v",
+        "120v"
+      ],
+      "polarity": [
+        "polarity",
+        "dcep"
+      ],
+      "settings": [
+        "chart"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 14,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-014.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "DCEP Solid Core (Gas Shielded) Polarity Setup 17. DCEP Direct Current Electrode Positive Wire Setup for Solid Core (gas shielded) welding: Ground Clamp Cable Safety in Negative Socket a. Plug Ground Clamp Cable into Negative (\u2013) Socket. Plug Wire Feed Power Cable into Positive (+) Socket. Twist cables clockwise all the way to lock in place. b. Determine which type of shielding gas would be appropriate for CONTROLS the welding you will do. Refer to the Settings Chart on the Wire Feed inside of the Welder door. Power Cable in Positive Socket c. With assistance, set the cylinder (not included) onto a cabinet or cart near the Welder Wire and secure the cylinder in place with two straps (not included) to prevent tipping. c d. Remove the cylinder\u2019s cap. Stand to the side of the valve opening, then open the Briefly open valve valve briefly to blow dust and dirt from the d to clean, TIG valve op"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:015",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 15,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-015.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "IMPORTANT Securely hold onto the end of the welding wire and keep tension on it during the following steps. If this is not done, the welding wire will unravel and unspool Safety which can cause tangling and feeding problems. HOLD WIRE Feed SECURELY Guide18. Cut off all bent and crimped wire. Welding The cut end must have no burrs or Wire sharp edges; cut again if needed. CONTROLS 19. Keep tension on the wire and guide at least 12 inches of wire into the Wire Inlet Liner and Feed Guide. WireWire Wire Inlet SpoolSpool Liner Wire Idler Arm Feed Tensioner20. Make sure the welding wire is resting in the groove of the Feed Roller, then push the wire Idler Arm down, and swing the Feed Tensioner up to latch it across the tip of the arm. After the wire is held by the Tensioner, you may release it. Note: The tension should be 3 \u2013 5 for solid wire and Stick2 \u2013 3 for flux-cored wire. Too much force "
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:016",
+    "matched_terms": {
+      "duty_cycle": [
+        "200a",
+        "240v",
+        "120v"
+      ],
+      "parts": [
+        "parts"
+      ],
+      "settings": [
+        "voltage"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 16,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-016.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "DANGER PARTS MAY BE AT WELDING VOLTAGE TO PREVENT ELECTRIC SHOCK AND DEATH: Safety 1. Keep hands away from Wire Feed mechanism. 2. Close door before plugging in, unless using Cold Wire Feed to feed wire through to gun. 3. Do not touch Trigger while feeding wire through to gun. Date: Vulcan to ANSI/IECOMNIPRO 60974-1220 ConformsUPC 193175422590 25d 264149 57812Std. CONTROLS 30A/15.5V to 220A/25V 25% 60% 100% 200A 115A I2X Power U0 = 86V 24V 20.5V130A 19.75V U2 10A/20.4V to 175A/27V X 25% 60% 100% Power Input 175A 115A 100A I2 U0 = 86V 27V 24.6V 24V U2 10A/10.4V to 175A/17V X 30% 60% 175A 125A 105A I2 Input U0 = 86V 17V 15V 14.2V100% U2 = = 24. Plug either 120 VAC or 240 VAC Power I1max I1eff 11.9A12.8A = 240V U1 23.7A15.6A25.5A 8.5A 1~50/60Hz 30A/15.5V to 140A/21V X 40% 60% 100% 100A 85A 75A I2 U0 = 86V 19V 18.25V 17.75V U2 10A/20.4V to 80A/23.2V X 40% 60% 100% 80A 70A 60A I2 Cord into Po"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:017",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 17,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-017.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "27. To check the wire\u2019s drive tension, press and hold Trigger to feed the wire against a piece of wood from 2 to 3 inches away. Note: After pressing Trigger, wire will stop feeding after 3 seconds if there is no arc. Check tension for less than 3 seconds. Safety Incrementally If the wire stops instead of bending, unplug increase tension the Welder, slightly tighten the Feed Tensioner until 2\u20133\" clockwise, and try again. If the wire bends wire bends. from the feed pressure, then the tension is set properly. Before proceeding, turn OFF the Power Switch and unplug the Power Cord from its electrical outlet. 28. Turn OFF the Power Switch and unplug the Power Cord from its electrical outlet. CONTROLS 29. Close the Door. Make sure Door is securely latched. MIG Gun 30. Select a Contact Tip that is compatible with the welding wire used. Slide the Contact Nozzle Contact Tip over the wire and threa"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:018",
+    "matched_terms": {
+      "settings": [
+        "thickness"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 18,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-018.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Basic Wire Welding Read the ENTIRE IMPORTANT SAFETY INFORMATION section at the beginning of this manual including all text under subheadings therein before welding. Safety TO PREVENT SERIOUS INJURY: Protective gear must be worn when using the Welder; minimum shade number 10 full face shield (or welding mask), ear protection, welding gloves, sleeves and apron, NIOSH-approved respirator, and fire resistant work clothes without pockets should be worn when welding. Light from the arc can cause permanent damage to the eyes and skin. Do not breathe arc fumes. Flux-cored wire welding is used to weld mild steel and stainless steel without shielding gas. CONTROLS MIG welding uses solid wire and shielding gas, and is used to weld mild steel and stainless steel. MIG welding can also be used to weld thinner workpieces than flux-cored welding can. Aluminum welding can be performed with an optional Sp"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:019",
+    "matched_terms": {
+      "duty_cycle": [
+        "duty cycle"
+      ],
+      "polarity": [
+        "polarity"
+      ],
+      "settings": [
+        "thickness",
+        "voltage"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 19,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-019.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Duty Cycle (Duration of Use) Avoid damage to the Welder by not welding for more than the prescribed duty cycle time. The Duty Cycle Rated Duty Cycle defines the number of minutes, within a 10 minute 120 VAC period, during which a given welder can produce a 40% Use at 100 Aparticular welding current without overheating. Safety For 10 Continuous Minutes For example, a welder with a 40% duty cycle at 100 A welding current must be allowed to rest for at least 4 6 6 minutes after every 4 minutes of continuous welding. Minutes Minutes Welding Resting Failure to carefully observe duty cycle limitations can easily over-stress a welder\u2019s power generation system contributing to premature welder failure. 100% Continuous Use at 75 A This Welder has an internal thermal protection system to help prevent this sort of over-stress. When the Rated Duty CycleWelder overheats, it automatically shuts down an"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:020",
+    "matched_terms": {
+      "polarity": [
+        "polarity"
+      ],
+      "settings": [
+        "thickness",
+        "voltage"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 20,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-020.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "4. Turn the Power Switch to the OFF position, then plug the Power Cord into a properly grounded, GFCI protected 120 VAC (20 amp Power rated) or 240 VAC receptacle that matches Switch the plug. The circuit must be equipped with Safety delayed action-type circuit breaker or fuses. 5. Set MIG Gun down on nonconductive, nonflammable surface away from any grounded objects. 6. Turn the Power Switch ON. Settings CONTROLS b. Set Wire Diameter and Material Thickness: \u00ae \u2022 Turn Left Knob to set wire diameter. \u2022 Turn Right Knob to set material thickness. Wire .025\" 24Ga Left Main Right Knob Control Knob Knob c. Auto Weld Settings: TIG 1. Press Home Button on Control Panel. \u2022 Turn Left Knob to adjust Wire / Feed Speed (Amperage). 2. Turn Main Control Knob until desired process appears on LCD display screen. \u2022 Turn Right Knob to adjust Voltage. Stick 3. Press Main Control Knob to select process. 121 1"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:021",
+    "matched_terms": {
+      "settings": [
+        "selection",
+        "chart",
+        "wire speed"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 21,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-021.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "d. Optional Settings: \u2022 Press Main Control Knob to enter Optional Settings. Safety \u2022 Turn Main Control Knob until desired setting appears on screen. \u2022 Press Main Control Knob to select desired setting. \u2022 Turn Main Control Knob to adjust setting. Available Optional Settings: \u2022 Run-In WFS \u2013 Adjust wire speed before it contacts workpiece. This setting represents CONTROLS a % of the pre-set wire feed speed (WFS). \u2022 Inductance \u2013 Adjust length of arc. Increase for more fluid puddle and flatter bead. Decrease for colder puddle. \u2022 Spot Timer \u2013 Set timer for spot welding. \u2022 Recall Setting \u2013 Retrieve saved settings. Wire \u2022 Save Setting \u2013 Program up to 5 different configurations. Turn Main Control Knob to scroll between 5 available slots. Press Main Control Knob to access OVERWRITE MEMORY SETTING screen and turn Main Control Knob to choose YES selection. Press Main Control Knob to save current Weld"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:022",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 22,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-022.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Basic Wire Welding Technique 1. Press (and hold) Trigger and contact the area to be welded with electrode wire to ignite arc. stringer bead weave bead 2. For a narrow weld, you can usually draw the wire Safety in a steady straight line. This is called a stringer bead. For a wider weld, draw the wire back and forth across the joint. This is called a weave bead and takes practice to perform properly. CONTROLS Weld MIG Gun angles, viewed from front of weld joint. 3. Direct the welding wire straight into the joint. This gives an angle of 90\u00b0 (straight up and down) for butt (end to end) welds, and an Wire angle of 45\u00b0 for fillet (T-shaped) welds. 90\u00b0 45\u00b0 fillet weld joint butt weld joint TIG / PushPush AngleAngle DragDrag AngleAngle 0-15\u00b00-15\u00b0 0-15\u00b00-15\u00b0 Stick 4. For MIG welding using solid wire and shielding gas, the end of the MIG Gun should be tilted so that wire is angled anywhere in-betw"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:023",
+    "matched_terms": {
+      "duty_cycle": [
+        "duty cycle"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 23,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-023.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Note: If Welder is used too long, a LCDwarning screen appears in the LCD \u00ae Warning DisplayDisplay window and the unit automatically Screen shuts down. The Welder automatically returns to service after cooling off. Should this occur, rest the MIG Gunon an electrically non-conductive, Safety heat\u2011proof surface, such as a concrete slab, away from the ground clamp. Allow the Welder to cool with the Power Switch on, so that the internal Fan will help cool the Welder. Power SwitchWhen normal operation resumes, use shorter welding periods and longer rest periods to help prevent needless wear. CONTROLS After practice welding for a few seconds, 7. After welding the test weld on a piece STOP and examine your weld using the of scrap for a few seconds, stop, and guidelines starting on the next page. check your progress. Clean, then compare your weld\u2019s appearance with the diagrams FOLLOW DUTY CYCLE! "
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:024",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 24,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "TIG / Stick Welding Read the ENTIRE IMPORTANT SAFETY INFORMATION section at the beginning of this manual including all text under subheadings therein before set up or use of this product. Safety TO PREVENT SERIOUS INJURY FROM ACCIDENTAL OPERATION: Turn the Power Switch off and unplug the Welder before setup. Note: Remove the protective foam and cardboard from the Welder before setup. Place the Welder on a level surface that can bear its weight near the work area. Leave space around the Welder for proper air flow. TIG Setup Connect Cables CONTROLS Foot Pedal Socket (inside Welder) Wire Foot Pedal (sold separately) Foot Pedal Cable TIGTIG TorchTorch TIG CableCable inin / NegativeNegative Shielding SocketSocket Stick Gas Hose Ground Clamp Cable in Positive Socket Welding TIG Torch Ground Tips (sold separately) Clamp 1. Plug Ground Clamp Cable into Positive Socket. 3. Insert the Foot Pedal C"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:025",
+    "matched_terms": {
+      "duty_cycle": [
+        "200a",
+        "240v",
+        "120v"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 25,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-025.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Connect Shielding Gas Safety1. With assistance, place an 100% Argon cylinder 1 (not included) onto a cabinet or cart near the Welder and secure the cylinder in place with two straps (not included) to prevent tipping. Briefly open valve 2. Remove the cylinder\u2019s cap. Stand to the 2 to clean, then close side of the valve opening, then open the valve. valve briefly to blow dust and dirt from the valve opening. Close the cylinder valve. CONTROLS 3. Locate the Regulator (included) and close its valve until it is loose, then thread Regulator onto cylinder and wrench-tighten connection. 4. Connect Shielding Gas Hose on TIG 4 3 Wire Torch Cable Connector to the Regulator\u2019s Outlet and wrench-tighten connection. Stick / TIG Connect Power Cord Tips Date: Vulcan to ANSI/IECOMNIPRO 60974-1220 ConformsUPC 193175422590 25d 264149 57812Std. 30A/15.5V to 220A/25V 25% 60% 100% 200A 115A I2X U0 = 86V 24V 20"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:026",
+    "matched_terms": {
+      "settings": [
+        "chart",
+        "thickness"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 26,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-026.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Sharpen Tungsten Electrode (sold separately) To avoid Electrode contamination, dedicate a fine grit grinding wheel exclusively to Electrode grinding. WARNING! TO PREVENT SERIOUS INJURY: Some 4. Lightly press Electrode tip Electrodes may have materials added to them that are against the surface of Electrode hazardous to breathe. Wear a respirator and ANSI- the grinding wheel at an angle. Safety approved Safety goggles when grinding an Electrode. Rotate Electrode tip until a blunt point is formed. 1. Shut off the welder and wait until Electrode and Torch have cooled enough to handle. Note: Grinding direction must be Grinding parallel to length of Electrode. Wheel 2. Remove Back Cap. Pull Electrode from front of Torch. (Pulling it from rear will damage 5. The conical portion of the ideal Collet and create burrs on Electrode). tip will be 2-1/2 times as long as the Electrode diameter. 3. If "
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:027",
+    "matched_terms": {
+      "duty_cycle": [
+        "200a",
+        "240v",
+        "120v"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 27,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-027.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Stick Setup Connect Cables Safety Ground Clamp Cable CONTROLS in Negative Socket Ground Clamp Wire Electrode Holder Cable in Positive Socket Electrode Holder 1. Plug Ground Clamp Cable into Negative Socket. 2. Plug Electrode Holder Cable into Positive Socket. Twist clockwise all the way to lock in place. Twist clockwise all the way to lock in place. Stick / TIG Connect Power Cord Tips Date: Vulcan to ANSI/IECOMNIPRO 60974-1220 ConformsUPC 193175422590 25d 264149 57812Std. 30A/15.5V to 220A/25V 25% 60% 100% 200A 115A I2X U0 = 86V 24V 20.5V130A 19.75V U2Plug either 120 VAC or 240 VAC Power Power 10A/20.4V to 175A/27V X 25% 60% 100% Power Input 175A 115A 100A I2 U0 = 86V 27V 24.6V 24V U2 10A/10.4V to 175A/17V X 30% 60% 100% Input 175A 125A 105A I2 U0 = 86VCord into Power Input Socket. 17V 15V 14.2V U2 = = I1max I1eff 11.9A12.8A = 240V U1 23.7A15.6A25.5A 8.5A 1~50/60Hz 30A/15.5V to 140A/21V "
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:028",
+    "matched_terms": {
+      "settings": [
+        "thickness"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 28,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-028.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Basic TIG / Stick Welding Read the ENTIRE IMPORTANT SAFETY INFORMATION section at the beginning of this manual including all text under subheadings therein before set up or use of this product. Safety TO PREVENT SERIOUS INJURY: Protective gear must be worn when using the Welder; minimum shade number 10 full face shield (or welding mask), ear protection, welding gloves, sleeves and apron, NIOSH-approved respirator, and fire resistant work clothes without pockets should be worn when welding. Light from the arc can cause permanent damage to the eyes and skin. Do not breathe arc fumes. \u2022 DC TIG Welding is used to weld mild steel and stainless steel using a TIG Rod and shielding gas. CONTROLS \u2022 AC TIG Welding is used to weld aluminum using a TIG Rod and shielding gas. \u2022 Stick Welding is used to weld mild steel and stainless steel using a Stick Electrode without shielding gas. Good welding tak"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029",
+    "matched_terms": {
+      "duty_cycle": [
+        "duty cycle"
+      ],
+      "polarity": [
+        "polarity"
+      ],
+      "settings": [
+        "thickness",
+        "voltage"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 29,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-029.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Duty Cycle (Duration of Use) avoid damage to the Welder by not welding for more This Welder has an internal thermal protection system to than the prescribed duty cycle time. The Duty Cycle help prevent this sort of over-stress. When the Welder defines the number of minutes, within a 10 minute overheats, it automatically shuts down and a warning period, during which a given welder can produce a screen appears in the LCD Display window. The Welderparticular welding current without overheating. automatically returns to service after cooling off. Should SaFety this occur, rest the Tig Torch or Electrode Holder on anFor example, a welder with a 40% duty electrically non-conductive, heat-proof surface, suchcycle at 125 A welding current must be as a concrete slab, well clear of the ground clamp.allowed to rest for at least 6 minutes after every 4 minutes of continuous welding. allow the Welder"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:030",
+    "matched_terms": {
+      "polarity": [
+        "polarity"
+      ],
+      "settings": [
+        "chart",
+        "thickness",
+        "voltage"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 30,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-030.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "TIG Welding TO PREVENT SERIOUS INJURY AND DEATH: Do not weld without Grounding Clamp. Safety When the operator is not holding the Torch, it must be sitting on a nonconductive, nonflammable surface. Only hold TIG Rod with an electrically insulated welding glove. TO PREVENT DEATH FROM ASPHYXIATION: Do not open gas without proper ventilation. Fix gas leaks immediately. Shielding gas can displace air and cause rapid loss of consciousness and death. Shielding gas without carbon dioxide can be even more hazardous because asphyxiation can start without feeling shortness of breath. NOTICE: TIG welding is a complicated process, 9. Adjust settings for the TIG process. requiring experience and skill to achieve CONTROLS a. Polarity and Gas Settings: successful results. Training beyond the scope of this manual is required to TIG weld properly. \u2022 Plug cables in according to screen. \u2022 Connect gas accor"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:031",
+    "matched_terms": {
+      "duty_cycle": [
+        "duty cycle"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 31,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-031.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "d. Optional Settings: 10. Hold TIG Torch in one gloved hand and the TIG \u2022 Press Main Control Knob to Rod (sold separately) in other gloved hand. enter Optional Settings. NOTE: Maintain a constant distance between the \u2022 Turn Main Control Knob until desired Tungsten Electrode and the workpiece: between setting appears on screen. 1 and 1.5 times the diameter of the Electrode. \u2022 Press Main Control Knob to Safety select desired setting. 11. Open valve on TIG Torch to start gas flow. \u2022 Turn Main Control Knob to adjust setting. 12. To initiate welding arc, push Foot Pedal and touch Available Optional Settings: Electrode to work piece and lift. If not using Foot Pedal, touch Electrode to work piece and lift. \u2022 Recall Setting \u2013 Retrieve saved settings. \u2022 Save Setting \u2013 Program up to 13. When welding puddle is hot enough, tilt Torch 5 different configurations. backward about 10-15 degrees from ver"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:032",
+    "matched_terms": {
+      "polarity": [
+        "polarity"
+      ],
+      "settings": [
+        "thickness",
+        "voltage"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 32,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-032.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Stick Welding TO PREVENT SERIOUS INJURY AND DEATH: Do not weld without Grounding Clamp. Safety When the operator is not holding the Electrode Holder, it must be sitting on a nonconductive, nonflammable surface. 1. Turn the Power Switch to the OFF position, then b. Set Electrode type: plug the Welder into a properly grounded, GFCI \u2022 Turn Main Control Knob to set electrode type. protected, 120 VAC (20 amp rated) outlet or 240 V outlet. The circuit must be equipped with delayed action-type circuit breaker or fuses. 2. Set Electrode Holder down on nonconductive, nonflammable surface CONTROLS away from any grounded objects. 3. Turn the Power Switch ON. 4. Press Home Button on Control Panel. 5. Turn Main Control Knob until Stick process c. Set Electrode Diameter and Material Thickness: appears on LCD display screen. Wire 6. Press Main Control Knob to select STICK process. \u2022\u2022 TurnTurn LeftRight"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:033",
+    "matched_terms": {
+      "duty_cycle": [
+        "duty cycle"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 33,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-033.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "e. Optional Settings: WARNING! TO PREVENT SERIOUS INJURY: \u2022 Press Main Control Knob to Protective gear must be worn when using the enter Optional Settings. Welder; minimum shade number 10 full face shield (or welding mask), ear protection, welding gloves, \u2022 Turn Main Control Knob until desired sleeves and apron, NIOSH-approved respirator, setting appears on screen. and fire resistant work clothes without pockets \u2022 Press Main Control Knob to should be worn when welding. Light from the Safety select desired setting. arc can cause permanent damage to the eyes \u2022 Turn Main Control Knob to adjust setting. and skin. Do not breathe arc fumes. Available Optional Settings: After practice welding on scrap, stop, \u2022 Hot Start \u2013 Adjust amperage at start of weld. and check your progress. Perform \u2022 Arc Force \u2013 Adjust weld penetration Strike Test according to Strike Test on and smoothness. page 34. After"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:034",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 34,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-034.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Welding Tips A good way to test welding technique is to examine a weld\u2019s appearance after it has cooled and the slag has been removed. Then, better welding can be learned by adjusting your weld technique to remedy any problems found. NOTICE: TIG welding is a complicated process, requiring experience and skill to achieve successful Safety results. Training beyond the scope of this manual is required to TIG weld properly. After practice welding a couple of welding beads, STOP and examine your weld using the following guidelines. Strike Test CONTROLS A test weld on a PIECE OF SCRAP can be clamp tested by using the following procedure. dead-blow hammer SCRAP WEAR ANSI-APPROVED SAFETY GOGGLES workpiece DURING THIS PROCEDURE. CAUTION! This test WILL damage the weld it is performed on. This test is ONLY an indicator of weld technique and is not intended to test working welds. Wire 1. After two "
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035",
+    "matched_terms": {
+      "polarity": [
+        "polarity"
+      ],
+      "settings": [
+        "voltage"
+      ],
+      "troubleshooting": [
+        "diagnosis",
+        "weld"
+      ]
+    },
+    "page": 35,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-035.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Wire Weld Diagnosis \u2013 Workpiece Heat Control / Weld Penetration EXCESS PENETRATION OR INADEQUATE PENETRATION PROPER PENETRATION BURN-THROUGH Safety Not hot enough Ideal heat Too hot How to increase workpiece heat How to reduce workpiece heat and increase penetration: and limit penetration: (to weld THICKER workpieces properly) (to weld THINNER workpieces properly) a. Increase weld current c. Use faster wire feed e. Decrease weld current g. Use slower wire feed CONTROLS b. Decrease travel speed d. Use shorter CTWD f. Increase travel speed h. Use longer CTWD Example Wire Weld Diagrams Wire Stick / TIG Good Voltage Voltage Travel Speed Travel Speed CTWD Weld Too Low or Too High or Too Fast Too Slow Too Long Wire Feed Wire Feed or Too Slow Too Fast Wrong Polarity Tips TO CORRECT: TO CORRECT: TO CORRECT: TO CORRECT: TO CORRECT: Increase Decrease Check Polarity Output Voltage Output Voltage an"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:036",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 36,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-036.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Wire Weld Penetration (Workpiece Heat Control) EXCESS PENETRATION OR PROPER PENETRATION INADEQUATE PENETRATION BURN-THROUGH Weld is visible underneath and Weld does not penetrate the Weld droops on top and bulges slightly on top. joint fully, just on the surface. Safety underneath, or falls through entirely, making a hole. PROFILE VIEWS CONTROLS POSSIBLE CAUSES AND SOLUTIONS POSSIBLE CAUSES AND SOLUTIONS 1. Workpiece overheating: 4. Incorrect welding technique: Reduce wire feed speed. Maintain 1/2\" or less CTWD. Decrease weld current. Keep arc on leading edge of weld puddle. Hold MIG Gun at proper angles. 2. Travel speed too slow: Increase travel speed and ensure 5. Insufficient weld heat: that travel speed is kept steady. Reduce travel speed. Increase weld current. 3. Excessive material at weld: Wire Reduce wire feed speed. 6. Workpieces too thick/close: Bevel thick workpieces, allow sl"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:037",
+    "matched_terms": {
+      "polarity": [
+        "polarity"
+      ],
+      "troubleshooting": [
+        "porosity",
+        "spatter",
+        "weld"
+      ]
+    },
+    "page": 37,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-037.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Wire Weld \u2013 Porosity Wire Weld \u2013 Excessive Spatter Small cavities or holes in the bead. Fine spatter is normal. Spatter that is grainy and large is a problem. TOP VIEW TOP Safety VIEW POSSIBLE CAUSES AND SOLUTIONS 1. Incorrect polarity: POSSIBLE CAUSES AND SOLUTIONS Check that polarity is set correctly 1. Dirty workpiece or welding wire: for type of welding. Clean workpiece down to bare metal. 2. Insufficient shielding gas (MIG only): Make certain that wire is clean and free Increase flow of gas. from oil, coatings, and other residues. Clean nozzle. 2. Incorrect polarity: Maintain proper CTWD. Check that polarity is set correctly CONTROLS 3. Incorrect shielding gas (MIG only): for type of welding. Use shielding gas recommended by wire supplier. 3. Insufficient shielding gas (MIG only): 4. Dirty workpiece or welding wire: Increase flow of gas. Clean workpiece down to bare metal. Clean noz"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:038",
+    "matched_terms": {
+      "troubleshooting": [
+        "diagnosis",
+        "weld"
+      ]
+    },
+    "page": 38,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-038.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Stick Weld Diagnosis \u2013 Workpiece Heat Control / Weld Penetration EXCESS PENETRATION OR INADEQUATE PENETRATION PROPER PENETRATION BURN-THROUGH Safety Not hot enough Ideal heat Too hot How to increase workpiece heat How to reduce workpiece heat and increase penetration: and limit penetration: (to weld THICKER workpieces properly) (to weld THINNER workpieces properly) CONTROLS a. Increase current. b. Weld more slowly. c. Decrease current. d. Weld more quickly. Example Stick Weld Diagrams Wire CLEAN WELDS FIRST! Stick welds will have a coat of slag over them until cleaned. TIG / Stick Good Current Current Weld Speed Weld Speed Arc Length Arc Length Weld Too Low Too High Too Fast Too Slow Too Short Too Long TO CORRECT: TO CORRECT: TO CORRECT: TO CORRECT: TO CORRECT: TO CORRECT: Increase the Decrease Weld slower Weld faster Increase Decrease current the current distance distance Welding Tips M"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:039",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 39,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-039.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Stick Weld Penetration (Workpiece Heat Control) EXCESS PENETRATION OR PROPER PENETRATION INADEQUATE PENETRATION BURN-THROUGH Weld is visible underneath and Weld does not contact the joint Weld droops on top and bulges slightly on top. fully, just on the surface. underneath or falls through Safety entirely, making a hole. PROFILE VIEWS POSSIBLE CAUSES AND SOLUTIONS FOR POSSIBLE CAUSES AND SOLUTIONS FOR CONTROLS EXCESS PENETRATION OR BURN-THROUGH INADEQUATE PENETRATION 1. Workpiece overheating: 1. Incorrect welding technique: Reduce current. Keep arc on leading edge of weld puddle. Hold torch at proper angles.2. Welding speed too slow: Increase welding speed and ensure 2. Insufficient weld heat: that welding speed is kept steady. Slow down so fill material has time to melt into the weld location. Increase current. Wire 3. Workpieces too thick/close: Bevel thick workpieces, allow slight gap"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:040",
+    "matched_terms": {
+      "troubleshooting": [
+        "porosity",
+        "spatter",
+        "weld"
+      ]
+    },
+    "page": 40,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-040.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Stick Weld \u2013 Coat of Slag Over Weld Slag is a necessary part of a stick weld. It shields the weld from impurities. Clean off the slag with the TOP Chipping Hammer and Wire Brush after welding. VIEW Safety PARTIALLY CHIPPED AWAY TO SHOW WELD Stick Weld \u2013 Porosity \u2014 Small cavities or holes in the bead. POSSIBLE CAUSES AND SOLUTIONS 1. Dirty workpiece or fill material: Clean workpiece down to bare metal. Make certain that fill material and Electrode are clean and free from oil, coatings, and other residues. CONTROLS TOP VIEW 2. Inconsistent welding speed: Maintain steady weld speed. Stick Weld \u2013 Crooked/Wavy Bead POSSIBLE CAUSES AND SOLUTIONS 1. Inaccurate welding: Wire Use two hands or rest hand on steady surface. 2. Inconsistent welding speed: TOP Maintain steady weld speed. VIEW TIG / Stick Weld \u2013 Excessive Spatter POSSIBLE CAUSES AND SOLUTIONS Fine spatter is normal. Spatter that is Sti"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:041",
+    "matched_terms": {
+      "parts": [
+        "parts"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 41,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-041.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Maintenance TO PREVENT SERIOUS INJURY, FIRE AND BURNS: Safety Unplug the Welder, rest the tool on a heat-proof, electrically non-conductive surface, and allow all parts of the Welder to cool thoroughly before service. 1. BEFORE EACH USE, inspect the general 2. PERIODICALLY, have a qualified condition of the Welder. Check for: technician remove the Rear Panel and use compressed air to blow \u2022 loose hardware out all dust from the interior. \u2022 misalignment or binding of moving parts 3. AFTER EVERY USE, store in \u2022 damaged cord / electrical wiring a clean and dry location. CONTROLS \u2022 frayed or damaged cables 4. For optimal MIG / Flux-Cored wire weld \u2022 cracked or broken parts quality, clean and inspect the MIG \u2022 any other condition that may Gun Contact Tip and Nozzle before affect its safe operation. each use, as explained below. MIG Gun Nozzle and Contact Tip Inspection and Cleaning 1. Make sur"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:042",
+    "matched_terms": {
+      "parts": [
+        "parts"
+      ],
+      "polarity": [
+        "polarity",
+        "dcen",
+        "dcep"
+      ],
+      "settings": [
+        "chart",
+        "thickness",
+        "voltage"
+      ],
+      "troubleshooting": [
+        "troubleshooting",
+        "weld"
+      ]
+    },
+    "page": 42,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-042.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Troubleshooting \u2013 MIG / Flux-Cored Welding IMPORTANT! Be CERTAIN to shut off the Welder, disconnect it from power, and discharge the MIG Gun to ground before adjusting, cleaning, or repairing the unit. Safety Problem Possible Causes Likely Solutions 1. Insufficient wire feed pressure. 1. Increase wire feed pressure properly. Follow step 27 on page 17. 2. Incorrect wire feed roller size. 2. Flip roll to correct size. Follow the Feed Wire Feed Motor Roller instructions on page 12. Runs but Wire Does 3. Damaged MIG Gun, cable, or liner assembly. 3. Have a qualified technician inspect these Not Feed Properly parts and replace as necessary. 4. Feed Tensioner is too tight. 4. Loosen Feed Tensioner so it applies only enough pressure to prevent continued spinning after the Gun Trigger is released. CONTROLS 1. Excess wire feed pressure. 1. Adjust wire feed pressure properly. Follow step 27 on pag"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:043",
+    "matched_terms": {
+      "duty_cycle": [
+        "duty cycle"
+      ],
+      "polarity": [
+        "polarity",
+        "dcen",
+        "dcep"
+      ],
+      "settings": [
+        "voltage"
+      ],
+      "troubleshooting": [
+        "porosity",
+        "weld"
+      ]
+    },
+    "page": 43,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-043.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Problem Possible Causes Likely Solutions 1. Tripped thermal protection device. 1. If a warning screen appears in the LCD Display window, Welder may have overheated and shut down. Stop and wait with the Power Switch ON for the Welder to cool. The Welder automatically returns to service after cooling off. Reduce duration or frequency of welding periods to Safety help reduce wear on the Welder. Refer to Duty Cycle (Duration of Use) on page 19. 2. Circuit supplies insufficient input voltage or 2. Verify that the circuit is designed to supply the Welder Does Not amperage. required input voltage and amperage as detailed Function When on the Specifications table. If a warning screen Switched On appears in the LCD Display window, check the input voltage to ensure it is within specified range. 3. Faulty or improperly connected Trigger. 3. Ensure the gun connection is properly seated on machine. Q"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:044",
+    "matched_terms": {
+      "duty_cycle": [
+        "duty cycle"
+      ],
+      "settings": [
+        "chart",
+        "voltage"
+      ],
+      "troubleshooting": [
+        "troubleshooting",
+        "weld"
+      ]
+    },
+    "page": 44,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-044.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Troubleshooting \u2013 TIG / Stick Welding IMPORTANT! Be CERTAIN to shut off the Welder, disconnect it from power, and discharge the electrode to ground before adjusting, cleaning, or repairing the unit. Safety Problem Possible Causes Likely Solutions Welder Does Not 1. Tripped thermal protection device. 1. Reduce duration or frequency of welding periods Function When to help reduce wear on the welder. Refer to Switched On Duty Cycle (Duration of Use) on page 29. 2. Faulty or improperly 2. Qualified technician must check and connected Trigger. secure/replace Trigger. 3. Ground Clamp not attached 3. Attach Ground Clamp to workpiece. to workpiece. 4. Shielding Gas not connected. 4. Connect shielding gas to Welder. CONTROLS LCD Display Does Not 1. Unit is not connected 1. Verify the voltage at the outlet and Light When Welder to outlet properly. the connection to the outlet. is Switched On 2. Ou"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:045",
+    "matched_terms": {
+      "duty_cycle": [
+        "240v"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 45,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-045.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Wiring Schematic OUT+ OUT- Hall Safety OUT+ 4 3 2 CN1 1 CONTROLS SCREEN 2 1 4 1 5 6 LCD T14 3 T60*30*28 4321 1234 CN5 34 34 33 33 Wire 32 32 31 31 30 30 29 29 3 28 28 4 27 27 2 26 26 5 25 25 1 24 24 23 23 22 22 21 21 3 20 20 4 19 19 2 BOARD 18 18 5 17 17 1 16 16 15 15 14 14 13 13 MCU 12 12 3 11 11 4 10 10 2 9 9 5 8 8 1 7 7 Stick IGBT 6 6 5 5 / 4 4 3 3 CN5 21 12 CN7 TIG PFC 2 4 2 4 VALVE SOLENOID + - + - 2 CN6 1 4 3 \uff5e \uff5e \uff5e \uff5e RECITIFIER 1 3 1 3 4 SWITCH FEED WIRE FAST 3 VALVE 2 CN3 1 SOLENOID -T Tips 5 3 4 4 3 FEEDERM 24V 1 J 2 CN4 21 3 WIRE CN7 21 v 7 1 CN3 2 1 PLUG Welding 6 2 AVIATION 5 3 6 BOARD 4 4 5 3 5 4 2 6 3 CN8 1 7 CN1 REMOTE 2 CN2 1 PLUG AVIATION 1/4 1/4 1/4 1/4 FAN2 FAN 1 2 1 2 AC1 AC2 G 120-240V/50/60HZ AC MAINTENANCE K1 Item 57812 For technical questions, please call 1-800-444-3353. Page 45"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:046",
+    "matched_terms": {
+      "parts": [
+        "parts list",
+        "parts",
+        "assembly diagram"
+      ],
+      "polarity": [
+        "polarity"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 46,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-046.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Parts List and Diagram PLEASE READ THE FOLLOWING CAREFULLY Safety THE MANUFACTURER AND/OR DISTRIBUTOR HAS PROVIDED THE PARTS LIST AND ASSEMBLY DIAGRAM IN THIS MANUAL AS A REFERENCE TOOL ONLY. NEITHER THE MANUFACTURER OR DISTRIBUTOR MAKES ANY REPRESENTATION OR WARRANTY OF ANY KIND TO THE BUYER THAT HE OR SHE IS QUALIFIED TO MAKE ANY REPAIRS TO THE PRODUCT, OR THAT HE OR SHE IS QUALIFIED TO REPLACE ANY PARTS OF THE PRODUCT. IN FACT, THE MANUFACTURER AND/OR DISTRIBUTOR EXPRESSLY STATES THAT ALL REPAIRS AND PARTS REPLACEMENTS SHOULD BE UNDERTAKEN BY CERTIFIED AND LICENSED TECHNICIANS, AND NOT BY THE BUYER. THE BUYER ASSUMES ALL RISK AND LIABILITY ARISING OUT OF HIS OR HER REPAIRS TO THE ORIGINAL PRODUCT OR REPLACEMENT PARTS THERETO, OR ARISING OUT OF HIS OR HER INSTALLATION OF REPLACEMENT PARTS THERETO. CONTROLS Parts List Part Description Qty Part Description Qty 1 Right Cover 1 32 Polarity"
+  },
+  {
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:047",
+    "matched_terms": {
+      "parts": [
+        "assembly diagram"
+      ],
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 47,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-047.png",
+    "source_doc": "owner-manual.pdf",
+    "text_preview": "Assembly Diagram Safety 7 6 5 4 3 2 1 61 60 59 58 57 56 55 CONTROLS 54 16 15 14 13 12 11 10 9 8 53 17 52 18 51 Wire 19 50 49 20 48 21 47 22 46 Stick 23 / 45 TIG 24 25 44 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 Tips Welding MAINTENANCE Item 57812 For technical questions, please call 1-800-444-3353. Page 47"
+  },
+  {
+    "doc_id": "quick-start-guide",
+    "element_id": "quick-start-guide:page:001",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 1,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-001.png",
+    "source_doc": "quick-start-guide.pdf",
+    "text_preview": "\u00ae Wingnut Feed Mechanism Spacer Spindle 2 lb Wire Spool feed Welder guides Brake Pad welding wire 2 lb Spool Loading Adapter and knob required for 10-12 lb spool Wire Spool WARNING 2\u2033 To prevent serious Contactinjury, read Tipmanual warnings and instructions Nozzlebefore use. WARNING clockwise To prevent fire and serious injury, keep torch and wire clear of 2\u2033-3\u2033grounded objects while welder wood plugged in. block HOLD GUN CLEAR BASIC WELDING INSTRUCTIONS AND WELDING TIPS ARE IN MANUAL."
+  },
+  {
+    "doc_id": "quick-start-guide",
+    "element_id": "quick-start-guide:page:002",
+    "matched_terms": {
+      "troubleshooting": [
+        "weld"
+      ]
+    },
+    "page": 2,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-002.png",
+    "source_doc": "quick-start-guide.pdf",
+    "text_preview": "\u00ae BASIC WELDING INSTRUCTIONS AND WELDING TIPS ARE IN MANUAL."
+  }
+]

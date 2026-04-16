@@ -1,0 +1,5772 @@
+[
+  {
+    "avg_confidence": 0.981,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            40.0,
+            34.0
+          ],
+          [
+            329.0,
+            36.0
+          ],
+          [
+            329.0,
+            88.0
+          ],
+          [
+            39.0,
+            85.0
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "VULCAN"
+      },
+      {
+        "bbox": [
+          [
+            355.0,
+            34.0
+          ],
+          [
+            509.0,
+            34.0
+          ],
+          [
+            509.0,
+            58.0
+          ],
+          [
+            355.0,
+            58.0
+          ]
+        ],
+        "confidence": 0.829,
+        "text": "DMNIPRO'"
+      },
+      {
+        "bbox": [
+          [
+            528.0,
+            39.0
+          ],
+          [
+            801.0,
+            39.0
+          ],
+          [
+            801.0,
+            69.0
+          ],
+          [
+            528.0,
+            69.0
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "QUICKSTARTGUIDE"
+      },
+      {
+        "bbox": [
+          [
+            352.0,
+            51.0
+          ],
+          [
+            505.0,
+            57.0
+          ],
+          [
+            503.0,
+            114.0
+          ],
+          [
+            350.0,
+            108.0
+          ]
+        ],
+        "confidence": 0.992,
+        "text": "220"
+      },
+      {
+        "bbox": [
+          [
+            727.0,
+            75.0
+          ],
+          [
+            803.0,
+            75.0
+          ],
+          [
+            803.0,
+            104.0
+          ],
+          [
+            727.0,
+            104.0
+          ]
+        ],
+        "confidence": 1.0,
+        "text": "57812"
+      },
+      {
+        "bbox": [
+          [
+            290.0,
+            144.0
+          ],
+          [
+            575.0,
+            143.0
+          ],
+          [
+            576.0,
+            164.0
+          ],
+          [
+            290.0,
+            165.0
+          ]
+        ],
+        "confidence": 0.94,
+        "text": "Connect cables as needed for flux"
+      },
+      {
+        "bbox": [
+          [
+            291.0,
+            168.0
+          ],
+          [
+            568.0,
+            168.0
+          ],
+          [
+            568.0,
+            188.0
+          ],
+          [
+            291.0,
+            188.0
+          ]
+        ],
+        "confidence": 0.99,
+        "text": "wirewelding-seebackofguide."
+      },
+      {
+        "bbox": [
+          [
+            665.0,
+            171.0
+          ],
+          [
+            704.0,
+            171.0
+          ],
+          [
+            704.0,
+            189.0
+          ],
+          [
+            665.0,
+            189.0
+          ]
+        ],
+        "confidence": 0.999,
+        "text": "Feed"
+      },
+      {
+        "bbox": [
+          [
+            43.0,
+            177.0
+          ],
+          [
+            99.0,
+            179.0
+          ],
+          [
+            98.0,
+            197.0
+          ],
+          [
+            42.0,
+            195.0
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "Wingnut"
+      },
+      {
+        "bbox": [
+          [
+            644.0,
+            188.0
+          ],
+          [
+            724.0,
+            188.0
+          ],
+          [
+            724.0,
+            205.0
+          ],
+          [
+            644.0,
+            205.0
+          ]
+        ],
+        "confidence": 0.949,
+        "text": "Mechanism"
+      },
+      {
+        "bbox": [
+          [
+            43.0,
+            206.0
+          ],
+          [
+            90.0,
+            206.0
+          ],
+          [
+            90.0,
+            223.0
+          ],
+          [
+            43.0,
+            223.0
+          ]
+        ],
+        "confidence": 0.963,
+        "text": "Spacer-"
+      },
+      {
+        "bbox": [
+          [
+            361.0,
+            211.0
+          ],
+          [
+            513.0,
+            213.0
+          ],
+          [
+            513.0,
+            234.0
+          ],
+          [
+            360.0,
+            232.0
+          ]
+        ],
+        "confidence": 0.986,
+        "text": "Install wire spool."
+      },
+      {
+        "bbox": [
+          [
+            43.0,
+            232.0
+          ],
+          [
+            93.0,
+            232.0
+          ],
+          [
+            93.0,
+            249.0
+          ],
+          [
+            43.0,
+            249.0
+          ]
+        ],
+        "confidence": 0.992,
+        "text": "Spindle"
+      },
+      {
+        "bbox": [
+          [
+            360.0,
+            235.0
+          ],
+          [
+            567.0,
+            235.0
+          ],
+          [
+            567.0,
+            259.0
+          ],
+          [
+            360.0,
+            259.0
+          ]
+        ],
+        "confidence": 0.999,
+        "text": "Insert wire through both"
+      },
+      {
+        "bbox": [
+          [
+            47.0,
+            259.0
+          ],
+          [
+            78.0,
+            259.0
+          ],
+          [
+            78.0,
+            277.0
+          ],
+          [
+            47.0,
+            277.0
+          ]
+        ],
+        "confidence": 0.938,
+        "text": "2Ib"
+      },
+      {
+        "bbox": [
+          [
+            361.0,
+            259.0
+          ],
+          [
+            554.0,
+            261.0
+          ],
+          [
+            554.0,
+            282.0
+          ],
+          [
+            360.0,
+            281.0
+          ]
+        ],
+        "confidence": 0.953,
+        "text": "feed guides and clamp"
+      },
+      {
+        "bbox": [
+          [
+            45.0,
+            273.0
+          ],
+          [
+            84.0,
+            273.0
+          ],
+          [
+            84.0,
+            291.0
+          ],
+          [
+            45.0,
+            291.0
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "Wire"
+      },
+      {
+        "bbox": [
+          [
+            360.0,
+            281.0
+          ],
+          [
+            561.0,
+            283.0
+          ],
+          [
+            561.0,
+            307.0
+          ],
+          [
+            359.0,
+            305.0
+          ]
+        ],
+        "confidence": 1.0,
+        "text": "it into feed mechanism."
+      },
+      {
+        "bbox": [
+          [
+            760.0,
+            282.0
+          ],
+          [
+            797.0,
+            282.0
+          ],
+          [
+            797.0,
+            300.0
+          ],
+          [
+            760.0,
+            300.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "feed"
+      },
+      {
+        "bbox": [
+          [
+            42.0,
+            287.0
+          ],
+          [
+            84.0,
+            287.0
+          ],
+          [
+            84.0,
+            304.0
+          ],
+          [
+            42.0,
+            304.0
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "Spool"
+      },
+      {
+        "bbox": [
+          [
+            264.0,
+            295.0
+          ],
+          [
+            312.0,
+            298.0
+          ],
+          [
+            311.0,
+            316.0
+          ],
+          [
+            263.0,
+            314.0
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "Welder"
+      },
+      {
+        "bbox": [
+          [
+            753.0,
+            300.0
+          ],
+          [
+            802.0,
+            296.0
+          ],
+          [
+            803.0,
+            315.0
+          ],
+          [
+            754.0,
+            318.0
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "guides"
+      },
+      {
+        "bbox": [
+          [
+            360.0,
+            307.0
+          ],
+          [
+            482.0,
+            307.0
+          ],
+          [
+            482.0,
+            330.0
+          ],
+          [
+            360.0,
+            330.0
+          ]
+        ],
+        "confidence": 0.989,
+        "text": "See manual if"
+      },
+      {
+        "bbox": [
+          [
+            43.0,
+            313.0
+          ],
+          [
+            87.0,
+            313.0
+          ],
+          [
+            87.0,
+            330.0
+          ],
+          [
+            43.0,
+            330.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "Brake"
+      },
+      {
+        "bbox": [
+          [
+            716.0,
+            318.0
+          ],
+          [
+            775.0,
+            322.0
+          ],
+          [
+            773.0,
+            343.0
+          ],
+          [
+            714.0,
+            340.0
+          ]
+        ],
+        "confidence": 0.957,
+        "text": "weiding"
+      },
+      {
+        "bbox": [
+          [
+            47.0,
+            327.0
+          ],
+          [
+            88.0,
+            327.0
+          ],
+          [
+            88.0,
+            344.0
+          ],
+          [
+            47.0,
+            344.0
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "Pad"
+      },
+      {
+        "bbox": [
+          [
+            360.0,
+            332.0
+          ],
+          [
+            524.0,
+            332.0
+          ],
+          [
+            524.0,
+            355.0
+          ],
+          [
+            360.0,
+            355.0
+          ]
+        ],
+        "confidence": 0.982,
+        "text": "changing wire size"
+      },
+      {
+        "bbox": [
+          [
+            728.0,
+            339.0
+          ],
+          [
+            763.0,
+            339.0
+          ],
+          [
+            763.0,
+            357.0
+          ],
+          [
+            728.0,
+            357.0
+          ]
+        ],
+        "confidence": 0.999,
+        "text": "wire"
+      },
+      {
+        "bbox": [
+          [
+            108.0,
+            351.0
+          ],
+          [
+            245.0,
+            353.0
+          ],
+          [
+            245.0,
+            373.0
+          ],
+          [
+            108.0,
+            371.0
+          ]
+        ],
+        "confidence": 0.932,
+        "text": "2 IbSpool Loading"
+      },
+      {
+        "bbox": [
+          [
+            358.0,
+            356.0
+          ],
+          [
+            525.0,
+            354.0
+          ],
+          [
+            525.0,
+            377.0
+          ],
+          [
+            359.0,
+            379.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "or using solid wire."
+      },
+      {
+        "bbox": [
+          [
+            663.0,
+            361.0
+          ],
+          [
+            741.0,
+            361.0
+          ],
+          [
+            741.0,
+            381.0
+          ],
+          [
+            663.0,
+            381.0
+          ]
+        ],
+        "confidence": 0.963,
+        "text": "Wire Spool"
+      },
+      {
+        "bbox": [
+          [
+            44.0,
+            369.0
+          ],
+          [
+            311.0,
+            369.0
+          ],
+          [
+            311.0,
+            386.0
+          ],
+          [
+            44.0,
+            386.0
+          ]
+        ],
+        "confidence": 0.99,
+        "text": "Adapterandknobrequiredfor10-12Ibspool"
+      },
+      {
+        "bbox": [
+          [
+            456.0,
+            417.0
+          ],
+          [
+            651.0,
+            420.0
+          ],
+          [
+            651.0,
+            443.0
+          ],
+          [
+            455.0,
+            441.0
+          ]
+        ],
+        "confidence": 0.986,
+        "text": "Take off nozzle and tip,"
+      },
+      {
+        "bbox": [
+          [
+            44.0,
+            422.0
+          ],
+          [
+            187.0,
+            422.0
+          ],
+          [
+            187.0,
+            446.0
+          ],
+          [
+            44.0,
+            446.0
+          ]
+        ],
+        "confidence": 0.983,
+        "text": "AWARNING"
+      },
+      {
+        "bbox": [
+          [
+            455.0,
+            444.0
+          ],
+          [
+            652.0,
+            443.0
+          ],
+          [
+            652.0,
+            466.0
+          ],
+          [
+            455.0,
+            467.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "plug selected cord into"
+      },
+      {
+        "bbox": [
+          [
+            41.0,
+            458.0
+          ],
+          [
+            188.0,
+            458.0
+          ],
+          [
+            188.0,
+            478.0
+          ],
+          [
+            41.0,
+            478.0
+          ]
+        ],
+        "confidence": 0.96,
+        "text": "To prevent serious"
+      },
+      {
+        "bbox": [
+          [
+            282.0,
+            467.0
+          ],
+          [
+            354.0,
+            467.0
+          ],
+          [
+            354.0,
+            484.0
+          ],
+          [
+            282.0,
+            484.0
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "Contact"
+      },
+      {
+        "bbox": [
+          [
+            455.0,
+            468.0
+          ],
+          [
+            637.0,
+            468.0
+          ],
+          [
+            637.0,
+            491.0
+          ],
+          [
+            455.0,
+            491.0
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "welder and into wall,"
+      },
+      {
+        "bbox": [
+          [
+            40.0,
+            477.0
+          ],
+          [
+            131.0,
+            477.0
+          ],
+          [
+            131.0,
+            498.0
+          ],
+          [
+            40.0,
+            498.0
+          ]
+        ],
+        "confidence": 0.99,
+        "text": "injury,read"
+      },
+      {
+        "bbox": [
+          [
+            307.0,
+            483.0
+          ],
+          [
+            338.0,
+            488.0
+          ],
+          [
+            334.0,
+            508.0
+          ],
+          [
+            304.0,
+            503.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "Tip"
+      },
+      {
+        "bbox": [
+          [
+            454.0,
+            491.0
+          ],
+          [
+            675.0,
+            493.0
+          ],
+          [
+            674.0,
+            515.0
+          ],
+          [
+            454.0,
+            513.0
+          ]
+        ],
+        "confidence": 0.949,
+        "text": "turn welder on, and press"
+      },
+      {
+        "bbox": [
+          [
+            39.0,
+            494.0
+          ],
+          [
+            178.0,
+            496.0
+          ],
+          [
+            177.0,
+            517.0
+          ],
+          [
+            38.0,
+            515.0
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "manualwarnings"
+      },
+      {
+        "bbox": [
+          [
+            39.0,
+            514.0
+          ],
+          [
+            172.0,
+            516.0
+          ],
+          [
+            171.0,
+            536.0
+          ],
+          [
+            38.0,
+            534.0
+          ]
+        ],
+        "confidence": 0.967,
+        "text": "and instructions"
+      },
+      {
+        "bbox": [
+          [
+            457.0,
+            516.0
+          ],
+          [
+            640.0,
+            516.0
+          ],
+          [
+            640.0,
+            536.0
+          ],
+          [
+            457.0,
+            536.0
+          ]
+        ],
+        "confidence": 0.96,
+        "text": "cold wire feed switch"
+      },
+      {
+        "bbox": [
+          [
+            217.0,
+            524.0
+          ],
+          [
+            273.0,
+            524.0
+          ],
+          [
+            273.0,
+            542.0
+          ],
+          [
+            217.0,
+            542.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "Nozzle"
+      },
+      {
+        "bbox": [
+          [
+            39.0,
+            533.0
+          ],
+          [
+            131.0,
+            535.0
+          ],
+          [
+            131.0,
+            555.0
+          ],
+          [
+            38.0,
+            553.0
+          ]
+        ],
+        "confidence": 0.975,
+        "text": "before use."
+      },
+      {
+        "bbox": [
+          [
+            455.0,
+            538.0
+          ],
+          [
+            637.0,
+            540.0
+          ],
+          [
+            637.0,
+            563.0
+          ],
+          [
+            454.0,
+            561.0
+          ]
+        ],
+        "confidence": 0.963,
+        "text": "until wire comes out."
+      },
+      {
+        "bbox": [
+          [
+            44.0,
+            583.0
+          ],
+          [
+            187.0,
+            583.0
+          ],
+          [
+            187.0,
+            608.0
+          ],
+          [
+            44.0,
+            608.0
+          ]
+        ],
+        "confidence": 0.986,
+        "text": "AWARNING"
+      },
+      {
+        "bbox": [
+          [
+            294.0,
+            594.0
+          ],
+          [
+            374.0,
+            594.0
+          ],
+          [
+            374.0,
+            615.0
+          ],
+          [
+            294.0,
+            615.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "clockwise"
+      },
+      {
+        "bbox": [
+          [
+            421.0,
+            607.0
+          ],
+          [
+            605.0,
+            610.0
+          ],
+          [
+            605.0,
+            633.0
+          ],
+          [
+            421.0,
+            631.0
+          ]
+        ],
+        "confidence": 0.961,
+        "text": "Incrementally tighten"
+      },
+      {
+        "bbox": [
+          [
+            40.0,
+            616.0
+          ],
+          [
+            156.0,
+            616.0
+          ],
+          [
+            156.0,
+            636.0
+          ],
+          [
+            40.0,
+            636.0
+          ]
+        ],
+        "confidence": 0.978,
+        "text": "Toprevent fire"
+      },
+      {
+        "bbox": [
+          [
+            421.0,
+            632.0
+          ],
+          [
+            573.0,
+            634.0
+          ],
+          [
+            572.0,
+            657.0
+          ],
+          [
+            421.0,
+            655.0
+          ]
+        ],
+        "confidence": 0.968,
+        "text": "wire feed tension"
+      },
+      {
+        "bbox": [
+          [
+            39.0,
+            635.0
+          ],
+          [
+            136.0,
+            635.0
+          ],
+          [
+            136.0,
+            655.0
+          ],
+          [
+            39.0,
+            655.0
+          ]
+        ],
+        "confidence": 0.971,
+        "text": "and serious"
+      },
+      {
+        "bbox": [
+          [
+            39.0,
+            654.0
+          ],
+          [
+            180.0,
+            654.0
+          ],
+          [
+            180.0,
+            677.0
+          ],
+          [
+            39.0,
+            677.0
+          ]
+        ],
+        "confidence": 0.965,
+        "text": "injury,keep torch"
+      },
+      {
+        "bbox": [
+          [
+            424.0,
+            659.0
+          ],
+          [
+            599.0,
+            659.0
+          ],
+          [
+            599.0,
+            679.0
+          ],
+          [
+            424.0,
+            679.0
+          ]
+        ],
+        "confidence": 0.978,
+        "text": "knob clockwise until"
+      },
+      {
+        "bbox": [
+          [
+            41.0,
+            675.0
+          ],
+          [
+            174.0,
+            675.0
+          ],
+          [
+            174.0,
+            692.0
+          ],
+          [
+            41.0,
+            692.0
+          ]
+        ],
+        "confidence": 0.948,
+        "text": "andwire clear of"
+      },
+      {
+        "bbox": [
+          [
+            421.0,
+            680.0
+          ],
+          [
+            592.0,
+            682.0
+          ],
+          [
+            591.0,
+            705.0
+          ],
+          [
+            421.0,
+            703.0
+          ]
+        ],
+        "confidence": 0.972,
+        "text": "wire will bend from"
+      },
+      {
+        "bbox": [
+          [
+            38.0,
+            692.0
+          ],
+          [
+            179.0,
+            690.0
+          ],
+          [
+            180.0,
+            713.0
+          ],
+          [
+            39.0,
+            715.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "groundedobjects"
+      },
+      {
+        "bbox": [
+          [
+            422.0,
+            706.0
+          ],
+          [
+            606.0,
+            703.0
+          ],
+          [
+            607.0,
+            727.0
+          ],
+          [
+            422.0,
+            730.0
+          ]
+        ],
+        "confidence": 0.953,
+        "text": "feed tension at 2\"-3\"."
+      },
+      {
+        "bbox": [
+          [
+            39.0,
+            711.0
+          ],
+          [
+            142.0,
+            711.0
+          ],
+          [
+            142.0,
+            731.0
+          ],
+          [
+            39.0,
+            731.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "whilewelder"
+      },
+      {
+        "bbox": [
+          [
+            654.0,
+            711.0
+          ],
+          [
+            703.0,
+            711.0
+          ],
+          [
+            703.0,
+            728.0
+          ],
+          [
+            654.0,
+            728.0
+          ]
+        ],
+        "confidence": 0.999,
+        "text": "wood"
+      },
+      {
+        "bbox": [
+          [
+            38.0,
+            730.0
+          ],
+          [
+            132.0,
+            728.0
+          ],
+          [
+            132.0,
+            752.0
+          ],
+          [
+            39.0,
+            755.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "plugged in."
+      },
+      {
+        "bbox": [
+          [
+            655.0,
+            729.0
+          ],
+          [
+            703.0,
+            729.0
+          ],
+          [
+            703.0,
+            747.0
+          ],
+          [
+            655.0,
+            747.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "block"
+      },
+      {
+        "bbox": [
+          [
+            475.0,
+            818.0
+          ],
+          [
+            634.0,
+            816.0
+          ],
+          [
+            634.0,
+            837.0
+          ],
+          [
+            476.0,
+            839.0
+          ]
+        ],
+        "confidence": 0.986,
+        "text": "Unplug welder and"
+      },
+      {
+        "bbox": [
+          [
+            475.0,
+            842.0
+          ],
+          [
+            665.0,
+            842.0
+          ],
+          [
+            665.0,
+            862.0
+          ],
+          [
+            475.0,
+            862.0
+          ]
+        ],
+        "confidence": 0.992,
+        "text": "replace nozzle and tip."
+      },
+      {
+        "bbox": [
+          [
+            214.0,
+            917.0
+          ],
+          [
+            624.0,
+            918.0
+          ],
+          [
+            624.0,
+            942.0
+          ],
+          [
+            214.0,
+            941.0
+          ]
+        ],
+        "confidence": 0.989,
+        "text": "Hold gun clear of workpiece, then plug in welder,"
+      },
+      {
+        "bbox": [
+          [
+            213.0,
+            941.0
+          ],
+          [
+            658.0,
+            944.0
+          ],
+          [
+            658.0,
+            967.0
+          ],
+          [
+            213.0,
+            965.0
+          ]
+        ],
+        "confidence": 0.986,
+        "text": "turn it on, and set weld thickness and other settings."
+      },
+      {
+        "bbox": [
+          [
+            43.0,
+            982.0
+          ],
+          [
+            93.0,
+            982.0
+          ],
+          [
+            93.0,
+            1000.0
+          ],
+          [
+            43.0,
+            1000.0
+          ]
+        ],
+        "confidence": 0.999,
+        "text": "HOLD"
+      },
+      {
+        "bbox": [
+          [
+            47.0,
+            1001.0
+          ],
+          [
+            89.0,
+            1001.0
+          ],
+          [
+            89.0,
+            1019.0
+          ],
+          [
+            47.0,
+            1019.0
+          ]
+        ],
+        "confidence": 0.999,
+        "text": "GUN"
+      },
+      {
+        "bbox": [
+          [
+            39.0,
+            1020.0
+          ],
+          [
+            98.0,
+            1020.0
+          ],
+          [
+            98.0,
+            1038.0
+          ],
+          [
+            39.0,
+            1038.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "CLEAR"
+      },
+      {
+        "bbox": [
+          [
+            77.0,
+            1148.0
+          ],
+          [
+            762.0,
+            1148.0
+          ],
+          [
+            762.0,
+            1167.0
+          ],
+          [
+            77.0,
+            1167.0
+          ]
+        ],
+        "confidence": 0.991,
+        "text": "BASICWELDINGINSTRUCTIONSANDWELDINGTIPSAREINMANUAL."
+      }
+    ],
+    "doc_id": "quick-start-guide",
+    "element_id": "quick-start-guide:page:001:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "quick-start-guide:page:001:ocr:page",
+    "page": 1,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-001.png",
+    "source_doc": "quick-start-guide.pdf",
+    "source_element_id": "quick-start-guide:page:001",
+    "target_path": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-001.png",
+    "target_type": "page_image",
+    "text": "VULCAN\nDMNIPRO'\nQUICKSTARTGUIDE\n220\n57812\nConnect cables as needed for flux\nwirewelding-seebackofguide.\nFeed\nWingnut\nMechanism\nSpacer-\nInstall wire spool.\nSpindle\nInsert wire through both\n2Ib\nfeed guides and clamp\nWire\nit into feed mechanism.\nfeed\nSpool\nWelder\nguides\nSee manual if\nBrake\nweiding\nPad\nchanging wire size\nwire\n2 IbSpool Loading\nor using solid wire.\nWire Spool\nAdapterandknobrequiredfor10-12Ibspool\nTake off nozzle and tip,\nAWARNING\nplug selected cord into\nTo prevent serious\nContact\nwelder and into wall,\ninjury,read\nTip\nturn welder on, and press\nmanualwarnings\nand instructions\ncold wire feed switch\nNozzle\nbefore use.\nuntil wire comes out.\nAWARNING\nclockwise\nIncrementally tighten\nToprevent fire\nwire feed tension\nand serious\ninjury,keep torch\nknob clockwise until\nandwire clear of\nwire will bend from\ngroundedobjects\nfeed tension at 2\"-3\".\nwhilewelder\nwood\nplugged in.\nblock\nUnplug welder and\nreplace nozzle and tip.\nHold gun clear of workpiece, then plug in welder,\nturn it on, and set weld thickness and other settings.\nHOLD\nGUN\nCLEAR\nBASICWELDINGINSTRUCTIONSANDWELDINGTIPSAREINMANUAL.",
+    "word_count": 160
+  },
+  {
+    "avg_confidence": 0.983,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            356.0,
+            34.0
+          ],
+          [
+            509.0,
+            34.0
+          ],
+          [
+            509.0,
+            58.0
+          ],
+          [
+            356.0,
+            58.0
+          ]
+        ],
+        "confidence": 0.849,
+        "text": "DMNIPRO'"
+      },
+      {
+        "bbox": [
+          [
+            40.0,
+            35.0
+          ],
+          [
+            331.0,
+            37.0
+          ],
+          [
+            331.0,
+            88.0
+          ],
+          [
+            39.0,
+            85.0
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "VULCAN"
+      },
+      {
+        "bbox": [
+          [
+            527.0,
+            40.0
+          ],
+          [
+            800.0,
+            38.0
+          ],
+          [
+            801.0,
+            68.0
+          ],
+          [
+            527.0,
+            70.0
+          ]
+        ],
+        "confidence": 0.968,
+        "text": "QUICKSTART GUIDE"
+      },
+      {
+        "bbox": [
+          [
+            351.0,
+            52.0
+          ],
+          [
+            505.0,
+            58.0
+          ],
+          [
+            503.0,
+            114.0
+          ],
+          [
+            349.0,
+            108.0
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "220"
+      },
+      {
+        "bbox": [
+          [
+            729.0,
+            76.0
+          ],
+          [
+            804.0,
+            76.0
+          ],
+          [
+            804.0,
+            105.0
+          ],
+          [
+            729.0,
+            105.0
+          ]
+        ],
+        "confidence": 1.0,
+        "text": "57812"
+      },
+      {
+        "bbox": [
+          [
+            50.0,
+            148.0
+          ],
+          [
+            247.0,
+            148.0
+          ],
+          [
+            247.0,
+            171.0
+          ],
+          [
+            50.0,
+            171.0
+          ]
+        ],
+        "confidence": 0.981,
+        "text": "STICK CABLE SETUP"
+      },
+      {
+        "bbox": [
+          [
+            49.0,
+            179.0
+          ],
+          [
+            265.0,
+            181.0
+          ],
+          [
+            264.0,
+            204.0
+          ],
+          [
+            48.0,
+            202.0
+          ]
+        ],
+        "confidence": 0.97,
+        "text": "1. Connect ground clamp"
+      },
+      {
+        "bbox": [
+          [
+            71.0,
+            203.0
+          ],
+          [
+            250.0,
+            205.0
+          ],
+          [
+            250.0,
+            228.0
+          ],
+          [
+            71.0,
+            226.0
+          ]
+        ],
+        "confidence": 0.999,
+        "text": "to negative terminal."
+      },
+      {
+        "bbox": [
+          [
+            48.0,
+            233.0
+          ],
+          [
+            227.0,
+            233.0
+          ],
+          [
+            227.0,
+            257.0
+          ],
+          [
+            48.0,
+            257.0
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "2. Connect electrode"
+      },
+      {
+        "bbox": [
+          [
+            72.0,
+            258.0
+          ],
+          [
+            223.0,
+            258.0
+          ],
+          [
+            223.0,
+            281.0
+          ],
+          [
+            72.0,
+            281.0
+          ]
+        ],
+        "confidence": 0.976,
+        "text": "holder to positive"
+      },
+      {
+        "bbox": [
+          [
+            73.0,
+            283.0
+          ],
+          [
+            151.0,
+            283.0
+          ],
+          [
+            151.0,
+            304.0
+          ],
+          [
+            73.0,
+            304.0
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "terminal."
+      },
+      {
+        "bbox": [
+          [
+            48.0,
+            310.0
+          ],
+          [
+            209.0,
+            312.0
+          ],
+          [
+            209.0,
+            335.0
+          ],
+          [
+            47.0,
+            333.0
+          ]
+        ],
+        "confidence": 0.984,
+        "text": "3.Leave wire feed"
+      },
+      {
+        "bbox": [
+          [
+            72.0,
+            336.0
+          ],
+          [
+            249.0,
+            334.0
+          ],
+          [
+            249.0,
+            357.0
+          ],
+          [
+            72.0,
+            359.0
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "power disconnected."
+      },
+      {
+        "bbox": [
+          [
+            50.0,
+            490.0
+          ],
+          [
+            228.0,
+            490.0
+          ],
+          [
+            228.0,
+            513.0
+          ],
+          [
+            50.0,
+            513.0
+          ]
+        ],
+        "confidence": 0.967,
+        "text": "MIG CABLE SETUP"
+      },
+      {
+        "bbox": [
+          [
+            49.0,
+            520.0
+          ],
+          [
+            264.0,
+            522.0
+          ],
+          [
+            263.0,
+            546.0
+          ],
+          [
+            48.0,
+            544.0
+          ]
+        ],
+        "confidence": 0.987,
+        "text": "1. Connect ground clamp"
+      },
+      {
+        "bbox": [
+          [
+            71.0,
+            545.0
+          ],
+          [
+            247.0,
+            545.0
+          ],
+          [
+            247.0,
+            568.0
+          ],
+          [
+            71.0,
+            568.0
+          ]
+        ],
+        "confidence": 0.999,
+        "text": "to negative terminal."
+      },
+      {
+        "bbox": [
+          [
+            48.0,
+            574.0
+          ],
+          [
+            227.0,
+            576.0
+          ],
+          [
+            227.0,
+            600.0
+          ],
+          [
+            47.0,
+            597.0
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "2. Connect wire feed"
+      },
+      {
+        "bbox": [
+          [
+            71.0,
+            601.0
+          ],
+          [
+            223.0,
+            598.0
+          ],
+          [
+            223.0,
+            622.0
+          ],
+          [
+            71.0,
+            624.0
+          ]
+        ],
+        "confidence": 0.973,
+        "text": "power to positive"
+      },
+      {
+        "bbox": [
+          [
+            73.0,
+            625.0
+          ],
+          [
+            151.0,
+            625.0
+          ],
+          [
+            151.0,
+            646.0
+          ],
+          [
+            73.0,
+            646.0
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "terminal."
+      },
+      {
+        "bbox": [
+          [
+            48.0,
+            651.0
+          ],
+          [
+            219.0,
+            653.0
+          ],
+          [
+            219.0,
+            677.0
+          ],
+          [
+            47.0,
+            675.0
+          ]
+        ],
+        "confidence": 0.962,
+        "text": "3. Connect MIG gun"
+      },
+      {
+        "bbox": [
+          [
+            73.0,
+            679.0
+          ],
+          [
+            180.0,
+            679.0
+          ],
+          [
+            180.0,
+            699.0
+          ],
+          [
+            73.0,
+            699.0
+          ]
+        ],
+        "confidence": 0.988,
+        "text": "to wire feed."
+      },
+      {
+        "bbox": [
+          [
+            508.0,
+            696.0
+          ],
+          [
+            696.0,
+            694.0
+          ],
+          [
+            697.0,
+            720.0
+          ],
+          [
+            508.0,
+            722.0
+          ]
+        ],
+        "confidence": 0.975,
+        "text": "FLUX CABLE SETUP"
+      },
+      {
+        "bbox": [
+          [
+            50.0,
+            707.0
+          ],
+          [
+            226.0,
+            707.0
+          ],
+          [
+            226.0,
+            727.0
+          ],
+          [
+            50.0,
+            727.0
+          ]
+        ],
+        "confidence": 0.977,
+        "text": "4. Connect wire feed"
+      },
+      {
+        "bbox": [
+          [
+            508.0,
+            727.0
+          ],
+          [
+            778.0,
+            727.0
+          ],
+          [
+            778.0,
+            747.0
+          ],
+          [
+            508.0,
+            747.0
+          ]
+        ],
+        "confidence": 0.979,
+        "text": "Follow MIG cable setup but connect"
+      },
+      {
+        "bbox": [
+          [
+            71.0,
+            731.0
+          ],
+          [
+            257.0,
+            729.0
+          ],
+          [
+            258.0,
+            752.0
+          ],
+          [
+            71.0,
+            755.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "control inside welder."
+      },
+      {
+        "bbox": [
+          [
+            507.0,
+            750.0
+          ],
+          [
+            796.0,
+            750.0
+          ],
+          [
+            796.0,
+            771.0
+          ],
+          [
+            507.0,
+            771.0
+          ]
+        ],
+        "confidence": 0.962,
+        "text": "ground clamp topositive terminal and"
+      },
+      {
+        "bbox": [
+          [
+            506.0,
+            772.0
+          ],
+          [
+            790.0,
+            771.0
+          ],
+          [
+            791.0,
+            791.0
+          ],
+          [
+            506.0,
+            792.0
+          ]
+        ],
+        "confidence": 0.993,
+        "text": "wirefeedpowertonegativeterminal."
+      },
+      {
+        "bbox": [
+          [
+            51.0,
+            832.0
+          ],
+          [
+            221.0,
+            832.0
+          ],
+          [
+            221.0,
+            855.0
+          ],
+          [
+            51.0,
+            855.0
+          ]
+        ],
+        "confidence": 0.971,
+        "text": "TIG CABLE SETUP"
+      },
+      {
+        "bbox": [
+          [
+            49.0,
+            862.0
+          ],
+          [
+            265.0,
+            865.0
+          ],
+          [
+            264.0,
+            889.0
+          ],
+          [
+            48.0,
+            886.0
+          ]
+        ],
+        "confidence": 0.988,
+        "text": "1. Connect ground clamp"
+      },
+      {
+        "bbox": [
+          [
+            74.0,
+            890.0
+          ],
+          [
+            243.0,
+            890.0
+          ],
+          [
+            243.0,
+            910.0
+          ],
+          [
+            74.0,
+            910.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "to positive terminal."
+      },
+      {
+        "bbox": [
+          [
+            48.0,
+            917.0
+          ],
+          [
+            246.0,
+            917.0
+          ],
+          [
+            246.0,
+            941.0
+          ],
+          [
+            48.0,
+            941.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "2. Connect TIG torch to"
+      },
+      {
+        "bbox": [
+          [
+            72.0,
+            943.0
+          ],
+          [
+            227.0,
+            943.0
+          ],
+          [
+            227.0,
+            966.0
+          ],
+          [
+            72.0,
+            966.0
+          ]
+        ],
+        "confidence": 0.999,
+        "text": "negative terminal."
+      },
+      {
+        "bbox": [
+          [
+            48.0,
+            970.0
+          ],
+          [
+            216.0,
+            972.0
+          ],
+          [
+            216.0,
+            996.0
+          ],
+          [
+            47.0,
+            994.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "3. Connect gas line"
+      },
+      {
+        "bbox": [
+          [
+            72.0,
+            996.0
+          ],
+          [
+            212.0,
+            996.0
+          ],
+          [
+            212.0,
+            1019.0
+          ],
+          [
+            72.0,
+            1019.0
+          ]
+        ],
+        "confidence": 0.999,
+        "text": "to gas regulator."
+      },
+      {
+        "bbox": [
+          [
+            49.0,
+            1025.0
+          ],
+          [
+            234.0,
+            1025.0
+          ],
+          [
+            234.0,
+            1048.0
+          ],
+          [
+            49.0,
+            1048.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "4. Connect foot pedal"
+      },
+      {
+        "bbox": [
+          [
+            72.0,
+            1047.0
+          ],
+          [
+            194.0,
+            1049.0
+          ],
+          [
+            194.0,
+            1072.0
+          ],
+          [
+            72.0,
+            1070.0
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "inside welder."
+      },
+      {
+        "bbox": [
+          [
+            48.0,
+            1077.0
+          ],
+          [
+            210.0,
+            1079.0
+          ],
+          [
+            210.0,
+            1103.0
+          ],
+          [
+            47.0,
+            1100.0
+          ]
+        ],
+        "confidence": 0.975,
+        "text": "5. Leave wire feed"
+      },
+      {
+        "bbox": [
+          [
+            73.0,
+            1105.0
+          ],
+          [
+            248.0,
+            1103.0
+          ],
+          [
+            248.0,
+            1125.0
+          ],
+          [
+            73.0,
+            1126.0
+          ]
+        ],
+        "confidence": 0.973,
+        "text": "power disconnected."
+      },
+      {
+        "bbox": [
+          [
+            77.0,
+            1148.0
+          ],
+          [
+            762.0,
+            1148.0
+          ],
+          [
+            762.0,
+            1168.0
+          ],
+          [
+            77.0,
+            1168.0
+          ]
+        ],
+        "confidence": 0.991,
+        "text": "BASICWELDINGINSTRUCTIONSANDWELDINGTIPSAREINMANUAL."
+      }
+    ],
+    "doc_id": "quick-start-guide",
+    "element_id": "quick-start-guide:page:002:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "quick-start-guide:page:002:ocr:page",
+    "page": 2,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-002.png",
+    "source_doc": "quick-start-guide.pdf",
+    "source_element_id": "quick-start-guide:page:002",
+    "target_path": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-002.png",
+    "target_type": "page_image",
+    "text": "DMNIPRO'\nVULCAN\nQUICKSTART GUIDE\n220\n57812\nSTICK CABLE SETUP\n1. Connect ground clamp\nto negative terminal.\n2. Connect electrode\nholder to positive\nterminal.\n3.Leave wire feed\npower disconnected.\nMIG CABLE SETUP\n1. Connect ground clamp\nto negative terminal.\n2. Connect wire feed\npower to positive\nterminal.\n3. Connect MIG gun\nto wire feed.\nFLUX CABLE SETUP\n4. Connect wire feed\nFollow MIG cable setup but connect\ncontrol inside welder.\nground clamp topositive terminal and\nwirefeedpowertonegativeterminal.\nTIG CABLE SETUP\n1. Connect ground clamp\nto positive terminal.\n2. Connect TIG torch to\nnegative terminal.\n3. Connect gas line\nto gas regulator.\n4. Connect foot pedal\ninside welder.\n5. Leave wire feed\npower disconnected.\nBASICWELDINGINSTRUCTIONSANDWELDINGTIPSAREINMANUAL.",
+    "word_count": 112
+  },
+  {
+    "avg_confidence": 0.936,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            27.82,
+            782.66
+          ],
+          [
+            464.52,
+            782.66
+          ],
+          [
+            464.52,
+            822.58
+          ],
+          [
+            27.82,
+            822.58
+          ]
+        ],
+        "confidence": 0.931,
+        "text": "HOW TO CHOOSE"
+      },
+      {
+        "bbox": [
+          [
+            600.0,
+            795.97
+          ],
+          [
+            1034.27,
+            795.97
+          ],
+          [
+            1034.27,
+            852.82
+          ],
+          [
+            600.0,
+            852.82
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "WELDER"
+      },
+      {
+        "bbox": [
+          [
+            1906.45,
+            798.39
+          ],
+          [
+            2295.97,
+            798.39
+          ],
+          [
+            2295.97,
+            822.58
+          ],
+          [
+            1906.45,
+            822.58
+          ]
+        ],
+        "confidence": 0.989,
+        "text": "IDENTIFYYOURINPUTVOLTAGE:"
+      },
+      {
+        "bbox": [
+          [
+            1717.74,
+            809.27
+          ],
+          [
+            1889.52,
+            809.27
+          ],
+          [
+            1889.52,
+            837.1
+          ],
+          [
+            1717.74,
+            837.1
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "IMPORTANT!"
+      },
+      {
+        "bbox": [
+          [
+            1907.66,
+            823.79
+          ],
+          [
+            2368.55,
+            823.79
+          ],
+          [
+            2368.55,
+            847.98
+          ],
+          [
+            1907.66,
+            847.98
+          ]
+        ],
+        "confidence": 0.921,
+        "text": "DOYOUHAVE120VOLT0R240VOLT?"
+      },
+      {
+        "bbox": [
+          [
+            2153.23,
+            869.76
+          ],
+          [
+            2364.92,
+            869.76
+          ],
+          [
+            2364.92,
+            890.32
+          ],
+          [
+            2153.23,
+            890.32
+          ]
+        ],
+        "confidence": 0.955,
+        "text": "MIGorFLUXCORED?"
+      },
+      {
+        "bbox": [
+          [
+            897.58,
+            879.44
+          ],
+          [
+            954.44,
+            881.85
+          ],
+          [
+            953.23,
+            908.47
+          ],
+          [
+            896.37,
+            906.05
+          ]
+        ],
+        "confidence": 0.985,
+        "text": "LOW"
+      },
+      {
+        "bbox": [
+          [
+            1420.16,
+            880.65
+          ],
+          [
+            1544.76,
+            880.65
+          ],
+          [
+            1544.76,
+            908.47
+          ],
+          [
+            1420.16,
+            908.47
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "MODERATE"
+      },
+      {
+        "bbox": [
+          [
+            483.87,
+            881.85
+          ],
+          [
+            538.31,
+            881.85
+          ],
+          [
+            538.31,
+            908.47
+          ],
+          [
+            483.87,
+            908.47
+          ]
+        ],
+        "confidence": 0.646,
+        "text": "M07"
+      },
+      {
+        "bbox": [
+          [
+            2000.81,
+            881.85
+          ],
+          [
+            2063.71,
+            881.85
+          ],
+          [
+            2063.71,
+            907.26
+          ],
+          [
+            2000.81,
+            907.26
+          ]
+        ],
+        "confidence": 0.97,
+        "text": "HIGH"
+      },
+      {
+        "bbox": [
+          [
+            752.42,
+            887.9
+          ],
+          [
+            816.53,
+            887.9
+          ],
+          [
+            816.53,
+            913.31
+          ],
+          [
+            752.42,
+            913.31
+          ]
+        ],
+        "confidence": 0.985,
+        "text": "HIGH"
+      },
+      {
+        "bbox": [
+          [
+            1170.97,
+            887.9
+          ],
+          [
+            1235.08,
+            887.9
+          ],
+          [
+            1235.08,
+            914.52
+          ],
+          [
+            1170.97,
+            914.52
+          ]
+        ],
+        "confidence": 0.984,
+        "text": "HIGH"
+      },
+      {
+        "bbox": [
+          [
+            1584.68,
+            887.9
+          ],
+          [
+            1647.58,
+            887.9
+          ],
+          [
+            1647.58,
+            913.31
+          ],
+          [
+            1584.68,
+            913.31
+          ]
+        ],
+        "confidence": 0.987,
+        "text": "HIGH"
+      },
+      {
+        "bbox": [
+          [
+            585.48,
+            889.11
+          ],
+          [
+            710.08,
+            889.11
+          ],
+          [
+            710.08,
+            913.31
+          ],
+          [
+            585.48,
+            913.31
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "MODERATE"
+      },
+      {
+        "bbox": [
+          [
+            1004.03,
+            889.11
+          ],
+          [
+            1128.63,
+            889.11
+          ],
+          [
+            1128.63,
+            913.31
+          ],
+          [
+            1004.03,
+            913.31
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "MODERATE"
+      },
+      {
+        "bbox": [
+          [
+            1318.55,
+            889.11
+          ],
+          [
+            1374.19,
+            889.11
+          ],
+          [
+            1374.19,
+            915.73
+          ],
+          [
+            1318.55,
+            915.73
+          ]
+        ],
+        "confidence": 0.972,
+        "text": "LOW"
+      },
+      {
+        "bbox": [
+          [
+            1835.08,
+            889.11
+          ],
+          [
+            1958.47,
+            889.11
+          ],
+          [
+            1958.47,
+            913.31
+          ],
+          [
+            1835.08,
+            913.31
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "MODERATE"
+      },
+      {
+        "bbox": [
+          [
+            1732.26,
+            890.32
+          ],
+          [
+            1787.9,
+            890.32
+          ],
+          [
+            1787.9,
+            915.73
+          ],
+          [
+            1732.26,
+            915.73
+          ]
+        ],
+        "confidence": 0.968,
+        "text": "LOW"
+      },
+      {
+        "bbox": [
+          [
+            105.24,
+            891.53
+          ],
+          [
+            413.71,
+            891.53
+          ],
+          [
+            413.71,
+            912.1
+          ],
+          [
+            105.24,
+            912.1
+          ]
+        ],
+        "confidence": 0.993,
+        "text": "WHATISYOURSKILLLEVEL?"
+      },
+      {
+        "bbox": [
+          [
+            2159.27,
+            930.24
+          ],
+          [
+            2265.73,
+            930.24
+          ],
+          [
+            2265.73,
+            950.81
+          ],
+          [
+            2159.27,
+            950.81
+          ]
+        ],
+        "confidence": 0.846,
+        "text": "PSES COIEWRE"
+      },
+      {
+        "bbox": [
+          [
+            241.94,
+            959.27
+          ],
+          [
+            417.34,
+            959.27
+          ],
+          [
+            417.34,
+            983.47
+          ],
+          [
+            241.94,
+            983.47
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "WILLYOUNEED"
+      },
+      {
+        "bbox": [
+          [
+            2164.11,
+            959.27
+          ],
+          [
+            2264.52,
+            959.27
+          ],
+          [
+            2264.52,
+            979.84
+          ],
+          [
+            2164.11,
+            979.84
+          ]
+        ],
+        "confidence": 0.827,
+        "text": "USES SOLII WRE"
+      },
+      {
+        "bbox": [
+          [
+            1797.58,
+            965.32
+          ],
+          [
+            2015.32,
+            965.32
+          ],
+          [
+            2015.32,
+            993.15
+          ],
+          [
+            1797.58,
+            993.15
+          ]
+        ],
+        "confidence": 0.991,
+        "text": "GASREQUIRED"
+      },
+      {
+        "bbox": [
+          [
+            956.85,
+            968.95
+          ],
+          [
+            1174.6,
+            968.95
+          ],
+          [
+            1174.6,
+            996.77
+          ],
+          [
+            956.85,
+            996.77
+          ]
+        ],
+        "confidence": 0.989,
+        "text": "GASREQUIRED"
+      },
+      {
+        "bbox": [
+          [
+            512.9,
+            975.0
+          ],
+          [
+            782.66,
+            975.0
+          ],
+          [
+            782.66,
+            1002.82
+          ],
+          [
+            512.9,
+            1002.82
+          ]
+        ],
+        "confidence": 0.954,
+        "text": "NO-GAS REQUIRED"
+      },
+      {
+        "bbox": [
+          [
+            1354.84,
+            977.42
+          ],
+          [
+            1620.97,
+            977.42
+          ],
+          [
+            1620.97,
+            1001.61
+          ],
+          [
+            1354.84,
+            1001.61
+          ]
+        ],
+        "confidence": 0.986,
+        "text": "NO-GASREQUIRED"
+      },
+      {
+        "bbox": [
+          [
+            233.47,
+            984.68
+          ],
+          [
+            417.34,
+            984.68
+          ],
+          [
+            417.34,
+            1008.87
+          ],
+          [
+            233.47,
+            1008.87
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "SHIELDINGGAS?"
+      },
+      {
+        "bbox": [
+          [
+            1775.81,
+            987.1
+          ],
+          [
+            2035.89,
+            988.31
+          ],
+          [
+            2035.89,
+            1016.13
+          ],
+          [
+            1775.81,
+            1014.92
+          ]
+        ],
+        "confidence": 0.956,
+        "text": "Indoorweldingreoomended"
+      },
+      {
+        "bbox": [
+          [
+            2145.97,
+            991.94
+          ],
+          [
+            2263.31,
+            991.94
+          ],
+          [
+            2263.31,
+            1008.87
+          ],
+          [
+            2145.97,
+            1008.87
+          ]
+        ],
+        "confidence": 0.789,
+        "text": "USES SRIELDINE CAS"
+      },
+      {
+        "bbox": [
+          [
+            936.29,
+            994.35
+          ],
+          [
+            1192.74,
+            994.35
+          ],
+          [
+            1192.74,
+            1018.55
+          ],
+          [
+            936.29,
+            1018.55
+          ]
+        ],
+        "confidence": 0.969,
+        "text": "Indoorwelding reoommended"
+      },
+      {
+        "bbox": [
+          [
+            2181.05,
+            1018.55
+          ],
+          [
+            2265.73,
+            1018.55
+          ],
+          [
+            2265.73,
+            1039.11
+          ],
+          [
+            2181.05,
+            1039.11
+          ]
+        ],
+        "confidence": 0.811,
+        "text": "CLBAWELDS"
+      },
+      {
+        "bbox": [
+          [
+            2161.69,
+            1034.27
+          ],
+          [
+            2262.1,
+            1034.27
+          ],
+          [
+            2262.1,
+            1050.0
+          ],
+          [
+            2161.69,
+            1050.0
+          ]
+        ],
+        "confidence": 0.76,
+        "text": "NINNALSPATTER"
+      },
+      {
+        "bbox": [
+          [
+            1002.82,
+            1042.74
+          ],
+          [
+            1098.39,
+            1042.74
+          ],
+          [
+            1098.39,
+            1071.77
+          ],
+          [
+            1002.82,
+            1071.77
+          ]
+        ],
+        "confidence": 0.988,
+        "text": "STEEL"
+      },
+      {
+        "bbox": [
+          [
+            1426.21,
+            1042.74
+          ],
+          [
+            1518.15,
+            1042.74
+          ],
+          [
+            1518.15,
+            1071.77
+          ],
+          [
+            1426.21,
+            1071.77
+          ]
+        ],
+        "confidence": 0.986,
+        "text": "STEEL"
+      },
+      {
+        "bbox": [
+          [
+            1729.84,
+            1042.74
+          ],
+          [
+            1895.56,
+            1042.74
+          ],
+          [
+            1895.56,
+            1063.31
+          ],
+          [
+            1729.84,
+            1063.31
+          ]
+        ],
+        "confidence": 0.963,
+        "text": "STEEL,STAIHLESS"
+      },
+      {
+        "bbox": [
+          [
+            1917.34,
+            1048.79
+          ],
+          [
+            2091.53,
+            1048.79
+          ],
+          [
+            2091.53,
+            1072.98
+          ],
+          [
+            1917.34,
+            1072.98
+          ]
+        ],
+        "confidence": 0.987,
+        "text": "DCIGREQUIRED"
+      },
+      {
+        "bbox": [
+          [
+            596.37,
+            1051.21
+          ],
+          [
+            689.52,
+            1051.21
+          ],
+          [
+            689.52,
+            1080.24
+          ],
+          [
+            596.37,
+            1080.24
+          ]
+        ],
+        "confidence": 0.99,
+        "text": "STEEL"
+      },
+      {
+        "bbox": [
+          [
+            1698.39,
+            1059.68
+          ],
+          [
+            1895.56,
+            1059.68
+          ],
+          [
+            1895.56,
+            1080.24
+          ],
+          [
+            1698.39,
+            1080.24
+          ]
+        ],
+        "confidence": 0.972,
+        "text": "STEEL,CHROMEMOLY"
+      },
+      {
+        "bbox": [
+          [
+            2190.73,
+            1062.1
+          ],
+          [
+            2263.31,
+            1062.1
+          ],
+          [
+            2263.31,
+            1079.03
+          ],
+          [
+            2190.73,
+            1079.03
+          ]
+        ],
+        "confidence": 0.764,
+        "text": "WELISDVEE"
+      },
+      {
+        "bbox": [
+          [
+            131.85,
+            1066.94
+          ],
+          [
+            408.87,
+            1066.94
+          ],
+          [
+            408.87,
+            1087.5
+          ],
+          [
+            131.85,
+            1087.5
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "WHATTYPEOFMATERIAL"
+      },
+      {
+        "bbox": [
+          [
+            1342.74,
+            1070.56
+          ],
+          [
+            1600.4,
+            1070.56
+          ],
+          [
+            1600.4,
+            1098.39
+          ],
+          [
+            1342.74,
+            1098.39
+          ]
+        ],
+        "confidence": 0.987,
+        "text": "STAINLESSSTEEL"
+      },
+      {
+        "bbox": [
+          [
+            931.45,
+            1072.98
+          ],
+          [
+            1185.48,
+            1072.98
+          ],
+          [
+            1185.48,
+            1100.81
+          ],
+          [
+            931.45,
+            1100.81
+          ]
+        ],
+        "confidence": 0.989,
+        "text": "STAINLESSSTEEL"
+      },
+      {
+        "bbox": [
+          [
+            2143.55,
+            1072.98
+          ],
+          [
+            2265.73,
+            1072.98
+          ],
+          [
+            2265.73,
+            1092.34
+          ],
+          [
+            2143.55,
+            1092.34
+          ]
+        ],
+        "confidence": 0.694,
+        "text": "NLLSOALEAD BOST"
+      },
+      {
+        "bbox": [
+          [
+            515.32,
+            1082.66
+          ],
+          [
+            769.35,
+            1082.66
+          ],
+          [
+            769.35,
+            1110.48
+          ],
+          [
+            515.32,
+            1110.48
+          ]
+        ],
+        "confidence": 0.99,
+        "text": "STAINLESSSTEEL"
+      },
+      {
+        "bbox": [
+          [
+            150.0,
+            1086.29
+          ],
+          [
+            413.71,
+            1086.29
+          ],
+          [
+            413.71,
+            1110.48
+          ],
+          [
+            150.0,
+            1110.48
+          ]
+        ],
+        "confidence": 0.993,
+        "text": "WILLYOUBEWELDING?"
+      },
+      {
+        "bbox": [
+          [
+            1784.27,
+            1089.92
+          ],
+          [
+            1889.52,
+            1089.92
+          ],
+          [
+            1889.52,
+            1110.48
+          ],
+          [
+            1784.27,
+            1110.48
+          ]
+        ],
+        "confidence": 0.958,
+        "text": "ALUMIHUM,"
+      },
+      {
+        "bbox": [
+          [
+            884.27,
+            1098.39
+          ],
+          [
+            1241.13,
+            1104.44
+          ],
+          [
+            1241.13,
+            1132.26
+          ],
+          [
+            884.27,
+            1126.21
+          ]
+        ],
+        "confidence": 0.948,
+        "text": "ALUMINUM(Spool gunrequlred)"
+      },
+      {
+        "bbox": [
+          [
+            1399.6,
+            1098.39
+          ],
+          [
+            1549.6,
+            1098.39
+          ],
+          [
+            1549.6,
+            1126.21
+          ],
+          [
+            1399.6,
+            1126.21
+          ]
+        ],
+        "confidence": 0.992,
+        "text": "CASTINGS"
+      },
+      {
+        "bbox": [
+          [
+            1919.76,
+            1098.39
+          ],
+          [
+            2090.32,
+            1098.39
+          ],
+          [
+            2090.32,
+            1118.95
+          ],
+          [
+            1919.76,
+            1118.95
+          ]
+        ],
+        "confidence": 0.983,
+        "text": "ACTIGREQUIRED"
+      },
+      {
+        "bbox": [
+          [
+            1704.44,
+            1102.02
+          ],
+          [
+            1891.94,
+            1103.23
+          ],
+          [
+            1891.94,
+            1127.42
+          ],
+          [
+            1704.44,
+            1126.21
+          ]
+        ],
+        "confidence": 0.953,
+        "text": "MAGNESIUMALLOYS"
+      },
+      {
+        "bbox": [
+          [
+            2153.23,
+            1105.65
+          ],
+          [
+            2262.1,
+            1105.65
+          ],
+          [
+            2262.1,
+            1122.58
+          ],
+          [
+            2153.23,
+            1122.58
+          ]
+        ],
+        "confidence": 0.678,
+        "text": "IEDRESNNIHAL"
+      },
+      {
+        "bbox": [
+          [
+            2131.45,
+            1143.15
+          ],
+          [
+            2265.73,
+            1144.35
+          ],
+          [
+            2265.73,
+            1164.92
+          ],
+          [
+            2131.45,
+            1163.71
+          ]
+        ],
+        "confidence": 0.79,
+        "text": "CABESED QUTDDOR"
+      },
+      {
+        "bbox": [
+          [
+            255.24,
+            1151.61
+          ],
+          [
+            414.92,
+            1151.61
+          ],
+          [
+            414.92,
+            1175.81
+          ],
+          [
+            255.24,
+            1175.81
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "WHATISYOUR"
+      },
+      {
+        "bbox": [
+          [
+            516.53,
+            1161.29
+          ],
+          [
+            770.56,
+            1158.87
+          ],
+          [
+            770.56,
+            1190.32
+          ],
+          [
+            516.53,
+            1192.74
+          ]
+        ],
+        "confidence": 0.934,
+        "text": "18Gauge to 5/16\""
+      },
+      {
+        "bbox": [
+          [
+            2138.71,
+            1160.08
+          ],
+          [
+            2262.1,
+            1160.08
+          ],
+          [
+            2262.1,
+            1175.81
+          ],
+          [
+            2138.71,
+            1175.81
+          ]
+        ],
+        "confidence": 0.648,
+        "text": "INWYCONIO\u7cbeS"
+      },
+      {
+        "bbox": [
+          [
+            1767.34,
+            1163.71
+          ],
+          [
+            2020.16,
+            1161.29
+          ],
+          [
+            2020.16,
+            1192.74
+          ],
+          [
+            1767.34,
+            1195.16
+          ]
+        ],
+        "confidence": 0.943,
+        "text": "24Gauge to3/16\""
+      },
+      {
+        "bbox": [
+          [
+            937.5,
+            1162.5
+          ],
+          [
+            1174.6,
+            1162.5
+          ],
+          [
+            1174.6,
+            1193.95
+          ],
+          [
+            937.5,
+            1193.95
+          ]
+        ],
+        "confidence": 0.91,
+        "text": "22 Gauge to 3/8\""
+      },
+      {
+        "bbox": [
+          [
+            1363.31,
+            1162.5
+          ],
+          [
+            1597.98,
+            1162.5
+          ],
+          [
+            1597.98,
+            1193.95
+          ],
+          [
+            1363.31,
+            1193.95
+          ]
+        ],
+        "confidence": 0.915,
+        "text": "10 Gauge to 1/2\""
+      },
+      {
+        "bbox": [
+          [
+            156.05,
+            1174.6
+          ],
+          [
+            414.92,
+            1174.6
+          ],
+          [
+            414.92,
+            1198.79
+          ],
+          [
+            156.05,
+            1198.79
+          ]
+        ],
+        "confidence": 0.992,
+        "text": "MATERIALTHICKNESS?"
+      },
+      {
+        "bbox": [
+          [
+            2152.02,
+            1204.84
+          ],
+          [
+            2264.52,
+            1204.84
+          ],
+          [
+            2264.52,
+            1225.4
+          ],
+          [
+            2152.02,
+            1225.4
+          ]
+        ],
+        "confidence": 0.811,
+        "text": "MAEDLES MATERAL"
+      },
+      {
+        "bbox": [
+          [
+            2196.77,
+            1219.35
+          ],
+          [
+            2263.31,
+            1219.35
+          ],
+          [
+            2263.31,
+            1236.29
+          ],
+          [
+            2196.77,
+            1236.29
+          ]
+        ],
+        "confidence": 0.939,
+        "text": "GAPSWELL"
+      },
+      {
+        "bbox": [
+          [
+            1708.06,
+            1229.03
+          ],
+          [
+            2085.48,
+            1231.45
+          ],
+          [
+            2085.48,
+            1259.27
+          ],
+          [
+            1708.06,
+            1256.85
+          ]
+        ],
+        "confidence": 0.924,
+        "text": "Stainless steelexhausts\u00b7Bicycle frames"
+      },
+      {
+        "bbox": [
+          [
+            889.11,
+            1230.24
+          ],
+          [
+            1013.71,
+            1230.24
+          ],
+          [
+            1013.71,
+            1259.27
+          ],
+          [
+            889.11,
+            1259.27
+          ]
+        ],
+        "confidence": 0.934,
+        "text": "Sheet metal"
+      },
+      {
+        "bbox": [
+          [
+            1050.0,
+            1231.45
+          ],
+          [
+            1213.31,
+            1231.45
+          ],
+          [
+            1213.31,
+            1259.27
+          ],
+          [
+            1050.0,
+            1259.27
+          ]
+        ],
+        "confidence": 0.983,
+        "text": "Automotivebody"
+      },
+      {
+        "bbox": [
+          [
+            457.26,
+            1232.66
+          ],
+          [
+            812.9,
+            1232.66
+          ],
+          [
+            812.9,
+            1256.85
+          ],
+          [
+            457.26,
+            1256.85
+          ]
+        ],
+        "confidence": 0.963,
+        "text": "Galvanized steel\u00b7Generalfabrication"
+      },
+      {
+        "bbox": [
+          [
+            1287.1,
+            1232.66
+          ],
+          [
+            1441.94,
+            1232.66
+          ],
+          [
+            1441.94,
+            1260.48
+          ],
+          [
+            1287.1,
+            1260.48
+          ]
+        ],
+        "confidence": 0.91,
+        "text": "\u00b7Pipe and tubing"
+      },
+      {
+        "bbox": [
+          [
+            1457.66,
+            1232.66
+          ],
+          [
+            1614.92,
+            1232.66
+          ],
+          [
+            1614.92,
+            1256.85
+          ],
+          [
+            1457.66,
+            1256.85
+          ]
+        ],
+        "confidence": 0.914,
+        "text": "\u00b7Structural steel"
+      },
+      {
+        "bbox": [
+          [
+            2166.53,
+            1249.6
+          ],
+          [
+            2264.52,
+            1249.6
+          ],
+          [
+            2264.52,
+            1266.53
+          ],
+          [
+            2166.53,
+            1266.53
+          ]
+        ],
+        "confidence": 0.611,
+        "text": "TEIN MATEISALS"
+      },
+      {
+        "bbox": [
+          [
+            152.42,
+            1250.81
+          ],
+          [
+            412.5,
+            1250.81
+          ],
+          [
+            412.5,
+            1271.37
+          ],
+          [
+            152.42,
+            1271.37
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "TYPICALAPPLICATIONS"
+      },
+      {
+        "bbox": [
+          [
+            889.11,
+            1254.44
+          ],
+          [
+            971.37,
+            1262.9
+          ],
+          [
+            967.74,
+            1293.15
+          ],
+          [
+            885.48,
+            1284.68
+          ]
+        ],
+        "confidence": 0.9,
+        "text": "Jubing"
+      },
+      {
+        "bbox": [
+          [
+            454.84,
+            1259.27
+          ],
+          [
+            833.47,
+            1261.69
+          ],
+          [
+            833.47,
+            1290.73
+          ],
+          [
+            454.84,
+            1288.31
+          ]
+        ],
+        "confidence": 0.936,
+        "text": "\u00b7Pipe and tubing\u00b7Maintonance &ropair"
+      },
+      {
+        "bbox": [
+          [
+            1283.47,
+            1261.69
+          ],
+          [
+            1666.94,
+            1259.27
+          ],
+          [
+            1666.94,
+            1288.31
+          ],
+          [
+            1283.47,
+            1290.73
+          ]
+        ],
+        "confidence": 0.907,
+        "text": "\u00b7Pressure vesseks \u00b7Maintonance &ropair"
+      },
+      {
+        "bbox": [
+          [
+            1708.06,
+            1259.27
+          ],
+          [
+            2038.31,
+            1260.48
+          ],
+          [
+            2038.31,
+            1288.31
+          ],
+          [
+            1708.06,
+            1287.1
+          ]
+        ],
+        "confidence": 0.914,
+        "text": "\u00b7Thin wall pipe&tubing\u00b7Metal art"
+      },
+      {
+        "bbox": [
+          [
+            1050.0,
+            1260.48
+          ],
+          [
+            1203.63,
+            1260.48
+          ],
+          [
+            1203.63,
+            1284.68
+          ],
+          [
+            1050.0,
+            1284.68
+          ]
+        ],
+        "confidence": 0.883,
+        "text": "\u00b7Structuralstool"
+      },
+      {
+        "bbox": [
+          [
+            869.76,
+            1313.71
+          ],
+          [
+            966.53,
+            1313.71
+          ],
+          [
+            966.53,
+            1339.11
+          ],
+          [
+            869.76,
+            1339.11
+          ]
+        ],
+        "confidence": 0.983,
+        "text": "CLEAN/"
+      },
+      {
+        "bbox": [
+          [
+            1285.89,
+            1314.92
+          ],
+          [
+            1363.31,
+            1314.92
+          ],
+          [
+            1363.31,
+            1343.95
+          ],
+          [
+            1285.89,
+            1343.95
+          ]
+        ],
+        "confidence": 0.993,
+        "text": "MORE"
+      },
+      {
+        "bbox": [
+          [
+            2122.98,
+            1314.92
+          ],
+          [
+            2377.02,
+            1318.55
+          ],
+          [
+            2377.02,
+            1347.58
+          ],
+          [
+            2122.98,
+            1343.95
+          ]
+        ],
+        "confidence": 0.991,
+        "text": "TheDutyCycle"
+      },
+      {
+        "bbox": [
+          [
+            452.42,
+            1316.13
+          ],
+          [
+            531.05,
+            1316.13
+          ],
+          [
+            531.05,
+            1345.16
+          ],
+          [
+            452.42,
+            1345.16
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "MORE"
+      },
+      {
+        "bbox": [
+          [
+            272.18,
+            1317.34
+          ],
+          [
+            408.87,
+            1317.34
+          ],
+          [
+            408.87,
+            1345.16
+          ],
+          [
+            272.18,
+            1345.16
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "HOWCLEAN"
+      },
+      {
+        "bbox": [
+          [
+            1700.81,
+            1317.34
+          ],
+          [
+            1847.18,
+            1317.34
+          ],
+          [
+            1847.18,
+            1345.16
+          ],
+          [
+            1700.81,
+            1345.16
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "EXTREMELY"
+      },
+      {
+        "bbox": [
+          [
+            867.34,
+            1336.69
+          ],
+          [
+            1089.92,
+            1336.69
+          ],
+          [
+            1089.92,
+            1364.52
+          ],
+          [
+            867.34,
+            1364.52
+          ]
+        ],
+        "confidence": 0.987,
+        "text": "MINIMALSPATTER"
+      },
+      {
+        "bbox": [
+          [
+            105.24,
+            1337.9
+          ],
+          [
+            410.08,
+            1337.9
+          ],
+          [
+            410.08,
+            1365.73
+          ],
+          [
+            105.24,
+            1365.73
+          ]
+        ],
+        "confidence": 0.99,
+        "text": "DOYOUNEEDYOURWELD?"
+      },
+      {
+        "bbox": [
+          [
+            454.84,
+            1340.32
+          ],
+          [
+            563.71,
+            1340.32
+          ],
+          [
+            563.71,
+            1365.73
+          ],
+          [
+            454.84,
+            1365.73
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "SPATTER"
+      },
+      {
+        "bbox": [
+          [
+            1288.31,
+            1340.32
+          ],
+          [
+            1399.6,
+            1340.32
+          ],
+          [
+            1399.6,
+            1365.73
+          ],
+          [
+            1288.31,
+            1365.73
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "SPATTER"
+      },
+      {
+        "bbox": [
+          [
+            1703.23,
+            1340.32
+          ],
+          [
+            1787.9,
+            1340.32
+          ],
+          [
+            1787.9,
+            1365.73
+          ],
+          [
+            1703.23,
+            1365.73
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "CLEAN"
+      },
+      {
+        "bbox": [
+          [
+            2125.4,
+            1341.53
+          ],
+          [
+            2377.02,
+            1341.53
+          ],
+          [
+            2377.02,
+            1360.89
+          ],
+          [
+            2125.4,
+            1360.89
+          ]
+        ],
+        "confidence": 0.8,
+        "text": "numberefminuiet,withn10minte"
+      },
+      {
+        "bbox": [
+          [
+            521.37,
+            1410.48
+          ],
+          [
+            826.21,
+            1410.48
+          ],
+          [
+            826.21,
+            1441.94
+          ],
+          [
+            521.37,
+            1441.94
+          ]
+        ],
+        "confidence": 0.987,
+        "text": "FLUX-CORED/FCAW"
+      },
+      {
+        "bbox": [
+          [
+            932.66,
+            1410.48
+          ],
+          [
+            1115.32,
+            1410.48
+          ],
+          [
+            1115.32,
+            1443.15
+          ],
+          [
+            932.66,
+            1443.15
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "MIG/GMAW"
+      },
+      {
+        "bbox": [
+          [
+            1357.26,
+            1410.48
+          ],
+          [
+            1571.37,
+            1410.48
+          ],
+          [
+            1571.37,
+            1443.15
+          ],
+          [
+            1357.26,
+            1443.15
+          ]
+        ],
+        "confidence": 0.987,
+        "text": "STICK/SMAW"
+      },
+      {
+        "bbox": [
+          [
+            1772.18,
+            1410.48
+          ],
+          [
+            1939.11,
+            1410.48
+          ],
+          [
+            1939.11,
+            1443.15
+          ],
+          [
+            1772.18,
+            1443.15
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "TIG/GTAW"
+      },
+      {
+        "bbox": [
+          [
+            2135.08,
+            1423.79
+          ],
+          [
+            2369.76,
+            1421.37
+          ],
+          [
+            2369.76,
+            1444.35
+          ],
+          [
+            2135.08,
+            1446.77
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "DUTYCYCLEEXAMPLE"
+      },
+      {
+        "bbox": [
+          [
+            221.37,
+            1454.03
+          ],
+          [
+            371.37,
+            1456.45
+          ],
+          [
+            371.37,
+            1489.11
+          ],
+          [
+            221.37,
+            1486.69
+          ]
+        ],
+        "confidence": 0.931,
+        "text": "USE THIS"
+      },
+      {
+        "bbox": [
+          [
+            471.77,
+            1456.45
+          ],
+          [
+            795.97,
+            1456.45
+          ],
+          [
+            795.97,
+            1480.65
+          ],
+          [
+            471.77,
+            1480.65
+          ]
+        ],
+        "confidence": 0.937,
+        "text": "Ideal for outdoor or windyconditions"
+      },
+      {
+        "bbox": [
+          [
+            886.69,
+            1456.45
+          ],
+          [
+            1222.98,
+            1456.45
+          ],
+          [
+            1222.98,
+            1484.27
+          ],
+          [
+            886.69,
+            1484.27
+          ]
+        ],
+        "confidence": 0.959,
+        "text": "Fast production (high welding speeds)"
+      },
+      {
+        "bbox": [
+          [
+            1313.71,
+            1456.45
+          ],
+          [
+            1640.32,
+            1458.87
+          ],
+          [
+            1640.32,
+            1486.69
+          ],
+          [
+            1313.71,
+            1484.27
+          ]
+        ],
+        "confidence": 0.891,
+        "text": "\u00b7Ideai for outdoor or windy conditions"
+      },
+      {
+        "bbox": [
+          [
+            1729.84,
+            1456.45
+          ],
+          [
+            1927.02,
+            1456.45
+          ],
+          [
+            1927.02,
+            1484.27
+          ],
+          [
+            1729.84,
+            1484.27
+          ]
+        ],
+        "confidence": 0.959,
+        "text": "Highest quality welds"
+      },
+      {
+        "bbox": [
+          [
+            2125.4,
+            1458.87
+          ],
+          [
+            2374.6,
+            1460.08
+          ],
+          [
+            2374.6,
+            1487.9
+          ],
+          [
+            2125.4,
+            1486.69
+          ]
+        ],
+        "confidence": 0.991,
+        "text": "165A@30%DutyCycle"
+      },
+      {
+        "bbox": [
+          [
+            885.48,
+            1485.48
+          ],
+          [
+            1036.69,
+            1487.9
+          ],
+          [
+            1036.69,
+            1513.31
+          ],
+          [
+            885.48,
+            1510.89
+          ]
+        ],
+        "confidence": 0.934,
+        "text": "Easiest toleam"
+      },
+      {
+        "bbox": [
+          [
+            1312.5,
+            1485.48
+          ],
+          [
+            1605.24,
+            1486.69
+          ],
+          [
+            1605.24,
+            1515.73
+          ],
+          [
+            1312.5,
+            1514.52
+          ]
+        ],
+        "confidence": 0.92,
+        "text": "Forgiving on rusty or dirty steels"
+      },
+      {
+        "bbox": [
+          [
+            1727.42,
+            1485.48
+          ],
+          [
+            2058.87,
+            1487.9
+          ],
+          [
+            2058.87,
+            1515.73
+          ],
+          [
+            1727.42,
+            1513.31
+          ]
+        ],
+        "confidence": 0.898,
+        "text": "\u00b7Extrenely aesthetic weld appearance"
+      },
+      {
+        "bbox": [
+          [
+            70.16,
+            1489.11
+          ],
+          [
+            370.16,
+            1489.11
+          ],
+          [
+            370.16,
+            1516.94
+          ],
+          [
+            70.16,
+            1516.94
+          ]
+        ],
+        "confidence": 0.96,
+        "text": "WELDING PROCESS"
+      },
+      {
+        "bbox": [
+          [
+            469.35,
+            1489.11
+          ],
+          [
+            758.47,
+            1489.11
+          ],
+          [
+            758.47,
+            1513.31
+          ],
+          [
+            469.35,
+            1513.31
+          ]
+        ],
+        "confidence": 0.951,
+        "text": "Forgiving on rusty or dirty steels"
+      },
+      {
+        "bbox": [
+          [
+            2124.19,
+            1501.21
+          ],
+          [
+            2200.4,
+            1501.21
+          ],
+          [
+            2200.4,
+            1525.4
+          ],
+          [
+            2124.19,
+            1525.4
+          ]
+        ],
+        "confidence": 0.854,
+        "text": "3 Minutes"
+      },
+      {
+        "bbox": [
+          [
+            2298.39,
+            1502.42
+          ],
+          [
+            2377.02,
+            1502.42
+          ],
+          [
+            2377.02,
+            1527.82
+          ],
+          [
+            2298.39,
+            1527.82
+          ]
+        ],
+        "confidence": 0.867,
+        "text": "7 MInutas"
+      },
+      {
+        "bbox": [
+          [
+            885.48,
+            1515.73
+          ],
+          [
+            1115.32,
+            1518.15
+          ],
+          [
+            1115.32,
+            1545.97
+          ],
+          [
+            885.48,
+            1543.55
+          ]
+        ],
+        "confidence": 0.913,
+        "text": "Clean welds with no slag"
+      },
+      {
+        "bbox": [
+          [
+            468.15,
+            1518.15
+          ],
+          [
+            826.21,
+            1518.15
+          ],
+          [
+            826.21,
+            1545.97
+          ],
+          [
+            468.15,
+            1545.97
+          ]
+        ],
+        "confidence": 0.904,
+        "text": "\u25aaGood out of position welding capabilities"
+      },
+      {
+        "bbox": [
+          [
+            1313.71,
+            1518.15
+          ],
+          [
+            1478.23,
+            1518.15
+          ],
+          [
+            1478.23,
+            1545.97
+          ],
+          [
+            1313.71,
+            1545.97
+          ]
+        ],
+        "confidence": 0.916,
+        "text": "Doep penotration"
+      },
+      {
+        "bbox": [
+          [
+            1728.63,
+            1518.15
+          ],
+          [
+            2055.24,
+            1518.15
+          ],
+          [
+            2055.24,
+            1545.97
+          ],
+          [
+            1728.63,
+            1545.97
+          ]
+        ],
+        "confidence": 0.934,
+        "text": "\u2022Can be used on a varioty of matorials"
+      },
+      {
+        "bbox": [
+          [
+            2305.65,
+            1521.77
+          ],
+          [
+            2370.97,
+            1524.19
+          ],
+          [
+            2369.76,
+            1549.6
+          ],
+          [
+            2304.44,
+            1547.18
+          ]
+        ],
+        "confidence": 0.945,
+        "text": "Resting"
+      },
+      {
+        "bbox": [
+          [
+            2132.66,
+            1522.98
+          ],
+          [
+            2196.77,
+            1525.4
+          ],
+          [
+            2195.56,
+            1547.18
+          ],
+          [
+            2131.45,
+            1544.76
+          ]
+        ],
+        "confidence": 0.943,
+        "text": "Welding"
+      },
+      {
+        "bbox": [
+          [
+            469.35,
+            1548.39
+          ],
+          [
+            757.26,
+            1548.39
+          ],
+          [
+            757.26,
+            1572.58
+          ],
+          [
+            469.35,
+            1572.58
+          ]
+        ],
+        "confidence": 0.956,
+        "text": "\u2022High deposition rates achievable"
+      },
+      {
+        "bbox": [
+          [
+            887.9,
+            1548.39
+          ],
+          [
+            1164.92,
+            1548.39
+          ],
+          [
+            1164.92,
+            1572.58
+          ],
+          [
+            887.9,
+            1572.58
+          ]
+        ],
+        "confidence": 0.931,
+        "text": "Better control en thin materials"
+      },
+      {
+        "bbox": [
+          [
+            1728.63,
+            1548.39
+          ],
+          [
+            1875.0,
+            1548.39
+          ],
+          [
+            1875.0,
+            1572.58
+          ],
+          [
+            1728.63,
+            1572.58
+          ]
+        ],
+        "confidence": 0.951,
+        "text": "Precise control"
+      },
+      {
+        "bbox": [
+          [
+            1316.13,
+            1552.02
+          ],
+          [
+            1607.66,
+            1552.02
+          ],
+          [
+            1607.66,
+            1572.58
+          ],
+          [
+            1316.13,
+            1572.58
+          ]
+        ],
+        "confidence": 0.951,
+        "text": "+Goodchoice forthickermaterials"
+      }
+    ],
+    "doc_id": "selection-chart",
+    "element_id": "selection-chart:page:001:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "selection-chart:page:001:ocr:page",
+    "page": 1,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/selection-chart/page-001.png",
+    "source_doc": "selection-chart.pdf",
+    "source_element_id": "selection-chart:page:001",
+    "target_path": "products/vulcan-omnipro-220/knowledge/pages/selection-chart/page-001.png",
+    "target_type": "page_image",
+    "text": "HOW TO CHOOSE\nWELDER\nIDENTIFYYOURINPUTVOLTAGE:\nIMPORTANT!\nDOYOUHAVE120VOLT0R240VOLT?\nMIGorFLUXCORED?\nLOW\nMODERATE\nM07\nHIGH\nHIGH\nHIGH\nHIGH\nMODERATE\nMODERATE\nLOW\nMODERATE\nLOW\nWHATISYOURSKILLLEVEL?\nPSES COIEWRE\nWILLYOUNEED\nUSES SOLII WRE\nGASREQUIRED\nGASREQUIRED\nNO-GAS REQUIRED\nNO-GASREQUIRED\nSHIELDINGGAS?\nIndoorweldingreoomended\nUSES SRIELDINE CAS\nIndoorwelding reoommended\nCLBAWELDS\nNINNALSPATTER\nSTEEL\nSTEEL\nSTEEL,STAIHLESS\nDCIGREQUIRED\nSTEEL\nSTEEL,CHROMEMOLY\nWELISDVEE\nWHATTYPEOFMATERIAL\nSTAINLESSSTEEL\nSTAINLESSSTEEL\nNLLSOALEAD BOST\nSTAINLESSSTEEL\nWILLYOUBEWELDING?\nALUMIHUM,\nALUMINUM(Spool gunrequlred)\nCASTINGS\nACTIGREQUIRED\nMAGNESIUMALLOYS\nIEDRESNNIHAL\nCABESED QUTDDOR\nWHATISYOUR\n18Gauge to 5/16\"\nINWYCONIO\u7cbeS\n24Gauge to3/16\"\n22 Gauge to 3/8\"\n10 Gauge to 1/2\"\nMATERIALTHICKNESS?\nMAEDLES MATERAL\nGAPSWELL\nStainless steelexhausts\u00b7Bicycle frames\nSheet metal\nAutomotivebody\nGalvanized steel\u00b7Generalfabrication\n\u00b7Pipe and tubing\n\u00b7Structural steel\nTEIN MATEISALS\nTYPICALAPPLICATIONS\nJubing\n\u00b7Pipe and tubing\u00b7Maintonance &ropair\n\u00b7Pressure vesseks \u00b7Maintonance &ropair\n\u00b7Thin wall pipe&tubing\u00b7Metal art\n\u00b7Structuralstool\nCLEAN/\nMORE\nTheDutyCycle\nMORE\nHOWCLEAN\nEXTREMELY\nMINIMALSPATTER\nDOYOUNEEDYOURWELD?\nSPATTER\nSPATTER\nCLEAN\nnumberefminuiet,withn10minte\nFLUX-CORED/FCAW\nMIG/GMAW\nSTICK/SMAW\nTIG/GTAW\nDUTYCYCLEEXAMPLE\nUSE THIS\nIdeal for outdoor or windyconditions\nFast production (high welding speeds)\n\u00b7Ideai for outdoor or windy conditions\nHighest quality welds\n165A@30%DutyCycle\nEasiest toleam\nForgiving on rusty or dirty steels\n\u00b7Extrenely aesthetic weld appearance\nWELDING PROCESS\nForgiving on rusty or dirty steels\n3 Minutes\n7 MInutas\nClean welds with no slag\n\u25aaGood out of position welding capabilities\nDoep penotration\n\u2022Can be used on a varioty of matorials\nResting\nWelding\n\u2022High deposition rates achievable\nBetter control en thin materials\nPrecise control\n+Goodchoice forthickermaterials",
+    "word_count": 212
+  },
+  {
+    "avg_confidence": 0.864,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            77.0,
+            46.0
+          ],
+          [
+            287.0,
+            46.0
+          ],
+          [
+            287.0,
+            74.0
+          ],
+          [
+            77.0,
+            74.0
+          ]
+        ],
+        "confidence": 0.972,
+        "text": "MIG Stainless"
+      },
+      {
+        "bbox": [
+          [
+            273.0,
+            46.0
+          ],
+          [
+            362.0,
+            47.0
+          ],
+          [
+            362.0,
+            73.0
+          ],
+          [
+            273.0,
+            72.0
+          ]
+        ],
+        "confidence": 0.996,
+        "text": "Steel"
+      },
+      {
+        "bbox": [
+          [
+            309.0,
+            227.0
+          ],
+          [
+            330.0,
+            227.0
+          ],
+          [
+            330.0,
+            244.0
+          ],
+          [
+            309.0,
+            244.0
+          ]
+        ],
+        "confidence": 0.912,
+        "text": "\u4e8c"
+      },
+      {
+        "bbox": [
+          [
+            261.0,
+            228.0
+          ],
+          [
+            281.0,
+            228.0
+          ],
+          [
+            281.0,
+            243.0
+          ],
+          [
+            261.0,
+            243.0
+          ]
+        ],
+        "confidence": 0.575,
+        "text": "\u5b81"
+      }
+    ],
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:020:image:xref:133:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "owner-manual:page:020:image:xref:133:ocr:image",
+    "page": 20,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-020.png",
+    "source_doc": "owner-manual.pdf",
+    "source_element_id": "owner-manual:page:020:image:xref:133",
+    "target_path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p020-img01-xref133.png",
+    "target_type": "embedded_image",
+    "text": "MIG Stainless\nSteel\n\u4e8c\n\u5b81",
+    "word_count": 5
+  },
+  {
+    "avg_confidence": 0.993,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            405.0,
+            289.0
+          ],
+          [
+            578.0,
+            291.0
+          ],
+          [
+            577.0,
+            334.0
+          ],
+          [
+            404.0,
+            332.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "Tri-Mix"
+      },
+      {
+        "bbox": [
+          [
+            171.0,
+            290.0
+          ],
+          [
+            398.0,
+            292.0
+          ],
+          [
+            398.0,
+            335.0
+          ],
+          [
+            171.0,
+            333.0
+          ]
+        ],
+        "confidence": 0.986,
+        "text": "Stainless"
+      },
+      {
+        "bbox": [
+          [
+            329.0,
+            370.0
+          ],
+          [
+            417.0,
+            370.0
+          ],
+          [
+            417.0,
+            387.0
+          ],
+          [
+            329.0,
+            387.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "CONFIRM"
+      }
+    ],
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:020:image:xref:134:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "owner-manual:page:020:image:xref:134:ocr:image",
+    "page": 20,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-020.png",
+    "source_doc": "owner-manual.pdf",
+    "source_element_id": "owner-manual:page:020:image:xref:134",
+    "target_path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p020-img02-xref134.png",
+    "target_type": "embedded_image",
+    "text": "Tri-Mix\nStainless\nCONFIRM",
+    "word_count": 3
+  },
+  {
+    "avg_confidence": 0.996,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            223.0,
+            42.0
+          ],
+          [
+            600.0,
+            43.0
+          ],
+          [
+            600.0,
+            80.0
+          ],
+          [
+            223.0,
+            79.0
+          ]
+        ],
+        "confidence": 0.993,
+        "text": "MIG Stainless Steel"
+      },
+      {
+        "bbox": [
+          [
+            466.0,
+            141.0
+          ],
+          [
+            596.0,
+            144.0
+          ],
+          [
+            595.0,
+            172.0
+          ],
+          [
+            466.0,
+            169.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "Thickness"
+      },
+      {
+        "bbox": [
+          [
+            195.0,
+            143.0
+          ],
+          [
+            313.0,
+            145.0
+          ],
+          [
+            313.0,
+            169.0
+          ],
+          [
+            195.0,
+            168.0
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "Diameter"
+      },
+      {
+        "bbox": [
+          [
+            322.0,
+            361.0
+          ],
+          [
+            408.0,
+            361.0
+          ],
+          [
+            408.0,
+            379.0
+          ],
+          [
+            322.0,
+            379.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "CONFIRM"
+      }
+    ],
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:020:image:xref:136:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "owner-manual:page:020:image:xref:136:ocr:image",
+    "page": 20,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-020.png",
+    "source_doc": "owner-manual.pdf",
+    "source_element_id": "owner-manual:page:020:image:xref:136",
+    "target_path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p020-img03-xref136.png",
+    "target_type": "embedded_image",
+    "text": "MIG Stainless Steel\nThickness\nDiameter\nCONFIRM",
+    "word_count": 6
+  },
+  {
+    "avg_confidence": 0.876,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            608.0,
+            44.0
+          ],
+          [
+            650.0,
+            44.0
+          ],
+          [
+            650.0,
+            92.0
+          ],
+          [
+            608.0,
+            92.0
+          ]
+        ],
+        "confidence": 0.685,
+        "text": "V"
+      },
+      {
+        "bbox": [
+          [
+            241.0,
+            157.0
+          ],
+          [
+            286.0,
+            157.0
+          ],
+          [
+            286.0,
+            207.0
+          ],
+          [
+            241.0,
+            207.0
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "A"
+      },
+      {
+        "bbox": [
+          [
+            608.0,
+            158.0
+          ],
+          [
+            648.0,
+            158.0
+          ],
+          [
+            648.0,
+            204.0
+          ],
+          [
+            608.0,
+            204.0
+          ]
+        ],
+        "confidence": 0.605,
+        "text": "V"
+      },
+      {
+        "bbox": [
+          [
+            144.0,
+            259.0
+          ],
+          [
+            262.0,
+            261.0
+          ],
+          [
+            261.0,
+            285.0
+          ],
+          [
+            143.0,
+            283.0
+          ]
+        ],
+        "confidence": 0.959,
+        "text": "MIG Steel"
+      },
+      {
+        "bbox": [
+          [
+            529.0,
+            264.0
+          ],
+          [
+            595.0,
+            262.0
+          ],
+          [
+            595.0,
+            289.0
+          ],
+          [
+            530.0,
+            291.0
+          ]
+        ],
+        "confidence": 0.99,
+        "text": ".030\""
+      },
+      {
+        "bbox": [
+          [
+            143.0,
+            306.0
+          ],
+          [
+            195.0,
+            306.0
+          ],
+          [
+            195.0,
+            332.0
+          ],
+          [
+            143.0,
+            332.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "C25"
+      },
+      {
+        "bbox": [
+          [
+            530.0,
+            307.0
+          ],
+          [
+            596.0,
+            309.0
+          ],
+          [
+            596.0,
+            334.0
+          ],
+          [
+            529.0,
+            332.0
+          ]
+        ],
+        "confidence": 0.995,
+        "text": "00Ga"
+      },
+      {
+        "bbox": [
+          [
+            315.0,
+            356.0
+          ],
+          [
+            407.0,
+            356.0
+          ],
+          [
+            407.0,
+            375.0
+          ],
+          [
+            315.0,
+            375.0
+          ]
+        ],
+        "confidence": 0.997,
+        "text": "SETTINGS"
+      },
+      {
+        "bbox": [
+          [
+            125.0,
+            376.0
+          ],
+          [
+            149.0,
+            376.0
+          ],
+          [
+            149.0,
+            401.0
+          ],
+          [
+            125.0,
+            401.0
+          ]
+        ],
+        "confidence": 0.66,
+        "text": "%"
+      }
+    ],
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:020:image:xref:138:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "owner-manual:page:020:image:xref:138:ocr:image",
+    "page": 20,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-020.png",
+    "source_doc": "owner-manual.pdf",
+    "source_element_id": "owner-manual:page:020:image:xref:138",
+    "target_path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p020-img04-xref138.png",
+    "target_type": "embedded_image",
+    "text": "V\nA\nV\nMIG Steel\n.030\"\nC25\n00Ga\nSETTINGS\n%",
+    "word_count": 10
+  },
+  {
+    "avg_confidence": 0.998,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            207.0,
+            67.0
+          ],
+          [
+            450.0,
+            63.0
+          ],
+          [
+            451.0,
+            111.0
+          ],
+          [
+            207.0,
+            114.0
+          ]
+        ],
+        "confidence": 0.998,
+        "text": "Spot Timer"
+      }
+    ],
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:021:image:xref:142:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "owner-manual:page:021:image:xref:142:ocr:image",
+    "page": 21,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-021.png",
+    "source_doc": "owner-manual.pdf",
+    "source_element_id": "owner-manual:page:021:image:xref:142",
+    "target_path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p021-img01-xref142.png",
+    "target_type": "embedded_image",
+    "text": "Spot Timer",
+    "word_count": 2
+  },
+  {
+    "avg_confidence": 0.994,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            176.0,
+            61.0
+          ],
+          [
+            482.0,
+            69.0
+          ],
+          [
+            481.0,
+            117.0
+          ],
+          [
+            174.0,
+            109.0
+          ]
+        ],
+        "confidence": 0.994,
+        "text": "Recall Setting"
+      }
+    ],
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:021:image:xref:144:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "owner-manual:page:021:image:xref:144:ocr:image",
+    "page": 21,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-021.png",
+    "source_doc": "owner-manual.pdf",
+    "source_element_id": "owner-manual:page:021:image:xref:144",
+    "target_path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p021-img02-xref144.png",
+    "target_type": "embedded_image",
+    "text": "Recall Setting",
+    "word_count": 2
+  },
+  {
+    "avg_confidence": 0.959,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            303.0,
+            61.0
+          ],
+          [
+            467.0,
+            72.0
+          ],
+          [
+            464.0,
+            117.0
+          ],
+          [
+            300.0,
+            107.0
+          ]
+        ],
+        "confidence": 1.0,
+        "text": "Setting"
+      },
+      {
+        "bbox": [
+          [
+            191.0,
+            68.0
+          ],
+          [
+            325.0,
+            68.0
+          ],
+          [
+            325.0,
+            107.0
+          ],
+          [
+            191.0,
+            107.0
+          ]
+        ],
+        "confidence": 0.917,
+        "text": "Save S"
+      }
+    ],
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:021:image:xref:146:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "owner-manual:page:021:image:xref:146:ocr:image",
+    "page": 21,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-021.png",
+    "source_doc": "owner-manual.pdf",
+    "source_element_id": "owner-manual:page:021:image:xref:146",
+    "target_path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p021-img03-xref146.png",
+    "target_type": "embedded_image",
+    "text": "Setting\nSave S",
+    "word_count": 3
+  },
+  {
+    "avg_confidence": 0.909,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            195.0,
+            68.0
+          ],
+          [
+            449.0,
+            68.0
+          ],
+          [
+            449.0,
+            106.0
+          ],
+          [
+            195.0,
+            106.0
+          ]
+        ],
+        "confidence": 0.94,
+        "text": "Run-ln WFS"
+      },
+      {
+        "bbox": [
+          [
+            284.0,
+            170.0
+          ],
+          [
+            372.0,
+            170.0
+          ],
+          [
+            372.0,
+            238.0
+          ],
+          [
+            284.0,
+            238.0
+          ]
+        ],
+        "confidence": 0.975,
+        "text": "8"
+      },
+      {
+        "bbox": [
+          [
+            168.0,
+            333.0
+          ],
+          [
+            199.0,
+            333.0
+          ],
+          [
+            199.0,
+            356.0
+          ],
+          [
+            168.0,
+            356.0
+          ]
+        ],
+        "confidence": 0.811,
+        "text": "\u4e2d"
+      }
+    ],
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:021:image:xref:148:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "owner-manual:page:021:image:xref:148:ocr:image",
+    "page": 21,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-021.png",
+    "source_doc": "owner-manual.pdf",
+    "source_element_id": "owner-manual:page:021:image:xref:148",
+    "target_path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p021-img04-xref148.png",
+    "target_type": "embedded_image",
+    "text": "Run-ln WFS\n8\n\u4e2d",
+    "word_count": 4
+  },
+  {
+    "avg_confidence": 0.767,
+    "blocks": [
+      {
+        "bbox": [
+          [
+            219.0,
+            68.0
+          ],
+          [
+            454.0,
+            71.0
+          ],
+          [
+            454.0,
+            108.0
+          ],
+          [
+            218.0,
+            105.0
+          ]
+        ],
+        "confidence": 0.973,
+        "text": "Inductance"
+      },
+      {
+        "bbox": [
+          [
+            274.0,
+            187.0
+          ],
+          [
+            382.0,
+            187.0
+          ],
+          [
+            382.0,
+            221.0
+          ],
+          [
+            274.0,
+            221.0
+          ]
+        ],
+        "confidence": 0.561,
+        "text": "59"
+      }
+    ],
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:021:image:xref:150:ocr",
+    "element_type": "ocr_text",
+    "ocr_id": "owner-manual:page:021:image:xref:150:ocr:image",
+    "page": 21,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-021.png",
+    "source_doc": "owner-manual.pdf",
+    "source_element_id": "owner-manual:page:021:image:xref:150",
+    "target_path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p021-img05-xref150.png",
+    "target_type": "embedded_image",
+    "text": "Inductance\n59",
+    "word_count": 2
+  }
+]

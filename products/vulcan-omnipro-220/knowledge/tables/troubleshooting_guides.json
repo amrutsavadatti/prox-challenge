@@ -1,0 +1,55 @@
+{
+  "table_id": "troubleshooting_guides",
+  "product_id": "vulcan-omnipro-220",
+  "status": "initial_hand_verified_seed",
+  "rows": [
+    {
+      "symptom": "porosity in flux-cored or MIG weld",
+      "applies_to": ["MIG", "Flux-Cored"],
+      "checks": [
+        {
+          "cause": "Incorrect polarity",
+          "solution": "Check that polarity is set correctly for the type of welding. For MIG use DCEP; for Flux-Cored self-shielded use DCEN."
+        },
+        {
+          "cause": "Insufficient shielding gas for MIG",
+          "solution": "Increase gas flow, clean the nozzle, and maintain proper contact-tip-to-work distance."
+        },
+        {
+          "cause": "Incorrect shielding gas for MIG",
+          "solution": "Use the shielding gas recommended by the wire supplier."
+        },
+        {
+          "cause": "Dirty workpiece or welding wire",
+          "solution": "Clean the workpiece down to bare metal and make sure the wire is clean and free from oil, coatings, rust, and residues."
+        },
+        {
+          "cause": "Inconsistent travel speed",
+          "solution": "Maintain steady travel speed."
+        },
+        {
+          "cause": "Contact-tip-to-work distance too long",
+          "solution": "Reduce CTWD."
+        }
+      ],
+      "source_refs": [
+        {
+          "doc_id": "owner-manual",
+          "source_doc": "owner-manual.pdf",
+          "page": 37,
+          "element_id": "owner-manual:page:037"
+        },
+        {
+          "doc_id": "owner-manual",
+          "source_doc": "owner-manual.pdf",
+          "page": 43,
+          "element_id": "owner-manual:page:043"
+        }
+      ],
+      "page_images": [
+        "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-037.png",
+        "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-043.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "table_id": "polarity_setups",
+  "product_id": "vulcan-omnipro-220",
+  "status": "hand_verified_from_manual_pages",
+  "rows": [
+    {
+      "process": "MIG",
+      "wire_or_mode": "solid core gas shielded",
+      "polarity": "DCEP",
+      "polarity_expanded": "Direct Current Electrode Positive",
+      "ground_clamp_socket": "Negative (-)",
+      "torch_or_wire_feed_socket": "Positive (+)",
+      "notes": "Use for solid core gas shielded MIG welding.",
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 14,
+        "element_id": "owner-manual:page:014"
+      },
+      "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-014.png"
+    },
+    {
+      "process": "Flux-Cored",
+      "wire_or_mode": "self-shielded gasless flux-cored",
+      "polarity": "DCEN",
+      "polarity_expanded": "Direct Current Electrode Negative",
+      "ground_clamp_socket": "Positive (+)",
+      "torch_or_wire_feed_socket": "Negative (-)",
+      "notes": "Use for gasless flux-cored welding.",
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 13,
+        "element_id": "owner-manual:page:013"
+      },
+      "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-013.png"
+    },
+    {
+      "process": "TIG",
+      "wire_or_mode": "TIG torch",
+      "polarity": "DCEN",
+      "polarity_expanded": "Direct Current Electrode Negative",
+      "ground_clamp_socket": "Positive (+)",
+      "torch_or_wire_feed_socket": "Negative (-)",
+      "notes": "Ground clamp cable goes in the positive socket; TIG torch cable goes in the negative socket.",
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 24,
+        "element_id": "owner-manual:page:024"
+      },
+      "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png"
+    },
+    {
+      "process": "Stick",
+      "wire_or_mode": "electrode holder",
+      "polarity": "DCEP",
+      "polarity_expanded": "Direct Current Electrode Positive",
+      "ground_clamp_socket": "Negative (-)",
+      "torch_or_wire_feed_socket": "Positive (+)",
+      "notes": "Ground clamp cable goes in the negative socket; electrode holder cable goes in the positive socket.",
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 27,
+        "element_id": "owner-manual:page:027"
+      },
+      "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-027.png"
+    }
+  ]
+}

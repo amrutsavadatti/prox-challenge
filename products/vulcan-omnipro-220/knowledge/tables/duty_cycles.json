@@ -1,0 +1,240 @@
+{
+  "table_id": "duty_cycles",
+  "product_id": "vulcan-omnipro-220",
+  "status": "hand_verified_from_manual_pages",
+  "notes": [
+    "The sample question 'MIG welding at 200A on 240V' resolves to 25% duty cycle, not 30%.",
+    "Rows with 60% values come from the machine rating label reproduced on owner manual pages 14 and 27.",
+    "Rows with welding/rest minutes come from the duty-cycle explanation charts on owner manual pages 19 and 29."
+  ],
+  "rows": [
+    {
+      "process": "MIG",
+      "input_voltage": "240 VAC",
+      "amperage": 200,
+      "duty_cycle_percent": 25,
+      "minutes_welding_per_10": 2.5,
+      "minutes_resting_per_10": 7.5,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 19,
+        "element_id": "owner-manual:page:019"
+      }
+    },
+    {
+      "process": "MIG",
+      "input_voltage": "240 VAC",
+      "amperage": 130,
+      "duty_cycle_percent": 60,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 14,
+        "element_id": "owner-manual:page:014"
+      }
+    },
+    {
+      "process": "MIG",
+      "input_voltage": "240 VAC",
+      "amperage": 115,
+      "duty_cycle_percent": 100,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 19,
+        "element_id": "owner-manual:page:019"
+      }
+    },
+    {
+      "process": "MIG",
+      "input_voltage": "120 VAC",
+      "amperage": 100,
+      "duty_cycle_percent": 40,
+      "minutes_welding_per_10": 4,
+      "minutes_resting_per_10": 6,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 19,
+        "element_id": "owner-manual:page:019"
+      }
+    },
+    {
+      "process": "MIG",
+      "input_voltage": "120 VAC",
+      "amperage": 85,
+      "duty_cycle_percent": 60,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 27,
+        "element_id": "owner-manual:page:027"
+      }
+    },
+    {
+      "process": "MIG",
+      "input_voltage": "120 VAC",
+      "amperage": 75,
+      "duty_cycle_percent": 100,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 19,
+        "element_id": "owner-manual:page:019"
+      }
+    },
+    {
+      "process": "TIG",
+      "input_voltage": "240 VAC",
+      "amperage": 175,
+      "duty_cycle_percent": 30,
+      "minutes_welding_per_10": 3,
+      "minutes_resting_per_10": 7,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 29,
+        "element_id": "owner-manual:page:029"
+      }
+    },
+    {
+      "process": "TIG",
+      "input_voltage": "240 VAC",
+      "amperage": 125,
+      "duty_cycle_percent": 60,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 14,
+        "element_id": "owner-manual:page:014"
+      }
+    },
+    {
+      "process": "TIG",
+      "input_voltage": "240 VAC",
+      "amperage": 105,
+      "duty_cycle_percent": 100,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 29,
+        "element_id": "owner-manual:page:029"
+      }
+    },
+    {
+      "process": "TIG",
+      "input_voltage": "120 VAC",
+      "amperage": 125,
+      "duty_cycle_percent": 40,
+      "minutes_welding_per_10": 4,
+      "minutes_resting_per_10": 6,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 29,
+        "element_id": "owner-manual:page:029"
+      }
+    },
+    {
+      "process": "TIG",
+      "input_voltage": "120 VAC",
+      "amperage": 105,
+      "duty_cycle_percent": 60,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 27,
+        "element_id": "owner-manual:page:027"
+      }
+    },
+    {
+      "process": "TIG",
+      "input_voltage": "120 VAC",
+      "amperage": 90,
+      "duty_cycle_percent": 100,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 29,
+        "element_id": "owner-manual:page:029"
+      }
+    },
+    {
+      "process": "Stick",
+      "input_voltage": "240 VAC",
+      "amperage": 175,
+      "duty_cycle_percent": 25,
+      "minutes_welding_per_10": 2.5,
+      "minutes_resting_per_10": 7.5,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 29,
+        "element_id": "owner-manual:page:029"
+      }
+    },
+    {
+      "process": "Stick",
+      "input_voltage": "240 VAC",
+      "amperage": 115,
+      "duty_cycle_percent": 60,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 14,
+        "element_id": "owner-manual:page:014"
+      }
+    },
+    {
+      "process": "Stick",
+      "input_voltage": "240 VAC",
+      "amperage": 100,
+      "duty_cycle_percent": 100,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 29,
+        "element_id": "owner-manual:page:029"
+      }
+    },
+    {
+      "process": "Stick",
+      "input_voltage": "120 VAC",
+      "amperage": 80,
+      "duty_cycle_percent": 40,
+      "minutes_welding_per_10": 4,
+      "minutes_resting_per_10": 6,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 29,
+        "element_id": "owner-manual:page:029"
+      }
+    },
+    {
+      "process": "Stick",
+      "input_voltage": "120 VAC",
+      "amperage": 70,
+      "duty_cycle_percent": 60,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 27,
+        "element_id": "owner-manual:page:027"
+      }
+    },
+    {
+      "process": "Stick",
+      "input_voltage": "120 VAC",
+      "amperage": 60,
+      "duty_cycle_percent": 100,
+      "source_ref": {
+        "doc_id": "owner-manual",
+        "source_doc": "owner-manual.pdf",
+        "page": 29,
+        "element_id": "owner-manual:page:029"
+      }
+    }
+  ]
+}

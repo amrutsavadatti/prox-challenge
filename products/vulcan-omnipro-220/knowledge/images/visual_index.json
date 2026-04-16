@@ -1,0 +1,187 @@
+[
+  {
+    "description": "Full-page selection chart for choosing process, setup direction, and baseline settings.",
+    "path": "products/vulcan-omnipro-220/knowledge/pages/selection-chart/page-001.png",
+    "query_terms": [
+      "selection chart",
+      "how to choose",
+      "settings chart",
+      "material thickness",
+      "wire speed",
+      "voltage",
+      "process"
+    ],
+    "source_ref": {
+      "doc_id": "selection-chart",
+      "element_id": "selection-chart:page:001",
+      "page": 1,
+      "source_doc": "selection-chart.pdf"
+    },
+    "title": "Selection Chart Overview",
+    "visual_id": "selection-chart-overview"
+  },
+  {
+    "description": "Quick-start page showing wire spool loading, feed path, and cold wire feed steps.",
+    "path": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-001.png",
+    "query_terms": [
+      "quick start",
+      "wire spool",
+      "feed mechanism",
+      "wire loading",
+      "cold wire feed",
+      "guide"
+    ],
+    "source_ref": {
+      "doc_id": "quick-start-guide",
+      "element_id": "quick-start-guide:page:001",
+      "page": 1,
+      "source_doc": "quick-start-guide.pdf"
+    },
+    "title": "Quick Start Wire Loading",
+    "visual_id": "quick-start-wire-loading"
+  },
+  {
+    "description": "Quick-start page showing STICK, MIG, Flux-Cored, and TIG cable setup guidance.",
+    "path": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-002.png",
+    "query_terms": [
+      "quick start",
+      "stick cable setup",
+      "mig cable setup",
+      "flux cable setup",
+      "tig cable setup",
+      "positive terminal",
+      "negative terminal"
+    ],
+    "source_ref": {
+      "doc_id": "quick-start-guide",
+      "element_id": "quick-start-guide:page:002",
+      "page": 2,
+      "source_doc": "quick-start-guide.pdf"
+    },
+    "title": "Quick Start Cable Setup",
+    "visual_id": "quick-start-cable-setup"
+  },
+  {
+    "description": "Controls page with front-panel setting labels such as Spot Timer and Run-In WFS.",
+    "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-021.png",
+    "query_terms": [
+      "front panel",
+      "control panel",
+      "spot timer",
+      "run-in wfs",
+      "settings",
+      "controls"
+    ],
+    "source_ref": {
+      "doc_id": "owner-manual",
+      "element_id": "owner-manual:page:021",
+      "page": 21,
+      "source_doc": "owner-manual.pdf"
+    },
+    "title": "Front Panel Controls",
+    "visual_id": "front-panel-controls"
+  },
+  {
+    "description": "TIG setup diagram showing ground clamp cable in the positive socket and TIG torch cable in the negative socket.",
+    "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png",
+    "query_terms": [
+      "tig",
+      "gtaw",
+      "polarity",
+      "ground clamp",
+      "positive socket",
+      "negative socket",
+      "torch cable",
+      "dcen"
+    ],
+    "source_ref": {
+      "doc_id": "owner-manual",
+      "element_id": "owner-manual:page:024",
+      "page": 24,
+      "source_doc": "owner-manual.pdf"
+    },
+    "title": "TIG Polarity Setup",
+    "visual_id": "tig-polarity-setup"
+  },
+  {
+    "description": "Stick setup diagram showing ground clamp cable in the negative socket and electrode holder cable in the positive socket.",
+    "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-027.png",
+    "query_terms": [
+      "stick",
+      "smaw",
+      "polarity",
+      "ground clamp",
+      "electrode holder",
+      "positive socket",
+      "negative socket"
+    ],
+    "source_ref": {
+      "doc_id": "owner-manual",
+      "element_id": "owner-manual:page:027",
+      "page": 27,
+      "source_doc": "owner-manual.pdf"
+    },
+    "title": "Stick Polarity Setup",
+    "visual_id": "stick-polarity-setup"
+  },
+  {
+    "description": "Diagnosis page showing porosity examples and likely causes for wire welding.",
+    "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-037.png",
+    "query_terms": [
+      "porosity",
+      "weld defect",
+      "wire weld",
+      "mig",
+      "flux-cored",
+      "diagnosis"
+    ],
+    "source_ref": {
+      "doc_id": "owner-manual",
+      "element_id": "owner-manual:page:037",
+      "page": 37,
+      "source_doc": "owner-manual.pdf"
+    },
+    "title": "Wire Weld Porosity Diagnosis",
+    "visual_id": "porosity-diagnosis"
+  },
+  {
+    "description": "Troubleshooting table for wire feed issues, unstable arc, weak arc strength, and related welding faults.",
+    "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-042.png",
+    "query_terms": [
+      "troubleshooting",
+      "wire feed",
+      "arc not stable",
+      "weak arc",
+      "mig troubleshooting",
+      "flux-cored troubleshooting"
+    ],
+    "source_ref": {
+      "doc_id": "owner-manual",
+      "element_id": "owner-manual:page:042",
+      "page": 42,
+      "source_doc": "owner-manual.pdf"
+    },
+    "title": "MIG and Flux-Cored Troubleshooting",
+    "visual_id": "mig-flux-troubleshooting"
+  },
+  {
+    "description": "Troubleshooting page that includes Porosity in the Weld Metal causes and remedies.",
+    "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-043.png",
+    "query_terms": [
+      "porosity troubleshooting",
+      "weld metal",
+      "gas coverage",
+      "dirty workpiece",
+      "dcep",
+      "dcen"
+    ],
+    "source_ref": {
+      "doc_id": "owner-manual",
+      "element_id": "owner-manual:page:043",
+      "page": 43,
+      "source_doc": "owner-manual.pdf"
+    },
+    "title": "Porosity Troubleshooting",
+    "visual_id": "porosity-troubleshooting"
+  }
+]

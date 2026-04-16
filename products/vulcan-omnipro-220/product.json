@@ -1,0 +1,62 @@
+{
+  "brand": "Vulcan",
+  "category": "multiprocess welder",
+  "name": "Vulcan OmniPro 220",
+  "product_id": "vulcan-omnipro-220",
+  "source_documents": [
+    {
+      "bytes": 6770784,
+      "doc_id": "owner-manual",
+      "page_count": 48,
+      "relative_path": "files/owner-manual.pdf",
+      "sha256": "52aa60b4e51e9671b85c1077c23c42fc5db852ec9626e1a3bf55f0d664964789",
+      "source_doc": "owner-manual.pdf"
+    },
+    {
+      "bytes": 914587,
+      "doc_id": "quick-start-guide",
+      "page_count": 2,
+      "relative_path": "files/quick-start-guide.pdf",
+      "sha256": "4a44c4b18988c05b9dabaa953392f9ecd598dcc689d4a75ec2f54f06a6fa400e",
+      "source_doc": "quick-start-guide.pdf"
+    },
+    {
+      "bytes": 2253676,
+      "doc_id": "selection-chart",
+      "page_count": 1,
+      "relative_path": "files/selection-chart.pdf",
+      "sha256": "670497435b031e4b6c48e5cec5322979fe8ab80d4f8380406cc492fee5f710f4",
+      "source_doc": "selection-chart.pdf"
+    }
+  ],
+  "source_images": [
+    {
+      "bbox": [],
+      "caption": "Vulcan OmniPro 220 exterior product photo.",
+      "doc_id": "product-photos",
+      "element_id": "product-photos:product-exterior",
+      "element_type": "product_photo",
+      "height": 1200,
+      "image_id": "product-exterior",
+      "needs_caption": false,
+      "page": null,
+      "path": "products/vulcan-omnipro-220/knowledge/images/product.webp",
+      "source_doc": "product.webp",
+      "width": 1200
+    },
+    {
+      "bbox": [],
+      "caption": "Vulcan OmniPro 220 inside panel product photo.",
+      "doc_id": "product-photos",
+      "element_id": "product-photos:product-inside-panel",
+      "element_type": "product_photo",
+      "height": 1200,
+      "image_id": "product-inside-panel",
+      "needs_caption": false,
+      "page": null,
+      "path": "products/vulcan-omnipro-220/knowledge/images/product-inside.webp",
+      "source_doc": "product-inside.webp",
+      "width": 1200
+    }
+  ]
+}

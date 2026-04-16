@@ -1,0 +1,326 @@
+[
+  {
+    "blocks": [
+      {
+        "bbox": [
+          164.68,
+          38.45,
+          167.04,
+          42.88
+        ],
+        "block_id": "block-001",
+        "text": "\u00ae"
+      },
+      {
+        "bbox": [
+          22.61,
+          88.77,
+          46.98,
+          97.23
+        ],
+        "block_id": "block-002",
+        "text": "Wingnut"
+      },
+      {
+        "bbox": [
+          323.06,
+          84.92,
+          360.09,
+          102.51
+        ],
+        "block_id": "block-003",
+        "text": "Feed\nMechanism"
+      },
+      {
+        "bbox": [
+          22.61,
+          102.36,
+          42.98,
+          110.82
+        ],
+        "block_id": "block-004",
+        "text": "Spacer"
+      },
+      {
+        "bbox": [
+          22.61,
+          115.95,
+          44.67,
+          124.42
+        ],
+        "block_id": "block-005",
+        "text": "Spindle"
+      },
+      {
+        "bbox": [
+          23.03,
+          129.54,
+          40.17,
+          151.44
+        ],
+        "block_id": "block-006",
+        "text": "2 lb\nWire\nSpool"
+      },
+      {
+        "bbox": [
+          133.63,
+          149.0,
+          153.88,
+          157.47
+        ],
+        "block_id": "block-007",
+        "text": "Welder"
+      },
+      {
+        "bbox": [
+          377.96,
+          140.38,
+          399.88,
+          157.97
+        ],
+        "block_id": "block-008",
+        "text": "feed\nguides"
+      },
+      {
+        "bbox": [
+          23.35,
+          156.57,
+          42.02,
+          165.04
+        ],
+        "block_id": "block-009",
+        "text": "Brake"
+      },
+      {
+        "bbox": [
+          359.72,
+          160.72,
+          386.84,
+          170.15
+        ],
+        "block_id": "block-010",
+        "text": "welding"
+      },
+      {
+        "bbox": [
+          26.24,
+          163.29,
+          37.44,
+          171.75
+        ],
+        "block_id": "block-011",
+        "text": "Pad"
+      },
+      {
+        "bbox": [
+          365.52,
+          168.88,
+          379.13,
+          178.31
+        ],
+        "block_id": "block-012",
+        "text": "wire"
+      },
+      {
+        "bbox": [
+          333.22,
+          180.8,
+          368.68,
+          190.22
+        ],
+        "block_id": "block-013",
+        "text": "Wire Spool"
+      },
+      {
+        "bbox": [
+          23.3,
+          175.8,
+          153.63,
+          192.83
+        ],
+        "block_id": "block-014",
+        "text": "2 lb Spool Loading\nAdapter and knob required for 10-12 lb spool"
+      },
+      {
+        "bbox": [
+          32.3,
+          207.8,
+          92.74,
+          226.51
+        ],
+        "block_id": "block-015",
+        "text": "WARNING"
+      },
+      {
+        "bbox": [
+          145.67,
+          213.42,
+          158.08,
+          227.06
+        ],
+        "block_id": "block-016",
+        "text": "2\u2033"
+      },
+      {
+        "bbox": [
+          145.41,
+          232.13,
+          175.19,
+          243.21
+        ],
+        "block_id": "block-017",
+        "text": "Contact"
+      },
+      {
+        "bbox": [
+          154.38,
+          241.73,
+          166.23,
+          252.81
+        ],
+        "block_id": "block-018",
+        "text": "Tip"
+      },
+      {
+        "bbox": [
+          109.59,
+          261.41,
+          134.92,
+          272.5
+        ],
+        "block_id": "block-019",
+        "text": "Nozzle"
+      },
+      {
+        "bbox": [
+          21.38,
+          227.91,
+          94.58,
+          277.4
+        ],
+        "block_id": "block-020",
+        "text": "To prevent serious\ninjury, read\nmanual warnings\nand instructions\nbefore use."
+      },
+      {
+        "bbox": [
+          32.3,
+          288.24,
+          92.74,
+          306.95
+        ],
+        "block_id": "block-021",
+        "text": "WARNING"
+      },
+      {
+        "bbox": [
+          147.64,
+          296.33,
+          185.16,
+          307.42
+        ],
+        "block_id": "block-022",
+        "text": "clockwise"
+      },
+      {
+        "bbox": [
+          383.38,
+          330.58,
+          400.62,
+          352.5
+        ],
+        "block_id": "block-023",
+        "text": "2\u2033-3\u2033"
+      },
+      {
+        "bbox": [
+          328.52,
+          353.78,
+          351.64,
+          374.46
+        ],
+        "block_id": "block-024",
+        "text": "wood\nblock"
+      },
+      {
+        "bbox": [
+          21.38,
+          307.0,
+          90.72,
+          375.68
+        ],
+        "block_id": "block-025",
+        "text": "To prevent fire\nand serious\ninjury, keep torch\nand wire clear of\ngrounded objects\nwhile welder\nplugged in."
+      },
+      {
+        "bbox": [
+          22.41,
+          489.76,
+          47.29,
+          500.85
+        ],
+        "block_id": "block-026",
+        "text": "HOLD"
+      },
+      {
+        "bbox": [
+          19.96,
+          499.36,
+          47.51,
+          520.05
+        ],
+        "block_id": "block-027",
+        "text": "GUN\nCLEAR"
+      },
+      {
+        "bbox": [
+          38.19,
+          572.02,
+          381.33,
+          585.88
+        ],
+        "block_id": "block-030",
+        "text": "BASIC WELDING INSTRUCTIONS AND WELDING TIPS ARE IN MANUAL."
+      }
+    ],
+    "doc_id": "quick-start-guide",
+    "element_id": "quick-start-guide:page:001",
+    "element_type": "page_text",
+    "page": 1,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-001.png",
+    "source_doc": "quick-start-guide.pdf",
+    "text": "\u00ae\n\n\n\n Wingnut                                                                        Feed\n                                                                          Mechanism\n Spacer\n\n Spindle\n\n  2 lb\n  Wire\n Spool                                                                                                  feed\n                                  Welder                                                             guides\n Brake\n  Pad                                                                                         welding\n                                                                                                      wire\n         2 lb Spool Loading\n Adapter and knob required for 10-12 lb spool                                                 Wire Spool\n\n WARNING         2\u2033\nTo prevent serious                             Contactinjury, read                                  Tipmanual warnings\nand instructions                     Nozzlebefore use.\n\n WARNING             clockwise\nTo prevent fire\nand serious\ninjury, keep torch\nand wire clear of                                                                                                         2\u2033-3\u2033grounded objects\nwhile welder                                                  wood\nplugged in.                                                               block\n\n\n\n\n\nHOLD\n GUN\nCLEAR\n\n\n\n\n   BASIC WELDING INSTRUCTIONS AND WELDING TIPS ARE IN MANUAL.",
+    "word_count": 78
+  },
+  {
+    "blocks": [
+      {
+        "bbox": [
+          164.68,
+          38.19,
+          167.04,
+          42.63
+        ],
+        "block_id": "block-001",
+        "text": "\u00ae"
+      },
+      {
+        "bbox": [
+          38.19,
+          572.02,
+          381.33,
+          585.88
+        ],
+        "block_id": "block-002",
+        "text": "BASIC WELDING INSTRUCTIONS AND WELDING TIPS ARE IN MANUAL."
+      }
+    ],
+    "doc_id": "quick-start-guide",
+    "element_id": "quick-start-guide:page:002",
+    "element_type": "page_text",
+    "page": 2,
+    "page_image": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-002.png",
+    "source_doc": "quick-start-guide.pdf",
+    "text": "\u00ae\n\n\n\n\n\nBASIC WELDING INSTRUCTIONS AND WELDING TIPS ARE IN MANUAL.",
+    "word_count": 10
+  }
+]

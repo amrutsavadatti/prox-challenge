@@ -1,0 +1,6888 @@
+[
+  {
+    "bbox": [
+      [
+        150.58,
+        360.94,
+        444.69,
+        662.25
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:001:image:xref:5759",
+    "element_type": "embedded_image",
+    "height": 1256,
+    "image_id": "owner-manual:image:xref:5759",
+    "needs_caption": true,
+    "page": 1,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p001-img01-xref5759.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 1226
+  },
+  {
+    "bbox": [
+      [
+        395.18,
+        279.17,
+        448.7,
+        332.69
+      ],
+      [
+        395.18,
+        128.53,
+        448.7,
+        182.05
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:019:image:xref:125",
+    "element_type": "embedded_image",
+    "height": 223,
+    "image_id": "owner-manual:image:xref:125",
+    "needs_caption": true,
+    "page": 19,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p019-img01-xref125.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 223
+  },
+  {
+    "bbox": [
+      [
+        395.18,
+        279.17,
+        448.7,
+        332.69
+      ],
+      [
+        395.18,
+        128.53,
+        448.7,
+        182.05
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:019:image:xref:125",
+    "element_type": "embedded_image",
+    "height": 223,
+    "image_id": "owner-manual:image:xref:125",
+    "needs_caption": true,
+    "page": 19,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p019-img01-xref125.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 223
+  },
+  {
+    "bbox": [
+      [
+        117.78,
+        257.83,
+        224.23,
+        318.16
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:020:image:xref:133",
+    "element_type": "embedded_image",
+    "height": 252,
+    "image_id": "owner-manual:image:xref:133",
+    "needs_caption": true,
+    "page": 20,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p020-img01-xref133.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 444
+  },
+  {
+    "bbox": [
+      [
+        81.23,
+        625.01,
+        259.91,
+        727.01
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:020:image:xref:134",
+    "element_type": "embedded_image",
+    "height": 425,
+    "image_id": "owner-manual:image:xref:134",
+    "needs_caption": true,
+    "page": 20,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p020-img02-xref134.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 745
+  },
+  {
+    "bbox": [
+      [
+        346.13,
+        299.09,
+        521.28,
+        398.37
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:020:image:xref:136",
+    "element_type": "embedded_image",
+    "height": 414,
+    "image_id": "owner-manual:image:xref:136",
+    "needs_caption": true,
+    "page": 20,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p020-img03-xref136.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 730
+  },
+  {
+    "bbox": [
+      [
+        345.18,
+        484.36,
+        518.15,
+        582.4
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:020:image:xref:138",
+    "element_type": "embedded_image",
+    "height": 409,
+    "image_id": "owner-manual:image:xref:138",
+    "needs_caption": true,
+    "page": 20,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p020-img04-xref138.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 721
+  },
+  {
+    "bbox": [
+      [
+        341.27,
+        221.39,
+        498.37,
+        310.43
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:021:image:xref:142",
+    "element_type": "embedded_image",
+    "height": 372,
+    "image_id": "owner-manual:image:xref:142",
+    "needs_caption": true,
+    "page": 21,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p021-img01-xref142.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 655
+  },
+  {
+    "bbox": [
+      [
+        341.27,
+        314.72,
+        499.66,
+        404.49
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:021:image:xref:144",
+    "element_type": "embedded_image",
+    "height": 375,
+    "image_id": "owner-manual:image:xref:144",
+    "needs_caption": true,
+    "page": 21,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p021-img02-xref144.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 660
+  },
+  {
+    "bbox": [
+      [
+        342.39,
+        408.09,
+        500.78,
+        497.86
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:021:image:xref:146",
+    "element_type": "embedded_image",
+    "height": 375,
+    "image_id": "owner-manual:image:xref:146",
+    "needs_caption": true,
+    "page": 21,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p021-img03-xref146.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 660
+  },
+  {
+    "bbox": [
+      [
+        342.56,
+        36.78,
+        498.18,
+        124.98
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:021:image:xref:148",
+    "element_type": "embedded_image",
+    "height": 368,
+    "image_id": "owner-manual:image:xref:148",
+    "needs_caption": true,
+    "page": 21,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p021-img04-xref148.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 649
+  },
+  {
+    "bbox": [
+      [
+        342.56,
+        129.3,
+        497.91,
+        217.35
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:021:image:xref:150",
+    "element_type": "embedded_image",
+    "height": 367,
+    "image_id": "owner-manual:image:xref:150",
+    "needs_caption": true,
+    "page": 21,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p021-img05-xref150.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 648
+  },
+  {
+    "bbox": [
+      [
+        388.28,
+        120.26,
+        417.35,
+        149.93
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:022:image:xref:477",
+    "element_type": "embedded_image",
+    "height": 122,
+    "image_id": "owner-manual:image:xref:477",
+    "needs_caption": true,
+    "page": 22,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p022-img01-xref477.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 124
+  },
+  {
+    "bbox": [
+      [
+        508.8,
+        113.22,
+        540.22,
+        156.98
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:022:image:xref:154",
+    "element_type": "embedded_image",
+    "height": 131,
+    "image_id": "owner-manual:image:xref:154",
+    "needs_caption": true,
+    "page": 22,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p022-img02-xref154.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 183
+  },
+  {
+    "bbox": [
+      [
+        387.01,
+        74.59,
+        550.28,
+        167.13
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:023:image:xref:168",
+    "element_type": "embedded_image",
+    "height": 386,
+    "image_id": "owner-manual:image:xref:168",
+    "needs_caption": true,
+    "page": 23,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p023-img01-xref168.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 681
+  },
+  {
+    "bbox": [
+      [
+        285.05,
+        53.51,
+        329.95,
+        78.95
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:023:image:xref:170",
+    "element_type": "embedded_image",
+    "height": 107,
+    "image_id": "owner-manual:image:xref:170",
+    "needs_caption": true,
+    "page": 23,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p023-img02-xref170.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 188
+  },
+  {
+    "bbox": [
+      [
+        339.24,
+        339.94,
+        374.35,
+        375.05
+      ],
+      [
+        455.12,
+        339.87,
+        490.23,
+        374.98
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:023:image:xref:171",
+    "element_type": "embedded_image",
+    "height": 147,
+    "image_id": "owner-manual:image:xref:171",
+    "needs_caption": true,
+    "page": 23,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p023-img03-xref171.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 147
+  },
+  {
+    "bbox": [
+      [
+        339.24,
+        339.94,
+        374.35,
+        375.05
+      ],
+      [
+        455.12,
+        339.87,
+        490.23,
+        374.98
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:023:image:xref:171",
+    "element_type": "embedded_image",
+    "height": 147,
+    "image_id": "owner-manual:image:xref:171",
+    "needs_caption": true,
+    "page": 23,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p023-img03-xref171.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 147
+  },
+  {
+    "bbox": [
+      [
+        393.22,
+        349.73,
+        535.11,
+        509.06
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:026:image:xref:187",
+    "element_type": "embedded_image",
+    "height": 612,
+    "image_id": "owner-manual:image:xref:187",
+    "needs_caption": true,
+    "page": 26,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p026-img01-xref187.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 545
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        285.7,
+        384.28,
+        291.63
+      ],
+      [
+        463.71,
+        285.7,
+        500.09,
+        291.63
+      ],
+      [
+        84.83,
+        285.7,
+        121.21,
+        291.63
+      ],
+      [
+        200.64,
+        285.7,
+        237.02,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:206",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:206",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img01-xref206.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        285.7,
+        379.2,
+        291.63
+      ],
+      [
+        468.78,
+        285.7,
+        495.01,
+        291.63
+      ],
+      [
+        89.9,
+        285.7,
+        116.13,
+        291.63
+      ],
+      [
+        205.72,
+        285.7,
+        231.95,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:207",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:207",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img02-xref207.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        291.06,
+        373.84,
+        291.91
+      ],
+      [
+        469.91,
+        291.06,
+        489.65,
+        291.91
+      ],
+      [
+        91.03,
+        291.06,
+        110.78,
+        291.91
+      ],
+      [
+        206.85,
+        291.06,
+        226.59,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:208",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:208",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img03-xref208.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 70
+  },
+  {
+    "bbox": [
+      [
+        90.19,
+        285.99,
+        103.72,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:209",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:209",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img04-xref209.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 48
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        285.99,
+        378.64,
+        291.63
+      ],
+      [
+        469.07,
+        285.99,
+        494.45,
+        291.63
+      ],
+      [
+        90.19,
+        285.99,
+        115.57,
+        291.63
+      ],
+      [
+        206.0,
+        285.99,
+        231.38,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:210",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:210",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img05-xref210.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 90
+  },
+  {
+    "bbox": [
+      [
+        358.05,
+        291.06,
+        377.79,
+        291.91
+      ],
+      [
+        473.86,
+        291.06,
+        493.6,
+        291.91
+      ],
+      [
+        94.98,
+        291.06,
+        114.72,
+        291.91
+      ],
+      [
+        210.79,
+        291.06,
+        230.54,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:211",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:211",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img06-xref211.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 70
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        291.06,
+        354.1,
+        291.91
+      ],
+      [
+        469.07,
+        291.06,
+        469.91,
+        291.91
+      ],
+      [
+        90.19,
+        291.06,
+        91.03,
+        291.91
+      ],
+      [
+        206.0,
+        291.06,
+        206.85,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:212",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:212",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img07-xref212.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 3
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        291.06,
+        378.64,
+        291.91
+      ],
+      [
+        469.07,
+        291.06,
+        494.45,
+        291.91
+      ],
+      [
+        90.19,
+        291.06,
+        115.57,
+        291.91
+      ],
+      [
+        206.0,
+        291.06,
+        231.38,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:213",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:213",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img08-xref213.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 90
+  },
+  {
+    "bbox": [
+      [
+        473.3,
+        314.47,
+        495.3,
+        321.24
+      ],
+      [
+        94.42,
+        314.47,
+        116.42,
+        321.24
+      ],
+      [
+        210.23,
+        314.47,
+        232.23,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:214",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:214",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img09-xref214.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 78
+  },
+  {
+    "bbox": [
+      [
+        88.78,
+        314.47,
+        95.26,
+        319.83
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:215",
+    "element_type": "embedded_image",
+    "height": 19,
+    "image_id": "owner-manual:image:xref:215",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img10-xref215.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 23
+  },
+  {
+    "bbox": [
+      [
+        351.84,
+        314.47,
+        380.33,
+        321.81
+      ],
+      [
+        467.65,
+        314.47,
+        496.14,
+        321.81
+      ],
+      [
+        88.78,
+        314.47,
+        117.26,
+        321.81
+      ],
+      [
+        204.59,
+        314.47,
+        233.08,
+        321.81
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:216",
+    "element_type": "embedded_image",
+    "height": 26,
+    "image_id": "owner-manual:image:xref:216",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img11-xref216.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 101
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:217",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:217",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img12-xref217.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        348.17,
+        291.06,
+        353.82,
+        315.04
+      ],
+      [
+        463.99,
+        291.06,
+        469.63,
+        315.04
+      ],
+      [
+        85.11,
+        291.06,
+        90.75,
+        315.04
+      ],
+      [
+        200.92,
+        291.06,
+        206.56,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:218",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:218",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img13-xref218.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 20
+  },
+  {
+    "bbox": [
+      [
+        352.69,
+        314.47,
+        379.48,
+        321.24
+      ],
+      [
+        468.5,
+        314.47,
+        495.3,
+        321.24
+      ],
+      [
+        89.62,
+        314.47,
+        116.42,
+        321.24
+      ],
+      [
+        205.43,
+        314.47,
+        232.23,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:219",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:219",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img14-xref219.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 95
+  },
+  {
+    "bbox": [
+      [
+        348.17,
+        291.06,
+        384.0,
+        315.04
+      ],
+      [
+        463.99,
+        291.06,
+        499.81,
+        315.04
+      ],
+      [
+        85.11,
+        291.06,
+        120.93,
+        315.04
+      ],
+      [
+        200.92,
+        291.06,
+        236.74,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:220",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:220",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img15-xref220.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 127
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        285.7,
+        384.28,
+        291.63
+      ],
+      [
+        463.71,
+        285.7,
+        500.09,
+        291.63
+      ],
+      [
+        84.83,
+        285.7,
+        121.21,
+        291.63
+      ],
+      [
+        200.64,
+        285.7,
+        237.02,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:206",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:206",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img01-xref206.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        285.7,
+        379.2,
+        291.63
+      ],
+      [
+        468.78,
+        285.7,
+        495.01,
+        291.63
+      ],
+      [
+        89.9,
+        285.7,
+        116.13,
+        291.63
+      ],
+      [
+        205.72,
+        285.7,
+        231.95,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:207",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:207",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img02-xref207.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        291.91
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        291.91
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        291.91
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:221",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:221",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img18-xref221.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        291.06,
+        379.2,
+        291.91
+      ],
+      [
+        468.78,
+        291.06,
+        495.01,
+        291.91
+      ],
+      [
+        89.9,
+        291.06,
+        116.13,
+        291.91
+      ],
+      [
+        205.72,
+        291.06,
+        231.95,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:222",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:222",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img19-xref222.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        314.47,
+        384.28,
+        322.09
+      ],
+      [
+        463.71,
+        314.47,
+        500.09,
+        322.09
+      ],
+      [
+        84.83,
+        314.47,
+        121.21,
+        322.09
+      ],
+      [
+        200.64,
+        314.47,
+        237.02,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:223",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:223",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img20-xref223.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        315.04
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        315.04
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        315.04
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:224",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:224",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img21-xref224.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        204.31,
+        291.06,
+        237.02,
+        309.96
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:225",
+    "element_type": "embedded_image",
+    "height": 67,
+    "image_id": "owner-manual:image:xref:225",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img22-xref225.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 116
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        286.55,
+        377.79,
+        291.63
+      ],
+      [
+        469.91,
+        286.55,
+        493.6,
+        291.63
+      ],
+      [
+        91.03,
+        286.55,
+        114.72,
+        291.63
+      ],
+      [
+        206.85,
+        286.55,
+        230.54,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:226",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:226",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img23-xref226.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 84
+  },
+  {
+    "bbox": [
+      [
+        206.85,
+        286.55,
+        228.28,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:227",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:227",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img24-xref227.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 76
+  },
+  {
+    "bbox": [
+      [
+        352.69,
+        314.47,
+        378.35,
+        321.24
+      ],
+      [
+        468.5,
+        314.47,
+        494.17,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:228",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:228",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img25-xref228.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 91
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        291.06,
+        377.79,
+        291.91
+      ],
+      [
+        469.91,
+        291.06,
+        493.6,
+        291.91
+      ],
+      [
+        91.03,
+        291.06,
+        114.72,
+        291.91
+      ],
+      [
+        206.85,
+        291.06,
+        230.54,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:229",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:229",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img26-xref229.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 84
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        291.06,
+        373.84,
+        291.91
+      ],
+      [
+        469.91,
+        291.06,
+        489.65,
+        291.91
+      ],
+      [
+        91.03,
+        291.06,
+        110.78,
+        291.91
+      ],
+      [
+        206.85,
+        291.06,
+        226.59,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:208",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:208",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img03-xref208.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 70
+  },
+  {
+    "bbox": [
+      [
+        352.69,
+        314.47,
+        379.48,
+        321.24
+      ],
+      [
+        468.5,
+        314.47,
+        495.3,
+        321.24
+      ],
+      [
+        89.62,
+        314.47,
+        116.42,
+        321.24
+      ],
+      [
+        205.43,
+        314.47,
+        232.23,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:219",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:219",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img14-xref219.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 95
+  },
+  {
+    "bbox": [
+      [
+        89.62,
+        314.47,
+        111.9,
+        321.24
+      ],
+      [
+        205.43,
+        314.47,
+        227.72,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:230",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:230",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img29-xref230.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 79
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:217",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:217",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img12-xref217.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:231",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:231",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img31-xref231.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        285.7,
+        379.2,
+        291.63
+      ],
+      [
+        468.78,
+        285.7,
+        495.01,
+        291.63
+      ],
+      [
+        89.9,
+        285.7,
+        116.13,
+        291.63
+      ],
+      [
+        205.72,
+        285.7,
+        231.95,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:232",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:232",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img32-xref232.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        365.66,
+        285.99,
+        378.64,
+        291.63
+      ],
+      [
+        481.48,
+        285.99,
+        494.45,
+        291.63
+      ],
+      [
+        102.6,
+        285.99,
+        115.57,
+        291.63
+      ],
+      [
+        218.41,
+        285.99,
+        231.38,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:233",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:233",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img33-xref233.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 46
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        291.06,
+        379.2,
+        291.91
+      ],
+      [
+        468.78,
+        291.06,
+        495.01,
+        291.91
+      ],
+      [
+        89.9,
+        291.06,
+        116.13,
+        291.91
+      ],
+      [
+        205.72,
+        291.06,
+        231.95,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:234",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:234",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img34-xref234.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        378.07,
+        291.06,
+        378.92,
+        291.91
+      ],
+      [
+        493.89,
+        291.06,
+        494.73,
+        291.91
+      ],
+      [
+        115.01,
+        291.06,
+        115.85,
+        291.91
+      ],
+      [
+        230.82,
+        291.06,
+        231.67,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:235",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:235",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img35-xref235.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 3
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:217",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:217",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img12-xref217.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        351.56,
+        314.47,
+        380.61,
+        322.09
+      ],
+      [
+        467.37,
+        314.47,
+        496.42,
+        322.09
+      ],
+      [
+        88.49,
+        314.47,
+        117.54,
+        322.09
+      ],
+      [
+        204.31,
+        314.47,
+        233.36,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:236",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:236",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img37-xref236.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 103
+  },
+  {
+    "bbox": [
+      [
+        351.56,
+        314.47,
+        380.61,
+        322.09
+      ],
+      [
+        467.37,
+        314.47,
+        496.42,
+        322.09
+      ],
+      [
+        88.49,
+        314.47,
+        117.54,
+        322.09
+      ],
+      [
+        204.31,
+        314.47,
+        233.36,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:237",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:237",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img38-xref237.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 103
+  },
+  {
+    "bbox": [
+      [
+        209.67,
+        314.47,
+        233.08,
+        321.81
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:238",
+    "element_type": "embedded_image",
+    "height": 26,
+    "image_id": "owner-manual:image:xref:238",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img39-xref238.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 83
+  },
+  {
+    "bbox": [
+      [
+        200.64,
+        292.75,
+        235.9,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:239",
+    "element_type": "embedded_image",
+    "height": 79,
+    "image_id": "owner-manual:image:xref:239",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img40-xref239.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 125
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        315.04
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        315.04
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        315.04
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:240",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:240",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img41-xref240.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        378.07,
+        291.06,
+        384.0,
+        315.04
+      ],
+      [
+        493.89,
+        291.06,
+        499.81,
+        315.04
+      ],
+      [
+        115.01,
+        291.06,
+        120.93,
+        315.04
+      ],
+      [
+        230.82,
+        291.06,
+        236.74,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:241",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:241",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img42-xref241.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 21
+  },
+  {
+    "bbox": [
+      [
+        356.92,
+        286.55,
+        377.79,
+        291.63
+      ],
+      [
+        472.73,
+        286.55,
+        493.6,
+        291.63
+      ],
+      [
+        93.85,
+        286.55,
+        114.72,
+        291.63
+      ],
+      [
+        209.67,
+        286.55,
+        230.54,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:242",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:242",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img43-xref242.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 74
+  },
+  {
+    "bbox": [
+      [
+        206.0,
+        285.99,
+        227.15,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:243",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:243",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img44-xref243.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 75
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        285.99,
+        378.64,
+        291.63
+      ],
+      [
+        469.07,
+        285.99,
+        494.45,
+        291.63
+      ],
+      [
+        90.19,
+        285.99,
+        115.57,
+        291.63
+      ],
+      [
+        206.0,
+        285.99,
+        231.38,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:210",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:210",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img05-xref210.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 90
+  },
+  {
+    "bbox": [
+      [
+        358.05,
+        291.06,
+        377.79,
+        291.91
+      ],
+      [
+        473.86,
+        291.06,
+        493.6,
+        291.91
+      ],
+      [
+        94.98,
+        291.06,
+        114.72,
+        291.91
+      ],
+      [
+        210.79,
+        291.06,
+        230.54,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:211",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:211",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img06-xref211.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 70
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:231",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:231",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img31-xref231.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        291.06,
+        354.1,
+        291.91
+      ],
+      [
+        469.07,
+        291.06,
+        469.91,
+        291.91
+      ],
+      [
+        90.19,
+        291.06,
+        91.03,
+        291.91
+      ],
+      [
+        206.0,
+        291.06,
+        206.85,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:212",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:212",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img07-xref212.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 3
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        291.06,
+        378.64,
+        291.91
+      ],
+      [
+        469.07,
+        291.06,
+        494.45,
+        291.91
+      ],
+      [
+        90.19,
+        291.06,
+        115.57,
+        291.91
+      ],
+      [
+        206.0,
+        291.06,
+        231.38,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:213",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:213",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img08-xref213.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 90
+  },
+  {
+    "bbox": [
+      [
+        473.3,
+        314.47,
+        495.3,
+        321.24
+      ],
+      [
+        94.42,
+        314.47,
+        116.42,
+        321.24
+      ],
+      [
+        210.23,
+        314.47,
+        232.23,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:214",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:214",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img09-xref214.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 78
+  },
+  {
+    "bbox": [
+      [
+        204.59,
+        314.47,
+        210.23,
+        319.55
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:244",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:244",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img51-xref244.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 20
+  },
+  {
+    "bbox": [
+      [
+        351.84,
+        314.47,
+        380.33,
+        321.81
+      ],
+      [
+        467.65,
+        314.47,
+        496.14,
+        321.81
+      ],
+      [
+        88.78,
+        314.47,
+        117.26,
+        321.81
+      ],
+      [
+        204.59,
+        314.47,
+        233.08,
+        321.81
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:216",
+    "element_type": "embedded_image",
+    "height": 26,
+    "image_id": "owner-manual:image:xref:216",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img11-xref216.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 101
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:217",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:217",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img12-xref217.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        348.17,
+        291.06,
+        353.82,
+        315.04
+      ],
+      [
+        463.99,
+        291.06,
+        469.63,
+        315.04
+      ],
+      [
+        85.11,
+        291.06,
+        90.75,
+        315.04
+      ],
+      [
+        200.92,
+        291.06,
+        206.56,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:218",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:218",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img13-xref218.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 20
+  },
+  {
+    "bbox": [
+      [
+        348.17,
+        291.06,
+        384.0,
+        315.04
+      ],
+      [
+        463.99,
+        291.06,
+        499.81,
+        315.04
+      ],
+      [
+        85.11,
+        291.06,
+        120.93,
+        315.04
+      ],
+      [
+        200.92,
+        291.06,
+        236.74,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:220",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:220",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img15-xref220.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 127
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        285.7,
+        379.2,
+        291.63
+      ],
+      [
+        468.78,
+        285.7,
+        495.01,
+        291.63
+      ],
+      [
+        89.9,
+        285.7,
+        116.13,
+        291.63
+      ],
+      [
+        205.72,
+        285.7,
+        231.95,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:232",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:232",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img32-xref232.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        365.66,
+        285.99,
+        378.64,
+        291.63
+      ],
+      [
+        481.48,
+        285.99,
+        494.45,
+        291.63
+      ],
+      [
+        102.6,
+        285.99,
+        115.57,
+        291.63
+      ],
+      [
+        218.41,
+        285.99,
+        231.38,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:233",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:233",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img33-xref233.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 46
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        291.06,
+        379.2,
+        291.91
+      ],
+      [
+        468.78,
+        291.06,
+        495.01,
+        291.91
+      ],
+      [
+        89.9,
+        291.06,
+        116.13,
+        291.91
+      ],
+      [
+        205.72,
+        291.06,
+        231.95,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:234",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:234",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img34-xref234.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        378.07,
+        291.06,
+        378.92,
+        291.91
+      ],
+      [
+        493.89,
+        291.06,
+        494.73,
+        291.91
+      ],
+      [
+        115.01,
+        291.06,
+        115.85,
+        291.91
+      ],
+      [
+        230.82,
+        291.06,
+        231.67,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:235",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:235",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img35-xref235.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 3
+  },
+  {
+    "bbox": [
+      [
+        351.56,
+        314.47,
+        380.61,
+        322.09
+      ],
+      [
+        467.37,
+        314.47,
+        496.42,
+        322.09
+      ],
+      [
+        88.49,
+        314.47,
+        117.54,
+        322.09
+      ],
+      [
+        204.31,
+        314.47,
+        233.36,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:236",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:236",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img37-xref236.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 103
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        291.91
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        291.91
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        291.91
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:221",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:221",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img18-xref221.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        351.56,
+        314.47,
+        380.61,
+        322.09
+      ],
+      [
+        467.37,
+        314.47,
+        496.42,
+        322.09
+      ],
+      [
+        88.49,
+        314.47,
+        117.54,
+        322.09
+      ],
+      [
+        204.31,
+        314.47,
+        233.36,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:237",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:237",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img38-xref237.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 103
+  },
+  {
+    "bbox": [
+      [
+        365.66,
+        314.47,
+        380.33,
+        321.81
+      ],
+      [
+        481.48,
+        314.47,
+        496.14,
+        321.81
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:245",
+    "element_type": "embedded_image",
+    "height": 26,
+    "image_id": "owner-manual:image:xref:245",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img63-xref245.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 52
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        292.19,
+        382.58,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:246",
+    "element_type": "embedded_image",
+    "height": 81,
+    "image_id": "owner-manual:image:xref:246",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img64-xref246.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        315.04
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        315.04
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        315.04
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:240",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:240",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img41-xref240.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        378.07,
+        291.06,
+        384.0,
+        315.04
+      ],
+      [
+        493.89,
+        291.06,
+        499.81,
+        315.04
+      ],
+      [
+        115.01,
+        291.06,
+        120.93,
+        315.04
+      ],
+      [
+        230.82,
+        291.06,
+        236.74,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:241",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:241",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img42-xref241.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 21
+  },
+  {
+    "bbox": [
+      [
+        356.92,
+        286.55,
+        377.79,
+        291.63
+      ],
+      [
+        472.73,
+        286.55,
+        493.6,
+        291.63
+      ],
+      [
+        93.85,
+        286.55,
+        114.72,
+        291.63
+      ],
+      [
+        209.67,
+        286.55,
+        230.54,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:242",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:242",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img43-xref242.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 74
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        285.99,
+        366.23,
+        291.63
+      ],
+      [
+        469.07,
+        285.99,
+        482.04,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:247",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:247",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img68-xref247.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 46
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        285.99,
+        378.64,
+        291.63
+      ],
+      [
+        469.07,
+        285.99,
+        494.45,
+        291.63
+      ],
+      [
+        90.19,
+        285.99,
+        115.57,
+        291.63
+      ],
+      [
+        206.0,
+        285.99,
+        231.38,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:210",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:210",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img05-xref210.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 90
+  },
+  {
+    "bbox": [
+      [
+        358.05,
+        291.06,
+        377.79,
+        291.91
+      ],
+      [
+        473.86,
+        291.06,
+        493.6,
+        291.91
+      ],
+      [
+        94.98,
+        291.06,
+        114.72,
+        291.91
+      ],
+      [
+        210.79,
+        291.06,
+        230.54,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:211",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:211",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img06-xref211.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 70
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        291.06,
+        354.1,
+        291.91
+      ],
+      [
+        469.07,
+        291.06,
+        469.91,
+        291.91
+      ],
+      [
+        90.19,
+        291.06,
+        91.03,
+        291.91
+      ],
+      [
+        206.0,
+        291.06,
+        206.85,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:212",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:212",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img07-xref212.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 3
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        291.06,
+        379.2,
+        291.91
+      ],
+      [
+        468.78,
+        291.06,
+        495.01,
+        291.91
+      ],
+      [
+        89.9,
+        291.06,
+        116.13,
+        291.91
+      ],
+      [
+        205.72,
+        291.06,
+        231.95,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:222",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:222",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img19-xref222.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        291.06,
+        378.64,
+        291.91
+      ],
+      [
+        469.07,
+        291.06,
+        494.45,
+        291.91
+      ],
+      [
+        90.19,
+        291.06,
+        115.57,
+        291.91
+      ],
+      [
+        206.0,
+        291.06,
+        231.38,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:213",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:213",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img08-xref213.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 90
+  },
+  {
+    "bbox": [
+      [
+        357.76,
+        314.47,
+        379.48,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:248",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:248",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img74-xref248.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 77
+  },
+  {
+    "bbox": [
+      [
+        351.84,
+        314.47,
+        366.23,
+        321.81
+      ],
+      [
+        467.65,
+        314.47,
+        482.04,
+        321.81
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:249",
+    "element_type": "embedded_image",
+    "height": 26,
+    "image_id": "owner-manual:image:xref:249",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img75-xref249.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 51
+  },
+  {
+    "bbox": [
+      [
+        351.84,
+        314.47,
+        380.33,
+        321.81
+      ],
+      [
+        467.65,
+        314.47,
+        496.14,
+        321.81
+      ],
+      [
+        88.78,
+        314.47,
+        117.26,
+        321.81
+      ],
+      [
+        204.59,
+        314.47,
+        233.08,
+        321.81
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:216",
+    "element_type": "embedded_image",
+    "height": 26,
+    "image_id": "owner-manual:image:xref:216",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img11-xref216.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 101
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:217",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:217",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img12-xref217.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        348.17,
+        291.06,
+        353.82,
+        315.04
+      ],
+      [
+        463.99,
+        291.06,
+        469.63,
+        315.04
+      ],
+      [
+        85.11,
+        291.06,
+        90.75,
+        315.04
+      ],
+      [
+        200.92,
+        291.06,
+        206.56,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:218",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:218",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img13-xref218.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 20
+  },
+  {
+    "bbox": [
+      [
+        348.17,
+        291.06,
+        384.0,
+        315.04
+      ],
+      [
+        463.99,
+        291.06,
+        499.81,
+        315.04
+      ],
+      [
+        85.11,
+        291.06,
+        120.93,
+        315.04
+      ],
+      [
+        200.92,
+        291.06,
+        236.74,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:220",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:220",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img15-xref220.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 127
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        285.7,
+        384.28,
+        291.63
+      ],
+      [
+        463.71,
+        285.7,
+        500.09,
+        291.63
+      ],
+      [
+        84.83,
+        285.7,
+        121.21,
+        291.63
+      ],
+      [
+        200.64,
+        285.7,
+        237.02,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:206",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:206",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img01-xref206.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        285.7,
+        379.2,
+        291.63
+      ],
+      [
+        468.78,
+        285.7,
+        495.01,
+        291.63
+      ],
+      [
+        89.9,
+        285.7,
+        116.13,
+        291.63
+      ],
+      [
+        205.72,
+        285.7,
+        231.95,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:207",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:207",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img02-xref207.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        291.91
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        291.91
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        291.91
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:221",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:221",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img18-xref221.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        314.47,
+        384.28,
+        322.09
+      ],
+      [
+        463.71,
+        314.47,
+        500.09,
+        322.09
+      ],
+      [
+        84.83,
+        314.47,
+        121.21,
+        322.09
+      ],
+      [
+        200.64,
+        314.47,
+        237.02,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:223",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:223",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img20-xref223.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        291.06,
+        379.2,
+        291.91
+      ],
+      [
+        468.78,
+        291.06,
+        495.01,
+        291.91
+      ],
+      [
+        89.9,
+        291.06,
+        116.13,
+        291.91
+      ],
+      [
+        205.72,
+        291.06,
+        231.95,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:222",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:222",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img19-xref222.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        314.47,
+        384.28,
+        322.09
+      ],
+      [
+        463.71,
+        314.47,
+        500.09,
+        322.09
+      ],
+      [
+        84.83,
+        314.47,
+        121.21,
+        322.09
+      ],
+      [
+        200.64,
+        314.47,
+        237.02,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:223",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:223",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img20-xref223.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        315.04
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        315.04
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        315.04
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:224",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:224",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img21-xref224.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        468.22,
+        291.06,
+        500.09,
+        311.65
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:250",
+    "element_type": "embedded_image",
+    "height": 73,
+    "image_id": "owner-manual:image:xref:250",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img87-xref250.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 113
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        286.55,
+        377.79,
+        291.63
+      ],
+      [
+        469.91,
+        286.55,
+        493.6,
+        291.63
+      ],
+      [
+        91.03,
+        286.55,
+        114.72,
+        291.63
+      ],
+      [
+        206.85,
+        286.55,
+        230.54,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:226",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:226",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img23-xref226.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 84
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        286.55,
+        374.97,
+        291.63
+      ],
+      [
+        469.91,
+        286.55,
+        490.78,
+        291.63
+      ],
+      [
+        91.03,
+        286.55,
+        111.9,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:251",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:251",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img89-xref251.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 74
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        291.06,
+        377.79,
+        291.91
+      ],
+      [
+        469.91,
+        291.06,
+        493.6,
+        291.91
+      ],
+      [
+        91.03,
+        291.06,
+        114.72,
+        291.91
+      ],
+      [
+        206.85,
+        291.06,
+        230.54,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:229",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:229",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img26-xref229.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 84
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        291.06,
+        373.84,
+        291.91
+      ],
+      [
+        469.91,
+        291.06,
+        489.65,
+        291.91
+      ],
+      [
+        91.03,
+        291.06,
+        110.78,
+        291.91
+      ],
+      [
+        206.85,
+        291.06,
+        226.59,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:208",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:208",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img03-xref208.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 70
+  },
+  {
+    "bbox": [
+      [
+        352.69,
+        314.47,
+        379.48,
+        321.24
+      ],
+      [
+        468.5,
+        314.47,
+        495.3,
+        321.24
+      ],
+      [
+        89.62,
+        314.47,
+        116.42,
+        321.24
+      ],
+      [
+        205.43,
+        314.47,
+        232.23,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:219",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:219",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img14-xref219.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 95
+  },
+  {
+    "bbox": [
+      [
+        352.69,
+        314.47,
+        378.35,
+        321.24
+      ],
+      [
+        468.5,
+        314.47,
+        494.17,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:228",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:228",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img25-xref228.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 91
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        315.04
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        315.04
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        315.04
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:224",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:224",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img21-xref224.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:217",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:217",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img12-xref217.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:231",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:231",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img31-xref231.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        285.7,
+        379.2,
+        291.63
+      ],
+      [
+        468.78,
+        285.7,
+        495.01,
+        291.63
+      ],
+      [
+        89.9,
+        285.7,
+        116.13,
+        291.63
+      ],
+      [
+        205.72,
+        285.7,
+        231.95,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:232",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:232",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img32-xref232.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        365.66,
+        285.99,
+        378.64,
+        291.63
+      ],
+      [
+        481.48,
+        285.99,
+        494.45,
+        291.63
+      ],
+      [
+        102.6,
+        285.99,
+        115.57,
+        291.63
+      ],
+      [
+        218.41,
+        285.99,
+        231.38,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:233",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:233",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img33-xref233.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 46
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        291.06,
+        379.2,
+        291.91
+      ],
+      [
+        468.78,
+        291.06,
+        495.01,
+        291.91
+      ],
+      [
+        89.9,
+        291.06,
+        116.13,
+        291.91
+      ],
+      [
+        205.72,
+        291.06,
+        231.95,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:234",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:234",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img34-xref234.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        378.07,
+        291.06,
+        378.92,
+        291.91
+      ],
+      [
+        493.89,
+        291.06,
+        494.73,
+        291.91
+      ],
+      [
+        115.01,
+        291.06,
+        115.85,
+        291.91
+      ],
+      [
+        230.82,
+        291.06,
+        231.67,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:235",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:235",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img35-xref235.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 3
+  },
+  {
+    "bbox": [
+      [
+        351.56,
+        314.47,
+        380.61,
+        322.09
+      ],
+      [
+        467.37,
+        314.47,
+        496.42,
+        322.09
+      ],
+      [
+        88.49,
+        314.47,
+        117.54,
+        322.09
+      ],
+      [
+        204.31,
+        314.47,
+        233.36,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:236",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:236",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img37-xref236.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 103
+  },
+  {
+    "bbox": [
+      [
+        351.56,
+        314.47,
+        380.61,
+        322.09
+      ],
+      [
+        467.37,
+        314.47,
+        496.42,
+        322.09
+      ],
+      [
+        88.49,
+        314.47,
+        117.54,
+        322.09
+      ],
+      [
+        204.31,
+        314.47,
+        233.36,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:237",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:237",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img38-xref237.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 103
+  },
+  {
+    "bbox": [
+      [
+        365.66,
+        314.47,
+        380.33,
+        321.81
+      ],
+      [
+        481.48,
+        314.47,
+        496.14,
+        321.81
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:245",
+    "element_type": "embedded_image",
+    "height": 26,
+    "image_id": "owner-manual:image:xref:245",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img63-xref245.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 52
+  },
+  {
+    "bbox": [
+      [
+        463.71,
+        291.63,
+        498.4,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:252",
+    "element_type": "embedded_image",
+    "height": 83,
+    "image_id": "owner-manual:image:xref:252",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img104-xref252.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        352.12,
+        291.06,
+        384.28,
+        311.65
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:253",
+    "element_type": "embedded_image",
+    "height": 73,
+    "image_id": "owner-manual:image:xref:253",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img105-xref253.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 114
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        315.04
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        315.04
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        315.04
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:240",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:240",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img41-xref240.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        378.07,
+        291.06,
+        384.0,
+        315.04
+      ],
+      [
+        493.89,
+        291.06,
+        499.81,
+        315.04
+      ],
+      [
+        115.01,
+        291.06,
+        120.93,
+        315.04
+      ],
+      [
+        230.82,
+        291.06,
+        236.74,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:241",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:241",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img42-xref241.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 21
+  },
+  {
+    "bbox": [
+      [
+        356.92,
+        286.55,
+        377.79,
+        291.63
+      ],
+      [
+        472.73,
+        286.55,
+        493.6,
+        291.63
+      ],
+      [
+        93.85,
+        286.55,
+        114.72,
+        291.63
+      ],
+      [
+        209.67,
+        286.55,
+        230.54,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:242",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:242",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img43-xref242.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 74
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        285.99,
+        366.23,
+        291.63
+      ],
+      [
+        469.07,
+        285.99,
+        482.04,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:247",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:247",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img68-xref247.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 46
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        285.99,
+        378.64,
+        291.63
+      ],
+      [
+        469.07,
+        285.99,
+        494.45,
+        291.63
+      ],
+      [
+        90.19,
+        285.99,
+        115.57,
+        291.63
+      ],
+      [
+        206.0,
+        285.99,
+        231.38,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:210",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:210",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img05-xref210.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 90
+  },
+  {
+    "bbox": [
+      [
+        358.05,
+        291.06,
+        377.79,
+        291.91
+      ],
+      [
+        473.86,
+        291.06,
+        493.6,
+        291.91
+      ],
+      [
+        94.98,
+        291.06,
+        114.72,
+        291.91
+      ],
+      [
+        210.79,
+        291.06,
+        230.54,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:211",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:211",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img06-xref211.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 70
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        291.06,
+        354.1,
+        291.91
+      ],
+      [
+        469.07,
+        291.06,
+        469.91,
+        291.91
+      ],
+      [
+        90.19,
+        291.06,
+        91.03,
+        291.91
+      ],
+      [
+        206.0,
+        291.06,
+        206.85,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:212",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:212",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img07-xref212.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 3
+  },
+  {
+    "bbox": [
+      [
+        353.25,
+        291.06,
+        378.64,
+        291.91
+      ],
+      [
+        469.07,
+        291.06,
+        494.45,
+        291.91
+      ],
+      [
+        90.19,
+        291.06,
+        115.57,
+        291.91
+      ],
+      [
+        206.0,
+        291.06,
+        231.38,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:213",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:213",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img08-xref213.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 90
+  },
+  {
+    "bbox": [
+      [
+        473.3,
+        314.47,
+        495.3,
+        321.24
+      ],
+      [
+        94.42,
+        314.47,
+        116.42,
+        321.24
+      ],
+      [
+        210.23,
+        314.47,
+        232.23,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:214",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:214",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img09-xref214.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 78
+  },
+  {
+    "bbox": [
+      [
+        351.84,
+        314.47,
+        366.23,
+        321.81
+      ],
+      [
+        467.65,
+        314.47,
+        482.04,
+        321.81
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:249",
+    "element_type": "embedded_image",
+    "height": 26,
+    "image_id": "owner-manual:image:xref:249",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img75-xref249.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 51
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        286.55,
+        377.79,
+        291.63
+      ],
+      [
+        469.91,
+        286.55,
+        493.6,
+        291.63
+      ],
+      [
+        91.03,
+        286.55,
+        114.72,
+        291.63
+      ],
+      [
+        206.85,
+        286.55,
+        230.54,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:226",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:226",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img23-xref226.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 84
+  },
+  {
+    "bbox": [
+      [
+        351.84,
+        314.47,
+        380.33,
+        321.81
+      ],
+      [
+        467.65,
+        314.47,
+        496.14,
+        321.81
+      ],
+      [
+        88.78,
+        314.47,
+        117.26,
+        321.81
+      ],
+      [
+        204.59,
+        314.47,
+        233.08,
+        321.81
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:216",
+    "element_type": "embedded_image",
+    "height": 26,
+    "image_id": "owner-manual:image:xref:216",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img11-xref216.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 101
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:217",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:217",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img12-xref217.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        348.17,
+        291.06,
+        353.82,
+        315.04
+      ],
+      [
+        463.99,
+        291.06,
+        469.63,
+        315.04
+      ],
+      [
+        85.11,
+        291.06,
+        90.75,
+        315.04
+      ],
+      [
+        200.92,
+        291.06,
+        206.56,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:218",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:218",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img13-xref218.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 20
+  },
+  {
+    "bbox": [
+      [
+        348.17,
+        291.06,
+        384.0,
+        315.04
+      ],
+      [
+        463.99,
+        291.06,
+        499.81,
+        315.04
+      ],
+      [
+        85.11,
+        291.06,
+        120.93,
+        315.04
+      ],
+      [
+        200.92,
+        291.06,
+        236.74,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:220",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:220",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img15-xref220.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 127
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        285.7,
+        384.28,
+        291.63
+      ],
+      [
+        463.71,
+        285.7,
+        500.09,
+        291.63
+      ],
+      [
+        84.83,
+        285.7,
+        121.21,
+        291.63
+      ],
+      [
+        200.64,
+        285.7,
+        237.02,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:206",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:206",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img01-xref206.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        285.7,
+        379.2,
+        291.63
+      ],
+      [
+        468.78,
+        285.7,
+        495.01,
+        291.63
+      ],
+      [
+        89.9,
+        285.7,
+        116.13,
+        291.63
+      ],
+      [
+        205.72,
+        285.7,
+        231.95,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:207",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:207",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img02-xref207.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        291.91
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        291.91
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        291.91
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:221",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:221",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img18-xref221.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        291.06,
+        379.2,
+        291.91
+      ],
+      [
+        468.78,
+        291.06,
+        495.01,
+        291.91
+      ],
+      [
+        89.9,
+        291.06,
+        116.13,
+        291.91
+      ],
+      [
+        205.72,
+        291.06,
+        231.95,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:222",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:222",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img19-xref222.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        314.47,
+        384.28,
+        322.09
+      ],
+      [
+        463.71,
+        314.47,
+        500.09,
+        322.09
+      ],
+      [
+        84.83,
+        314.47,
+        121.21,
+        322.09
+      ],
+      [
+        200.64,
+        314.47,
+        237.02,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:223",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:223",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img20-xref223.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        315.04
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        315.04
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        315.04
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:224",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:224",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img21-xref224.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        286.55,
+        374.97,
+        291.63
+      ],
+      [
+        469.91,
+        286.55,
+        490.78,
+        291.63
+      ],
+      [
+        91.03,
+        286.55,
+        111.9,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:251",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:251",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img89-xref251.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 74
+  },
+  {
+    "bbox": [
+      [
+        88.78,
+        291.06,
+        121.21,
+        310.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:254",
+    "element_type": "embedded_image",
+    "height": 68,
+    "image_id": "owner-manual:image:xref:254",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img128-xref254.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 115
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        286.55,
+        377.79,
+        291.63
+      ],
+      [
+        469.91,
+        286.55,
+        493.6,
+        291.63
+      ],
+      [
+        91.03,
+        286.55,
+        114.72,
+        291.63
+      ],
+      [
+        206.85,
+        286.55,
+        230.54,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:226",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:226",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img23-xref226.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 84
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        286.55,
+        374.97,
+        291.63
+      ],
+      [
+        469.91,
+        286.55,
+        490.78,
+        291.63
+      ],
+      [
+        91.03,
+        286.55,
+        111.9,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:251",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:251",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img89-xref251.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 74
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        291.06,
+        377.79,
+        291.91
+      ],
+      [
+        469.91,
+        291.06,
+        493.6,
+        291.91
+      ],
+      [
+        91.03,
+        291.06,
+        114.72,
+        291.91
+      ],
+      [
+        206.85,
+        291.06,
+        230.54,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:229",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:229",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img26-xref229.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 84
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        291.06,
+        373.84,
+        291.91
+      ],
+      [
+        469.91,
+        291.06,
+        489.65,
+        291.91
+      ],
+      [
+        91.03,
+        291.06,
+        110.78,
+        291.91
+      ],
+      [
+        206.85,
+        291.06,
+        226.59,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:208",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:208",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img03-xref208.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 70
+  },
+  {
+    "bbox": [
+      [
+        352.69,
+        314.47,
+        379.48,
+        321.24
+      ],
+      [
+        468.5,
+        314.47,
+        495.3,
+        321.24
+      ],
+      [
+        89.62,
+        314.47,
+        116.42,
+        321.24
+      ],
+      [
+        205.43,
+        314.47,
+        232.23,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:219",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:219",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img14-xref219.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 95
+  },
+  {
+    "bbox": [
+      [
+        89.62,
+        314.47,
+        111.9,
+        321.24
+      ],
+      [
+        205.43,
+        314.47,
+        227.72,
+        321.24
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:230",
+    "element_type": "embedded_image",
+    "height": 24,
+    "image_id": "owner-manual:image:xref:230",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img29-xref230.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 79
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:217",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:217",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img12-xref217.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        348.74,
+        291.06,
+        383.43,
+        315.04
+      ],
+      [
+        464.55,
+        291.06,
+        499.24,
+        315.04
+      ],
+      [
+        85.67,
+        291.06,
+        120.36,
+        315.04
+      ],
+      [
+        201.49,
+        291.06,
+        236.18,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:231",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:231",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img31-xref231.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 123
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        285.7,
+        379.2,
+        291.63
+      ],
+      [
+        468.78,
+        285.7,
+        495.01,
+        291.63
+      ],
+      [
+        89.9,
+        285.7,
+        116.13,
+        291.63
+      ],
+      [
+        205.72,
+        285.7,
+        231.95,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:232",
+    "element_type": "embedded_image",
+    "height": 21,
+    "image_id": "owner-manual:image:xref:232",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img32-xref232.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        354.1,
+        291.06,
+        377.79,
+        291.91
+      ],
+      [
+        469.91,
+        291.06,
+        493.6,
+        291.91
+      ],
+      [
+        91.03,
+        291.06,
+        114.72,
+        291.91
+      ],
+      [
+        206.85,
+        291.06,
+        230.54,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:229",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:229",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img26-xref229.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 84
+  },
+  {
+    "bbox": [
+      [
+        365.66,
+        285.99,
+        378.64,
+        291.63
+      ],
+      [
+        481.48,
+        285.99,
+        494.45,
+        291.63
+      ],
+      [
+        102.6,
+        285.99,
+        115.57,
+        291.63
+      ],
+      [
+        218.41,
+        285.99,
+        231.38,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:233",
+    "element_type": "embedded_image",
+    "height": 20,
+    "image_id": "owner-manual:image:xref:233",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img33-xref233.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 46
+  },
+  {
+    "bbox": [
+      [
+        352.97,
+        291.06,
+        379.2,
+        291.91
+      ],
+      [
+        468.78,
+        291.06,
+        495.01,
+        291.91
+      ],
+      [
+        89.9,
+        291.06,
+        116.13,
+        291.91
+      ],
+      [
+        205.72,
+        291.06,
+        231.95,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:234",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:234",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img34-xref234.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 93
+  },
+  {
+    "bbox": [
+      [
+        378.07,
+        291.06,
+        378.92,
+        291.91
+      ],
+      [
+        493.89,
+        291.06,
+        494.73,
+        291.91
+      ],
+      [
+        115.01,
+        291.06,
+        115.85,
+        291.91
+      ],
+      [
+        230.82,
+        291.06,
+        231.67,
+        291.91
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:235",
+    "element_type": "embedded_image",
+    "height": 3,
+    "image_id": "owner-manual:image:xref:235",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img35-xref235.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 3
+  },
+  {
+    "bbox": [
+      [
+        351.56,
+        314.47,
+        380.61,
+        322.09
+      ],
+      [
+        467.37,
+        314.47,
+        496.42,
+        322.09
+      ],
+      [
+        88.49,
+        314.47,
+        117.54,
+        322.09
+      ],
+      [
+        204.31,
+        314.47,
+        233.36,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:236",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:236",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img37-xref236.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 103
+  },
+  {
+    "bbox": [
+      [
+        351.56,
+        314.47,
+        380.61,
+        322.09
+      ],
+      [
+        467.37,
+        314.47,
+        496.42,
+        322.09
+      ],
+      [
+        88.49,
+        314.47,
+        117.54,
+        322.09
+      ],
+      [
+        204.31,
+        314.47,
+        233.36,
+        322.09
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:237",
+    "element_type": "embedded_image",
+    "height": 27,
+    "image_id": "owner-manual:image:xref:237",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img38-xref237.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 103
+  },
+  {
+    "bbox": [
+      [
+        94.7,
+        314.47,
+        117.26,
+        321.81
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:255",
+    "element_type": "embedded_image",
+    "height": 26,
+    "image_id": "owner-manual:image:xref:255",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img144-xref255.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 80
+  },
+  {
+    "bbox": [
+      [
+        84.83,
+        292.19,
+        120.08,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:256",
+    "element_type": "embedded_image",
+    "height": 81,
+    "image_id": "owner-manual:image:xref:256",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img145-xref256.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 125
+  },
+  {
+    "bbox": [
+      [
+        347.89,
+        291.06,
+        384.28,
+        315.04
+      ],
+      [
+        463.71,
+        291.06,
+        500.09,
+        315.04
+      ],
+      [
+        84.83,
+        291.06,
+        121.21,
+        315.04
+      ],
+      [
+        200.64,
+        291.06,
+        237.02,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:240",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:240",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img41-xref240.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 129
+  },
+  {
+    "bbox": [
+      [
+        378.07,
+        291.06,
+        384.0,
+        315.04
+      ],
+      [
+        493.89,
+        291.06,
+        499.81,
+        315.04
+      ],
+      [
+        115.01,
+        291.06,
+        120.93,
+        315.04
+      ],
+      [
+        230.82,
+        291.06,
+        236.74,
+        315.04
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:241",
+    "element_type": "embedded_image",
+    "height": 85,
+    "image_id": "owner-manual:image:xref:241",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img42-xref241.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 21
+  },
+  {
+    "bbox": [
+      [
+        356.92,
+        286.55,
+        377.79,
+        291.63
+      ],
+      [
+        472.73,
+        286.55,
+        493.6,
+        291.63
+      ],
+      [
+        93.85,
+        286.55,
+        114.72,
+        291.63
+      ],
+      [
+        209.67,
+        286.55,
+        230.54,
+        291.63
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:029:image:xref:242",
+    "element_type": "embedded_image",
+    "height": 18,
+    "image_id": "owner-manual:image:xref:242",
+    "needs_caption": true,
+    "page": 29,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p029-img43-xref242.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 74
+  },
+  {
+    "bbox": [
+      [
+        117.9,
+        584.1,
+        224.1,
+        644.3
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:030:image:xref:483",
+    "element_type": "embedded_image",
+    "height": 251,
+    "image_id": "owner-manual:image:xref:483",
+    "needs_caption": true,
+    "page": 30,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p030-img01-xref483.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 443
+  },
+  {
+    "bbox": [
+      [
+        345.27,
+        299.81,
+        522.14,
+        400.05
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:030:image:xref:262",
+    "element_type": "embedded_image",
+    "height": 418,
+    "image_id": "owner-manual:image:xref:262",
+    "needs_caption": true,
+    "page": 30,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p030-img02-xref262.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 737
+  },
+  {
+    "bbox": [
+      [
+        345.27,
+        474.05,
+        522.14,
+        574.3
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:030:image:xref:264",
+    "element_type": "embedded_image",
+    "height": 418,
+    "image_id": "owner-manual:image:xref:264",
+    "needs_caption": true,
+    "page": 30,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p030-img03-xref264.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 737
+  },
+  {
+    "bbox": [
+      [
+        344.89,
+        688.8,
+        519.04,
+        787.5
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:030:image:xref:266",
+    "element_type": "embedded_image",
+    "height": 412,
+    "image_id": "owner-manual:image:xref:266",
+    "needs_caption": true,
+    "page": 30,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p030-img04-xref266.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 726
+  },
+  {
+    "bbox": [
+      [
+        73.27,
+        211.78,
+        250.14,
+        312.03
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:031:image:xref:270",
+    "element_type": "embedded_image",
+    "height": 418,
+    "image_id": "owner-manual:image:xref:270",
+    "needs_caption": true,
+    "page": 31,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p031-img01-xref270.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 737
+  },
+  {
+    "bbox": [
+      [
+        73.0,
+        326.19,
+        249.87,
+        426.44
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:031:image:xref:272",
+    "element_type": "embedded_image",
+    "height": 418,
+    "image_id": "owner-manual:image:xref:272",
+    "needs_caption": true,
+    "page": 31,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p031-img02-xref272.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 737
+  },
+  {
+    "bbox": [
+      [
+        117.9,
+        396.1,
+        224.1,
+        456.3
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:032:image:xref:483",
+    "element_type": "embedded_image",
+    "height": 251,
+    "image_id": "owner-manual:image:xref:483",
+    "needs_caption": true,
+    "page": 32,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p030-img01-xref483.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 443
+  },
+  {
+    "bbox": [
+      [
+        82.13,
+        636.75,
+        259.01,
+        737.0
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:032:image:xref:278",
+    "element_type": "embedded_image",
+    "height": 418,
+    "image_id": "owner-manual:image:xref:278",
+    "needs_caption": true,
+    "page": 32,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p032-img02-xref278.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 737
+  },
+  {
+    "bbox": [
+      [
+        345.27,
+        177.81,
+        522.14,
+        278.05
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:032:image:xref:280",
+    "element_type": "embedded_image",
+    "height": 418,
+    "image_id": "owner-manual:image:xref:280",
+    "needs_caption": true,
+    "page": 32,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p032-img03-xref280.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 737
+  },
+  {
+    "bbox": [
+      [
+        345.27,
+        352.05,
+        522.14,
+        452.3
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:032:image:xref:282",
+    "element_type": "embedded_image",
+    "height": 418,
+    "image_id": "owner-manual:image:xref:282",
+    "needs_caption": true,
+    "page": 32,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p032-img04-xref282.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 737
+  },
+  {
+    "bbox": [
+      [
+        346.34,
+        582.29,
+        521.28,
+        681.88
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:032:image:xref:284",
+    "element_type": "embedded_image",
+    "height": 415,
+    "image_id": "owner-manual:image:xref:284",
+    "needs_caption": true,
+    "page": 32,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p032-img05-xref284.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 729
+  },
+  {
+    "bbox": [
+      [
+        73.13,
+        367.04,
+        250.01,
+        467.28
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:033:image:xref:288",
+    "element_type": "embedded_image",
+    "height": 418,
+    "image_id": "owner-manual:image:xref:288",
+    "needs_caption": true,
+    "page": 33,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p033-img01-xref288.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 737
+  },
+  {
+    "bbox": [
+      [
+        73.13,
+        256.76,
+        250.01,
+        357.0
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:033:image:xref:290",
+    "element_type": "embedded_image",
+    "height": 418,
+    "image_id": "owner-manual:image:xref:290",
+    "needs_caption": true,
+    "page": 33,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p033-img02-xref290.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 737
+  },
+  {
+    "bbox": [
+      [
+        73.13,
+        476.32,
+        250.01,
+        576.56
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:033:image:xref:292",
+    "element_type": "embedded_image",
+    "height": 418,
+    "image_id": "owner-manual:image:xref:292",
+    "needs_caption": true,
+    "page": 33,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p033-img03-xref292.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 737
+  },
+  {
+    "bbox": [
+      [
+        73.13,
+        586.32,
+        250.01,
+        686.56
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:033:image:xref:294",
+    "element_type": "embedded_image",
+    "height": 418,
+    "image_id": "owner-manual:image:xref:294",
+    "needs_caption": true,
+    "page": 33,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p033-img04-xref294.png",
+    "source_doc": "owner-manual.pdf",
+    "width": 737
+  },
+  {
+    "bbox": [
+      [
+        60.11,
+        458.31,
+        89.78,
+        487.37
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:477",
+    "element_type": "embedded_image",
+    "height": 122,
+    "image_id": "owner-manual:image:xref:477",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p022-img01-xref477.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 124
+  },
+  {
+    "bbox": [
+      [
+        57.11,
+        327.33,
+        92.78,
+        344.32
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:300",
+    "element_type": "embedded_image",
+    "height": 71,
+    "image_id": "owner-manual:image:xref:300",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img02-xref300.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 149
+  },
+  {
+    "bbox": [
+      [
+        402.98,
+        326.56,
+        438.05,
+        340.19
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:302",
+    "element_type": "embedded_image",
+    "height": 57,
+    "image_id": "owner-manual:image:xref:302",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img03-xref302.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 147
+  },
+  {
+    "bbox": [
+      [
+        490.13,
+        436.18,
+        526.26,
+        480.81
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:304",
+    "element_type": "embedded_image",
+    "height": 186,
+    "image_id": "owner-manual:image:xref:304",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img04-xref304.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 151
+  },
+  {
+    "bbox": [
+      [
+        489.38,
+        328.91,
+        524.45,
+        341.59
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:306",
+    "element_type": "embedded_image",
+    "height": 53,
+    "image_id": "owner-manual:image:xref:306",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img05-xref306.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 147
+  },
+  {
+    "bbox": [
+      [
+        150.63,
+        360.15,
+        171.5,
+        486.95
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:308",
+    "element_type": "embedded_image",
+    "height": 1,
+    "image_id": "owner-manual:image:xref:308",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img06-xref308.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 338
+  },
+  {
+    "bbox": [
+      [
+        150.84,
+        322.06,
+        171.85,
+        338.93
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:310",
+    "element_type": "embedded_image",
+    "height": 71,
+    "image_id": "owner-manual:image:xref:310",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img07-xref310.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 88
+  },
+  {
+    "bbox": [
+      [
+        232.55,
+        360.81,
+        262.8,
+        485.06
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:312",
+    "element_type": "embedded_image",
+    "height": 1,
+    "image_id": "owner-manual:image:xref:312",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img08-xref312.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 506
+  },
+  {
+    "bbox": [
+      [
+        234.05,
+        429.81,
+        262.8,
+        485.06
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:314",
+    "element_type": "embedded_image",
+    "height": 231,
+    "image_id": "owner-manual:image:xref:314",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img09-xref314.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 120
+  },
+  {
+    "bbox": [
+      [
+        231.43,
+        327.33,
+        264.52,
+        344.32
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:316",
+    "element_type": "embedded_image",
+    "height": 71,
+    "image_id": "owner-manual:image:xref:316",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img10-xref316.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 138
+  },
+  {
+    "bbox": [
+      [
+        325.58,
+        359.76,
+        342.58,
+        486.56
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:318",
+    "element_type": "embedded_image",
+    "height": 1,
+    "image_id": "owner-manual:image:xref:318",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img11-xref318.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 284
+  },
+  {
+    "bbox": [
+      [
+        320.21,
+        326.56,
+        348.07,
+        341.21
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:320",
+    "element_type": "embedded_image",
+    "height": 62,
+    "image_id": "owner-manual:image:xref:320",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img12-xref320.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 117
+  },
+  {
+    "bbox": [
+      [
+        402.21,
+        442.18,
+        436.56,
+        486.14
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:035:image:xref:322",
+    "element_type": "embedded_image",
+    "height": 184,
+    "image_id": "owner-manual:image:xref:322",
+    "needs_caption": true,
+    "page": 35,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p035-img13-xref322.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 144
+  },
+  {
+    "bbox": [
+      [
+        191.45,
+        616.41,
+        220.51,
+        646.08
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:036:image:xref:477",
+    "element_type": "embedded_image",
+    "height": 122,
+    "image_id": "owner-manual:image:xref:477",
+    "needs_caption": true,
+    "page": 36,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p022-img01-xref477.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 124
+  },
+  {
+    "bbox": [
+      [
+        432.13,
+        554.26,
+        476.97,
+        589.29
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:037:image:xref:328",
+    "element_type": "embedded_image",
+    "height": 187,
+    "image_id": "owner-manual:image:xref:328",
+    "needs_caption": true,
+    "page": 37,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p037-img01-xref328.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 146
+  },
+  {
+    "bbox": [
+      [
+        163.87,
+        533.24,
+        207.75,
+        568.76
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:037:image:xref:330",
+    "element_type": "embedded_image",
+    "height": 183,
+    "image_id": "owner-manual:image:xref:330",
+    "needs_caption": true,
+    "page": 37,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p037-img02-xref330.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 148
+  },
+  {
+    "bbox": [
+      [
+        188.45,
+        89.96,
+        217.51,
+        119.62
+      ],
+      [
+        455.82,
+        102.02,
+        484.88,
+        131.69
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:037:image:xref:477",
+    "element_type": "embedded_image",
+    "height": 122,
+    "image_id": "owner-manual:image:xref:477",
+    "needs_caption": true,
+    "page": 37,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p022-img01-xref477.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 124
+  },
+  {
+    "bbox": [
+      [
+        188.45,
+        89.96,
+        217.51,
+        119.62
+      ],
+      [
+        455.82,
+        102.02,
+        484.88,
+        131.69
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:037:image:xref:477",
+    "element_type": "embedded_image",
+    "height": 122,
+    "image_id": "owner-manual:image:xref:477",
+    "needs_caption": true,
+    "page": 37,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p022-img01-xref477.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 124
+  },
+  {
+    "bbox": [
+      [
+        49.72,
+        396.33,
+        115.95,
+        517.17
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:038:image:xref:360",
+    "element_type": "embedded_image",
+    "height": 504,
+    "image_id": "owner-manual:image:xref:360",
+    "needs_caption": true,
+    "page": 38,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p038-img01-xref360.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 276
+  },
+  {
+    "bbox": [
+      [
+        123.87,
+        396.35,
+        188.0,
+        516.13
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:038:image:xref:362",
+    "element_type": "embedded_image",
+    "height": 500,
+    "image_id": "owner-manual:image:xref:362",
+    "needs_caption": true,
+    "page": 38,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p038-img02-xref362.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 268
+  },
+  {
+    "bbox": [
+      [
+        196.97,
+        396.3,
+        262.18,
+        517.22
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:038:image:xref:364",
+    "element_type": "embedded_image",
+    "height": 504,
+    "image_id": "owner-manual:image:xref:364",
+    "needs_caption": true,
+    "page": 38,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p038-img03-xref364.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 272
+  },
+  {
+    "bbox": [
+      [
+        269.04,
+        396.35,
+        335.24,
+        517.19
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:038:image:xref:366",
+    "element_type": "embedded_image",
+    "height": 504,
+    "image_id": "owner-manual:image:xref:366",
+    "needs_caption": true,
+    "page": 38,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p038-img04-xref366.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 276
+  },
+  {
+    "bbox": [
+      [
+        342.29,
+        397.38,
+        407.71,
+        517.17
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:038:image:xref:368",
+    "element_type": "embedded_image",
+    "height": 500,
+    "image_id": "owner-manual:image:xref:368",
+    "needs_caption": true,
+    "page": 38,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p038-img05-xref368.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 273
+  },
+  {
+    "bbox": [
+      [
+        415.23,
+        396.34,
+        481.45,
+        517.13
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:038:image:xref:370",
+    "element_type": "embedded_image",
+    "height": 504,
+    "image_id": "owner-manual:image:xref:370",
+    "needs_caption": true,
+    "page": 38,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p038-img06-xref370.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 276
+  },
+  {
+    "bbox": [
+      [
+        488.32,
+        396.32,
+        554.54,
+        517.18
+      ]
+    ],
+    "caption": "",
+    "doc_id": "owner-manual",
+    "element_id": "owner-manual:page:038:image:xref:372",
+    "element_type": "embedded_image",
+    "height": 504,
+    "image_id": "owner-manual:image:xref:372",
+    "needs_caption": true,
+    "page": 38,
+    "path": "products/vulcan-omnipro-220/knowledge/images/owner-manual-p038-img07-xref372.jpeg",
+    "source_doc": "owner-manual.pdf",
+    "width": 276
+  },
+  {
+    "bbox": [
+      [
+        23.49,
+        485.88,
+        105.03,
+        565.34
+      ]
+    ],
+    "caption": "",
+    "doc_id": "quick-start-guide",
+    "element_id": "quick-start-guide:page:001:image:xref:199",
+    "element_type": "embedded_image",
+    "height": 203,
+    "image_id": "quick-start-guide:image:xref:199",
+    "needs_caption": true,
+    "page": 1,
+    "path": "products/vulcan-omnipro-220/knowledge/images/quick-start-guide-p001-img01-xref199.jpeg",
+    "source_doc": "quick-start-guide.pdf",
+    "width": 274
+  },
+  {
+    "bbox": [
+      [
+        318.05,
+        502.15,
+        354.85,
+        523.0
+      ]
+    ],
+    "caption": "",
+    "doc_id": "quick-start-guide",
+    "element_id": "quick-start-guide:page:001:image:xref:201",
+    "element_type": "embedded_image",
+    "height": 87,
+    "image_id": "quick-start-guide:image:xref:201",
+    "needs_caption": true,
+    "page": 1,
+    "path": "products/vulcan-omnipro-220/knowledge/images/quick-start-guide-p001-img02-xref201.png",
+    "source_doc": "quick-start-guide.pdf",
+    "width": 154
+  },
+  {
+    "bbox": [
+      [
+        0.0,
+        0.0,
+        1200.0,
+        1200.0
+      ]
+    ],
+    "caption": "",
+    "doc_id": "selection-chart",
+    "element_id": "selection-chart:page:001:image:xref:10",
+    "element_type": "embedded_image",
+    "height": 1200,
+    "image_id": "selection-chart:image:xref:10",
+    "needs_caption": true,
+    "page": 1,
+    "path": "products/vulcan-omnipro-220/knowledge/images/selection-chart-p001-img01-xref10.jpeg",
+    "source_doc": "selection-chart.pdf",
+    "width": 1200
+  },
+  {
+    "bbox": [],
+    "caption": "Vulcan OmniPro 220 exterior product photo.",
+    "doc_id": "product-photos",
+    "element_id": "product-photos:product-exterior",
+    "element_type": "product_photo",
+    "height": 1200,
+    "image_id": "product-exterior",
+    "needs_caption": false,
+    "page": null,
+    "path": "products/vulcan-omnipro-220/knowledge/images/product.webp",
+    "source_doc": "product.webp",
+    "width": 1200
+  },
+  {
+    "bbox": [],
+    "caption": "Vulcan OmniPro 220 inside panel product photo.",
+    "doc_id": "product-photos",
+    "element_id": "product-photos:product-inside-panel",
+    "element_type": "product_photo",
+    "height": 1200,
+    "image_id": "product-inside-panel",
+    "needs_caption": false,
+    "page": null,
+    "path": "products/vulcan-omnipro-220/knowledge/images/product-inside.webp",
+    "source_doc": "product-inside.webp",
+    "width": 1200
+  }
+]

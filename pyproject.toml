@@ -1,0 +1,14 @@
+[project]
+name = "prox-challenge"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "claude-code-sdk>=0.0.25",
+    "pillow>=12.2.0",
+    "pydantic>=2.13.1",
+    "pymupdf>=1.27.2.2",
+    "python-dotenv>=1.2.2",
+    "rank-bm25>=0.2.2",
+    "rapidfuzz>=3.14.5",
+    "rapidocr-onnxruntime>=1.4.4",
+]

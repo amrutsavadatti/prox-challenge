@@ -1,0 +1,35 @@
+# OS
+.DS_Store
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+
+# Environment / secrets
+.env
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
