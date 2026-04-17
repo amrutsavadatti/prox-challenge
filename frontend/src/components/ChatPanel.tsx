@@ -9,11 +9,67 @@ import {
   FileCode2,
   Paperclip,
   X,
+  Download,
 } from 'lucide-react';
 import type { Artifact, Citation, AttachedImage } from '@/types';
 import { AlertTriangle } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+
+const API_BASE = (import.meta as any).env?.VITE_API_BASE ?? 'http://localhost:8000';
+
+function getArtifactExtension(artifact: Artifact): string {
+  switch (artifact.type) {
+    case 'markdown': return 'md';
+    case 'json':
+    case 'table': return 'json';
+    case 'html':
+    case 'interactive': return 'html';
+    case 'mermaid': return 'mmd';
+    case 'image': {
+      const ext = artifact.content.split('.').pop()?.split('?')[0]?.toLowerCase();
+      return ext && ['png','jpg','jpeg','gif','webp','svg'].includes(ext) ? ext : 'png';
+    }
+    default:
+      return artifact.language ?? 'txt';
+  }
+}
+
+function getMimeType(artifact: Artifact): string {
+  switch (artifact.type) {
+    case 'markdown': return 'text/markdown';
+    case 'json':
+    case 'table': return 'application/json';
+    case 'html':
+    case 'interactive': return 'text/html';
+    default: return 'text/plain';
+  }
+}
+
+async function downloadArtifact(artifact: Artifact) {
+  const filename = `${artifact.title.replace(/[^a-z0-9_\-. ]/gi, '_')}.${getArtifactExtension(artifact)}`;
+
+  if (artifact.type === 'image') {
+    const src = /^https?:\/\//i.test(artifact.content)
+      ? artifact.content
+      : `${API_BASE}${artifact.content.startsWith('/') ? '' : '/'}${artifact.content}`;
+    const res = await fetch(src);
+    const blob = await res.blob();
+    triggerDownload(URL.createObjectURL(blob), filename);
+    return;
+  }
+
+  const blob = new Blob([artifact.content], { type: getMimeType(artifact) });
+  triggerDownload(URL.createObjectURL(blob), filename);
+}
+
+function triggerDownload(url: string, filename: string) {
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 10_000);
+}
 
 function MessageBubble({
   role,
@@ -110,23 +166,31 @@ function MessageBubble({
         {artifacts && artifacts.length > 0 && (
           <div className="space-y-1.5">
             {artifacts.map((artifact) => (
-              <button
-                key={artifact.id}
-                onClick={() => onArtifactClick(artifact)}
-                className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl border border-border bg-card hover:bg-accent transition-colors text-left group"
-              >
-                <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-purple-500/20 to-indigo-500/20 flex items-center justify-center shrink-0">
-                  <FileCode2 size={18} className="text-purple-400" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium truncate group-hover:text-purple-400 transition-colors">
-                    {artifact.title}
-                  </p>
-                  <p className="text-xs text-muted-foreground capitalize">
-                    {artifact.type === 'interactive' ? 'Interactive Widget' : artifact.type}
-                  </p>
-                </div>
-              </button>
+              <div key={artifact.id} className="flex items-center gap-1">
+                <button
+                  onClick={() => onArtifactClick(artifact)}
+                  className="flex-1 flex items-center gap-3 px-3 py-2.5 rounded-xl border border-border bg-card hover:bg-accent transition-colors text-left group min-w-0"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-purple-500/20 to-indigo-500/20 flex items-center justify-center shrink-0">
+                    <FileCode2 size={18} className="text-purple-400" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium truncate group-hover:text-purple-400 transition-colors">
+                      {artifact.title}
+                    </p>
+                    <p className="text-xs text-muted-foreground capitalize">
+                      {artifact.type === 'interactive' ? 'Interactive Widget' : artifact.type}
+                    </p>
+                  </div>
+                </button>
+                <button
+                  onClick={() => void downloadArtifact(artifact)}
+                  className="shrink-0 p-2 rounded-xl border border-border bg-card hover:bg-accent text-muted-foreground hover:text-foreground transition-colors"
+                  title={`Download ${artifact.title}`}
+                >
+                  <Download size={15} />
+                </button>
+              </div>
             ))}
           </div>
         )}
@@ -141,12 +205,12 @@ function MessageBubble({
 }
 
 const SUGGESTIONS = [
-  'How do I wire a stepper motor?',
-  'Help me configure print settings',
-  'TIG welding parameters for aluminum',
-  'Troubleshoot thermal runaway error',
-  'Compare filament materials',
-  'Show firmware configuration',
+  'How do I set up the Vulcan OmniPro 220 for MIG welding?',
+  'What are the duty cycle limits at 200A on 240V?',
+  'Show me the polarity settings for flux-core wire',
+  'Help me troubleshoot poor arc stability',
+  'What TIG settings should I use for 1/8" aluminum?',
+  'Show me the wiring diagram for the work clamp',
 ];
 
 const MAX_IMAGE_BYTES = 8 * 1024 * 1024;
@@ -161,7 +225,7 @@ function readImageAsDataUrl(file: File): Promise<string> {
 }
 
 export function ChatPanel() {
-  const { chats, activeChatId, sendMessage, isStreaming, sidebarOpen, toggleSidebar, setActiveArtifact } = useStore();
+  const { chats, activeChatId, sendMessage, isStreaming, streamingStatus, sidebarOpen, toggleSidebar, setActiveArtifact } = useStore();
   const [input, setInput] = useState('');
   const [pendingImages, setPendingImages] = useState<AttachedImage[]>([]);
   const [isDragging, setIsDragging] = useState(false);
@@ -213,6 +277,12 @@ export function ChatPanel() {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [messages.length, isStreaming]);
+
+  useEffect(() => {
+    if (activeChatId && messages.length === 0) {
+      textareaRef.current?.focus();
+    }
+  }, [activeChatId]);
 
   const handleSend = () => {
     const trimmed = input.trim();
@@ -320,8 +390,13 @@ export function ChatPanel() {
               <div className="shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-amber-600 flex items-center justify-center">
                 <Sparkles size={16} className="text-white" />
               </div>
-              <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
-                <Loader2 size={18} className="animate-spin text-muted-foreground" />
+              <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-2.5">
+                <Loader2 size={16} className="animate-spin text-muted-foreground shrink-0" />
+                {streamingStatus ? (
+                  <span className="text-sm text-muted-foreground animate-pulse">{streamingStatus}</span>
+                ) : (
+                  <span className="text-sm text-muted-foreground">Thinking...</span>
+                )}
               </div>
             </div>
           )}

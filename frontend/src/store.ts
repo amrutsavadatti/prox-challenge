@@ -4,48 +4,14 @@ import type { Chat, Artifact, Citation, AttachedImage } from './types';
 
 const API_BASE = (import.meta as any).env?.VITE_API_BASE ?? 'http://localhost:8000';
 
-async function fetchChat(
-  question: string,
-  history: { role: 'user' | 'assistant'; content: string }[],
-  images: AttachedImage[],
-): Promise<{
-  text: string;
-  artifacts: Artifact[];
-  citations: Citation[];
-  safetyFlags: string[];
-}> {
-  const res = await fetch(`${API_BASE}/chat`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      question,
-      history,
-      images: images.map((img) => ({
-        name: img.name,
-        mime_type: img.mimeType,
-        data_url: img.dataUrl,
-      })),
-    }),
-  });
-  if (!res.ok) {
-    const detail = await res.text();
-    throw new Error(`chat request failed: ${res.status} ${detail}`);
-  }
-  const data = await res.json();
-  const rawArtifacts = Array.isArray(data.artifacts) ? data.artifacts : [];
-  const artifacts: Artifact[] = rawArtifacts.map((a: any) => ({
+function parseArtifacts(raw: any[]): Artifact[] {
+  return raw.map((a: any) => ({
     id: String(a.id ?? `artifact-${Math.random().toString(36).slice(2)}`),
     title: String(a.title ?? 'Artifact'),
     type: a.type,
     content: typeof a.content === 'string' ? a.content : JSON.stringify(a.content ?? ''),
     language: a.language,
   }));
-  return {
-    text: String(data.answer_markdown ?? ''),
-    artifacts,
-    citations: Array.isArray(data.citations) ? data.citations : [],
-    safetyFlags: Array.isArray(data.safety_flags) ? data.safety_flags : [],
-  };
 }
 
 interface AppState {
@@ -56,6 +22,7 @@ interface AppState {
   sidebarOpen: boolean;
   artifactPanelOpen: boolean;
   isStreaming: boolean;
+  streamingStatus: string | null;
 
   createChat: () => string;
   setActiveChat: (id: string) => void;
@@ -78,18 +45,9 @@ export const useStore = create<AppState>()(persist((set, get) => ({
   sidebarOpen: true,
   artifactPanelOpen: false,
   isStreaming: false,
+  streamingStatus: null,
 
   createChat: () => {
-    const state = get();
-    const active = state.chats.find((c) => c.id === state.activeChatId);
-    if (active && active.messages.length === 0) {
-      set({
-        activeArtifact: null,
-        openArtifacts: [],
-        artifactPanelOpen: false,
-      });
-      return active.id;
-    }
     const id = uid();
     const chat: Chat = {
       id,
@@ -155,43 +113,92 @@ export const useStore = create<AppState>()(persist((set, get) => ({
           : c
       ),
       isStreaming: true,
+      streamingStatus: null,
     }));
 
     const priorMessages = state.chats.find((c) => c.id === chatId)?.messages ?? [];
     const history = priorMessages.map((m) => ({ role: m.role, content: m.content }));
 
-    fetchChat(content, history, images)
-      .then((response) => {
-        const assistantMsg = {
-          id: uid(),
-          role: 'assistant' as const,
-          content: response.text,
-          artifacts: response.artifacts,
-          citations: response.citations,
-          safetyFlags: response.safetyFlags,
-          timestamp: new Date(),
-        };
-        set((s) => {
-          const newOpenArtifacts = [...s.openArtifacts, ...response.artifacts];
-          const latestArtifact = response.artifacts[response.artifacts.length - 1] ?? s.activeArtifact;
-          return {
-            chats: s.chats.map((c) =>
-              c.id === chatId
-                ? { ...c, messages: [...c.messages, assistantMsg], updatedAt: new Date() }
-                : c
-            ),
-            isStreaming: false,
-            openArtifacts: newOpenArtifacts,
-            activeArtifact: latestArtifact,
-            artifactPanelOpen: response.artifacts.length > 0 ? true : s.artifactPanelOpen,
-          };
+    const body = JSON.stringify({
+      question: content,
+      history,
+      images: images.map((img) => ({
+        name: img.name,
+        mime_type: img.mimeType,
+        data_url: img.dataUrl,
+      })),
+    });
+
+    (async () => {
+      try {
+        const res = await fetch(`${API_BASE}/chat/stream`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body,
         });
-      })
-      .catch((err: Error) => {
+
+        if (!res.ok || !res.body) {
+          throw new Error(`chat request failed: ${res.status}`);
+        }
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+
+          // SSE events are separated by double newline
+          const parts = buffer.split('\n\n');
+          buffer = parts.pop() ?? '';
+
+          for (const part of parts) {
+            const dataLine = part.split('\n').find((l) => l.startsWith('data: '));
+            if (!dataLine) continue;
+            let event: any;
+            try { event = JSON.parse(dataLine.slice(6)); } catch { continue; }
+
+            if (event.type === 'tool_call') {
+              set({ streamingStatus: event.label });
+            } else if (event.type === 'done') {
+              const artifacts = parseArtifacts(Array.isArray(event.artifacts) ? event.artifacts : []);
+              const assistantMsg = {
+                id: uid(),
+                role: 'assistant' as const,
+                content: String(event.answer_markdown ?? ''),
+                artifacts,
+                citations: Array.isArray(event.citations) ? event.citations as Citation[] : [],
+                safetyFlags: Array.isArray(event.safety_flags) ? event.safety_flags as string[] : [],
+                timestamp: new Date(),
+              };
+              set((s) => {
+                const newOpenArtifacts = [...s.openArtifacts, ...artifacts];
+                const latestArtifact = artifacts[artifacts.length - 1] ?? s.activeArtifact;
+                return {
+                  chats: s.chats.map((c) =>
+                    c.id === chatId
+                      ? { ...c, messages: [...c.messages, assistantMsg], updatedAt: new Date() }
+                      : c
+                  ),
+                  isStreaming: false,
+                  streamingStatus: null,
+                  openArtifacts: newOpenArtifacts,
+                  activeArtifact: latestArtifact,
+                  artifactPanelOpen: artifacts.length > 0 ? true : s.artifactPanelOpen,
+                };
+              });
+            } else if (event.type === 'error') {
+              throw new Error(event.message ?? 'Unknown stream error');
+            }
+          }
+        }
+      } catch (err: any) {
         const assistantMsg = {
           id: uid(),
           role: 'assistant' as const,
-          content: `Error: ${err.message}`,
+          content: `Error: ${err?.message ?? 'Request failed'}`,
           timestamp: new Date(),
         };
         set((s) => ({
@@ -201,8 +208,10 @@ export const useStore = create<AppState>()(persist((set, get) => ({
               : c
           ),
           isStreaming: false,
+          streamingStatus: null,
         }));
-      });
+      }
+    })();
   },
 
   setActiveArtifact: (artifact) => set((s) => {

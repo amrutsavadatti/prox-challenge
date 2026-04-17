@@ -2,18 +2,20 @@ from __future__ import annotations
 
 import base64
 import io
+import json
 import re
 import uuid
+from collections.abc import AsyncGenerator
 from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from PIL import Image as PILImage
 from pydantic import BaseModel
 
-from prox_agent.agent import ROOT, ask_claude, MissingAPIKeyError
+from prox_agent.agent import ROOT, ask_claude, ask_claude_stream, MissingAPIKeyError
 from prox_agent.local_answer import answer_local
 
 UPLOAD_ROOT = (ROOT / "uploads").resolve()
@@ -114,6 +116,40 @@ async def chat(req: ChatRequest) -> dict[str, Any]:
         result = answer_local(question)
         result["fallback"] = "local (no API key)"
         return result
+
+
+@app.post("/chat/stream")
+async def chat_stream(req: ChatRequest) -> StreamingResponse:
+    question = (req.question or "").strip()
+    if not question:
+        raise HTTPException(status_code=400, detail="question is required")
+
+    image_paths = _save_uploaded_images(req.images)
+    history = [{"role": t.role, "content": t.content} for t in req.history]
+
+    async def event_generator() -> AsyncGenerator[str, None]:
+        try:
+            async for event in ask_claude_stream(
+                question,
+                max_turns=req.max_turns,
+                history=history,
+                image_paths=image_paths,
+            ):
+                yield f"data: {json.dumps(event)}\n\n"
+        except MissingAPIKeyError:
+            result = answer_local(question)
+            result["type"] = "done"
+            result["fallback"] = "local (no API key)"
+            yield f"data: {json.dumps(result)}\n\n"
+        except Exception as exc:
+            error_event = {"type": "error", "message": str(exc)}
+            yield f"data: {json.dumps(error_event)}\n\n"
+
+    return StreamingResponse(
+        event_generator(),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
 
 
 @app.get("/knowledge/{path:path}")

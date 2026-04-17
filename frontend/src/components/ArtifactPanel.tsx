@@ -71,24 +71,11 @@ function CodeViewer({ content, language }: { content: string; language?: string 
 }
 
 function HtmlPreview({ content }: { content: string }) {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  useEffect(() => {
-    if (iframeRef.current) {
-      const doc = iframeRef.current.contentDocument;
-      if (doc) {
-        doc.open();
-        doc.write(content);
-        doc.close();
-      }
-    }
-  }, [content]);
-
   return (
     <iframe
-      ref={iframeRef}
+      srcDoc={content}
       className="w-full h-full border-0 bg-[#1a1a2e]"
-      sandbox="allow-scripts allow-same-origin"
+      sandbox="allow-scripts"
       title="Interactive Preview"
     />
   );
@@ -123,10 +110,24 @@ function MermaidViewer({ content }: { content: string }) {
     return () => { cancelled = true; };
   }, [content]);
 
+  // Make the SVG responsive after it lands in the DOM.
+  // Mermaid sets fixed width/height + an inline max-width style which causes
+  // clipping in normal mode and uncontrolled zoom in fullscreen.
+  useEffect(() => {
+    if (!containerRef.current || !svg) return;
+    const svgEl = containerRef.current.querySelector('svg');
+    if (!svgEl) return;
+    svgEl.removeAttribute('width');
+    svgEl.removeAttribute('height');
+    svgEl.style.maxWidth = '100%';
+    svgEl.style.height = 'auto';
+    svgEl.style.display = 'block';
+  }, [svg]);
+
   return (
     <div
       ref={containerRef}
-      className="flex items-center justify-center h-full p-8 overflow-auto"
+      className="overflow-auto h-full p-6 flex justify-center"
       dangerouslySetInnerHTML={{ __html: svg }}
     />
   );

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+from collections.abc import AsyncGenerator
 from typing import Any
 
 from claude_code_sdk import (
@@ -128,6 +129,20 @@ API_KEY_PLACEHOLDERS = {
 }
 
 
+_TOOL_LABELS: dict[str, str] = {
+    "search_manual": "Reading the manual...",
+    "lookup_duty_cycle": "Checking duty cycle table...",
+    "lookup_polarity": "Looking up polarity settings...",
+    "troubleshooting_for": "Scanning troubleshooting guide...",
+    "get_manual_image": "Finding diagrams...",
+}
+
+
+def _tool_label(name: str) -> str:
+    bare = name.split("__")[-1]
+    return _TOOL_LABELS.get(bare, f"Calling {bare}...")
+
+
 class MissingAPIKeyError(RuntimeError):
     pass
 
@@ -217,6 +232,57 @@ async def ask_claude(
     parsed["claude"] = _result_metadata(result_message)
     parsed["messages"] = messages
     return parsed
+
+
+async def ask_claude_stream(
+    question: str,
+    *,
+    api_key: str | None = None,
+    max_turns: int = 8,
+    history: list[dict[str, str]] | None = None,
+    image_paths: list[str] | None = None,
+) -> AsyncGenerator[dict[str, Any], None]:
+    """Yield SSE-ready dicts: tool_call events during the run, then a done event."""
+    resolved_api_key = api_key or _api_key_from_env()
+    if not _has_real_api_key(resolved_api_key):
+        raise MissingAPIKeyError(
+            "Set ANTHROPIC_API_KEY in .env before running the Claude agent."
+        )
+
+    options = build_agent_options(api_key=resolved_api_key, max_turns=max_turns)
+    assistant_text: list[str] = []
+    result_message: ResultMessage | None = None
+
+    async with ClaudeSDKClient(options=options) as client:
+        await client.query(_user_prompt(question, history=history, image_paths=image_paths))
+        async for message in client.receive_response():
+            if isinstance(message, AssistantMessage):
+                for block in message.content:
+                    if isinstance(block, ToolUseBlock):
+                        yield {"type": "tool_call", "tool": block.name, "label": _tool_label(block.name)}
+                    elif isinstance(block, TextBlock):
+                        assistant_text.append(block.text)
+            elif isinstance(message, ResultMessage):
+                result_message = message
+
+    raw_text = "\n".join(part for part in assistant_text if part).strip()
+    if not raw_text and result_message and result_message.result:
+        raw_text = result_message.result.strip()
+
+    parsed = _parse_json_object(raw_text)
+    if parsed is None:
+        parsed = {
+            "answer_markdown": raw_text,
+            "citations": [],
+            "artifacts": [],
+            "tool_results": {},
+            "safety_flags": [],
+            "parse_warning": "Claude did not return a clean JSON object.",
+        }
+
+    parsed = normalize_response_contract(parsed)
+    parsed["type"] = "done"
+    yield parsed
 
 
 def _user_prompt(
