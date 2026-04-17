@@ -7,8 +7,10 @@ import {
   User,
   Loader2,
   FileCode2,
+  Paperclip,
+  X,
 } from 'lucide-react';
-import type { Artifact, Citation } from '@/types';
+import type { Artifact, Citation, AttachedImage } from '@/types';
 import { AlertTriangle } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -19,6 +21,7 @@ function MessageBubble({
   artifacts,
   citations,
   safetyFlags,
+  images,
   onArtifactClick,
 }: {
   role: 'user' | 'assistant';
@@ -26,6 +29,7 @@ function MessageBubble({
   artifacts?: Artifact[];
   citations?: Citation[];
   safetyFlags?: string[];
+  images?: AttachedImage[];
   onArtifactClick: (a: Artifact) => void;
 }) {
   return (
@@ -36,6 +40,18 @@ function MessageBubble({
         </div>
       )}
       <div className={`max-w-[80%] space-y-2 ${role === 'user' ? 'order-first' : ''}`}>
+        {role === 'user' && images && images.length > 0 && (
+          <div className="flex flex-wrap gap-2 justify-end">
+            {images.map((img) => (
+              <img
+                key={img.id}
+                src={img.dataUrl}
+                alt={img.name}
+                className="max-h-48 max-w-[240px] rounded-xl border border-border object-cover"
+              />
+            ))}
+          </div>
+        )}
         {role === 'assistant' && safetyFlags && safetyFlags.length > 0 && (
           <div className="flex items-start gap-2 px-3 py-2 rounded-xl border border-yellow-500/40 bg-yellow-500/10 text-xs text-yellow-200">
             <AlertTriangle size={14} className="shrink-0 mt-0.5" />
@@ -133,11 +149,61 @@ const SUGGESTIONS = [
   'Show firmware configuration',
 ];
 
+const MAX_IMAGE_BYTES = 8 * 1024 * 1024;
+
+function readImageAsDataUrl(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result ?? ''));
+    reader.onerror = () => reject(reader.error ?? new Error('read failed'));
+    reader.readAsDataURL(file);
+  });
+}
+
 export function ChatPanel() {
   const { chats, activeChatId, sendMessage, isStreaming, sidebarOpen, toggleSidebar, setActiveArtifact } = useStore();
   const [input, setInput] = useState('');
+  const [pendingImages, setPendingImages] = useState<AttachedImage[]>([]);
+  const [isDragging, setIsDragging] = useState(false);
+  const [attachError, setAttachError] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const attachFiles = async (fileList: FileList | File[] | null | undefined) => {
+    if (!fileList) return;
+    const files = Array.from(fileList).filter((f) => f.type.startsWith('image/'));
+    if (files.length === 0) {
+      setAttachError('Only image files are supported.');
+      return;
+    }
+    const next: AttachedImage[] = [];
+    for (const file of files) {
+      if (file.size > MAX_IMAGE_BYTES) {
+        setAttachError(`${file.name} is larger than 8 MB.`);
+        continue;
+      }
+      try {
+        const dataUrl = await readImageAsDataUrl(file);
+        next.push({
+          id: `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+          name: file.name,
+          mimeType: file.type,
+          dataUrl,
+        });
+      } catch {
+        setAttachError(`Could not read ${file.name}.`);
+      }
+    }
+    if (next.length > 0) {
+      setPendingImages((cur) => [...cur, ...next]);
+      setAttachError(null);
+    }
+  };
+
+  const removePendingImage = (id: string) => {
+    setPendingImages((cur) => cur.filter((img) => img.id !== id));
+  };
 
   const activeChat = chats.find((c) => c.id === activeChatId);
   const messages = activeChat?.messages ?? [];
@@ -150,9 +216,11 @@ export function ChatPanel() {
 
   const handleSend = () => {
     const trimmed = input.trim();
-    if (!trimmed || isStreaming) return;
-    sendMessage(trimmed);
+    if ((!trimmed && pendingImages.length === 0) || isStreaming) return;
+    sendMessage(trimmed || '(image attached)', pendingImages);
     setInput('');
+    setPendingImages([]);
+    setAttachError(null);
     if (textareaRef.current) {
       textareaRef.current.style.height = 'auto';
     }
@@ -173,7 +241,23 @@ export function ChatPanel() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-background">
+    <div
+      className={`relative flex flex-col h-full bg-background ${isDragging ? 'ring-2 ring-primary/60' : ''}`}
+      onDragOver={(e) => {
+        if (Array.from(e.dataTransfer.items).some((i) => i.kind === 'file')) {
+          e.preventDefault();
+          setIsDragging(true);
+        }
+      }}
+      onDragLeave={(e) => {
+        if (e.currentTarget === e.target) setIsDragging(false);
+      }}
+      onDrop={(e) => {
+        e.preventDefault();
+        setIsDragging(false);
+        void attachFiles(e.dataTransfer.files);
+      }}
+    >
       {/* Header */}
       <div className="flex items-center gap-2 px-4 h-14 border-b border-border shrink-0">
         {!sidebarOpen && (
@@ -226,6 +310,7 @@ export function ChatPanel() {
               artifacts={msg.artifacts}
               citations={msg.citations}
               safetyFlags={msg.safetyFlags}
+              images={msg.images}
               onArtifactClick={(a) => setActiveArtifact(a)}
             />
           ))}
@@ -246,30 +331,89 @@ export function ChatPanel() {
       {/* Input bar */}
       <div className="border-t border-border p-4 shrink-0">
         <div className="max-w-3xl mx-auto">
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            multiple
+            className="hidden"
+            onChange={(e) => {
+              void attachFiles(e.target.files);
+              if (fileInputRef.current) fileInputRef.current.value = '';
+            }}
+          />
+
+          {pendingImages.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-2">
+              {pendingImages.map((img) => (
+                <div key={img.id} className="relative group">
+                  <img
+                    src={img.dataUrl}
+                    alt={img.name}
+                    className="h-16 w-16 rounded-lg border border-border object-cover"
+                  />
+                  <button
+                    onClick={() => removePendingImage(img.id)}
+                    className="absolute -top-1.5 -right-1.5 p-0.5 rounded-full bg-background border border-border opacity-80 hover:opacity-100 hover:bg-destructive hover:text-destructive-foreground transition"
+                    aria-label={`Remove ${img.name}`}
+                  >
+                    <X size={12} />
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {attachError && (
+            <p className="text-xs text-destructive mb-2">{attachError}</p>
+          )}
+
           <div className="flex items-end gap-2 rounded-2xl border border-border bg-card px-4 py-3 focus-within:ring-2 focus-within:ring-ring/30 focus-within:border-ring transition-all">
+            <button
+              onClick={() => fileInputRef.current?.click()}
+              disabled={isStreaming}
+              className="shrink-0 w-8 h-8 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent flex items-center justify-center disabled:opacity-40 transition-colors"
+              aria-label="Attach image"
+              title="Attach image"
+            >
+              <Paperclip size={16} />
+            </button>
             <textarea
               ref={textareaRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onInput={handleTextareaInput}
               onKeyDown={handleKeyDown}
-              placeholder="Ask about your equipment..."
+              onPaste={(e) => {
+                const imgs = Array.from(e.clipboardData.files).filter((f) => f.type.startsWith('image/'));
+                if (imgs.length > 0) {
+                  e.preventDefault();
+                  void attachFiles(imgs);
+                }
+              }}
+              placeholder="Ask about your equipment (or drop an image)..."
               rows={1}
               className="flex-1 resize-none bg-transparent text-sm placeholder:text-muted-foreground focus:outline-none min-h-[24px] max-h-[200px]"
             />
             <button
               onClick={handleSend}
-              disabled={!input.trim() || isStreaming}
+              disabled={(!input.trim() && pendingImages.length === 0) || isStreaming}
               className="shrink-0 w-8 h-8 rounded-lg bg-primary text-primary-foreground flex items-center justify-center disabled:opacity-40 hover:bg-primary/90 transition-colors"
             >
               <Send size={16} />
             </button>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-2">
-            Press Enter to send, Shift+Enter for new line
+            Press Enter to send, Shift+Enter for new line. Paste or drop images to attach.
           </p>
         </div>
       </div>
+
+      {isDragging && (
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-primary/5 border-2 border-dashed border-primary/60 rounded-lg">
+          <p className="text-sm font-medium text-primary">Drop image to attach</p>
+        </div>
+      )}
     </div>
   );
 }

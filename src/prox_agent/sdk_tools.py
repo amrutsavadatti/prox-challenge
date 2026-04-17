@@ -208,6 +208,7 @@ TOOL_NAMES = [sdk_tool.name for sdk_tool in KNOWLEDGE_TOOLS]
 ALLOWED_TOOL_NAMES = [
     *TOOL_NAMES,
     *(f"mcp__{MCP_SERVER_NAME}__{name}" for name in TOOL_NAMES),
+    "Read",
 ]
 
 

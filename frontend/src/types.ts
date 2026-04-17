@@ -18,6 +18,13 @@ export interface Citation {
   excerpt?: string;
 }
 
+export interface AttachedImage {
+  id: string;
+  name: string;
+  mimeType: string;
+  dataUrl: string;
+}
+
 export interface Message {
   id: string;
   role: 'user' | 'assistant';
@@ -25,6 +32,7 @@ export interface Message {
   artifacts?: Artifact[];
   citations?: Citation[];
   safetyFlags?: string[];
+  images?: AttachedImage[];
   timestamp: Date;
 }
 

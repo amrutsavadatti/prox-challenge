@@ -38,6 +38,8 @@ Grounding rules:
 - If the question asks about polarity, cable placement, sockets, or setup, call lookup_polarity and get_manual_image.
 - If the question asks about symptoms, weld defects, or repair steps, call troubleshooting_for and search_manual.
 - If an answer would be clearer with a chart, diagram, setup image, or manual page, call get_manual_image and include it as an artifact.
+- When the user attaches images, absolute file paths are listed under "Attached user images" in the prompt. Use the Read tool to open each image — you need to *see* it before you can reason about it. Do this before calling knowledge tools.
+- Visual observations from user-attached images are YOUR OWN CLAIMS, not citations. Prefix them with "From your photo, I can see...". Only manual-sourced facts get an entry in `citations`. Every fix or recommendation must still cite the OmniPro 220 documentation.
 - Do not invent product specs or machine-specific operating facts.
 - If the tools do not contain enough evidence for setup, polarity, sockets, wiring, duty cycle, electrical requirements, or any other safety-critical or machine-specific instruction, say what is missing and ask one focused follow-up instead of guessing.
 - If the tools do not contain an exact citation for a low-risk troubleshooting or technique suggestion, you may offer a clearly labeled best-effort guess only after stating that you could not verify it in the OmniPro 220 documentation.
@@ -171,6 +173,7 @@ async def ask_claude(
     api_key: str | None = None,
     max_turns: int = 8,
     history: list[dict[str, str]] | None = None,
+    image_paths: list[str] | None = None,
 ) -> dict[str, Any]:
     resolved_api_key = api_key or _api_key_from_env()
     if not _has_real_api_key(resolved_api_key):
@@ -185,7 +188,7 @@ async def ask_claude(
     result_message: ResultMessage | None = None
 
     async with ClaudeSDKClient(options=options) as client:
-        await client.query(_user_prompt(question, history=history))
+        await client.query(_user_prompt(question, history=history, image_paths=image_paths))
         async for message in client.receive_response():
             messages.append(_serialize_message(message))
             if isinstance(message, AssistantMessage):
@@ -216,19 +219,30 @@ async def ask_claude(
     return parsed
 
 
-def _user_prompt(question: str, *, history: list[dict[str, str]] | None = None) -> str:
-    if not history:
-        return f"User question:\n{question}"
-    lines = ["Prior conversation (for context only — do not repeat verbatim):"]
-    for turn in history[-10:]:
-        role = str(turn.get("role", "")).strip().lower()
-        text = str(turn.get("content", "")).strip()
-        if not text or role not in {"user", "assistant"}:
-            continue
-        label = "User" if role == "user" else "Assistant"
-        lines.append(f"{label}: {text}")
-    lines.append("")
-    lines.append(f"Current user question:\n{question}")
+def _user_prompt(
+    question: str,
+    *,
+    history: list[dict[str, str]] | None = None,
+    image_paths: list[str] | None = None,
+) -> str:
+    lines: list[str] = []
+    if history:
+        lines.append("Prior conversation (for context only — do not repeat verbatim):")
+        for turn in history[-10:]:
+            role = str(turn.get("role", "")).strip().lower()
+            text = str(turn.get("content", "")).strip()
+            if not text or role not in {"user", "assistant"}:
+                continue
+            label = "User" if role == "user" else "Assistant"
+            lines.append(f"{label}: {text}")
+        lines.append("")
+    if image_paths:
+        lines.append("Attached user images (use the Read tool to open each before reasoning):")
+        for path in image_paths:
+            lines.append(f"- {path}")
+        lines.append("")
+    prefix = "Current user question:\n" if (history or image_paths) else "User question:\n"
+    lines.append(f"{prefix}{question}")
     return "\n".join(lines)
 
 

@@ -1,11 +1,13 @@
 import { create } from 'zustand';
-import type { Chat, Artifact, Citation } from './types';
+import { persist, createJSONStorage } from 'zustand/middleware';
+import type { Chat, Artifact, Citation, AttachedImage } from './types';
 
 const API_BASE = (import.meta as any).env?.VITE_API_BASE ?? 'http://localhost:8000';
 
 async function fetchChat(
   question: string,
   history: { role: 'user' | 'assistant'; content: string }[],
+  images: AttachedImage[],
 ): Promise<{
   text: string;
   artifacts: Artifact[];
@@ -15,7 +17,15 @@ async function fetchChat(
   const res = await fetch(`${API_BASE}/chat`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ question, history }),
+    body: JSON.stringify({
+      question,
+      history,
+      images: images.map((img) => ({
+        name: img.name,
+        mime_type: img.mimeType,
+        data_url: img.dataUrl,
+      })),
+    }),
   });
   if (!res.ok) {
     const detail = await res.text();
@@ -50,7 +60,7 @@ interface AppState {
   createChat: () => string;
   setActiveChat: (id: string) => void;
   deleteChat: (id: string) => void;
-  sendMessage: (content: string) => void;
+  sendMessage: (content: string, images?: AttachedImage[]) => void;
   setActiveArtifact: (artifact: Artifact | null) => void;
   closeArtifact: (id: string) => void;
   toggleSidebar: () => void;
@@ -60,7 +70,7 @@ interface AppState {
 let nextId = 1;
 const uid = () => `${Date.now()}-${nextId++}`;
 
-export const useStore = create<AppState>((set, get) => ({
+export const useStore = create<AppState>()(persist((set, get) => ({
   chats: [],
   activeChatId: null,
   activeArtifact: null,
@@ -70,6 +80,16 @@ export const useStore = create<AppState>((set, get) => ({
   isStreaming: false,
 
   createChat: () => {
+    const state = get();
+    const active = state.chats.find((c) => c.id === state.activeChatId);
+    if (active && active.messages.length === 0) {
+      set({
+        activeArtifact: null,
+        openArtifacts: [],
+        artifactPanelOpen: false,
+      });
+      return active.id;
+    }
     const id = uid();
     const chat: Chat = {
       id,
@@ -107,7 +127,7 @@ export const useStore = create<AppState>((set, get) => ({
     });
   },
 
-  sendMessage: (content) => {
+  sendMessage: (content, images = []) => {
     const state = get();
     let chatId = state.activeChatId;
 
@@ -119,6 +139,7 @@ export const useStore = create<AppState>((set, get) => ({
       id: uid(),
       role: 'user' as const,
       content,
+      images: images.length > 0 ? images : undefined,
       timestamp: new Date(),
     };
 
@@ -139,7 +160,7 @@ export const useStore = create<AppState>((set, get) => ({
     const priorMessages = state.chats.find((c) => c.id === chatId)?.messages ?? [];
     const history = priorMessages.map((m) => ({ role: m.role, content: m.content }));
 
-    fetchChat(content, history)
+    fetchChat(content, history, images)
       .then((response) => {
         const assistantMsg = {
           id: uid(),
@@ -211,4 +232,24 @@ export const useStore = create<AppState>((set, get) => ({
 
   toggleSidebar: () => set((s) => ({ sidebarOpen: !s.sidebarOpen })),
   toggleArtifactPanel: () => set((s) => ({ artifactPanelOpen: !s.artifactPanelOpen })),
+}), {
+  name: 'prox-chat-store-v1',
+  storage: createJSONStorage(() => localStorage),
+  partialize: (s) => ({
+    chats: s.chats,
+    activeChatId: s.activeChatId,
+    sidebarOpen: s.sidebarOpen,
+  }),
+  onRehydrateStorage: () => (state) => {
+    if (!state) return;
+    state.chats = (state.chats ?? []).map((c) => ({
+      ...c,
+      createdAt: new Date(c.createdAt),
+      updatedAt: new Date(c.updatedAt),
+      messages: (c.messages ?? []).map((m) => ({
+        ...m,
+        timestamp: new Date(m.timestamp),
+      })),
+    }));
+  },
 }));
