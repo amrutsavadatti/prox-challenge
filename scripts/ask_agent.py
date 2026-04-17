@@ -26,18 +26,15 @@ def main() -> int:
         action="store_true",
         help="Call Claude. Without this flag, the command stays in local dry-run mode.",
     )
-    parser.add_argument("--model", help="Optional Claude model override.")
     parser.add_argument("--max-turns", type=int, default=8, help="Claude Code max turns.")
     args = parser.parse_args()
 
     if not args.use_api:
-        print_json(build_dry_run(args.question, model=args.model, max_turns=args.max_turns))
+        print_json(build_dry_run(args.question, max_turns=args.max_turns))
         return 0
 
     try:
-        result = asyncio.run(
-            ask_claude(args.question, model=args.model, max_turns=args.max_turns)
-        )
+        result = asyncio.run(ask_claude(args.question, max_turns=args.max_turns))
     except MissingAPIKeyError as exc:
         print(str(exc), file=sys.stderr)
         print(

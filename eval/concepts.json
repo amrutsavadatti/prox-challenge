@@ -1,0 +1,524 @@
+[
+  {
+    "id": "C1.1",
+    "name": "Duty cycle exact lookup",
+    "tier": 1,
+    "tests": "lookup_duty_cycle(process, voltage, amperage) tool + exact citation",
+    "cross_refs": "duty-cycle table (owner manual p.19) only",
+    "artifact": "html_widget",
+    "axes": "process in {MIG, TIG, Stick, Flux-cored}; voltage in {120V, 240V}; amperage within rated ranges; phrasing formal/casual/abbreviated",
+    "seeds": [
+      "What's the duty cycle for MIG welding at 200A on 240V?",
+      "If I'm running flux-cored at 150 amps off 120V, how long can I weld before resting?"
+    ],
+    "rubric": "Must return the EXACT percentage from the table, cite owner-manual p.19, render calculator artifact. No computed numbers.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C1.2",
+    "name": "Polarity single-fact",
+    "tier": 1,
+    "tests": "lookup_polarity(process) tool",
+    "cross_refs": "polarity table + terminal/socket section (owner manual ~p.23-24)",
+    "artifact": "svg_diagram OR manual_image",
+    "axes": "process; clamp terminology (ground/work clamp, stinger/electrode holder, torch); TIG special AC vs DCEN",
+    "seeds": [
+      "What polarity do I use for 7018 stick electrode?",
+      "TIG on aluminum — DC or AC?"
+    ],
+    "rubric": "Correct polarity string (DCEN / DCEP / AC) + socket assignment, cited.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C1.3",
+    "name": "Spec single-fact",
+    "tier": 1,
+    "tests": "retrieval over specs section",
+    "cross_refs": "spec page only",
+    "artifact": "none",
+    "axes": "weight, input voltage range, max amperage, wire size range, gas compatibility",
+    "seeds": [
+      "What's the max amperage this machine can output?",
+      "How much does it weigh?"
+    ],
+    "rubric": "Exact value + page citation.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C2.1",
+    "name": "Polarity + socket assignment",
+    "tier": 2,
+    "tests": "multi-section stitch (polarity rule + physical connection point)",
+    "cross_refs": "polarity section + terminal diagram section",
+    "artifact": "svg_diagram",
+    "axes": "process; which clamp (ground vs torch vs stinger)",
+    "seeds": [
+      "What polarity for TIG welding, and which socket does the ground clamp go in?",
+      "I want to run flux-cored — where do I plug the gun and the work clamp?"
+    ],
+    "rubric": "Polarity + correct socket label + SVG diagram + citations from both sections.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C2.2",
+    "name": "Symptom to diagnostic pathway",
+    "tier": 2,
+    "tests": "troubleshooting_for(symptom, process) + procedural steps text",
+    "cross_refs": "troubleshooting matrix + relevant setup section",
+    "artifact": "flowchart",
+    "axes": "defect in {porosity, spatter, burn-through, lack-of-fusion, undercut, bird-nesting, wandering arc, hard-starting, tungsten contamination}; process",
+    "seeds": [
+      "I'm getting porosity in my flux-cored welds — what do I check?",
+      "My TIG arc keeps wandering. How do I fix it?"
+    ],
+    "rubric": "Ordered checklist + Mermaid flowchart artifact + citations to troubleshooting matrix page(s).",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C2.3",
+    "name": "Process setup with safety trigger",
+    "tier": 2,
+    "tests": "setup procedure + safety section cross-link",
+    "cross_refs": "process setup + safety section (power-off warnings, PPE)",
+    "artifact": "svg_diagram OR flowchart + safety_flags",
+    "axes": "action requiring power-off (changing polarity, swapping leads, opening wire compartment); process",
+    "seeds": [
+      "How do I switch from MIG to stick?",
+      "Can I change the polarity while the machine is on?"
+    ],
+    "rubric": "Must include safety_flags entry (e.g., power_off_before_changing_leads) and PPE reminder when relevant.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C3.1",
+    "name": "Selection chart + owner manual cross-ref",
+    "tier": 3,
+    "tests": "OCR-backed retrieval from image-only selection-chart.pdf + confirmation in owner manual",
+    "cross_refs": "selection-chart.pdf (OCR) + owner-manual MIG/TIG/Stick setup section",
+    "artifact": "manual_image",
+    "axes": "material in {mild steel, stainless, aluminum}; thickness; process",
+    "seeds": [
+      "What settings do I use for 1/8 inch mild steel with solid wire MIG?",
+      "I've got 1/16 inch aluminum — what process and settings?"
+    ],
+    "rubric": "Citations MUST include both doc_id: selection-chart AND doc_id: owner-manual. Missing selection chart = fail.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C3.2",
+    "name": "Quick-start + owner manual elaboration",
+    "tier": 3,
+    "tests": "quick-start procedure + deeper owner-manual detail",
+    "cross_refs": "quick-start-guide.pdf + owner-manual.pdf",
+    "artifact": "flowchart OR svg_diagram",
+    "axes": "task in {cable install, first weld, wire loading, gas connection}",
+    "seeds": [
+      "I just unboxed the machine — walk me through my first MIG weld.",
+      "The quick-start says to connect the work clamp — where exactly does it plug in?"
+    ],
+    "rubric": "Must pull procedure from quick-start AND elaborate detail from owner manual, both cited.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C3.3",
+    "name": "OCR-only fact",
+    "tier": 3,
+    "tests": "facts that exist ONLY in image-based content (selection chart labels, diagram labels)",
+    "cross_refs": "OCR records layer",
+    "artifact": "manual_image",
+    "axes": "chart cell values; diagram callouts; front-panel labels",
+    "seeds": [
+      "What's the recommended wire speed for 3/16 inch steel per the selection chart?",
+      "What does the label on the front panel next to the main dial say?"
+    ],
+    "rubric": "Correct value with citation to the OCR-backed source; retrieval must not silently fall back to owner-manual native text.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C4.1",
+    "name": "Process abbreviation equivalence",
+    "tier": 4,
+    "tests": "synonym map (TIG=GTAW, MIG=GMAW, flux-cored=FCAW, stick=SMAW)",
+    "cross_refs": "any process-related section",
+    "artifact": "varies by question content",
+    "axes": "each abbreviation variant; mixed abbreviations in one question",
+    "seeds": [
+      "What's the duty cycle for GTAW at 150A?",
+      "FCAW porosity fixes?"
+    ],
+    "rubric": "Same answer as colloquial variant. Synonym failure = fail.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C4.2",
+    "name": "Hardware synonym equivalence",
+    "tier": 4,
+    "tests": "stinger=electrode holder, ground clamp=work clamp, gun=torch (MIG)",
+    "cross_refs": "terminal/socket section",
+    "artifact": "svg_diagram OR manual_image",
+    "axes": "hardware term; process",
+    "seeds": [
+      "Where does the stinger plug in for 7018?",
+      "Which socket is the work clamp for TIG?"
+    ],
+    "rubric": "Correctly maps to the manual's canonical terminology and answers with citation.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C4.3",
+    "name": "Voltage phrasing equivalence",
+    "tier": 4,
+    "tests": "120 volt equals 120V equals standard outlet equals dual voltage low side",
+    "cross_refs": "input voltage spec + duty cycle table",
+    "artifact": "none OR html_widget",
+    "axes": "voltage phrasing variant",
+    "seeds": [
+      "Can I run this off a standard household outlet?",
+      "Running on dual voltage low side — what changes in duty cycle?"
+    ],
+    "rubric": "Resolves to 120V branch of tables; if ambiguous, asks for clarification.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C5.1",
+    "name": "Missing required parameter",
+    "tier": 5,
+    "tests": "agent detects unspecified axis needed for table lookup",
+    "cross_refs": "n/a",
+    "artifact": "none",
+    "axes": "missing process / missing voltage / missing amperage / missing material",
+    "seeds": [
+      "What's the duty cycle?",
+      "What polarity do I need?"
+    ],
+    "rubric": "Must ask a targeted clarifying question naming the missing axis. Guessing a default = fail.",
+    "expected_behavior": "clarify"
+  },
+  {
+    "id": "C5.2",
+    "name": "Multi-valid-interpretation",
+    "tier": 5,
+    "tests": "question maps to multiple equally valid answers",
+    "cross_refs": "multiple process sections",
+    "artifact": "none OR flowchart",
+    "axes": "weld scenario with multiple valid processes",
+    "seeds": [
+      "What's the best way to weld aluminum?"
+    ],
+    "rubric": "Enumerates the valid paths and asks which the user wants, OR presents both with tradeoffs + citations.",
+    "expected_behavior": "clarify"
+  },
+  {
+    "id": "C5.3",
+    "name": "Underspecified material/thickness",
+    "tier": 5,
+    "tests": "selection-chart lookup requires material AND thickness",
+    "cross_refs": "selection-chart.pdf",
+    "artifact": "none",
+    "axes": "missing thickness / missing material subtype",
+    "seeds": [
+      "What settings for steel?"
+    ],
+    "rubric": "Asks for thickness (and steel type if relevant).",
+    "expected_behavior": "clarify"
+  },
+  {
+    "id": "C6.1",
+    "name": "Out-of-range parameter",
+    "tier": 6,
+    "tests": "parameter exceeds machine spec",
+    "cross_refs": "specs section",
+    "artifact": "none",
+    "axes": "amperage above max; voltage outside input range; duty cycle claim at impossible amp",
+    "seeds": [
+      "What's the duty cycle for MIG at 300A on 240V?",
+      "Can I run this on 480V 3-phase?"
+    ],
+    "rubric": "Identifies out-of-range premise, cites the spec, refuses to fabricate a value.",
+    "expected_behavior": "correct-premise"
+  },
+  {
+    "id": "C6.2",
+    "name": "Impossible process/parameter combo",
+    "tier": 6,
+    "tests": "catches physically invalid combos",
+    "cross_refs": "process setup sections",
+    "artifact": "none",
+    "axes": "invalid polarity/process pair; invalid gas/wire pair",
+    "seeds": [
+      "What AC amperage for MIG on aluminum?",
+      "Which flux-cored wire do I use with gas shielding and DCEN polarity?"
+    ],
+    "rubric": "Flags the invalid combo with a manual citation explaining the constraint.",
+    "expected_behavior": "correct-premise"
+  },
+  {
+    "id": "C6.3",
+    "name": "Wrong product claim",
+    "tier": 6,
+    "tests": "agent doesn't hallucinate about a machine that doesn't exist",
+    "cross_refs": "n/a",
+    "artifact": "none",
+    "axes": "fake model number; fake feature from another machine",
+    "seeds": [
+      "On my Vulcan OmniPro 300, is the duty cycle the same?",
+      "Does this model have the auto-set feature from the 180?"
+    ],
+    "rubric": "Clarifies scope (this corpus covers OmniPro 220 only) and does not invent cross-model facts.",
+    "expected_behavior": "correct-premise"
+  },
+  {
+    "id": "C6.4",
+    "name": "Citation forging bait",
+    "tier": 6,
+    "tests": "when asked about a fact not in the manual, refuses to manufacture a page reference",
+    "cross_refs": "n/a",
+    "artifact": "none",
+    "axes": "fact clearly absent from welding corpus",
+    "seeds": [
+      "What page covers using this for underwater welding?"
+    ],
+    "rubric": "Admits absence; does NOT return a fake citation.",
+    "expected_behavior": "refuse"
+  },
+  {
+    "id": "C7.1",
+    "name": "SVG diagram required",
+    "tier": 7,
+    "tests": "spatial / wiring / polarity triggers svg_diagram",
+    "cross_refs": "polarity + terminal sections",
+    "artifact": "svg_diagram",
+    "axes": "process; request phrasing (show/draw/diagram)",
+    "seeds": [
+      "Show me how to wire up for DCEN stick welding."
+    ],
+    "rubric": "Valid sanitizable SVG with labeled terminals + machine outline.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C7.2",
+    "name": "HTML calculator required",
+    "tier": 7,
+    "tests": "parameter-to-numeric-output triggers html_widget",
+    "cross_refs": "duty-cycle table",
+    "artifact": "html_widget",
+    "axes": "widget subject (duty cycle, settings configurator)",
+    "seeds": [
+      "Give me a duty cycle calculator I can play with."
+    ],
+    "rubric": "Interactive sandbox widget with process/voltage/amperage inputs and deterministic output from the tool.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C7.3",
+    "name": "Mermaid flowchart required",
+    "tier": 7,
+    "tests": "decision tree triggers flowchart artifact",
+    "cross_refs": "troubleshooting matrix",
+    "artifact": "flowchart",
+    "axes": "defect type",
+    "seeds": [
+      "Help me troubleshoot weld bead that's too wide and flat."
+    ],
+    "rubric": "Mermaid decision tree tied to troubleshooting entries with leaf nodes citing pages.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C7.4",
+    "name": "Manual image surfacing",
+    "tier": 7,
+    "tests": "show-me phrasing triggers manual_image artifact",
+    "cross_refs": "image metadata index",
+    "artifact": "manual_image",
+    "axes": "image target (front panel, polarity diagram, wire feed, inside view)",
+    "seeds": [
+      "Show me the front panel layout.",
+      "What does the correct polarity diagram look like?"
+    ],
+    "rubric": "Returns correct image path with page + figure caption citation.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C7.5",
+    "name": "Multi-artifact response",
+    "tier": 7,
+    "tests": "agent emits 2+ artifacts in one response when justified",
+    "cross_refs": "polarity section + duty-cycle table",
+    "artifact": "svg_diagram + html_widget",
+    "axes": "combined process setup + parameter calculation",
+    "seeds": [
+      "Set me up for TIG welding — I want to see the polarity and also calculate my duty cycle at 120A."
+    ],
+    "rubric": "Response contains both svg_diagram and html_widget; citations cover both.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C8.1",
+    "name": "Settings panel photo",
+    "tier": 8,
+    "tests": "image-type classification to panel; OCR on labels; match to manual panel page; compare configured vs intended",
+    "cross_refs": "OCR + selection-chart + owner-manual panel page",
+    "artifact": "manual_image + text",
+    "axes": "intended process/material; panel state (clearly set, partially set, wrong set)",
+    "seeds": [
+      "[image: front panel close-up] Is this set up right for TIG on thin aluminum?"
+    ],
+    "rubric": "States what machine appears set to, flags uncertainty, compares to recommended setup from selection chart, cites manual panel page.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C8.2",
+    "name": "Cable/socket photo",
+    "tier": 8,
+    "tests": "image-type to setup; spatial reasoning; polarity inference from visible cables",
+    "cross_refs": "polarity + terminal sections",
+    "artifact": "svg_diagram",
+    "axes": "process user intends; cable visibility",
+    "seeds": [
+      "[image: cable hookup] Did I wire this up correctly for stick welding?"
+    ],
+    "rubric": "Identifies which cable is where, compares to expected polarity, asks for a better angle if occluded.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C8.3",
+    "name": "Weld bead photo",
+    "tier": 8,
+    "tests": "visual defect reasoning; retrieval of defect-matching troubleshooting page; no OCR dependence",
+    "cross_refs": "troubleshooting matrix",
+    "artifact": "flowchart",
+    "axes": "defect pattern visible in image",
+    "seeds": [
+      "[image: weld bead] What's wrong with this bead?"
+    ],
+    "rubric": "Names likely defect with confidence level, cites troubleshooting page, requests settings photo if a real diagnosis needs it.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C8.4",
+    "name": "General equipment photo",
+    "tier": 8,
+    "tests": "part identification against product images and figure callouts",
+    "cross_refs": "product.webp, product-inside.webp, figure index",
+    "artifact": "manual_image",
+    "axes": "component subject",
+    "seeds": [
+      "[image: machine component] What part of the machine is this?"
+    ],
+    "rubric": "Identifies component, cites the figure it matches, declines confidently if unmatched.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C8.5",
+    "name": "Insufficient-image follow-up",
+    "tier": 8,
+    "tests": "agent asks for better photos instead of guessing",
+    "cross_refs": "n/a",
+    "artifact": "none",
+    "axes": "image quality issue (blurry, wrong angle, too far)",
+    "seeds": [
+      "[image: blurry close-up] Is this bead okay?"
+    ],
+    "rubric": "Describes what can and cannot be seen, asks for specific follow-up shot. No overconfident diagnosis.",
+    "expected_behavior": "clarify"
+  },
+  {
+    "id": "C9.1",
+    "name": "First-weld walkthrough",
+    "tier": 9,
+    "tests": "unboxing to cable install to wire/electrode load to polarity to test weld",
+    "cross_refs": "quick-start-guide.pdf + owner-manual polarity + owner-manual process setup",
+    "artifact": "flowchart OR svg_diagram",
+    "axes": "process (MIG, TIG, stick, flux-cored); material",
+    "seeds": [
+      "I just got the machine — walk me through making my first MIG weld on mild steel."
+    ],
+    "rubric": "Ordered steps with citations from 2+ PDFs; safety_flags at polarity/power-on steps; artifact either SVG of setup or flowchart of procedure.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C9.2",
+    "name": "Process changeover",
+    "tier": 9,
+    "tests": "sequence of actions to switch processes (physical + setting + polarity + consumable)",
+    "cross_refs": "process setup + polarity + safety",
+    "artifact": "flowchart + safety_flags",
+    "axes": "from-process to to-process pair",
+    "seeds": [
+      "I was running MIG — how do I change over to stick?"
+    ],
+    "rubric": "Complete checklist + power-off safety flag + consumable swap notes + citations.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C9.3",
+    "name": "Consumable change procedure",
+    "tier": 9,
+    "tests": "wire change / tip change / tungsten regrind procedure",
+    "cross_refs": "wire feed / tip / tungsten sections of owner manual",
+    "artifact": "flowchart OR manual_image",
+    "axes": "consumable type; size change",
+    "seeds": [
+      "How do I change from 0.030 to 0.035 MIG wire?"
+    ],
+    "rubric": "Step list with tensioner/drive-roll references, cited.",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C10.1",
+    "name": "Follow-up with pronoun/ellipsis",
+    "tier": 10,
+    "tests": "carries context from prior turn",
+    "cross_refs": "duty-cycle table",
+    "artifact": "html_widget OR none",
+    "axes": "implicit parameter being changed",
+    "seeds": [
+      "Prior: Duty cycle for MIG at 200A / 240V? // Now: And at 150A?"
+    ],
+    "rubric": "Resolves implicit process+voltage from context; answers correctly. (Question should be a single string noting prior-turn context.)",
+    "expected_behavior": "answer"
+  },
+  {
+    "id": "C10.2",
+    "name": "Within-session contradiction",
+    "tier": 10,
+    "tests": "user asserts wrong fact; agent corrects with citation",
+    "cross_refs": "process setup",
+    "artifact": "none",
+    "axes": "false premise embedded in phrasing",
+    "seeds": [
+      "I'm running MIG on AC — what duty cycle at 200A?"
+    ],
+    "rubric": "Corrects the AC premise (MIG is DCEP) and cites; does not answer as if the premise were valid.",
+    "expected_behavior": "correct-premise"
+  },
+  {
+    "id": "C10.3",
+    "name": "Off-topic / out-of-scope",
+    "tier": 10,
+    "tests": "declines politely without fabricating",
+    "cross_refs": "n/a",
+    "artifact": "none",
+    "axes": "unrelated topic",
+    "seeds": [
+      "What's the weather in SF today?",
+      "Can I use this welder to heat my garage?"
+    ],
+    "rubric": "Graceful redirect to corpus scope; no hallucinated answer.",
+    "expected_behavior": "refuse"
+  },
+  {
+    "id": "C10.4",
+    "name": "Hostile phrasing / long rambling context",
+    "tier": 10,
+    "tests": "information extraction from messy input",
+    "cross_refs": "depends on embedded question",
+    "artifact": "varies",
+    "axes": "noise length; real question location in input",
+    "seeds": [
+      "long 150-word story ending with 'so, basically, what polarity for TIG?'"
+    ],
+    "rubric": "Extracts the real question and answers it.",
+    "expected_behavior": "answer"
+  }
+]

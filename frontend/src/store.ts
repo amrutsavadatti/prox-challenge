@@ -1,6 +1,42 @@
 import { create } from 'zustand';
-import type { Chat, Artifact } from './types';
-import { generateMockResponse } from './mock-data';
+import type { Chat, Artifact, Citation } from './types';
+
+const API_BASE = (import.meta as any).env?.VITE_API_BASE ?? 'http://localhost:8000';
+
+async function fetchChat(
+  question: string,
+  history: { role: 'user' | 'assistant'; content: string }[],
+): Promise<{
+  text: string;
+  artifacts: Artifact[];
+  citations: Citation[];
+  safetyFlags: string[];
+}> {
+  const res = await fetch(`${API_BASE}/chat`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ question, history }),
+  });
+  if (!res.ok) {
+    const detail = await res.text();
+    throw new Error(`chat request failed: ${res.status} ${detail}`);
+  }
+  const data = await res.json();
+  const rawArtifacts = Array.isArray(data.artifacts) ? data.artifacts : [];
+  const artifacts: Artifact[] = rawArtifacts.map((a: any) => ({
+    id: String(a.id ?? `artifact-${Math.random().toString(36).slice(2)}`),
+    title: String(a.title ?? 'Artifact'),
+    type: a.type,
+    content: typeof a.content === 'string' ? a.content : JSON.stringify(a.content ?? ''),
+    language: a.language,
+  }));
+  return {
+    text: String(data.answer_markdown ?? ''),
+    artifacts,
+    citations: Array.isArray(data.citations) ? data.citations : [],
+    safetyFlags: Array.isArray(data.safety_flags) ? data.safety_flags : [],
+  };
+}
 
 interface AppState {
   chats: Chat[];
@@ -100,40 +136,52 @@ export const useStore = create<AppState>((set, get) => ({
       isStreaming: true,
     }));
 
-    // Simulate response delay
-    setTimeout(() => {
-      const mockResponse = generateMockResponse(content);
-      const assistantMsg = {
-        id: uid(),
-        role: 'assistant' as const,
-        content: mockResponse.text,
-        artifacts: mockResponse.artifacts,
-        timestamp: new Date(),
-      };
+    const priorMessages = state.chats.find((c) => c.id === chatId)?.messages ?? [];
+    const history = priorMessages.map((m) => ({ role: m.role, content: m.content }));
 
-      set((s) => {
-        const newOpenArtifacts = [
-          ...s.openArtifacts,
-          ...(mockResponse.artifacts ?? []),
-        ];
-        const latestArtifact = mockResponse.artifacts?.[mockResponse.artifacts.length - 1] ?? s.activeArtifact;
-        return {
+    fetchChat(content, history)
+      .then((response) => {
+        const assistantMsg = {
+          id: uid(),
+          role: 'assistant' as const,
+          content: response.text,
+          artifacts: response.artifacts,
+          citations: response.citations,
+          safetyFlags: response.safetyFlags,
+          timestamp: new Date(),
+        };
+        set((s) => {
+          const newOpenArtifacts = [...s.openArtifacts, ...response.artifacts];
+          const latestArtifact = response.artifacts[response.artifacts.length - 1] ?? s.activeArtifact;
+          return {
+            chats: s.chats.map((c) =>
+              c.id === chatId
+                ? { ...c, messages: [...c.messages, assistantMsg], updatedAt: new Date() }
+                : c
+            ),
+            isStreaming: false,
+            openArtifacts: newOpenArtifacts,
+            activeArtifact: latestArtifact,
+            artifactPanelOpen: response.artifacts.length > 0 ? true : s.artifactPanelOpen,
+          };
+        });
+      })
+      .catch((err: Error) => {
+        const assistantMsg = {
+          id: uid(),
+          role: 'assistant' as const,
+          content: `Error: ${err.message}`,
+          timestamp: new Date(),
+        };
+        set((s) => ({
           chats: s.chats.map((c) =>
             c.id === chatId
-              ? {
-                  ...c,
-                  messages: [...c.messages, assistantMsg],
-                  updatedAt: new Date(),
-                }
+              ? { ...c, messages: [...c.messages, assistantMsg], updatedAt: new Date() }
               : c
           ),
           isStreaming: false,
-          openArtifacts: newOpenArtifacts,
-          activeArtifact: latestArtifact,
-          artifactPanelOpen: mockResponse.artifacts ? mockResponse.artifacts.length > 0 : s.artifactPanelOpen,
-        };
+        }));
       });
-    }, 800 + Math.random() * 1200);
   },
 
   setActiveArtifact: (artifact) => set((s) => {

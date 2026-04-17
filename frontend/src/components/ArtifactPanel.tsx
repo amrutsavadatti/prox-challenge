@@ -194,12 +194,17 @@ function renderArtifactContent(artifact: Artifact) {
       return <TableViewer content={artifact.content} />;
     case 'json':
       return <JsonViewer content={artifact.content} />;
-    case 'image':
+    case 'image': {
+      const API_BASE = (import.meta as any).env?.VITE_API_BASE ?? 'http://localhost:8000';
+      const src = /^https?:\/\//i.test(artifact.content)
+        ? artifact.content
+        : `${API_BASE}${artifact.content.startsWith('/') ? '' : '/'}${artifact.content}`;
       return (
         <div className="flex items-center justify-center h-full p-8">
-          <img src={artifact.content} alt={artifact.title} className="max-w-full max-h-full object-contain rounded-lg" />
+          <img src={src} alt={artifact.title} className="max-w-full max-h-full object-contain rounded-lg" />
         </div>
       );
+    }
     default:
       return <CodeViewer content={artifact.content} />;
   }
@@ -218,10 +223,18 @@ export function ArtifactPanel() {
         <ScrollArea className="flex-1">
           <div className="flex items-center h-11 px-1">
             {openArtifacts.map((artifact) => (
-              <button
+              <div
                 key={artifact.id}
+                role="button"
+                tabIndex={0}
                 onClick={() => setActiveArtifact(artifact)}
-                className={`group flex items-center gap-1.5 px-3 py-1.5 text-xs rounded-md mx-0.5 whitespace-nowrap transition-colors ${
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setActiveArtifact(artifact);
+                  }
+                }}
+                className={`group flex items-center gap-1.5 px-3 py-1.5 text-xs rounded-md mx-0.5 whitespace-nowrap transition-colors cursor-pointer ${
                   artifact.id === activeArtifact.id
                     ? 'bg-accent text-accent-foreground'
                     : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
@@ -238,7 +251,7 @@ export function ArtifactPanel() {
                 >
                   <X size={12} />
                 </button>
-              </button>
+              </div>
             ))}
           </div>
         </ScrollArea>

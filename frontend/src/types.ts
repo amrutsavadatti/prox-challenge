@@ -8,11 +8,23 @@ export interface Artifact {
   language?: string;
 }
 
+export interface Citation {
+  doc_id?: string;
+  source_doc?: string;
+  page?: number;
+  element_id?: string;
+  source_kind?: string;
+  page_image?: string;
+  excerpt?: string;
+}
+
 export interface Message {
   id: string;
   role: 'user' | 'assistant';
   content: string;
   artifacts?: Artifact[];
+  citations?: Citation[];
+  safetyFlags?: string[];
   timestamp: Date;
 }
 

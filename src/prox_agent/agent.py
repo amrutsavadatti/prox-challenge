@@ -19,6 +19,7 @@ from dotenv import dotenv_values
 
 from prox_agent.knowledge import ROOT
 from prox_agent.local_answer import answer_local
+from prox_agent.response_contract import normalize_response_contract
 from prox_agent.sdk_tools import (
     ALLOWED_TOOL_NAMES,
     MCP_SERVER_NAME,
@@ -37,31 +38,83 @@ Grounding rules:
 - If the question asks about polarity, cable placement, sockets, or setup, call lookup_polarity and get_manual_image.
 - If the question asks about symptoms, weld defects, or repair steps, call troubleshooting_for and search_manual.
 - If an answer would be clearer with a chart, diagram, setup image, or manual page, call get_manual_image and include it as an artifact.
-- Do not invent product specs. If the tools do not contain enough evidence, say what is missing and ask a focused follow-up.
+- Do not invent product specs or machine-specific operating facts.
+- If the tools do not contain enough evidence for setup, polarity, sockets, wiring, duty cycle, electrical requirements, or any other safety-critical or machine-specific instruction, say what is missing and ask one focused follow-up instead of guessing.
+- If the tools do not contain an exact citation for a low-risk troubleshooting or technique suggestion, you may offer a clearly labeled best-effort guess only after stating that you could not verify it in the OmniPro 220 documentation.
+- When you use a best-effort guess, use wording like: "I couldn't find an exact citation for this in the OmniPro 220 documentation. My best guess is..."
+- Treat best-effort guesses as unverified guidance. Keep them short, practical, and limited to likely checks or technique adjustments.
 - Preserve source_ref objects from tool results in citations whenever possible.
+- Preserve citation metadata when available: source_kind, page_image, target_path, avg_confidence, and short excerpts.
+- Do not add extra process theory or material claims unless they are directly supported by the cited tool evidence for this answer.
 
 Safety rules:
 - For cable swaps, polarity changes, cleaning, troubleshooting, or internal adjustment, tell the user to power off and disconnect input power first.
 - Do not recommend unsafe bypasses or unsupported modifications.
 
+Scope and escalation rules:
+- You are only for the Vulcan OmniPro 220 and closely related setup, operation, troubleshooting, and manual-guided questions about that machine.
+- If the user asks for something outside this scope, say clearly that it is out of scope for this assistant and do not answer the unrelated question.
+- If the tools do not provide enough evidence, do not guess unless it is a low-risk troubleshooting or technique suggestion that you clearly label as an unverified best-effort guess.
+- Never use best-effort guesses for polarity, cable placement, sockets, wiring, duty cycle, electrical setup, internal repair, undocumented modification, or any safety-critical instruction.
+- If the user asks for internal repair, undocumented modification, bypassing protections, or anything that should be handled by a professional, say so directly and advise contacting a qualified technician or the manufacturer / official support.
+- If the request is clearly abusive, dangerous, or unrelated to the welder, refuse briefly and redirect only if there is a safe product-related way to help.
+
 Return format:
-Return only valid JSON. Do not wrap it in Markdown fences. The top-level object must have these keys:
+Return only valid JSON. Start with { and end with }. Do not wrap the JSON in Markdown fences. Do not include any prose before or after the JSON. The top-level object must have these keys:
 {
   "answer_markdown": "short practical answer in Markdown",
   "citations": [
-    {"doc_id": "...", "source_doc": "...", "page": 1, "element_id": "..."}
+    {
+      "doc_id": "owner-manual | quick-start-guide | selection-chart",
+      "source_doc": "owner-manual.pdf",
+      "page": 1,
+      "element_id": "...",
+      "source_kind": "native_text | ocr | table | visual",
+      "page_image": "knowledge/pages/owner-manual/page-001.png",
+      "target_path": "knowledge/ocr/records.json",
+      "avg_confidence": 0.98,
+      "excerpt": "short cited preview when available"
+    }
   ],
   "artifacts": [
     {
-      "type": "manual_image | duty_cycle_result | troubleshooting_flow | setup_diagram",
-      "title": "...",
-      "path": "relative/path/when_available",
-      "source_ref": {"doc_id": "...", "source_doc": "...", "page": 1, "element_id": "..."},
-      "payload": {}
+      "id": "stable_artifact_id",
+      "type": "interactive | mermaid | image | table | markdown",
+      "title": "short human title",
+      "summary": "one sentence describing what the artifact shows",
+      "content": "<string — see Artifact rules below>",
+      "language": "html | gcode | ...  (optional, only useful with future 'code' type)",
+      "source_ref": {"doc_id": "...", "source_doc": "...", "page": 1, "element_id": "..."}
     }
   ],
+  "tool_results": {},
   "safety_flags": ["short_machine_readable_flag"]
 }
+
+Citation rules:
+- Use source_kind="table" for lookup_duty_cycle, lookup_polarity, and troubleshooting_for evidence.
+- Use source_kind="visual" for get_manual_image evidence.
+- Use source_kind="native_text" or "ocr" for search_manual evidence, matching the tool output exactly.
+- Omit avg_confidence unless the tool actually returned a confidence value.
+
+Artifact rules — there are exactly five allowed types. The frontend renders nothing else.
+- type="interactive" — content is a COMPLETE self-contained HTML document (starts with <!DOCTYPE html>). Use for duty-cycle calculators (with sliders wired to the exact values returned by lookup_duty_cycle), settings configurators, and polarity/wiring diagrams built with inline <svg>. Never fetch external scripts.
+- type="mermaid" — content is valid Mermaid source (graph TD / flowchart LR). Use for troubleshooting decision trees and procedure flows. No prose wrapper, just the diagram source.
+- type="image" — content is a URL string pointing to a manual page or figure, e.g. "/knowledge/pages/owner-manual/page-023.png". When get_manual_image returns a path like "pages/owner-manual/page-023.png" or an absolute knowledge-bundle path, prefix it with "/knowledge/" to form the URL.
+- type="table" — content is a JSON string (exactly: JSON.stringify({headers: [...], rows: [[...]]})). Use for spec comparisons, parameter tables.
+- type="markdown" — content is rich Markdown. Prefer packing explanation into answer_markdown at the top level; only use this artifact for genuinely standalone reference essays.
+
+Artifact authoring rules:
+- Return at most 2 artifacts per answer unless a third adds clear user value (e.g., diagram + calculator + reference image).
+- Every artifact must have id, title, type, content. summary and source_ref are strongly recommended.
+- For polarity/wiring answers, prefer type="interactive" with inline <svg>, not type="image".
+- For duty-cycle answers, always emit a type="interactive" calculator whose default values match the exact row from lookup_duty_cycle.
+- For troubleshooting, emit type="mermaid" rooted in the tool output's check list.
+- When the user asks "show me X" (a figure, diagram, schematic, panel), emit type="image" with the URL.
+
+tool_results rules:
+- Keep tool_results compact and machine-friendly. Prefer small summaries over dumping full tool outputs.
+- Do NOT echo long raw text back into tool_results; the frontend does not display it.
 """
 
 API_KEY_PLACEHOLDERS = {
@@ -80,11 +133,10 @@ class MissingAPIKeyError(RuntimeError):
 def build_agent_options(
     *,
     api_key: str,
-    model: str | None = None,
     max_turns: int = 8,
 ) -> ClaudeCodeOptions:
     env = {"ANTHROPIC_API_KEY": api_key}
-    resolved_model = model or os.getenv("ANTHROPIC_MODEL") or None
+    resolved_model = _model_from_env()
     return ClaudeCodeOptions(
         system_prompt=SYSTEM_PROMPT,
         mcp_servers={MCP_SERVER_NAME: build_knowledge_mcp_server()},
@@ -96,8 +148,8 @@ def build_agent_options(
     )
 
 
-def build_dry_run(question: str, *, model: str | None = None, max_turns: int = 8) -> dict[str, Any]:
-    options = build_agent_options(api_key="dry-run-not-used", model=model, max_turns=max_turns)
+def build_dry_run(question: str, *, max_turns: int = 8) -> dict[str, Any]:
+    options = build_agent_options(api_key="dry-run-not-used", max_turns=max_turns)
     return {
         "status": "ready_for_api_key",
         "will_call_claude": False,
@@ -117,8 +169,8 @@ async def ask_claude(
     question: str,
     *,
     api_key: str | None = None,
-    model: str | None = None,
     max_turns: int = 8,
+    history: list[dict[str, str]] | None = None,
 ) -> dict[str, Any]:
     resolved_api_key = api_key or _api_key_from_env()
     if not _has_real_api_key(resolved_api_key):
@@ -127,13 +179,13 @@ async def ask_claude(
             "No Claude call was made."
         )
 
-    options = build_agent_options(api_key=resolved_api_key, model=model, max_turns=max_turns)
+    options = build_agent_options(api_key=resolved_api_key, max_turns=max_turns)
     messages: list[dict[str, Any]] = []
     assistant_text: list[str] = []
     result_message: ResultMessage | None = None
 
     async with ClaudeSDKClient(options=options) as client:
-        await client.query(_user_prompt(question))
+        await client.query(_user_prompt(question, history=history))
         async for message in client.receive_response():
             messages.append(_serialize_message(message))
             if isinstance(message, AssistantMessage):
@@ -153,21 +205,31 @@ async def ask_claude(
             "answer_markdown": raw_text,
             "citations": [],
             "artifacts": [],
+            "tool_results": {},
             "safety_flags": [],
             "parse_warning": "Claude did not return a clean JSON object.",
         }
 
-    parsed.setdefault("answer_markdown", "")
-    parsed.setdefault("citations", [])
-    parsed.setdefault("artifacts", [])
-    parsed.setdefault("safety_flags", [])
+    parsed = normalize_response_contract(parsed)
     parsed["claude"] = _result_metadata(result_message)
     parsed["messages"] = messages
     return parsed
 
 
-def _user_prompt(question: str) -> str:
-    return f"User question:\n{question}"
+def _user_prompt(question: str, *, history: list[dict[str, str]] | None = None) -> str:
+    if not history:
+        return f"User question:\n{question}"
+    lines = ["Prior conversation (for context only — do not repeat verbatim):"]
+    for turn in history[-10:]:
+        role = str(turn.get("role", "")).strip().lower()
+        text = str(turn.get("content", "")).strip()
+        if not text or role not in {"user", "assistant"}:
+            continue
+        label = "User" if role == "user" else "Assistant"
+        lines.append(f"{label}: {text}")
+    lines.append("")
+    lines.append(f"Current user question:\n{question}")
+    return "\n".join(lines)
 
 
 def _has_real_api_key(value: str) -> bool:
@@ -184,6 +246,16 @@ def _api_key_from_env() -> str:
         if isinstance(file_value, str):
             return file_value
     return os.getenv("ANTHROPIC_API_KEY", "")
+
+
+def _model_from_env() -> str | None:
+    env_path = ROOT / ".env"
+    if env_path.exists():
+        file_value = dotenv_values(env_path).get("ANTHROPIC_MODEL")
+        if isinstance(file_value, str) and file_value.strip():
+            return file_value.strip()
+    env_value = os.getenv("ANTHROPIC_MODEL", "").strip()
+    return env_value or None
 
 
 def _parse_json_object(text: str) -> dict[str, Any] | None:
@@ -208,18 +280,18 @@ def _serialize_message(message: Any) -> dict[str, Any]:
         return {
             "type": "assistant",
             "model": message.model,
-            "content": [_serialize_block(block) for block in message.content],
+            "content": _json_safe(message.content),
         }
     if isinstance(message, UserMessage):
         return {
             "type": "user",
-            "content": message.content,
+            "content": _json_safe(message.content),
         }
     if isinstance(message, SystemMessage):
         return {
             "type": "system",
             "subtype": message.subtype,
-            "data": message.data,
+            "data": _json_safe(message.data),
         }
     if isinstance(message, ResultMessage):
         return {
@@ -236,18 +308,30 @@ def _serialize_block(block: Any) -> dict[str, Any]:
     if isinstance(block, TextBlock):
         return {"type": "text", "text": block.text}
     if isinstance(block, ToolUseBlock):
-        return {"type": "tool_use", "id": block.id, "name": block.name, "input": block.input}
+        return {"type": "tool_use", "id": block.id, "name": block.name, "input": _json_safe(block.input)}
     if isinstance(block, ToolResultBlock):
         return {
             "type": "tool_result",
             "tool_use_id": block.tool_use_id,
-            "content": block.content,
+            "content": _json_safe(block.content),
             "is_error": block.is_error,
         }
     return {
         "type": type(block).__name__,
         "repr": repr(block),
     }
+
+
+def _json_safe(value: Any) -> Any:
+    if value is None or isinstance(value, (str, int, float, bool)):
+        return value
+    if isinstance(value, (list, tuple)):
+        return [_json_safe(item) for item in value]
+    if isinstance(value, dict):
+        return {str(key): _json_safe(item) for key, item in value.items()}
+    if isinstance(value, (TextBlock, ToolUseBlock, ToolResultBlock)):
+        return _serialize_block(value)
+    return repr(value)
 
 
 def _result_metadata(message: ResultMessage | None) -> dict[str, Any]:

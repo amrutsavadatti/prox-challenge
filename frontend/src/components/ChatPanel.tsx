@@ -8,17 +8,24 @@ import {
   Loader2,
   FileCode2,
 } from 'lucide-react';
-import type { Artifact } from '@/types';
+import type { Artifact, Citation } from '@/types';
+import { AlertTriangle } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 function MessageBubble({
   role,
   content,
   artifacts,
+  citations,
+  safetyFlags,
   onArtifactClick,
 }: {
   role: 'user' | 'assistant';
   content: string;
   artifacts?: Artifact[];
+  citations?: Citation[];
+  safetyFlags?: string[];
   onArtifactClick: (a: Artifact) => void;
 }) {
   return (
@@ -29,6 +36,16 @@ function MessageBubble({
         </div>
       )}
       <div className={`max-w-[80%] space-y-2 ${role === 'user' ? 'order-first' : ''}`}>
+        {role === 'assistant' && safetyFlags && safetyFlags.length > 0 && (
+          <div className="flex items-start gap-2 px-3 py-2 rounded-xl border border-yellow-500/40 bg-yellow-500/10 text-xs text-yellow-200">
+            <AlertTriangle size={14} className="shrink-0 mt-0.5" />
+            <div className="space-y-0.5">
+              {safetyFlags.map((flag) => (
+                <p key={flag} className="leading-snug">{flag.replace(/_/g, ' ')}</p>
+              ))}
+            </div>
+          </div>
+        )}
         <div
           className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${
             role === 'user'
@@ -36,20 +53,42 @@ function MessageBubble({
               : 'bg-muted text-foreground rounded-bl-md'
           }`}
         >
-          {content.split('\n').map((line, i) => {
-            if (line.startsWith('- **')) {
-              const match = line.match(/- \*\*(.+?)\*\* — (.+)/);
-              if (match) {
-                return (
-                  <p key={i} className="py-0.5">
-                    <strong>{match[1]}</strong> — {match[2]}
-                  </p>
-                );
-              }
-            }
-            return <p key={i} className={line === '' ? 'h-2' : ''}>{line}</p>;
-          })}
+          {role === 'assistant' ? (
+            <div className="prose prose-sm prose-invert max-w-none
+              prose-p:my-1.5 prose-headings:mt-3 prose-headings:mb-1.5
+              prose-ul:my-1.5 prose-ol:my-1.5 prose-li:my-0.5
+              prose-hr:my-3 prose-table:my-2
+              prose-th:border prose-th:border-border prose-th:px-2 prose-th:py-1 prose-th:bg-muted-foreground/10
+              prose-td:border prose-td:border-border prose-td:px-2 prose-td:py-1
+              prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:bg-muted-foreground/10 prose-code:before:content-none prose-code:after:content-none
+              prose-strong:text-foreground">
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+            </div>
+          ) : (
+            content.split('\n').map((line, i) => (
+              <p key={i} className={line === '' ? 'h-2' : ''}>{line}</p>
+            ))
+          )}
         </div>
+
+        {role === 'assistant' && citations && citations.length > 0 && (
+          <div className="flex flex-wrap gap-1.5">
+            {citations.map((c, i) => {
+              const label = c.source_doc
+                ? `${c.source_doc}${c.page ? ` p.${c.page}` : ''}`
+                : c.element_id ?? `source ${i + 1}`;
+              return (
+                <span
+                  key={`${c.element_id ?? c.source_doc ?? 'cite'}-${i}`}
+                  className="text-[11px] px-2 py-0.5 rounded-full border border-border bg-card text-muted-foreground"
+                  title={c.excerpt}
+                >
+                  {label}
+                </span>
+              );
+            })}
+          </div>
+        )}
 
         {/* Artifact cards */}
         {artifacts && artifacts.length > 0 && (
@@ -185,6 +224,8 @@ export function ChatPanel() {
               role={msg.role}
               content={msg.content}
               artifacts={msg.artifacts}
+              citations={msg.citations}
+              safetyFlags={msg.safetyFlags}
               onArtifactClick={(a) => setActiveArtifact(a)}
             />
           ))}

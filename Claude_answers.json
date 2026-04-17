@@ -1,0 +1,720 @@
+[
+  // Sonnet 4.6 raw output Before tightening system prompt
+    ```json
+    {
+      "answer_markdown": "## TIG Polarity Setup — Vulcan OmniPro 220\n\n**⚠️ Power off and disconnect input power before touching any cables.**\n\n| Cable | Socket |\n|---|---|\n|
+    **Ground clamp** | **Positive (+)** |\n| **TIG torch** | **Negative (−)** |\n\n**Polarity:** DCEN — Direct Current Electrode Negative\n\nThat means the electrode (torch) is on the
+    negative terminal, and the work (ground clamp) is on positive. This is standard for TIG on steel, stainless, and titanium — gives you a focused, penetrating arc with good bead
+    control.\n\n> Swap the cables to those sockets, then power back on and you're good to go.",
+      "citations": [
+        {
+          "doc_id": "owner-manual",
+          "source_doc": "owner-manual.pdf",
+          "page": 24,
+          "element_id": "owner-manual:page:024",
+          "source_kind": "visual",
+          "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png",
+          "target_path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png",
+          "avg_confidence": 0.98,
+          "excerpt": "Ground clamp cable goes in the positive socket; TIG torch cable goes in the negative socket. Polarity: DCEN."
+        },
+        {
+          "doc_id": "quick-start-guide",
+          "source_doc": "quick-start-guide.pdf",
+          "page": 2,
+          "element_id": "quick-start-guide:page:002",
+          "source_kind": "visual",
+          "page_image": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-002.png",
+          "target_path": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-002.png",
+          "avg_confidence": 0.95,
+          "excerpt": "Quick-start cable setup guidance for STICK, MIG, Flux-Cored, and TIG processes."
+        }
+      ],
+      "artifacts": [
+        {
+          "id": "tig-polarity-setup",
+          "type": "manual_image",
+          "title": "TIG Polarity Setup — Owner's Manual p. 24",
+          "summary": "Diagram showing ground clamp in the positive (+) socket and TIG torch in the negative (−) socket for DCEN polarity.",
+          "source_ref": {
+            "doc_id": "owner-manual",
+            "source_doc": "owner-manual.pdf",
+            "page": 24,
+            "element_id": "owner-manual:page:024"
+          },
+          "payload": {
+            "image_path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png"
+          }
+        },
+        {
+          "id": "quick-start-cable-setup",
+          "type": "manual_image",
+          "title": "Quick-Start Cable Setup Guide — p. 2",
+          "summary": "Quick-reference page showing cable socket assignments for all four welding processes including TIG.",
+          "source_ref": {
+            "doc_id": "quick-start-guide",
+            "source_doc": "quick-start-guide.pdf",
+            "page": 2,
+            "element_id": "quick-start-guide:page:002"
+          },
+          "payload": {
+            "image_path": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-002.png"
+          }
+        }
+      ],
+      "tool_results": {
+        "lookup_polarity": {
+          "process": "TIG",
+          "polarity": "DCEN",
+          "polarity_expanded": "Direct Current Electrode Negative",
+          "ground_clamp_socket": "Positive (+)",
+          "torch_or_wire_feed_socket": "Negative (-)",
+          "wire_or_mode": "TIG torch",
+          "notes": "Ground clamp cable goes in the positive socket; TIG torch cable goes in the negative socket."
+        },
+        "get_manual_image": {
+          "top_result": "tig-polarity-setup",
+          "image_path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png"
+        }
+      },
+      "safety_flags": ["power_off_before_cable_swap"]
+    }
+    ```
+
+    // Opus 4.7 raw output before tightening system prompt
+
+    {
+      "answer_markdown": "## TIG Setup on the OmniPro 220\n\n**Polarity:** DCEN (Direct Current Electrode Negative)\n\n**Cable placement:**\n- **Ground clamp cable → Positive (+)
+    socket**\n- **TIG torch cable → Negative (-) socket**\n\n⚠️ **Before swapping any cables: power the welder off and disconnect the input power cord.** Once the machine is isolated,
+    plug the work/ground lead into the **(+)** dinse socket and the TIG torch lead into the **(-)** dinse socket, then lock each connector with a quarter turn. See the page 24 diagram
+    in the artifact panel for the exact socket layout.",
+      "citations": [
+        {
+          "doc_id": "owner-manual",
+          "source_doc": "owner-manual.pdf",
+          "page": 24,
+          "element_id": "owner-manual:page:024",
+          "source_kind": "table",
+          "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png",
+          "target_path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png",
+          "excerpt": "TIG — DCEN. Ground clamp cable goes in the positive socket; TIG torch cable goes in the negative socket."
+        },
+        {
+          "doc_id": "quick-start-guide",
+          "source_doc": "quick-start-guide.pdf",
+          "page": 2,
+          "element_id": "quick-start-guide:page:002",
+          "source_kind": "visual",
+          "page_image": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-002.png",
+          "target_path": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-002.png",
+          "excerpt": "Quick-start cable setup for STICK, MIG, Flux-Cored, and TIG."
+        }
+      ],
+      "artifacts": [
+        {
+          "id": "tig-polarity-setup",
+          "type": "manual_image",
+          "title": "TIG Polarity Setup (Owner's Manual p.24)",
+          "summary": "Diagram showing the TIG torch cable in the negative socket and the ground clamp cable in the positive socket (DCEN).",
+          "source_ref": {
+            "doc_id": "owner-manual",
+            "source_doc": "owner-manual.pdf",
+            "page": 24,
+            "element_id": "owner-manual:page:024"
+          },
+          "payload": {
+            "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png",
+            "visual_id": "tig-polarity-setup"
+          }
+        },
+        {
+          "id": "tig-polarity-result",
+          "type": "setup_diagram",
+          "title": "TIG Polarity — Quick Reference",
+          "summary": "Structured polarity and socket lookup for the TIG process.",
+          "source_ref": {
+            "doc_id": "owner-manual",
+            "source_doc": "owner-manual.pdf",
+            "page": 24,
+            "element_id": "owner-manual:page:024"
+          },
+          "payload": {
+            "process": "TIG",
+            "polarity": "DCEN",
+            "polarity_expanded": "Direct Current Electrode Negative",
+            "ground_clamp_socket": "Positive (+)",
+            "torch_or_wire_feed_socket": "Negative (-)",
+            "wire_or_mode": "TIG torch",
+            "notes": "Ground clamp cable goes in the positive socket; TIG torch cable goes in the negative socket."
+          }
+        },
+        {
+          "id": "quick-start-cable-setup",
+          "type": "manual_image",
+          "title": "Quick Start Cable Setup (Quick-Start Guide p.2)",
+          "summary": "One-page reference showing cable/socket placement for STICK, MIG, Flux-Cored, and TIG.",
+          "source_ref": {
+            "doc_id": "quick-start-guide",
+            "source_doc": "quick-start-guide.pdf",
+            "page": 2,
+            "element_id": "quick-start-guide:page:002"
+          },
+          "payload": {
+            "path": "products/vulcan-omnipro-220/knowledge/pages/quick-start-guide/page-002.png",
+            "visual_id": "quick-start-cable-setup"
+          }
+        }
+      ],
+      "tool_results": {
+        "lookup_polarity": {
+          "process": "TIG",
+          "polarity": "DCEN",
+          "ground_clamp_socket": "Positive (+)",
+          "torch_or_wire_feed_socket": "Negative (-)"
+        },
+        "get_manual_image": {
+          "count": 3,
+          "top_path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png"
+        }
+      },
+      "safety_flags": ["power_off_before_cable_swap"]
+    },
+  {
+    // all from here are sonnet 4.6 post tightening prompt
+    "run_at": "2026-04-17T02:03:09.958061+00:00",
+    "question": "What polarity setup do I need for TIG welding? Which socket does the ground clamp go in?",
+    "model": "claude-sonnet-4-6",
+    "raw_final_text": "```json\n{\n  \"answer_markdown\": \"## TIG Polarity Setup \u2014 Vulcan OmniPro 220\\n\\n**Power off and disconnect input power before touching any cables.**\\n\\n| Cable | Socket |\\n|---|---|\\n| Ground (work) clamp | **Positive (+)** |\\n| TIG torch | **Negative (\u2212)** |\\n\\n**Polarity: DCEN \u2014 Direct Current Electrode Negative**\\n\\nThat's it. Ground clamp in the **+** socket, torch in the **\u2212** socket. This is the standard setup for TIG on this machine. See the diagram on manual page 24 for the exact socket positions on the front panel.\",\n  \"citations\": [\n    {\n      \"doc_id\": \"owner-manual\",\n      \"source_doc\": \"owner-manual.pdf\",\n      \"page\": 24,\n      \"element_id\": \"owner-manual:page:024\",\n      \"source_kind\": \"table\",\n      \"page_image\": \"products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png\",\n      \"excerpt\": \"Ground clamp cable goes in the positive socket; TIG torch cable goes in the negative socket. Polarity: DCEN.\"\n    }\n  ],\n  \"artifacts\": [\n    {\n      \"id\": \"tig-polarity-setup\",\n      \"type\": \"manual_image\",\n      \"title\": \"TIG Polarity Setup \u2014 Manual Page 24\",\n      \"summary\": \"Diagram from the owner's manual showing ground clamp in the positive (+) socket and TIG torch in the negative (\u2212) socket for DCEN TIG operation.\",\n      \"source_ref\": {\n        \"doc_id\": \"owner-manual\",\n        \"source_doc\": \"owner-manual.pdf\",\n        \"page\": 24,\n        \"element_id\": \"owner-manual:page:024\"\n      },\n      \"payload\": {\n        \"path\": \"products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png\",\n        \"visual_id\": \"tig-polarity-setup\"\n      }\n    },\n    {\n      \"id\": \"tig-polarity-summary\",\n      \"type\": \"setup_diagram\",\n      \"title\": \"TIG Cable Placement \u2014 Quick Reference\",\n      \"summary\": \"Compact setup facts for TIG polarity on the Vulcan OmniPro 220.\",\n      \"source_ref\": {\n        \"doc_id\": \"owner-manual\",\n        \"source_doc\": \"owner-manual.pdf\",\n        \"page\": 24,\n        \"element_id\": \"owner-manual:page:024\"\n      },\n      \"payload\": {\n        \"process\": \"TIG (GTAW)\",\n        \"polarity\": \"DCEN \u2014 Direct Current Electrode Negative\",\n        \"ground_clamp_socket\": \"Positive (+)\",\n        \"torch_socket\": \"Negative (\u2212)\",\n        \"safety\": \"Power off and disconnect input power before swapping cables\"\n      }\n    }\n  ],\n  \"tool_results\": {\n    \"lookup_polarity\": {\n      \"process\": \"TIG\",\n      \"polarity\": \"DCEN\",\n      \"ground_clamp_socket\": \"Positive (+)\",\n      \"torch_socket\": \"Negative (-)\",\n      \"page\": 24\n    },\n    \"get_manual_image\": {\n      \"top_match\": \"tig-polarity-setup\",\n      \"page\": 24,\n      \"path\": \"products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png\"\n    }\n  },\n  \"safety_flags\": [\"power_off_before_cable_swap\"]\n}\n```",
+    "response": {
+      "answer_markdown": "## TIG Polarity Setup \u2014 Vulcan OmniPro 220\n\n**Power off and disconnect input power before touching any cables.**\n\n| Cable | Socket |\n|---|---|\n| Ground (work) clamp | **Positive (+)** |\n| TIG torch | **Negative (\u2212)** |\n\n**Polarity: DCEN \u2014 Direct Current Electrode Negative**\n\nThat's it. Ground clamp in the **+** socket, torch in the **\u2212** socket. This is the standard setup for TIG on this machine. See the diagram on manual page 24 for the exact socket positions on the front panel.",
+      "citations": [
+        {
+          "doc_id": "owner-manual",
+          "source_doc": "owner-manual.pdf",
+          "page": 24,
+          "element_id": "owner-manual:page:024",
+          "source_kind": "table",
+          "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png",
+          "excerpt": "Ground clamp cable goes in the positive socket; TIG torch cable goes in the negative socket. Polarity: DCEN."
+        }
+      ],
+      "artifacts": [
+        {
+          "id": "tig-polarity-setup",
+          "type": "manual_image",
+          "title": "TIG Polarity Setup \u2014 Manual Page 24",
+          "summary": "Diagram from the owner's manual showing ground clamp in the positive (+) socket and TIG torch in the negative (\u2212) socket for DCEN TIG operation.",
+          "payload": {
+            "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png",
+            "visual_id": "tig-polarity-setup"
+          },
+          "source_ref": {
+            "doc_id": "owner-manual",
+            "source_doc": "owner-manual.pdf",
+            "page": 24,
+            "element_id": "owner-manual:page:024"
+          }
+        },
+        {
+          "id": "tig-polarity-summary",
+          "type": "setup_diagram",
+          "title": "TIG Cable Placement \u2014 Quick Reference",
+          "summary": "Compact setup facts for TIG polarity on the Vulcan OmniPro 220.",
+          "payload": {
+            "process": "TIG (GTAW)",
+            "polarity": "DCEN \u2014 Direct Current Electrode Negative",
+            "ground_clamp_socket": "Positive (+)",
+            "torch_socket": "Negative (\u2212)",
+            "safety": "Power off and disconnect input power before swapping cables"
+          },
+          "source_ref": {
+            "doc_id": "owner-manual",
+            "source_doc": "owner-manual.pdf",
+            "page": 24,
+            "element_id": "owner-manual:page:024"
+          }
+        }
+      ],
+      "tool_results": {
+        "lookup_polarity": {
+          "process": "TIG",
+          "polarity": "DCEN",
+          "ground_clamp_socket": "Positive (+)",
+          "torch_socket": "Negative (-)",
+          "page": 24
+        },
+        "get_manual_image": {
+          "top_match": "tig-polarity-setup",
+          "page": 24,
+          "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-024.png"
+        }
+      },
+      "safety_flags": [
+        "power_off_before_cable_swap"
+      ],
+      "claude": {
+        "subtype": "success",
+        "is_error": false,
+        "num_turns": 4,
+        "duration_ms": 21637,
+        "duration_api_ms": 22687,
+        "total_cost_usd": 0.0857788,
+        "usage": {
+          "input_tokens": 7,
+          "cache_creation_input_tokens": 15072,
+          "cache_read_input_tokens": 27876,
+          "output_tokens": 1361,
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 15072
+          },
+          "inference_geo": "",
+          "iterations": [
+            {
+              "input_tokens": 1,
+              "output_tokens": 1028,
+              "cache_read_input_tokens": 14159,
+              "cache_creation_input_tokens": 913,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 913,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard"
+        },
+        "session_id": "5a88fb96-b616-4e47-a016-719d56d782a3"
+      }
+    }
+  },
+  {
+    "run_at": "2026-04-17T02:03:33.099530+00:00",
+    "question": "What's the duty cycle for MIG welding at 200A on 240V?",
+    "model": "claude-sonnet-4-6",
+    "raw_final_text": "{\n  \"answer_markdown\": \"## MIG @ 200A / 240V \u2014 Duty Cycle: **25%**\\n\\nAt 200A on 240V, the Vulcan OmniPro 220 gives you:\\n\\n| Weld time (per 10 min) | Rest time (per 10 min) |\\n|---|---|\\n| **2.5 min** | **7.5 min** |\\n\\n**Bottom line:** You get 2.5 minutes of arc time, then the machine needs 7.5 minutes to cool before the next run. Don't push past that or you'll trip the thermal overload. If you need longer continuous runs, drop amperage \u2014 duty cycle improves significantly at lower output settings.\",\n  \"citations\": [\n    {\n      \"doc_id\": \"owner-manual\",\n      \"source_doc\": \"owner-manual.pdf\",\n      \"page\": 19,\n      \"element_id\": \"owner-manual:page:019\",\n      \"source_kind\": \"table\",\n      \"excerpt\": \"MIG, 240 VAC, 200A \u2192 25% duty cycle (2.5 min weld / 7.5 min rest per 10-min period)\"\n    }\n  ],\n  \"artifacts\": [\n    {\n      \"id\": \"duty_cycle_mig_200a_240v\",\n      \"type\": \"duty_cycle_result\",\n      \"title\": \"Duty Cycle \u2014 MIG 200A @ 240V\",\n      \"summary\": \"Verified duty-cycle table row for MIG at 200A/240V showing 25% duty cycle with 2.5 min weld and 7.5 min rest per 10-minute period.\",\n      \"source_ref\": {\n        \"doc_id\": \"owner-manual\",\n        \"source_doc\": \"owner-manual.pdf\",\n        \"page\": 19,\n        \"element_id\": \"owner-manual:page:019\"\n      },\n      \"payload\": {\n        \"process\": \"MIG\",\n        \"input_voltage\": \"240 VAC\",\n        \"amperage\": 200,\n        \"duty_cycle_percent\": 25,\n        \"minutes_welding_per_10\": 2.5,\n        \"minutes_resting_per_10\": 7.5\n      }\n    }\n  ],\n  \"tool_results\": {\n    \"lookup_duty_cycle\": {\n      \"found\": true,\n      \"process\": \"MIG\",\n      \"input_voltage\": \"240 VAC\",\n      \"amperage\": 200,\n      \"duty_cycle_percent\": 25,\n      \"minutes_welding_per_10\": 2.5,\n      \"minutes_resting_per_10\": 7.5,\n      \"source_page\": 19\n    }\n  },\n  \"safety_flags\": []\n}",
+    "response": {
+      "answer_markdown": "## MIG @ 200A / 240V \u2014 Duty Cycle: **25%**\n\nAt 200A on 240V, the Vulcan OmniPro 220 gives you:\n\n| Weld time (per 10 min) | Rest time (per 10 min) |\n|---|---|\n| **2.5 min** | **7.5 min** |\n\n**Bottom line:** You get 2.5 minutes of arc time, then the machine needs 7.5 minutes to cool before the next run. Don't push past that or you'll trip the thermal overload. If you need longer continuous runs, drop amperage \u2014 duty cycle improves significantly at lower output settings.",
+      "citations": [
+        {
+          "doc_id": "owner-manual",
+          "source_doc": "owner-manual.pdf",
+          "page": 19,
+          "element_id": "owner-manual:page:019",
+          "source_kind": "table",
+          "excerpt": "MIG, 240 VAC, 200A \u2192 25% duty cycle (2.5 min weld / 7.5 min rest per 10-min period)"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": "duty_cycle_mig_200a_240v",
+          "type": "duty_cycle_result",
+          "title": "Duty Cycle \u2014 MIG 200A @ 240V",
+          "summary": "Verified duty-cycle table row for MIG at 200A/240V showing 25% duty cycle with 2.5 min weld and 7.5 min rest per 10-minute period.",
+          "payload": {
+            "process": "MIG",
+            "input_voltage": "240 VAC",
+            "amperage": 200,
+            "duty_cycle_percent": 25,
+            "minutes_welding_per_10": 2.5,
+            "minutes_resting_per_10": 7.5
+          },
+          "source_ref": {
+            "doc_id": "owner-manual",
+            "source_doc": "owner-manual.pdf",
+            "page": 19,
+            "element_id": "owner-manual:page:019"
+          }
+        }
+      ],
+      "tool_results": {
+        "lookup_duty_cycle": {
+          "found": true,
+          "process": "MIG",
+          "input_voltage": "240 VAC",
+          "amperage": 200,
+          "duty_cycle_percent": 25,
+          "minutes_welding_per_10": 2.5,
+          "minutes_resting_per_10": 7.5,
+          "source_page": 19
+        }
+      },
+      "safety_flags": [],
+      "claude": {
+        "subtype": "success",
+        "is_error": false,
+        "num_turns": 3,
+        "duration_ms": 16259,
+        "duration_api_ms": 17529,
+        "total_cost_usd": 0.043003,
+        "usage": {
+          "input_tokens": 7,
+          "cache_creation_input_tokens": 3826,
+          "cache_read_input_tokens": 38295,
+          "output_tokens": 1114,
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 3826
+          },
+          "inference_geo": "",
+          "iterations": [
+            {
+              "input_tokens": 1,
+              "output_tokens": 829,
+              "cache_read_input_tokens": 14051,
+              "cache_creation_input_tokens": 306,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 306,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard"
+        },
+        "session_id": "b6eafcb1-0284-4fe9-80d9-c9ca4ad6f3ed"
+      }
+    }
+  },
+  {
+    "run_at": "2026-04-17T02:03:50.038467+00:00",
+    "question": "I'm getting porosity in my flux-cored welds. What should I check?",
+    "model": "claude-sonnet-4-6",
+    "raw_final_text": "{\n  \"answer_markdown\": \"Porosity = gas pockets trapped in the bead. For flux-cored, work through this checklist in order:\\n\\n**\u26a0\ufe0f Before touching cables or the nozzle: power off and unplug the welder.**\\n\\n### 1. Check polarity first (biggest offender)\\n- **Self-shielded FCAW \u2192 DCEN** (electrode negative). If you're on DCEP, you'll get porosity almost every time.\\n- Swap the torch and work clamp leads at the front panel terminals to change polarity.\\n\\n### 2. Clean the workpiece \u2014 down to bare metal\\n- Grind or wire-brush off mill scale, rust, paint, galvanizing, and any oil or moisture.\\n- Clean the wire too \u2014 if the spool has been sitting exposed, the outermost wraps may be contaminated.\\n\\n### 3. Contact-tip-to-work distance (CTWD)\\n- Keep CTWD at \u00bd\\\" or less. A long stick-out raises the chance of atmospheric contamination at the arc.\\n\\n### 4. Maintain steady travel speed\\n- Erratic speed lets the arc sit over the puddle unevenly, trapping gas. Use two hands or brace your arm.\\n\\n### 5. Gas-shielded flux-cored only (FCAW-G)\\n- If you're running a gas-shielded flux-cored wire, also check:\\n  - Gas flow rate (increase if low, target ~15\u201320 CFH unless wire spec says otherwise)\\n  - Clean and clear the nozzle\\n  - Use the gas type the wire supplier recommends\\n\\n> Start with polarity \u2014 it's the most common cause of porosity on self-shielded flux-cored and the easiest thing to have set wrong.\",\n  \"citations\": [\n    {\n      \"doc_id\": \"owner-manual\",\n      \"source_doc\": \"owner-manual.pdf\",\n      \"page\": 37,\n      \"element_id\": \"owner-manual:page:037\",\n      \"source_kind\": \"table\",\n      \"page_image\": \"products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-037.png\",\n      \"excerpt\": \"Wire Weld \u2013 Porosity: Small cavities or holes in the bead. POSSIBLE CAUSES AND SOLUTIONS 1. Incorrect polarity: Check that polarity is set correctly for type of welding. 2. Insufficient shielding gas (MIG only): Increase flow of gas. Clean nozzle. Maintain proper CTWD.\"\n    },\n    {\n      \"doc_id\": \"owner-manual\",\n      \"source_doc\": \"owner-manual.pdf\",\n      \"page\": 43,\n      \"element_id\": \"owner-manual:page:043\",\n      \"source_kind\": \"table\",\n      \"page_image\": \"products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-043.png\",\n      \"excerpt\": \"Troubleshooting \u2013 MIG / Flux-Cored Welding. Porosity causes: dirty workpiece or wire, incorrect polarity (MIG use DCEP; Flux-Cored self-shielded use DCEN), insufficient/incorrect shielding gas, inconsistent travel speed, CTWD too long.\"\n    },\n    {\n      \"doc_id\": \"owner-manual\",\n      \"source_doc\": \"owner-manual.pdf\",\n      \"page\": 37,\n      \"element_id\": \"owner-manual:page:037\",\n      \"source_kind\": \"visual\",\n      \"page_image\": \"products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-037.png\",\n      \"excerpt\": \"Diagnosis page showing porosity examples and likely causes for wire welding.\"\n    }\n  ],\n  \"artifacts\": [\n    {\n      \"id\": \"porosity-diagnosis\",\n      \"type\": \"manual_image\",\n      \"title\": \"Wire Weld Porosity Diagnosis (Manual p. 37)\",\n      \"summary\": \"Manual page showing top-view porosity examples and the full causes/solutions list for wire (MIG/flux-cored) welding.\",\n      \"source_ref\": {\n        \"doc_id\": \"owner-manual\",\n        \"source_doc\": \"owner-manual.pdf\",\n        \"page\": 37,\n        \"element_id\": \"owner-manual:page:037\"\n      },\n      \"payload\": {\n        \"path\": \"products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-037.png\",\n        \"visual_id\": \"porosity-diagnosis\"\n      }\n    },\n    {\n      \"id\": \"porosity-troubleshooting\",\n      \"type\": \"manual_image\",\n      \"title\": \"MIG/Flux-Cored Troubleshooting Table (Manual p. 43)\",\n      \"summary\": \"Structured troubleshooting table covering porosity causes and remedies for MIG and flux-cored processes.\",\n      \"source_ref\": {\n        \"doc_id\": \"owner-manual\",\n        \"source_doc\": \"owner-manual.pdf\",\n        \"page\": 43,\n        \"element_id\": \"owner-manual:page:043\"\n      },\n      \"payload\": {\n        \"path\": \"products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-043.png\",\n        \"visual_id\": \"porosity-troubleshooting\"\n      }\n    }\n  ],\n  \"tool_results\": {\n    \"troubleshooting_for\": {\n      \"symptom\": \"porosity in flux-cored or MIG weld\",\n      \"checks_count\": 6,\n      \"top_causes\": [\"Incorrect polarity\", \"Dirty workpiece or welding wire\", \"Insufficient/incorrect shielding gas (MIG only)\", \"Inconsistent travel speed\", \"CTWD too long\"]\n    },\n    \"search_manual\": {\n      \"top_pages\": [37, 40, 42],\n      \"top_score\": 33.668\n    },\n    \"get_manual_image\": {\n      \"images_returned\": 2,\n      \"pages\": [37, 43]\n    }\n  },\n  \"safety_flags\": [\"power_off_before_polarity_change\", \"disconnect_input_power_before_cable_swap\"]\n}",
+    "response": {
+      "answer_markdown": "Porosity = gas pockets trapped in the bead. For flux-cored, work through this checklist in order:\n\n**\u26a0\ufe0f Before touching cables or the nozzle: power off and unplug the welder.**\n\n### 1. Check polarity first (biggest offender)\n- **Self-shielded FCAW \u2192 DCEN** (electrode negative). If you're on DCEP, you'll get porosity almost every time.\n- Swap the torch and work clamp leads at the front panel terminals to change polarity.\n\n### 2. Clean the workpiece \u2014 down to bare metal\n- Grind or wire-brush off mill scale, rust, paint, galvanizing, and any oil or moisture.\n- Clean the wire too \u2014 if the spool has been sitting exposed, the outermost wraps may be contaminated.\n\n### 3. Contact-tip-to-work distance (CTWD)\n- Keep CTWD at \u00bd\" or less. A long stick-out raises the chance of atmospheric contamination at the arc.\n\n### 4. Maintain steady travel speed\n- Erratic speed lets the arc sit over the puddle unevenly, trapping gas. Use two hands or brace your arm.\n\n### 5. Gas-shielded flux-cored only (FCAW-G)\n- If you're running a gas-shielded flux-cored wire, also check:\n  - Gas flow rate (increase if low, target ~15\u201320 CFH unless wire spec says otherwise)\n  - Clean and clear the nozzle\n  - Use the gas type the wire supplier recommends\n\n> Start with polarity \u2014 it's the most common cause of porosity on self-shielded flux-cored and the easiest thing to have set wrong.",
+      "citations": [
+        {
+          "doc_id": "owner-manual",
+          "source_doc": "owner-manual.pdf",
+          "page": 37,
+          "element_id": "owner-manual:page:037",
+          "source_kind": "table",
+          "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-037.png",
+          "excerpt": "Wire Weld \u2013 Porosity: Small cavities or holes in the bead. POSSIBLE CAUSES AND SOLUTIONS 1. Incorrect polarity: Check that polarity is set correctly for type of welding. 2. Insufficient shielding gas (MIG only): Increase flow of gas. Clean nozzle. Maintain proper CTWD."
+        },
+        {
+          "doc_id": "owner-manual",
+          "source_doc": "owner-manual.pdf",
+          "page": 43,
+          "element_id": "owner-manual:page:043",
+          "source_kind": "table",
+          "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-043.png",
+          "excerpt": "Troubleshooting \u2013 MIG / Flux-Cored Welding. Porosity causes: dirty workpiece or wire, incorrect polarity (MIG use DCEP; Flux-Cored self-shielded use DCEN), insufficient/incorrect shielding gas, inconsistent travel speed, CTWD too long."
+        },
+        {
+          "doc_id": "owner-manual",
+          "source_doc": "owner-manual.pdf",
+          "page": 37,
+          "element_id": "owner-manual:page:037",
+          "source_kind": "visual",
+          "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-037.png",
+          "excerpt": "Diagnosis page showing porosity examples and likely causes for wire welding."
+        }
+      ],
+      "artifacts": [
+        {
+          "id": "porosity-diagnosis",
+          "type": "manual_image",
+          "title": "Wire Weld Porosity Diagnosis (Manual p. 37)",
+          "summary": "Manual page showing top-view porosity examples and the full causes/solutions list for wire (MIG/flux-cored) welding.",
+          "payload": {
+            "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-037.png",
+            "visual_id": "porosity-diagnosis"
+          },
+          "source_ref": {
+            "doc_id": "owner-manual",
+            "source_doc": "owner-manual.pdf",
+            "page": 37,
+            "element_id": "owner-manual:page:037"
+          }
+        },
+        {
+          "id": "porosity-troubleshooting",
+          "type": "manual_image",
+          "title": "MIG/Flux-Cored Troubleshooting Table (Manual p. 43)",
+          "summary": "Structured troubleshooting table covering porosity causes and remedies for MIG and flux-cored processes.",
+          "payload": {
+            "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-043.png",
+            "visual_id": "porosity-troubleshooting"
+          },
+          "source_ref": {
+            "doc_id": "owner-manual",
+            "source_doc": "owner-manual.pdf",
+            "page": 43,
+            "element_id": "owner-manual:page:043"
+          }
+        }
+      ],
+      "tool_results": {
+        "troubleshooting_for": {
+          "symptom": "porosity in flux-cored or MIG weld",
+          "checks_count": 6,
+          "top_causes": [
+            "Incorrect polarity",
+            "Dirty workpiece or welding wire",
+            "Insufficient/incorrect shielding gas (MIG only)",
+            "Inconsistent travel speed",
+            "CTWD too long"
+          ]
+        },
+        "search_manual": {
+          "top_pages": [
+            37,
+            40,
+            42
+          ],
+          "top_score": 33.668
+        },
+        "get_manual_image": {
+          "images_returned": 2,
+          "pages": [
+            37,
+            43
+          ]
+        }
+      },
+      "safety_flags": [
+        "power_off_before_polarity_change",
+        "disconnect_input_power_before_cable_swap"
+      ],
+      "claude": {
+        "subtype": "success",
+        "is_error": false,
+        "num_turns": 5,
+        "duration_ms": 36902,
+        "duration_api_ms": 37901,
+        "total_cost_usd": 0.0706261,
+        "usage": {
+          "input_tokens": 7,
+          "cache_creation_input_tokens": 6786,
+          "cache_read_input_tokens": 38572,
+          "output_tokens": 2208,
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 6786
+          },
+          "inference_geo": "",
+          "iterations": [
+            {
+              "input_tokens": 1,
+              "output_tokens": 1743,
+              "cache_read_input_tokens": 14328,
+              "cache_creation_input_tokens": 2989,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 2989,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard"
+        },
+        "session_id": "499dcd87-404a-4bee-8301-83aebf2ecb0d"
+      }
+    }
+  },
+  {
+    "run_at": "2026-04-17T02:04:27.593522+00:00",
+    "question": "How do I fly a plane?",
+    "model": "claude-sonnet-4-6",
+    "raw_final_text": "{\"answer_markdown\": \"That's out of scope for this assistant. I'm only here to help with the **Vulcan OmniPro 220 welder** \u2014 setup, operation, duty cycle, polarity, troubleshooting, and manual guidance.\\n\\nGot a welding question? Ask away!\", \"citations\": [], \"artifacts\": [], \"tool_results\": {}, \"safety_flags\": [\"out_of_scope_request\"]}",
+    "response": {
+      "answer_markdown": "That's out of scope for this assistant. I'm only here to help with the **Vulcan OmniPro 220 welder** \u2014 setup, operation, duty cycle, polarity, troubleshooting, and manual guidance.\n\nGot a welding question? Ask away!",
+      "citations": [],
+      "artifacts": [],
+      "tool_results": {},
+      "safety_flags": [
+        "out_of_scope_request"
+      ],
+      "claude": {
+        "subtype": "success",
+        "is_error": false,
+        "num_turns": 1,
+        "duration_ms": 3420,
+        "duration_api_ms": 4388,
+        "total_cost_usd": 0.0181498,
+        "usage": {
+          "input_tokens": 3,
+          "cache_creation_input_tokens": 3170,
+          "cache_read_input_tokens": 10531,
+          "output_tokens": 179,
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 3170
+          },
+          "inference_geo": "",
+          "iterations": [
+            {
+              "input_tokens": 3,
+              "output_tokens": 179,
+              "cache_read_input_tokens": 10531,
+              "cache_creation_input_tokens": 3170,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 3170,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard"
+        },
+        "session_id": "f55539ad-168b-4f1a-a458-d2606e3f096d"
+      }
+    }
+  },
+  {
+    "run_at": "2026-04-17T02:04:31.756990+00:00",
+    "question": "Write a C program.",
+    "model": "claude-sonnet-4-6",
+    "raw_final_text": "{\"answer_markdown\": \"That's outside the scope of this assistant. I'm here exclusively to help with the **Vulcan OmniPro 220** welder \u2014 setup, polarity, duty cycle, troubleshooting, and manual-guided questions.\\n\\nIf you have a welding question, fire away!\", \"citations\": [], \"artifacts\": [], \"tool_results\": {}, \"safety_flags\": [\"out_of_scope_request\"]}",
+    "response": {
+      "answer_markdown": "That's outside the scope of this assistant. I'm here exclusively to help with the **Vulcan OmniPro 220** welder \u2014 setup, polarity, duty cycle, troubleshooting, and manual-guided questions.\n\nIf you have a welding question, fire away!",
+      "citations": [],
+      "artifacts": [],
+      "tool_results": {},
+      "safety_flags": [
+        "out_of_scope_request"
+      ],
+      "claude": {
+        "subtype": "success",
+        "is_error": false,
+        "num_turns": 1,
+        "duration_ms": 3968,
+        "duration_api_ms": 4723,
+        "total_cost_usd": 0.017960300000000002,
+        "usage": {
+          "input_tokens": 3,
+          "cache_creation_input_tokens": 3168,
+          "cache_read_input_tokens": 10531,
+          "output_tokens": 167,
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 3168
+          },
+          "inference_geo": "",
+          "iterations": [
+            {
+              "input_tokens": 3,
+              "output_tokens": 167,
+              "cache_read_input_tokens": 10531,
+              "cache_creation_input_tokens": 3168,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 3168,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message"
+            }
+          ],
+          "speed": "standard"
+        },
+        "session_id": "b8f32aeb-1e43-4324-b9fc-17ee3e014ca4"
+      }
+    }
+  },
+  {
+     "answer_markdown": "Since polarity is already ruled out, here's what the OmniPro 220 manual points to next for flux-cored pinholes/porosity:\n\n### Remaining Checks (in priority
+   order)\n\n| # | Cause | What to Do |\n|---|-------|------------|\n| 1 | **Dirty base metal or wire** | Grind/wire-brush the joint down to bare metal. Make sure your wire spool is
+   clean — no oil, rust, mill scale, or coatings. |\n| 2 | **CTWD too long** | Keep your contact-tip-to-work distance at **½\" or less**. A long stickout lets air contaminate the
+   puddle. |\n| 3 | **Inconsistent travel speed** | Move at a steady pace. Pausing or speeding up creates irregular gas coverage and cooling. |\n| 4 | **Gas-shielded FCAW only —
+   insufficient/wrong shielding gas** | If you're running gas-shielded flux-cored (not self-shielded), increase gas flow, clean the nozzle, and confirm you're using the wire
+   supplier's recommended gas. *(Self-shielded FCAW needs no gas — skip this if that's your setup.)* |\n\n> ⚠️ **Power off and unplug the machine before cleaning the nozzle, swapping
+   wire, or adjusting the drive roll/liner.**\n\nStart with #1 — contamination is the most common pinhole culprit after a polarity check.",
+     "citations": [
+       {
+         "doc_id": "owner-manual",
+         "source_doc": "owner-manual.pdf",
+         "page": 37,
+         "element_id": "owner-manual:page:037",
+         "source_kind": "native_text",
+         "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-037.png",
+         "excerpt": "Wire Weld – Porosity: Small cavities or holes in the bead. POSSIBLE CAUSES AND SOLUTIONS: 1. Incorrect polarity … 2. Insufficient shielding gas (MIG only) … 3.
+   Incorrect shielding gas (MIG only) … Dirty workpiece or welding wire: Clean workpiece down to bare metal. Make certain that wire is clean and free from oil, coatings, and other
+   residues."
+       },
+       {
+         "doc_id": "owner-manual",
+         "source_doc": "owner-manual.pdf",
+         "page": 43,
+         "element_id": "owner-manual:page:043",
+         "source_kind": "table",
+         "page_image": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-043.png",
+         "excerpt": "Troubleshooting – MIG / Flux-Cored Welding causes and solutions table."
+       }
+     ],
+     "artifacts": [
+       {
+         "id": "porosity_troubleshoot_page37",
+         "type": "manual_image",
+         "title": "OmniPro 220 Manual — Wire Weld Porosity (p. 37)",
+         "summary": "Manual page showing porosity causes and solutions for wire (MIG/FCAW) welds with diagrams.",
+         "source_ref": {
+           "doc_id": "owner-manual",
+           "source_doc": "owner-manual.pdf",
+           "page": 37,
+           "element_id": "owner-manual:page:037"
+         },
+         "payload": {
+           "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-037.png",
+           "visual_id": "owner-manual:page:037"
+         }
+       },
+       {
+         "id": "fcaw_troubleshoot_page43",
+         "type": "manual_image",
+         "title": "OmniPro 220 Manual — MIG/Flux-Cored Troubleshooting Table (p. 43)",
+         "summary": "Full MIG/FCAW troubleshooting table listing problems, causes, and solutions from the owner's manual.",
+         "source_ref": {
+           "doc_id": "owner-manual",
+           "source_doc": "owner-manual.pdf",
+           "page": 43,
+           "element_id": "owner-manual:page:043"
+         },
+         "payload": {
+           "path": "products/vulcan-omnipro-220/knowledge/pages/owner-manual/page-043.png",
+           "visual_id": "owner-manual:page:043"
+         }
+       }
+     ],
+     "tool_results": {
+       "troubleshooting_for": {
+         "symptom": "porosity/pinholes",
+         "process": "Flux-Cored",
+         "checks_count": 6,
+         "top_causes": ["Incorrect polarity (already checked)", "Insufficient/incorrect shielding gas (MIG only)", "Dirty workpiece or wire", "Inconsistent travel speed", "CTWD too
+   long"]
+       },
+       "search_manual": {
+         "top_page": 37,
+         "top_score": 47.085,
+         "source_kind": "native_text"
+       }
+     },
+     "safety_flags": ["power_off_before_cleaning_or_adjusting"]
+   }
+]

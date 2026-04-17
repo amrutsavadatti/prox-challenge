@@ -4,6 +4,13 @@ import re
 from typing import Any
 
 from prox_agent.knowledge import KnowledgeBase
+from prox_agent.response_contract import (
+    citation_from_search_result,
+    citation_from_source_ref,
+    duty_cycle_artifact,
+    manual_image_artifact as build_manual_image_artifact,
+    normalize_response_contract,
+)
 
 
 PROCESS_PATTERNS = [
@@ -68,24 +75,24 @@ def answer_local(question: str) -> dict[str, Any]:
         duty = _answer_duty_cycle(kb, question)
         if duty:
             response.update(duty)
-            return response
+            return normalize_response_contract(response)
 
     if any(term in lowered for term in ["polarity", "socket", "ground clamp", "which socket", "cable"]):
         polarity = _answer_polarity(kb, question)
         if polarity:
             response.update(polarity)
-            return response
+            return normalize_response_contract(response)
 
     if any(term in lowered for term in ["porosity", "holes", "cavities", "troubleshoot", "spatter"]):
         troubleshooting = _answer_troubleshooting(kb, question)
         if troubleshooting:
             response.update(troubleshooting)
-            return response
+            return normalize_response_contract(response)
 
     controls = _answer_control_setting(kb, question)
     if controls:
         response.update(controls)
-        return response
+        return normalize_response_contract(response)
 
     search_results = kb.search_manual(question, limit=5)
     images = kb.get_manual_image(question, limit=3)
@@ -98,8 +105,8 @@ def answer_local(question: str) -> dict[str, Any]:
         "get_manual_image": images,
     }
     response["citations"] = _citations_from_search(search_results)
-    response["artifacts"] = [_manual_image_artifact(image) for image in images]
-    return response
+    response["artifacts"] = [build_manual_image_artifact(image) for image in images]
+    return normalize_response_contract(response)
 
 
 def _answer_duty_cycle(kb: KnowledgeBase, question: str) -> dict[str, Any] | None:
@@ -144,14 +151,8 @@ def _answer_duty_cycle(kb: KnowledgeBase, question: str) -> dict[str, Any] | Non
             f"{process} at {result['amperage']}A on {result['input_voltage']} is rated for "
             f"{result['duty_cycle_percent']}% duty cycle.{minutes}{match_note}"
         ),
-        "citations": [source],
-        "artifacts": [
-            {
-                "type": "duty_cycle_result",
-                "title": f"{process} duty cycle",
-                "payload": result,
-            }
-        ],
+        "citations": [citation_from_source_ref(source, source_kind="table")],
+        "artifacts": [duty_cycle_artifact(result, process)],
         "tool_results": {
             "lookup_duty_cycle": result,
             "search_manual": kb.search_manual(question, limit=3),
@@ -175,8 +176,8 @@ def _answer_polarity(kb: KnowledgeBase, question: str) -> dict[str, Any] | None:
             f"the {result['wire_or_mode']} cable in the {result['torch_or_wire_feed_socket']} socket. "
             "Turn the welder off and unplug it before changing cable setup."
         ),
-        "citations": [result["source_ref"]],
-        "artifacts": [_manual_image_artifact(image) for image in images],
+        "citations": [citation_from_source_ref(result["source_ref"], source_kind="table")],
+        "artifacts": [build_manual_image_artifact(image) for image in images],
         "tool_results": {
             "lookup_polarity": result,
             "get_manual_image": images,
@@ -194,12 +195,14 @@ def _answer_troubleshooting(kb: KnowledgeBase, question: str) -> dict[str, Any] 
     images = []
     for image_path, source_ref in zip(guide.get("page_images", []), guide.get("source_refs", []), strict=False):
         images.append(
-            {
-                "type": "manual_image",
-                "title": f"{source_ref['source_doc']} p.{source_ref['page']}",
-                "path": image_path,
-                "source_ref": source_ref,
-            }
+            build_manual_image_artifact(
+                {
+                    "title": f"{source_ref['source_doc']} p.{source_ref['page']}",
+                    "path": image_path,
+                    "source_ref": source_ref,
+                    "description": f"Relevant troubleshooting page from {source_ref['source_doc']} page {source_ref['page']}.",
+                }
+            )
         )
     checks = "\n".join(f"- {check['cause']}: {check['solution']}" for check in guide["checks"])
     return {
@@ -208,7 +211,7 @@ def _answer_troubleshooting(kb: KnowledgeBase, question: str) -> dict[str, Any] 
             f"{checks}\n\n"
             "Turn the welder off and disconnect power before adjusting, cleaning, or repairing the unit."
         ),
-        "citations": guide["source_refs"],
+        "citations": [citation_from_source_ref(source_ref, source_kind="table") for source_ref in guide["source_refs"]],
         "artifacts": images,
         "tool_results": {
             "troubleshooting_for": guide,
@@ -248,7 +251,7 @@ def _answer_control_setting(kb: KnowledgeBase, question: str) -> dict[str, Any] 
         return {
             "answer_markdown": config["answer_markdown"],
             "citations": citations,
-            "artifacts": [_manual_image_artifact(image) for image in ordered_images],
+            "artifacts": [build_manual_image_artifact(image) for image in ordered_images],
             "tool_results": {
                 "search_manual": search_results,
                 "get_manual_image": ordered_images,
@@ -299,15 +302,6 @@ def _extract_amperage(question: str) -> int | None:
     return int(match.group(1))
 
 
-def _manual_image_artifact(image: dict[str, Any]) -> dict[str, Any]:
-    return {
-        "type": "manual_image",
-        "title": image["title"],
-        "path": image["path"],
-        "source_ref": image["source_ref"],
-    }
-
-
 def _citations_from_search(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
     citations: list[dict[str, Any]] = []
     seen: set[tuple[str, int]] = set()
@@ -316,12 +310,5 @@ def _citations_from_search(results: list[dict[str, Any]]) -> list[dict[str, Any]
         if key in seen:
             continue
         seen.add(key)
-        citations.append(
-            {
-                "doc_id": result["doc_id"],
-                "source_doc": result["source_doc"],
-                "page": result["page"],
-                "element_id": result["element_id"],
-            }
-        )
+        citations.append(citation_from_search_result(result))
     return citations
