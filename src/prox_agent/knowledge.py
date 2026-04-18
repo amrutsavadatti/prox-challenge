@@ -106,6 +106,11 @@ class KnowledgeBase:
         self.polarity_setups = self._load_json(self.knowledge_dir / "tables" / "polarity_setups.json")["rows"]
         self.troubleshooting_guides = self._load_json(self.knowledge_dir / "tables" / "troubleshooting_guides.json")["rows"]
         self.visual_index = self._load_visual_index()
+        self._page_image_map: dict[tuple[str, int], str] = {
+            (e["source_ref"]["doc_id"], e["source_ref"]["page"]): e["path"]
+            for e in self.visual_index
+            if "source_ref" in e
+        }
         self.articles = self._load_articles()
         self.ocr_records = self._load_ocr_records()
         self._search_tokens = [self._tokens(page["text"]) for page in self.pages]
@@ -212,7 +217,16 @@ class KnowledgeBase:
             if final > 0:
                 ranked.append((final, article))
         ranked.sort(key=lambda x: x[0], reverse=True)
-        return [a for _, a in ranked[:limit]]
+        return [self._inject_page_images(a) for _, a in ranked[:limit]]
+
+    def _inject_page_images(self, article: dict[str, Any]) -> dict[str, Any]:
+        import copy
+        article = copy.deepcopy(article)
+        for ref in article.get("source_refs", []):
+            key = (ref.get("doc_id"), ref.get("page"))
+            if key in self._page_image_map:
+                ref["page_image"] = self._page_image_map[key]
+        return article
 
     def get_manual_image(self, query: str, limit: int = 3) -> list[dict[str, Any]]:
         expanded = self._expand_query(query)
