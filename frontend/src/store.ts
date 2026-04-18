@@ -23,11 +23,14 @@ interface AppState {
   artifactPanelOpen: boolean;
   isStreaming: boolean;
   streamingStatus: string | null;
+  streamingMessageId: string | null;
 
   createChat: () => string;
   setActiveChat: (id: string) => void;
   deleteChat: (id: string) => void;
   sendMessage: (content: string, images?: AttachedImage[]) => void;
+  sendVoiceMessage: (audio: Blob, mime: string) => void;
+  stopPlayback: () => void;
   setActiveArtifact: (artifact: Artifact | null) => void;
   closeArtifact: (id: string) => void;
   toggleSidebar: () => void;
@@ -36,6 +39,30 @@ interface AppState {
 
 let nextId = 1;
 const uid = () => `${Date.now()}-${nextId++}`;
+
+let currentAudio: HTMLAudioElement | null = null;
+let currentAudioUrl: string | null = null;
+
+function stopCurrentAudio() {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.src = '';
+    currentAudio = null;
+  }
+  if (currentAudioUrl) {
+    URL.revokeObjectURL(currentAudioUrl);
+    currentAudioUrl = null;
+  }
+}
+
+function playAudioFromBase64(b64: string, mime: string) {
+  stopCurrentAudio();
+  const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+  const blob = new Blob([bytes], { type: mime || 'audio/mpeg' });
+  currentAudioUrl = URL.createObjectURL(blob);
+  currentAudio = new Audio(currentAudioUrl);
+  currentAudio.play().catch(() => {});
+}
 
 export const useStore = create<AppState>()(persist((set, get) => ({
   chats: [],
@@ -46,6 +73,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
   artifactPanelOpen: false,
   isStreaming: false,
   streamingStatus: null,
+  streamingMessageId: null,
 
   createChat: () => {
     const id = uid();
@@ -101,19 +129,27 @@ export const useStore = create<AppState>()(persist((set, get) => ({
       timestamp: new Date(),
     };
 
+    // Insert a streaming placeholder message immediately so text deltas have somewhere to land
+    const streamingMsgId = uid();
     set((s) => ({
       chats: s.chats.map((c) =>
         c.id === chatId
           ? {
               ...c,
               title: c.messages.length === 0 ? content.slice(0, 40) : c.title,
-              messages: [...c.messages, userMsg],
+              messages: [...c.messages, userMsg, {
+                id: streamingMsgId,
+                role: 'assistant' as const,
+                content: '',
+                timestamp: new Date(),
+              }],
               updatedAt: new Date(),
             }
           : c
       ),
       isStreaming: true,
       streamingStatus: null,
+      streamingMessageId: streamingMsgId,
     }));
 
     const priorMessages = state.chats.find((c) => c.id === chatId)?.messages ?? [];
@@ -150,7 +186,6 @@ export const useStore = create<AppState>()(persist((set, get) => ({
           if (done) break;
           buffer += decoder.decode(value, { stream: true });
 
-          // SSE events are separated by double newline
           const parts = buffer.split('\n\n');
           buffer = parts.pop() ?? '';
 
@@ -160,30 +195,55 @@ export const useStore = create<AppState>()(persist((set, get) => ({
             let event: any;
             try { event = JSON.parse(dataLine.slice(6)); } catch { continue; }
 
-            if (event.type === 'tool_call') {
+            if (event.type === 'text_delta') {
+              set((s) => ({
+                chats: s.chats.map((c) =>
+                  c.id === chatId
+                    ? {
+                        ...c,
+                        messages: c.messages.map((m) =>
+                          m.id === streamingMsgId
+                            ? { ...m, content: m.content + String(event.text ?? '') }
+                            : m
+                        ),
+                      }
+                    : c
+                ),
+                streamingStatus: null,
+              }));
+            } else if (event.type === 'tool_call') {
               set({ streamingStatus: event.label });
             } else if (event.type === 'done') {
               const artifacts = parseArtifacts(Array.isArray(event.artifacts) ? event.artifacts : []);
-              const assistantMsg = {
-                id: uid(),
-                role: 'assistant' as const,
-                content: String(event.answer_markdown ?? ''),
-                artifacts,
-                citations: Array.isArray(event.citations) ? event.citations as Citation[] : [],
-                safetyFlags: Array.isArray(event.safety_flags) ? event.safety_flags as string[] : [],
-                timestamp: new Date(),
-              };
+              // Finalize: replace streaming placeholder with full structured message
               set((s) => {
                 const newOpenArtifacts = [...s.openArtifacts, ...artifacts];
                 const latestArtifact = artifacts[artifacts.length - 1] ?? s.activeArtifact;
+                const finalContent = String(event.answer_markdown ?? '');
                 return {
                   chats: s.chats.map((c) =>
                     c.id === chatId
-                      ? { ...c, messages: [...c.messages, assistantMsg], updatedAt: new Date() }
+                      ? {
+                          ...c,
+                          messages: c.messages.map((m) =>
+                            m.id === streamingMsgId
+                              ? {
+                                  ...m,
+                                  // Use streamed text if it matches; fall back to JSON answer_markdown
+                                  content: m.content || finalContent,
+                                  artifacts,
+                                  citations: Array.isArray(event.citations) ? event.citations as Citation[] : [],
+                                  safetyFlags: Array.isArray(event.safety_flags) ? event.safety_flags as string[] : [],
+                                }
+                              : m
+                          ),
+                          updatedAt: new Date(),
+                        }
                       : c
                   ),
                   isStreaming: false,
                   streamingStatus: null,
+                  streamingMessageId: null,
                   openArtifacts: newOpenArtifacts,
                   activeArtifact: latestArtifact,
                   artifactPanelOpen: artifacts.length > 0 ? true : s.artifactPanelOpen,
@@ -195,20 +255,194 @@ export const useStore = create<AppState>()(persist((set, get) => ({
           }
         }
       } catch (err: any) {
-        const assistantMsg = {
-          id: uid(),
-          role: 'assistant' as const,
-          content: `Error: ${err?.message ?? 'Request failed'}`,
-          timestamp: new Date(),
-        };
+        const errContent = `Error: ${err?.message ?? 'Request failed'}`;
         set((s) => ({
           chats: s.chats.map((c) =>
             c.id === chatId
-              ? { ...c, messages: [...c.messages, assistantMsg], updatedAt: new Date() }
+              ? {
+                  ...c,
+                  messages: c.messages.map((m) =>
+                    m.id === streamingMsgId ? { ...m, content: errContent } : m
+                  ),
+                }
               : c
           ),
           isStreaming: false,
           streamingStatus: null,
+          streamingMessageId: null,
+        }));
+      }
+    })();
+  },
+
+  stopPlayback: () => stopCurrentAudio(),
+
+  sendVoiceMessage: (audio, mime) => {
+    const state = get();
+    let chatId = state.activeChatId;
+    if (!chatId) chatId = get().createChat();
+
+    stopCurrentAudio();
+
+    const placeholderId = uid();
+    const userMsg = {
+      id: placeholderId,
+      role: 'user' as const,
+      content: '🎤 …',
+      timestamp: new Date(),
+    };
+
+    const streamingMsgId = uid();
+    set((s) => ({
+      chats: s.chats.map((c) =>
+        c.id === chatId
+          ? {
+              ...c,
+              messages: [...c.messages, userMsg],
+              updatedAt: new Date(),
+            }
+          : c
+      ),
+      isStreaming: true,
+      streamingStatus: 'Transcribing…',
+      streamingMessageId: streamingMsgId,
+    }));
+
+    const priorMessages = state.chats.find((c) => c.id === chatId)?.messages ?? [];
+    const history = priorMessages.map((m) => ({ role: m.role, content: m.content }));
+
+    const form = new FormData();
+    form.append('audio', audio, `recording.${mime.includes('webm') ? 'webm' : 'ogg'}`);
+    form.append('history', JSON.stringify(history));
+
+    (async () => {
+      try {
+        const res = await fetch(`${API_BASE}/chat/voice/stream`, {
+          method: 'POST',
+          body: form,
+        });
+        if (!res.ok || !res.body) throw new Error(`voice request failed: ${res.status}`);
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+        let answerReceived = false;
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+
+          const parts = buffer.split('\n\n');
+          buffer = parts.pop() ?? '';
+
+          for (const part of parts) {
+            const dataLine = part.split('\n').find((l) => l.startsWith('data: '));
+            if (!dataLine) continue;
+            let event: any;
+            try { event = JSON.parse(dataLine.slice(6)); } catch { continue; }
+
+            if (event.type === 'transcript') {
+              const transcript = String(event.text ?? '').trim() || '(no speech detected)';
+              // Insert the streaming assistant placeholder now that we have a transcript
+              set((s) => ({
+                chats: s.chats.map((c) =>
+                  c.id === chatId
+                    ? {
+                        ...c,
+                        title: c.messages.filter((m) => m.id !== placeholderId).length === 0
+                          ? transcript.slice(0, 40)
+                          : c.title,
+                        messages: [
+                          ...c.messages.map((m) =>
+                            m.id === placeholderId ? { ...m, content: transcript } : m
+                          ),
+                          { id: streamingMsgId, role: 'assistant' as const, content: '', timestamp: new Date() },
+                        ],
+                      }
+                    : c
+                ),
+                streamingStatus: null,
+              }));
+            } else if (event.type === 'text_delta') {
+              set((s) => ({
+                chats: s.chats.map((c) =>
+                  c.id === chatId
+                    ? {
+                        ...c,
+                        messages: c.messages.map((m) =>
+                          m.id === streamingMsgId
+                            ? { ...m, content: m.content + String(event.text ?? '') }
+                            : m
+                        ),
+                      }
+                    : c
+                ),
+              }));
+            } else if (event.type === 'tool_call') {
+              set({ streamingStatus: event.label });
+            } else if (event.type === 'error' && answerReceived) {
+              console.warn('Voice post-answer error (TTS?):', event.message);
+            } else if (event.type === 'done') {
+              answerReceived = true;
+              const artifacts = parseArtifacts(Array.isArray(event.artifacts) ? event.artifacts : []);
+              const finalContent = String(event.answer_markdown ?? '');
+              set((s) => {
+                const newOpenArtifacts = [...s.openArtifacts, ...artifacts];
+                const latestArtifact = artifacts[artifacts.length - 1] ?? s.activeArtifact;
+                return {
+                  chats: s.chats.map((c) =>
+                    c.id === chatId
+                      ? {
+                          ...c,
+                          messages: c.messages.map((m) =>
+                            m.id === streamingMsgId
+                              ? {
+                                  ...m,
+                                  content: m.content || finalContent,
+                                  artifacts,
+                                  citations: Array.isArray(event.citations) ? event.citations as Citation[] : [],
+                                  safetyFlags: Array.isArray(event.safety_flags) ? event.safety_flags as string[] : [],
+                                }
+                              : m
+                          ),
+                          updatedAt: new Date(),
+                        }
+                      : c
+                  ),
+                  isStreaming: false,
+                  streamingStatus: null,
+                  streamingMessageId: null,
+                  openArtifacts: newOpenArtifacts,
+                  activeArtifact: latestArtifact,
+                  artifactPanelOpen: artifacts.length > 0 ? true : s.artifactPanelOpen,
+                };
+              });
+            } else if (event.type === 'audio') {
+              playAudioFromBase64(String(event.data_b64 ?? ''), String(event.mime ?? 'audio/mpeg'));
+            } else if (event.type === 'tts_error') {
+              console.warn('TTS failed:', event.message);
+            } else if (event.type === 'error') {
+              throw new Error(event.message ?? 'voice stream error');
+            }
+          }
+        }
+      } catch (err: any) {
+        const errContent = `Error: ${err?.message ?? 'Voice request failed'}`;
+        set((s) => ({
+          chats: s.chats.map((c) =>
+            c.id === chatId
+              ? {
+                  ...c,
+                  messages: c.messages.map((m) =>
+                    m.id === streamingMsgId ? { ...m, content: errContent } : m
+                  ),
+                }
+              : c
+          ),
+          isStreaming: false,
+          streamingStatus: null,
+          streamingMessageId: null,
         }));
       }
     })();

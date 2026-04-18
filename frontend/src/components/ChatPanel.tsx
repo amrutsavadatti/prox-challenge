@@ -15,6 +15,7 @@ import type { Artifact, Citation, AttachedImage } from '@/types';
 import { AlertTriangle } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { VoiceButton } from './VoiceButton';
 
 const API_BASE = (import.meta as any).env?.VITE_API_BASE ?? 'http://localhost:8000';
 
@@ -78,6 +79,8 @@ function MessageBubble({
   citations,
   safetyFlags,
   images,
+  isStreaming,
+  streamingStatus,
   onArtifactClick,
 }: {
   role: 'user' | 'assistant';
@@ -86,6 +89,8 @@ function MessageBubble({
   citations?: Citation[];
   safetyFlags?: string[];
   images?: AttachedImage[];
+  isStreaming?: boolean;
+  streamingStatus?: string | null;
   onArtifactClick: (a: Artifact) => void;
 }) {
   return (
@@ -126,6 +131,18 @@ function MessageBubble({
           }`}
         >
           {role === 'assistant' ? (
+            isStreaming && !content ? (
+              <div className="flex items-center gap-2.5">
+                <div className="flex gap-1 items-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground animate-bounce [animation-delay:0ms]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground animate-bounce [animation-delay:150ms]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground animate-bounce [animation-delay:300ms]" />
+                </div>
+                {streamingStatus && (
+                  <span className="text-xs text-muted-foreground animate-pulse">{streamingStatus}</span>
+                )}
+              </div>
+            ) : (
             <div className="prose prose-sm prose-invert max-w-none
               prose-p:my-1.5 prose-headings:mt-3 prose-headings:mb-1.5
               prose-ul:my-1.5 prose-ol:my-1.5 prose-li:my-0.5
@@ -136,6 +153,7 @@ function MessageBubble({
               prose-strong:text-foreground">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
             </div>
+            )
           ) : (
             content.split('\n').map((line, i) => (
               <p key={i} className={line === '' ? 'h-2' : ''}>{line}</p>
@@ -225,7 +243,7 @@ function readImageAsDataUrl(file: File): Promise<string> {
 }
 
 export function ChatPanel() {
-  const { chats, activeChatId, sendMessage, isStreaming, streamingStatus, sidebarOpen, toggleSidebar, setActiveArtifact } = useStore();
+  const { chats, activeChatId, sendMessage, isStreaming, streamingStatus, streamingMessageId, sidebarOpen, toggleSidebar, setActiveArtifact } = useStore();
   const [input, setInput] = useState('');
   const [pendingImages, setPendingImages] = useState<AttachedImage[]>([]);
   const [isDragging, setIsDragging] = useState(false);
@@ -381,25 +399,12 @@ export function ChatPanel() {
               citations={msg.citations}
               safetyFlags={msg.safetyFlags}
               images={msg.images}
+              isStreaming={isStreaming && msg.id === streamingMessageId}
+              streamingStatus={isStreaming && msg.id === streamingMessageId ? streamingStatus : null}
               onArtifactClick={(a) => setActiveArtifact(a)}
             />
           ))}
 
-          {isStreaming && (
-            <div className="flex gap-3">
-              <div className="shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-amber-600 flex items-center justify-center">
-                <Sparkles size={16} className="text-white" />
-              </div>
-              <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-2.5">
-                <Loader2 size={16} className="animate-spin text-muted-foreground shrink-0" />
-                {streamingStatus ? (
-                  <span className="text-sm text-muted-foreground animate-pulse">{streamingStatus}</span>
-                ) : (
-                  <span className="text-sm text-muted-foreground">Thinking...</span>
-                )}
-              </div>
-            </div>
-          )}
         </div>
       </div>
 
@@ -453,6 +458,7 @@ export function ChatPanel() {
             >
               <Paperclip size={16} />
             </button>
+            <VoiceButton disabled={isStreaming} />
             <textarea
               ref={textareaRef}
               value={input}

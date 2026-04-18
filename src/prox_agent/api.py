@@ -9,7 +9,7 @@ from collections.abc import AsyncGenerator
 from pathlib import Path
 from typing import Any
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 from PIL import Image as PILImage
@@ -17,6 +17,12 @@ from pydantic import BaseModel
 
 from prox_agent.agent import ROOT, ask_claude, ask_claude_stream, MissingAPIKeyError
 from prox_agent.local_answer import answer_local
+from prox_agent.voice import (
+    VoiceConfigError,
+    prepare_for_speech,
+    synthesize_stream,
+    transcribe,
+)
 
 UPLOAD_ROOT = (ROOT / "uploads").resolve()
 UPLOAD_ROOT.mkdir(parents=True, exist_ok=True)
@@ -144,6 +150,125 @@ async def chat_stream(req: ChatRequest) -> StreamingResponse:
         except Exception as exc:
             error_event = {"type": "error", "message": str(exc)}
             yield f"data: {json.dumps(error_event)}\n\n"
+
+    return StreamingResponse(
+        event_generator(),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
+
+
+class TTSRequest(BaseModel):
+    text: str
+    safety_flags: list[str] = []
+
+
+@app.post("/voice/stt")
+async def voice_stt(audio: UploadFile = File(...)) -> dict[str, Any]:
+    data = await audio.read()
+    if not data:
+        raise HTTPException(status_code=400, detail="empty audio upload")
+    try:
+        text = await transcribe(data, mime=audio.content_type or "audio/webm")
+    except VoiceConfigError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+    return {"text": text}
+
+
+@app.post("/voice/tts")
+async def voice_tts(req: TTSRequest) -> StreamingResponse:
+    spoken, instructions = prepare_for_speech(req.text, req.safety_flags)
+
+    async def audio_stream() -> AsyncGenerator[bytes, None]:
+        try:
+            async for chunk in synthesize_stream(spoken, instructions=instructions):
+                yield chunk
+        except VoiceConfigError as exc:
+            raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+    return StreamingResponse(audio_stream(), media_type="audio/mpeg")
+
+
+@app.post("/chat/voice/stream")
+async def chat_voice_stream(
+    audio: UploadFile = File(...),
+    history: str = Form("[]"),
+    max_turns: int = Form(8),
+) -> StreamingResponse:
+    audio_bytes = await audio.read()
+    if not audio_bytes:
+        raise HTTPException(status_code=400, detail="empty audio upload")
+    mime = audio.content_type or "audio/webm"
+
+    try:
+        history_turns = json.loads(history) if history else []
+        if not isinstance(history_turns, list):
+            history_turns = []
+    except json.JSONDecodeError:
+        history_turns = []
+
+    async def event_generator() -> AsyncGenerator[str, None]:
+        try:
+            transcript = await transcribe(audio_bytes, mime=mime)
+        except VoiceConfigError as exc:
+            yield f"data: {json.dumps({'type': 'error', 'message': str(exc)})}\n\n"
+            return
+        except Exception as exc:
+            yield f"data: {json.dumps({'type': 'error', 'message': f'STT failed: {exc}'})}\n\n"
+            return
+
+        yield f"data: {json.dumps({'type': 'transcript', 'text': transcript})}\n\n"
+
+        if not transcript.strip():
+            yield f"data: {json.dumps({'type': 'error', 'message': 'empty transcript'})}\n\n"
+            return
+
+        final: dict[str, Any] | None = None
+        try:
+            async for event in ask_claude_stream(
+                transcript,
+                max_turns=max_turns,
+                history=history_turns,
+            ):
+                yield f"data: {json.dumps(event)}\n\n"
+                if event.get("type") == "done":
+                    final = event
+        except MissingAPIKeyError:
+            final = answer_local(transcript)
+            final["type"] = "done"
+            final["fallback"] = "local (no API key)"
+            yield f"data: {json.dumps(final)}\n\n"
+        except Exception as exc:
+            yield f"data: {json.dumps({'type': 'error', 'message': str(exc)})}\n\n"
+            return
+
+        if not final:
+            return
+
+        spoken, instructions = prepare_for_speech(
+            str(final.get("answer_markdown") or ""),
+            list(final.get("safety_flags") or []),
+        )
+        if not spoken.strip():
+            return
+
+        audio_b64_parts: list[str] = []
+        try:
+            async for chunk in synthesize_stream(spoken, instructions=instructions):
+                audio_b64_parts.append(base64.b64encode(chunk).decode("ascii"))
+        except VoiceConfigError as exc:
+            yield f"data: {json.dumps({'type': 'tts_error', 'message': str(exc)})}\n\n"
+            return
+        except Exception as exc:
+            yield f"data: {json.dumps({'type': 'tts_error', 'message': str(exc)})}\n\n"
+            return
+
+        payload = {
+            "type": "audio",
+            "mime": "audio/mpeg",
+            "data_b64": "".join(audio_b64_parts),
+        }
+        yield f"data: {json.dumps(payload)}\n\n"
 
     return StreamingResponse(
         event_generator(),

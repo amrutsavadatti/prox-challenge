@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import json
 import os
 from collections.abc import AsyncGenerator
@@ -33,13 +34,51 @@ SYSTEM_PROMPT = """You are the Prox product assistant for the Vulcan OmniPro 220
 
 Answer like you are helping a practical garage user who wants the correct setup, not a lecture.
 
+## Triage and follow-up rules — HARD GATE
+
+**Do NOT call any MCP tools until you have enough context to give a precise, actionable answer.**
+
+Decision process — run this mentally before every response:
+1. Do I know the welding process (MIG / Flux-core / Stick / TIG)?
+2. Do I know the material type and thickness?
+3. Do I have the critical process-specific parameters below?
+
+If ANY of 1–3 is missing, respond ONLY with a follow-up question in `answer_markdown`. Do not call tools. Do not partially answer. Just ask.
+
+Keep follow-up questions tight — ask for the most important missing piece only, not a full checklist. After the user answers, collect the next missing piece if still needed, then call tools when you have enough to give a precise answer.
+
+Critical parameters by process:
+- **MIG/GMAW**: material type, material thickness, wire diameter, shielding gas type + flow rate (CFH)
+- **Flux-core (FCAW)**: material type, thickness, wire type (gas-shielded FCAW vs self-shielded — polarity is opposite), flux spec if known
+- **Stick (SMAW)**: electrode type (e.g. E6013, E7018), electrode diameter, position (flat / vertical / overhead)
+- **TIG (GTAW)**: material type, thickness, tungsten diameter + type, filler rod type + diameter, shielding gas + flow
+
+For troubleshooting questions (bad weld, defect, arc instability): also ask for current settings — what amps/voltage/wire-speed they are running now — before searching for solutions.
+
+## Compatibility and settings analysis
+For every setup or troubleshooting question, explicitly assess:
+1. Is the requested operation within the OmniPro 220's specified capability for this process and material?
+2. Are the stated settings (amps, wire speed, gas flow, polarity) consistent with each other and with the machine's documented ranges?
+3. Flag any mismatch (e.g. wire diameter outside the machine's drive-roll range, amps exceeding duty cycle at that setting).
+
+## Actionability triage
+When giving solutions, sort them by immediacy:
+1. **Adjust now** — settings the user can change on the machine in the next 30 seconds (voltage, wire speed, amps, gas flow).
+2. **Check/clean now** — things the user can inspect and fix in minutes without parts (contact tip condition, ground clamp placement, liner obstruction, gas hose kink).
+3. **Swap soon** — consumables or accessories worth replacing on the next hardware run (contact tip, nozzle, liner, drive rolls).
+4. **Escalate** — internal component issues that require a technician or return to Harbour Freight support; only raise these if the quick fixes are exhausted.
+
+Do not lead with escalation steps. A user at the bench needs to try the fast fixes first.
+
 Grounding rules:
 - Use the provided MCP tools for every product-specific factual claim.
-- If the question asks about duty cycle, call lookup_duty_cycle.
-- If the question asks about polarity, cable placement, sockets, or setup, call lookup_polarity and get_manual_image.
-- If the question asks about symptoms, weld defects, or repair steps, call troubleshooting_for and search_manual.
-- If the question asks how to do something, what the steps are, what the key facts or warnings are for a topic, or asks for a section overview, call search_articles first. Its results include pre-extracted key_facts, procedure_steps, and warnings — use these directly in your answer rather than re-deriving them from raw text.
-- If an answer would be clearer with a chart, diagram, setup image, or manual page, call get_manual_image and include it as an artifact.
+- Do not call both search_articles and search_manual for the same question — they cover the same source material. search_articles returns pre-extracted structure (steps, key facts, warnings); search_manual returns raw cited text. Pick whichever fits the question and only fall back to the other if the first returns nothing useful.
+- If the question asks about duty cycle, call lookup_duty_cycle. It is the authoritative source — do not also call search_manual or search_articles for the same duty cycle question.
+- If the question asks about polarity or cable placement, call lookup_polarity. Pair it with get_manual_image when a wiring diagram would help the user act on the answer.
+- If the question asks how to do something, what the steps are, key facts, or warnings for a topic, call search_articles. Its results include pre-extracted key_facts, procedure_steps, and warnings — use these directly. Pair with get_manual_image when a diagram or panel photo would clarify the steps.
+- If the question asks about symptoms, weld defects, or repair steps, call troubleshooting_for. Pair with get_manual_image when a weld diagnosis photo would help identify the problem.
+- get_manual_image is additive — combine it with a text tool when a visual genuinely helps the user act. Skip it when the answer is purely numerical or procedural text.
+- Do not invent product specs or machine-specific operating facts.
 - When the user attaches images, absolute file paths are listed under "Attached user images" in the prompt. Use the Read tool to open each image — you need to *see* it before you can reason about it. Do this before calling knowledge tools.
 - Visual observations from user-attached images are YOUR OWN CLAIMS, not citations. Prefix them with "From your photo, I can see...". Only manual-sourced facts get an entry in `citations`. Every fix or recommendation must still cite the OmniPro 220 documentation.
 - Do not invent product specs or machine-specific operating facts.
@@ -152,7 +191,7 @@ class MissingAPIKeyError(RuntimeError):
 def build_agent_options(
     *,
     api_key: str,
-    max_turns: int = 8,
+    max_turns: int = 4,
 ) -> ClaudeCodeOptions:
     env = {"ANTHROPIC_API_KEY": api_key}
     resolved_model = _model_from_env()
@@ -188,7 +227,7 @@ async def ask_claude(
     question: str,
     *,
     api_key: str | None = None,
-    max_turns: int = 8,
+    max_turns: int = 4,
     history: list[dict[str, str]] | None = None,
     image_paths: list[str] | None = None,
 ) -> dict[str, Any]:
@@ -236,15 +275,37 @@ async def ask_claude(
     return parsed
 
 
+async def _stream_text(text: str, *, chunk_size: int = 4) -> AsyncGenerator[dict[str, Any], None]:
+    """Emit text_delta events word-by-word so the frontend can render progressively."""
+    words = text.split(" ")
+    buf: list[str] = []
+    for i, word in enumerate(words):
+        buf.append(word)
+        if len(buf) >= chunk_size or i == len(words) - 1:
+            yield {"type": "text_delta", "text": " ".join(buf) + (" " if i < len(words) - 1 else "")}
+            buf = []
+            await asyncio.sleep(0.012)
+
+
 async def ask_claude_stream(
     question: str,
     *,
     api_key: str | None = None,
-    max_turns: int = 8,
+    max_turns: int = 4,
     history: list[dict[str, str]] | None = None,
     image_paths: list[str] | None = None,
 ) -> AsyncGenerator[dict[str, Any], None]:
-    """Yield SSE-ready dicts: tool_call events during the run, then a done event."""
+    """Yield SSE-ready dicts.
+
+    Flow:
+    - text_delta events  — progressive text rendering as each AssistantMessage TextBlock arrives
+    - tool_call events   — when Claude calls a knowledge tool
+    - done event         — final structured payload (citations, artifacts, safety_flags)
+
+    text_delta events are streamed word-by-word with a small delay so the UI renders
+    progressively. This means follow-up questions appear immediately (before any tool
+    calls) and final answers stream in rather than popping all at once.
+    """
     resolved_api_key = api_key or _api_key_from_env()
     if not _has_real_api_key(resolved_api_key):
         raise MissingAPIKeyError(
@@ -262,8 +323,19 @@ async def ask_claude_stream(
                 for block in message.content:
                     if isinstance(block, ToolUseBlock):
                         yield {"type": "tool_call", "tool": block.name, "label": _tool_label(block.name)}
-                    elif isinstance(block, TextBlock):
+                    elif isinstance(block, TextBlock) and block.text.strip():
                         assistant_text.append(block.text)
+                        # Claude wraps its answer in a JSON envelope — stream just the
+                        # readable answer_markdown so the user sees prose, not raw JSON.
+                        preview = _parse_json_object(block.text)
+                        stream_text = (
+                            preview["answer_markdown"]
+                            if preview and isinstance(preview.get("answer_markdown"), str)
+                            else block.text
+                        )
+                        if stream_text.strip():
+                            async for delta in _stream_text(stream_text):
+                                yield delta
             elif isinstance(message, ResultMessage):
                 result_message = message
 
