@@ -355,6 +355,17 @@ async def ask_claude_stream(
         }
 
     parsed = normalize_response_contract(parsed)
+
+    # Emit tts_start before done so the voice endpoint can kick off TTS in
+    # parallel with the frontend still processing the last text_delta events.
+    answer_md = str(parsed.get("answer_markdown") or "")
+    safety_flags = list(parsed.get("safety_flags") or [])
+    if answer_md.strip():
+        from prox_agent.voice import prepare_for_speech
+        spoken, instructions = prepare_for_speech(answer_md, safety_flags)
+        if spoken.strip():
+            yield {"type": "tts_start", "spoken": spoken, "instructions": instructions}
+
     parsed["type"] = "done"
     yield parsed
 

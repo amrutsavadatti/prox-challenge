@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import base64
 import io
 import json
@@ -223,6 +224,18 @@ async def chat_voice_stream(
             yield f"data: {json.dumps({'type': 'error', 'message': 'empty transcript'})}\n\n"
             return
 
+        # TTS runs in parallel with the final text_delta events.
+        # ask_claude_stream emits a `tts_start` event before `done` — we kick off
+        # TTS as an asyncio task at that point so it overlaps with the frontend
+        # rendering the last word-chunks.
+        tts_task: asyncio.Task[list[bytes]] | None = None
+
+        async def _collect_tts(spoken: str, instructions: str | None) -> list[bytes]:
+            chunks: list[bytes] = []
+            async for chunk in synthesize_stream(spoken, instructions=instructions):
+                chunks.append(chunk)
+            return chunks
+
         final: dict[str, Any] | None = None
         try:
             async for event in ask_claude_stream(
@@ -230,9 +243,15 @@ async def chat_voice_stream(
                 max_turns=max_turns,
                 history=history_turns,
             ):
-                yield f"data: {json.dumps(event)}\n\n"
-                if event.get("type") == "done":
-                    final = event
+                if event.get("type") == "tts_start":
+                    # Start TTS now — don't yield this internal event to the client.
+                    tts_task = asyncio.create_task(
+                        _collect_tts(event.get("spoken", ""), event.get("instructions"))
+                    )
+                else:
+                    yield f"data: {json.dumps(event)}\n\n"
+                    if event.get("type") == "done":
+                        final = event
         except MissingAPIKeyError:
             final = answer_local(transcript)
             final["type"] = "done"
@@ -245,17 +264,19 @@ async def chat_voice_stream(
         if not final:
             return
 
-        spoken, instructions = prepare_for_speech(
-            str(final.get("answer_markdown") or ""),
-            list(final.get("safety_flags") or []),
-        )
-        if not spoken.strip():
-            return
-
-        audio_chunks: list[bytes] = []
+        # Await the TTS task (already running in parallel); fall back to a fresh
+        # call if it wasn't started (e.g. local fallback path).
         try:
-            async for chunk in synthesize_stream(spoken, instructions=instructions):
-                audio_chunks.append(chunk)
+            if tts_task is not None:
+                audio_chunks = await tts_task
+            else:
+                spoken, instructions = prepare_for_speech(
+                    str(final.get("answer_markdown") or ""),
+                    list(final.get("safety_flags") or []),
+                )
+                if not spoken.strip():
+                    return
+                audio_chunks = await _collect_tts(spoken, None)
         except VoiceConfigError as exc:
             yield f"data: {json.dumps({'type': 'tts_error', 'message': str(exc)})}\n\n"
             return
@@ -263,7 +284,9 @@ async def chat_voice_stream(
             yield f"data: {json.dumps({'type': 'tts_error', 'message': str(exc)})}\n\n"
             return
 
-        # Encode all bytes in one pass — per-chunk encoding breaks base64 alignment.
+        if not audio_chunks:
+            return
+
         payload = {
             "type": "audio",
             "mime": "audio/mpeg",

@@ -11,6 +11,7 @@ import {
   X,
   Download,
   Volume2,
+  StopCircle,
 } from 'lucide-react';
 import type { Artifact, Citation, AttachedImage } from '@/types';
 import { AlertTriangle } from 'lucide-react';
@@ -144,15 +145,23 @@ function MessageBubble({
                 )}
               </div>
             ) : (
-            <div className="prose prose-sm prose-invert max-w-none
-              prose-p:my-1.5 prose-headings:mt-3 prose-headings:mb-1.5
-              prose-ul:my-1.5 prose-ol:my-1.5 prose-li:my-0.5
-              prose-hr:my-3 prose-table:my-2
-              prose-th:border prose-th:border-border prose-th:px-2 prose-th:py-1 prose-th:bg-muted-foreground/10
-              prose-td:border prose-td:border-border prose-td:px-2 prose-td:py-1
-              prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:bg-muted-foreground/10 prose-code:before:content-none prose-code:after:content-none
-              prose-strong:text-foreground">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+            <div>
+              <div className="prose prose-sm prose-invert max-w-none
+                prose-p:my-1.5 prose-headings:mt-3 prose-headings:mb-1.5
+                prose-ul:my-1.5 prose-ol:my-1.5 prose-li:my-0.5
+                prose-hr:my-3 prose-table:my-2
+                prose-th:border prose-th:border-border prose-th:px-2 prose-th:py-1 prose-th:bg-muted-foreground/10
+                prose-td:border prose-td:border-border prose-td:px-2 prose-td:py-1
+                prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:bg-muted-foreground/10 prose-code:before:content-none prose-code:after:content-none
+                prose-strong:text-foreground">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+              </div>
+              {isStreaming && streamingStatus && (
+                <div className="flex items-center gap-1.5 mt-2 pt-2 border-t border-border/40">
+                  <Loader2 size={11} className="text-muted-foreground animate-spin" />
+                  <span className="text-xs text-muted-foreground animate-pulse">{streamingStatus}</span>
+                </div>
+              )}
             </div>
             )
           ) : (
@@ -244,7 +253,7 @@ function readImageAsDataUrl(file: File): Promise<string> {
 }
 
 export function ChatPanel() {
-  const { chats, activeChatId, sendMessage, isStreaming, streamingStatus, streamingMessageId, isPlayingAudio, stopPlayback, sidebarOpen, toggleSidebar, setActiveArtifact } = useStore();
+  const { chats, activeChatId, sendMessage, isStreaming, streamingStatus, streamingMessageId, isPlayingAudio, audioError, stopPlayback, cancelMessage, sidebarOpen, toggleSidebar, setActiveArtifact } = useStore();
   const [input, setInput] = useState('');
   const [pendingImages, setPendingImages] = useState<AttachedImage[]>([]);
   const [isDragging, setIsDragging] = useState(false);
@@ -449,6 +458,10 @@ export function ChatPanel() {
             <p className="text-xs text-destructive mb-2">{attachError}</p>
           )}
 
+          {audioError && (
+            <p className="text-xs text-destructive mb-2">🔇 {audioError}</p>
+          )}
+
           <div className="flex items-end gap-2 rounded-2xl border border-border bg-card px-4 py-3 focus-within:ring-2 focus-within:ring-ring/30 focus-within:border-ring transition-all">
             <button
               onClick={() => fileInputRef.current?.click()}
@@ -486,13 +499,23 @@ export function ChatPanel() {
               rows={1}
               className="flex-1 resize-none bg-transparent text-sm placeholder:text-muted-foreground focus:outline-none min-h-[24px] max-h-[200px]"
             />
-            <button
-              onClick={handleSend}
-              disabled={(!input.trim() && pendingImages.length === 0) || isStreaming}
-              className="shrink-0 w-8 h-8 rounded-lg bg-primary text-primary-foreground flex items-center justify-center disabled:opacity-40 hover:bg-primary/90 transition-colors"
-            >
-              <Send size={16} />
-            </button>
+            {isStreaming ? (
+              <button
+                onClick={cancelMessage}
+                title="Cancel"
+                className="shrink-0 w-8 h-8 rounded-lg bg-destructive text-destructive-foreground flex items-center justify-center hover:bg-destructive/90 transition-colors"
+              >
+                <StopCircle size={16} />
+              </button>
+            ) : (
+              <button
+                onClick={handleSend}
+                disabled={!input.trim() && pendingImages.length === 0}
+                className="shrink-0 w-8 h-8 rounded-lg bg-primary text-primary-foreground flex items-center justify-center disabled:opacity-40 hover:bg-primary/90 transition-colors"
+              >
+                <Send size={16} />
+              </button>
+            )}
           </div>
           <p className="text-xs text-muted-foreground text-center mt-2">
             Press Enter to send, Shift+Enter for new line. Paste or drop images to attach.

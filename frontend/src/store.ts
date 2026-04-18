@@ -25,12 +25,14 @@ interface AppState {
   streamingStatus: string | null;
   streamingMessageId: string | null;
   isPlayingAudio: boolean;
+  audioError: string | null;
 
   createChat: () => string;
   setActiveChat: (id: string) => void;
   deleteChat: (id: string) => void;
   sendMessage: (content: string, images?: AttachedImage[]) => void;
   sendVoiceMessage: (audio: Blob, mime: string) => void;
+  cancelMessage: () => void;
   unlockAudio: () => void;
   stopPlayback: () => void;
   setActiveArtifact: (artifact: Artifact | null) => void;
@@ -42,6 +44,9 @@ interface AppState {
 let nextId = 1;
 const uid = () => `${Date.now()}-${nextId++}`;
 
+// Active fetch abort controller — module-level so cancelMessage can reach it.
+let activeAbortController: AbortController | null = null;
+
 // ---------------------------------------------------------------------------
 // Audio playback — uses Web Audio API so the context can be unlocked during
 // the mic button press (a user gesture) and stays unlocked for the async TTS
@@ -49,7 +54,6 @@ const uid = () => `${Date.now()}-${nextId++}`;
 // ---------------------------------------------------------------------------
 let audioCtx: AudioContext | null = null;
 let currentSource: AudioBufferSourceNode | null = null;
-let onAudioEndCb: (() => void) | null = null;
 
 function getAudioContext(): AudioContext {
   if (!audioCtx || audioCtx.state === 'closed') {
@@ -66,13 +70,19 @@ export function unlockAudioContext() {
 function stopCurrentAudio() {
   try { currentSource?.stop(); } catch { /* already stopped */ }
   currentSource = null;
-  onAudioEndCb = null;
 }
 
-function playAudioFromBase64(b64: string, _mime: string, onEnd?: () => void) {
+function playAudioFromBase64(b64: string, _mime: string, onEnd?: () => void, onError?: (msg: string) => void) {
   stopCurrentAudio();
-  if (!b64) return;
-  const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0)).buffer;
+  if (!b64) { onError?.('Empty audio payload'); return; }
+  let bytes: ArrayBuffer;
+  try {
+    bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0)).buffer;
+  } catch (e: any) {
+    onError?.(`Base64 decode failed: ${e?.message}`);
+    onEnd?.();
+    return;
+  }
   const ctx = getAudioContext();
   if (ctx.state === 'suspended') ctx.resume();
   ctx.decodeAudioData(bytes).then((buffer) => {
@@ -86,9 +96,9 @@ function playAudioFromBase64(b64: string, _mime: string, onEnd?: () => void) {
     };
     src.start(0);
     currentSource = src;
-    onAudioEndCb = onEnd ?? null;
-  }).catch((err) => {
+  }).catch((err: any) => {
     console.warn('Audio decode failed:', err);
+    onError?.(`Audio decode failed: ${err?.message ?? err}`);
     onEnd?.();
   });
 }
@@ -104,6 +114,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
   streamingStatus: null,
   streamingMessageId: null,
   isPlayingAudio: false,
+  audioError: null,
 
   createChat: () => {
     const id = uid();
@@ -196,10 +207,13 @@ export const useStore = create<AppState>()(persist((set, get) => ({
     });
 
     (async () => {
+      const abort = new AbortController();
+      activeAbortController = abort;
       try {
         const res = await fetch(`${API_BASE}/chat/stream`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
+          signal: abort.signal,
           body,
         });
 
@@ -239,7 +253,6 @@ export const useStore = create<AppState>()(persist((set, get) => ({
                       }
                     : c
                 ),
-                streamingStatus: null,
               }));
             } else if (event.type === 'tool_call') {
               set({ streamingStatus: event.label });
@@ -285,6 +298,12 @@ export const useStore = create<AppState>()(persist((set, get) => ({
           }
         }
       } catch (err: any) {
+        activeAbortController = null;
+        if (err?.name === 'AbortError') {
+          // User cancelled — keep whatever text streamed so far, just stop.
+          set({ isStreaming: false, streamingStatus: null, streamingMessageId: null });
+          return;
+        }
         const errContent = `Error: ${err?.message ?? 'Request failed'}`;
         set((s) => ({
           chats: s.chats.map((c) =>
@@ -292,7 +311,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
               ? {
                   ...c,
                   messages: c.messages.map((m) =>
-                    m.id === streamingMsgId ? { ...m, content: errContent } : m
+                    m.id === streamingMsgId ? { ...m, content: m.content || errContent } : m
                   ),
                 }
               : c
@@ -303,6 +322,11 @@ export const useStore = create<AppState>()(persist((set, get) => ({
         }));
       }
     })();
+  },
+
+  cancelMessage: () => {
+    activeAbortController?.abort();
+    activeAbortController = null;
   },
 
   unlockAudio: () => unlockAudioContext(),
@@ -318,6 +342,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
     if (!chatId) chatId = get().createChat();
 
     stopCurrentAudio();
+    set({ audioError: null });
 
     const placeholderId = uid();
     const userMsg = {
@@ -351,17 +376,20 @@ export const useStore = create<AppState>()(persist((set, get) => ({
     form.append('history', JSON.stringify(history));
 
     (async () => {
+      const abort = new AbortController();
+      activeAbortController = abort;
+      let answerReceived = false;
       try {
         const res = await fetch(`${API_BASE}/chat/voice/stream`, {
           method: 'POST',
           body: form,
+          signal: abort.signal,
         });
         if (!res.ok || !res.body) throw new Error(`voice request failed: ${res.status}`);
 
         const reader = res.body.getReader();
         const decoder = new TextDecoder();
         let buffer = '';
-        let answerReceived = false;
 
         while (true) {
           const { done, value } = await reader.read();
@@ -454,20 +482,27 @@ export const useStore = create<AppState>()(persist((set, get) => ({
                 };
               });
             } else if (event.type === 'audio') {
-              set({ isPlayingAudio: true });
+              set({ isPlayingAudio: true, audioError: null });
               playAudioFromBase64(
                 String(event.data_b64 ?? ''),
                 String(event.mime ?? 'audio/mpeg'),
                 () => set({ isPlayingAudio: false }),
+                (msg) => set({ isPlayingAudio: false, audioError: msg }),
               );
             } else if (event.type === 'tts_error') {
               console.warn('TTS failed:', event.message);
+              set({ audioError: `Audio unavailable: ${event.message ?? 'TTS error'}` });
             } else if (event.type === 'error') {
               throw new Error(event.message ?? 'voice stream error');
             }
           }
         }
       } catch (err: any) {
+        activeAbortController = null;
+        if (err?.name === 'AbortError') {
+          set({ isStreaming: false, streamingStatus: null, streamingMessageId: null });
+          return;
+        }
         // Only overwrite message content if the answer hasn't arrived yet.
         // Post-answer errors (TTS failures) must not clobber already-rendered text.
         if (!answerReceived) {

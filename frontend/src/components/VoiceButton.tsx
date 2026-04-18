@@ -27,8 +27,23 @@ export function VoiceButton({ disabled }: Props) {
   const [error, setError] = useState<string | null>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
+  // Keep the stream alive between recordings so start() is instant.
   const streamRef = useRef<MediaStream | null>(null);
-  const mimeRef = useRef<string>('');
+  const mimeRef = useRef<string>(pickMime());
+
+  // Pre-warm: request mic access on mount so the device is ready before first press.
+  useEffect(() => {
+    if (!navigator.mediaDevices?.getUserMedia) return;
+    const mime = mimeRef.current;
+    if (!mime) return;
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then((s) => { streamRef.current = s; })
+      .catch(() => { /* permission denied — will surface on first press */ });
+    return () => {
+      streamRef.current?.getTracks().forEach((t) => t.stop());
+      streamRef.current = null;
+    };
+  }, []);
 
   // Ctrl+Space hold-to-talk
   useEffect(() => {
@@ -55,32 +70,21 @@ export function VoiceButton({ disabled }: Props) {
     };
   }, [isRecording, disabled]);
 
-  useEffect(() => {
-    return () => {
-      recorderRef.current?.stop();
-      streamRef.current?.getTracks().forEach((t) => t.stop());
-    };
-  }, []);
-
   const start = async () => {
     setError(null);
-    unlockAudio(); // unlock AudioContext while we're inside a user gesture
+    unlockAudio();
     stopPlayback();
 
-    if (!navigator.mediaDevices?.getUserMedia) {
-      setError('Mic not supported in this browser');
-      return;
-    }
-    const mime = pickMime();
-    if (!mime) {
-      setError('No supported audio format');
-      return;
-    }
+    const mime = mimeRef.current;
+    if (!mime) { setError('No supported audio format'); return; }
+    if (!navigator.mediaDevices?.getUserMedia) { setError('Mic not supported'); return; }
 
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      streamRef.current = stream;
-      mimeRef.current = mime;
+      // Reuse the pre-warmed stream; request a new one only if it died.
+      if (!streamRef.current || streamRef.current.getTracks().some((t) => t.readyState === 'ended')) {
+        streamRef.current = await navigator.mediaDevices.getUserMedia({ audio: true });
+      }
+      const stream = streamRef.current;
       chunksRef.current = [];
       const rec = new MediaRecorder(stream, { mimeType: mime });
       rec.ondataavailable = (e) => {
@@ -88,8 +92,7 @@ export function VoiceButton({ disabled }: Props) {
       };
       rec.onstop = () => {
         const blob = new Blob(chunksRef.current, { type: mime });
-        streamRef.current?.getTracks().forEach((t) => t.stop());
-        streamRef.current = null;
+        // Do NOT stop tracks — keep the stream alive for the next recording.
         if (blob.size > 1000) sendVoiceMessage(blob, mime);
       };
       rec.start();
