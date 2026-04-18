@@ -1,0 +1,78 @@
+{
+  "article_id": "duty-cycle-weld-setup-gas-shielded-mig",
+  "title": "Duty Cycle, Weld Setup, and MIG Settings",
+  "summary": "This section explains the duty cycle limitations for the Vulcan OmniPro 220 at both 120 VAC and 240 VAC, and provides step-by-step procedures for setting up a weld. It also covers how to configure MIG process settings including polarity, gas, wire diameter, material thickness, and optional parameters such as inductance and spot timer.",
+  "key_facts": [
+    "Duty cycle defines minutes of welding allowed within a 10-minute period without overheating.",
+    "At 120 VAC, the rated duty cycle is 40% use at 100 A (4 minutes welding, 6 minutes rest).",
+    "At 120 VAC, the welder supports 100% continuous use at 75 A.",
+    "At 240 VAC, the rated duty cycle is 25% use at 200 A (2.5 minutes welding, 7.5 minutes rest).",
+    "At 240 VAC, the welder supports 100% continuous use at 115 A.",
+    "The welder has an internal thermal protection system that automatically shuts down on overheat.",
+    "When overheated, allow the welder to cool with the Power Switch ON so the internal fan assists cooling.",
+    "Weld surfaces must be free of rust, paint, oil, and other materials; only bare metal is acceptable.",
+    "Thicker workpiece edges may need to be chamfered or beveled to allow proper weld penetration.",
+    "Ground cable must be clamped to bare metal on the workpiece near the weld area or to a metal work bench.",
+    "The circuit must be equipped with a delayed action-type circuit breaker or fuses.",
+    "Up to 5 different welder configurations can be saved using the Save Setting option."
+  ],
+  "procedure_steps": [
+    "1. Make practice welds on scrap of the same thickness as the intended workpiece; clean weld surfaces to bare metal with a wire brush or angle grinder.",
+    "2. Use clamps to hold workpieces in position; chamfer edges of thicker workpieces if needed for proper weld penetration.",
+    "3. Clamp Ground Cable to bare metal on the workpiece near the weld area, or to a metal work bench where the workpiece is clamped.",
+    "4. Turn the Power Switch to OFF, then plug the Power Cord into a properly grounded, GFCI protected 120 VAC (20 amp rated) or 240 VAC receptacle.",
+    "5. Set MIG Gun down on a nonconductive, nonflammable surface away from any grounded objects.",
+    "6. Turn the Power Switch ON.",
+    "7. Press the Home Button on the Control Panel.",
+    "8. Turn the Main Control Knob until the desired process appears on the LCD display screen.",
+    "9. Press the Main Control Knob to select the process.",
+    "10. Adjust polarity and gas settings: plug cables in according to the screen, connect gas according to the screen, and set SCFH between 20 and 30.",
+    "11. Set wire diameter using the Left Knob and set material thickness using the Right Knob.",
+    "12. In Auto Weld Settings, turn the Left Knob to adjust Wire Feed Speed (Amperage) and the Right Knob to adjust Voltage.",
+    "13. Optionally press the Main Control Knob to enter Optional Settings and adjust Run-In WFS, Inductance, Spot Timer, Recall Setting, or Save Setting.",
+    "14. For gas-shielded solid-core wire: open the gas cylinder valve all the way, then set the Flow Gauge to the SCFH value indicated on the Settings Chart."
+  ],
+  "warnings": [
+    "Failure to carefully observe duty cycle limitations can easily over-stress a welder's power generation system contributing to premature welder failure.",
+    "Should the welder overheat and shut down, rest the MIG Gun on an electrically non-conductive, heat-proof surface, such as a concrete slab, well clear of the ground clamp.",
+    "When welding equipment on a vehicle, disconnect the vehicle battery power from both the positive connection and the ground before welding. This prevents damage to some vehicle electrical systems and electronics due to the high voltage and high frequency bursts common in welding.",
+    "DANGER! TO PREVENT DEATH FROM ASPHYXIATION: Do not open gas without proper ventilation. Fix gas leaks immediately. Shielding gas can displace air and cause rapid loss of consciousness and death. Shielding gas without carbon dioxide can be even more hazardous because asphyxiation can start without feeling shortness of breath."
+  ],
+  "related_topics": [
+    "mig-polarity-setup",
+    "duty-cycle-specs",
+    "shielding-gas-setup",
+    "wire-feed-speed-voltage-settings"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 19,
+      "element_id": "duty-cycle-weld-setup"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 20,
+      "element_id": "power-mig-process-settings"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 21,
+      "element_id": "optional-settings-gas-shielded-wire"
+    }
+  ],
+  "query_terms": [
+    "duty cycle OmniPro 220",
+    "how long can I weld before resting",
+    "welder overheat shutdown",
+    "MIG weld setup steps",
+    "wire diameter material thickness settings",
+    "shielding gas flow rate SCFH",
+    "inductance spot timer settings",
+    "save welder configuration",
+    "ground clamp placement",
+    "chamfer workpiece for welding",
+    "asphyxiation shielding gas danger",
+    "120 VAC 240 VAC duty cycle"
+  ]
+}

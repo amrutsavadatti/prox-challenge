@@ -1,0 +1,87 @@
+{
+  "article_id": "mig-solid-wire-setup-gas-shielded-dcep",
+  "title": "DCEP Solid Core Gas Shielded MIG Welding Setup",
+  "summary": "This section covers the complete setup procedure for solid core (gas shielded) MIG welding using DCEP polarity on the Vulcan OmniPro 220. It includes cable polarity connections, shielding gas cylinder and regulator installation, wire feeding, contact tip installation, and optional spool gun setup. Drive tension verification and power connection steps are also detailed.",
+  "key_facts": [
+    "Ground Clamp Cable plugs into the Negative (–) Socket for solid core DCEP welding.",
+    "Wire Feed Power Cable plugs into the Positive (+) Socket for solid core DCEP welding.",
+    "Cables must be twisted clockwise all the way to lock in place.",
+    "Refer to the Settings Chart inside the Welder door to select appropriate shielding gas.",
+    "Secure the gas cylinder with two straps to prevent tipping.",
+    "Briefly open the cylinder valve to blow out dust and dirt, then close it before attaching the regulator.",
+    "When using C100 shielding gas, attach the enclosed CGA 580/320 adapter to the regulator inlet.",
+    "Feed Tensioner setting should be 3–5 for solid wire and 2–3 for flux-cored wire.",
+    "Too much force on flux-cored wire will crush it and may cause feeding issues.",
+    "Guide at least 12 inches of wire into the Wire Inlet Liner and Feed Guide.",
+    "Cut the wire off at 1/2 inch stickout from the Contact Tip after reassembly.",
+    "If the Spool Gun Cable Connector is not fully inserted, the gas connection will leak."
+  ],
+  "procedure_steps": [
+    "1. Plug Ground Clamp Cable into Negative (–) Socket and Wire Feed Power Cable into Positive (+) Socket. Twist cables clockwise all the way to lock in place.",
+    "2. Determine appropriate shielding gas by referring to the Settings Chart on the inside of the Welder door.",
+    "3. With assistance, set the cylinder onto a cabinet or cart and secure it with two straps to prevent tipping.",
+    "4. Remove the cylinder cap. Stand to the side of the valve opening, briefly open the valve to blow out dust and dirt, then close the valve.",
+    "5. Close the regulator valve until loose, then thread the Regulator onto the cylinder and wrench-tighten. If using C100 gas, attach the CGA 580/320 adapter and wrench-tighten.",
+    "6. Attach the Gas Hose to the Regulator's outlet and to the Welder's gas inlet. Wrench-tighten both connections.",
+    "7. Cut off all bent and crimped wire. The cut end must have no burrs or sharp edges; cut again if needed.",
+    "8. Keep tension on the wire and guide at least 12 inches of wire into the Wire Inlet Liner and Feed Guide.",
+    "9. Ensure the welding wire rests in the groove of the Feed Roller, push the Idler Arm down, and swing the Feed Tensioner up to latch it across the tip of the arm.",
+    "10. Pull the Nozzle to remove it, then unscrew the Contact Tip counterclockwise and remove it.",
+    "11. Lay the MIG Gun Cable out in a straight line so the welding wire moves through it easily. Leave the cover open to observe the feed mechanism.",
+    "12. Plug either 120 VAC or 240 VAC Power Cord into the Power Input Socket. Do not touch the Gun Trigger. Plug into a properly grounded, GFCI-protected receptacle and turn the Power Switch ON. The circuit must be equipped with a delayed action-type circuit breaker or fuses.",
+    "13. Point the Gun away from all objects. Press and hold the Cold Wire Feed Switch until the wire feeds through two inches.",
+    "14. Check drive tension by pressing and holding the Trigger to feed wire against a piece of wood from 2 to 3 inches away. If the wire bends from feed pressure, tension is set properly. If wire stops instead of bending, unplug the Welder and slightly tighten the Feed Tensioner clockwise.",
+    "15. Turn OFF the Power Switch and unplug the Power Cord from its electrical outlet.",
+    "16. Close the Door and ensure it is securely latched.",
+    "17. Select a compatible Contact Tip, slide it over the wire, thread it clockwise into the MIG Gun, and tighten.",
+    "18. Replace the Nozzle and cut the wire off at 1/2 inch stickout from the tip."
+  ],
+  "warnings": [
+    "DANGER: PARTS MAY BE AT WELDING VOLTAGE. TO PREVENT ELECTRIC SHOCK AND DEATH: 1. Keep hands away from Wire Feed mechanism. 2. Close door before plugging in, unless using Cold Wire Feed to feed wire through to gun. 3. Do not touch Trigger while feeding wire through to gun.",
+    "IMPORTANT: Securely hold onto the end of the welding wire and keep tension on it during the following steps. If this is not done, the welding wire will unravel and unspool which can cause tangling and feeding problems.",
+    "IMPORTANT: Stainless steel wire is less flexible than other welding wire. Therefore, it is more difficult to feed through the liner and gun. It is especially important to keep the gun cable straight while feeding stainless steel wire.",
+    "NOTICE: To prevent damage, do not overtighten the Knob on the Wire Feed mechanism."
+  ],
+  "related_topics": [
+    "mig-polarity-setup",
+    "shielding-gas-regulator-installation",
+    "wire-feed-tension-settings",
+    "spool-gun-setup"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 14,
+      "element_id": "dcep-solid-core-setup-steps-a-f"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 15,
+      "element_id": "wire-feed-steps-18-23"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 16,
+      "element_id": "power-connection-cold-feed-steps-24-26"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 17,
+      "element_id": "tension-check-contact-tip-spool-gun-steps-27-31"
+    }
+  ],
+  "query_terms": [
+    "DCEP solid core MIG setup",
+    "gas shielded MIG polarity",
+    "shielding gas regulator installation OmniPro 220",
+    "wire feed tension setting",
+    "MIG wire feeding procedure",
+    "contact tip installation MIG gun",
+    "cold wire feed switch",
+    "spool gun setup OmniPro 220",
+    "CGA 580 320 adapter C100 gas",
+    "MIG gun cable straight stainless steel wire",
+    "ground clamp negative socket MIG",
+    "flux core wire tension setting"
+  ]
+}

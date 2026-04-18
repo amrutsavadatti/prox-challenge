@@ -73,6 +73,24 @@ TROUBLESHOOTING_SCHEMA = {
     "required": ["symptom"],
 }
 
+SEARCH_ARTICLES_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "query": {
+            "type": "string",
+            "description": "Topic or question to find structured knowledge articles for.",
+        },
+        "limit": {
+            "type": "integer",
+            "description": "Maximum number of articles to return.",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3,
+        },
+    },
+    "required": ["query"],
+}
+
 MANUAL_IMAGE_SCHEMA = {
     "type": "object",
     "properties": {
@@ -182,6 +200,21 @@ async def troubleshooting_for_tool(args: dict[str, Any]) -> dict[str, Any]:
 
 
 @tool(
+    "search_articles",
+    "Search structured knowledge articles extracted from the owner manual. Returns full article objects with key_facts, procedure_steps, warnings, and source_refs. Use for setup procedures, how-to questions, section overviews, and safety information.",
+    SEARCH_ARTICLES_SCHEMA,
+)
+async def search_articles_tool(args: dict[str, Any]) -> dict[str, Any]:
+    query = str(args["query"])
+    return _text_response(
+        {
+            "query": query,
+            "results": _KB.search_articles(query, limit=_limit(args, default=3, maximum=5)),
+        }
+    )
+
+
+@tool(
     "get_manual_image",
     "Find relevant manual page images, diagrams, charts, or product photos to surface as visual artifacts.",
     MANUAL_IMAGE_SCHEMA,
@@ -198,6 +231,7 @@ async def get_manual_image_tool(args: dict[str, Any]) -> dict[str, Any]:
 
 KNOWLEDGE_TOOLS = [
     search_manual_tool,
+    search_articles_tool,
     lookup_duty_cycle_tool,
     lookup_polarity_tool,
     troubleshooting_for_tool,

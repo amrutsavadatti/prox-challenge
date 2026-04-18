@@ -1,0 +1,53 @@
+{
+  "article_id": "omnipro-220-troubleshooting-common-welding-problems",
+  "title": "Troubleshooting Common Welding Problems OmniPro 220",
+  "summary": "This section covers troubleshooting for four common issues: welder not functioning when switched on, LCD display not lighting, arc not igniting despite wire feeding, and porosity in weld metal. Each problem lists possible causes and corresponding solutions. Users are directed to verify connections, settings, consumables, and input voltage as part of diagnosis.",
+  "key_facts": [
+    "Tripped thermal protection causes welder shutdown; wait with Power Switch ON to cool.",
+    "Welder automatically returns to service after cooling off from thermal overload.",
+    "Insufficient input voltage or amperage will prevent the welder from functioning.",
+    "A faulty or improperly connected trigger requires a qualified technician to check and replace.",
+    "Low- or over-voltage protection can be reset using the Reset Button on the back of the machine.",
+    "Tripped circuit breaker due to high input amperage is reset via the Reset Button on back.",
+    "The twist lock input Power Cord must be fully secured for proper operation.",
+    "Improper ground connection or dirty workpiece can prevent arc ignition.",
+    "Improperly sized or worn Contact Tip will prevent arc ignition during wire feeding.",
+    "Incorrect polarity causes porosity: DCEP for MIG, DCEN for Flux-Cored.",
+    "Gun used too far from workpiece can cause porosity; check CTWD for proper procedure.",
+    "Dirty or rusty welding wire introduces contamination and causes porosity in weld metal."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "Follow all safety precautions whenever diagnosing or servicing the equipment.",
+    "Stop and wait with the Power Switch ON for the Welder to cool. The Welder automatically returns to service after cooling off. Reduce duration or frequency of welding periods to help reduce wear on the Welder.",
+    "Check circuit breaker/GFCI devices; if any are tripped, determine and remedy cause before resetting.",
+    "Qualified technician must check and secure/replace Trigger."
+  ],
+  "related_topics": [
+    "duty-cycle-duration-of-use",
+    "mig-polarity-setup",
+    "contact-tip-maintenance",
+    "input-voltage-specifications"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 43,
+      "element_id": "troubleshooting-table"
+    }
+  ],
+  "query_terms": [
+    "welder does not function when switched on",
+    "LCD display not lighting",
+    "wire feeds but arc does not ignite",
+    "porosity in weld metal",
+    "thermal protection tripped",
+    "reset button OmniPro 220",
+    "contact tip arc ignition problem",
+    "incorrect polarity MIG flux-cored",
+    "shielding gas porosity fix",
+    "over-voltage protection reset",
+    "ground clamp arc not starting",
+    "OmniPro 220 troubleshooting"
+  ]
+}

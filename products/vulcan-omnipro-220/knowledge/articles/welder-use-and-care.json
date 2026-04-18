@@ -1,0 +1,66 @@
+{
+  "article_id": "welder-use-care-maintenance-cylinder-safety",
+  "title": "Welder Use, Care, Maintenance, and Cylinder Safety",
+  "summary": "This section covers safe operating practices for the Vulcan OmniPro 220 welder, including use and storage guidelines. It also details maintenance requirements to keep the welder in safe working condition. Additionally, it provides cylinder safety rules for gas shielded welding.",
+  "key_facts": [
+    "Do not use the welder if the switch does not turn it on and off.",
+    "Disconnect the plug from the power source before making any adjustments or changing accessories.",
+    "Ensure the switch is in the off-position before connecting to power source or moving the welder.",
+    "Store idle welders out of the reach of children.",
+    "Do not use the welder for pipe thawing.",
+    "Unplug the welder from its electrical outlet before any inspection, maintenance, or cleaning procedures.",
+    "Have your welder serviced by a qualified repair person using only identical replacement parts.",
+    "Maintain labels and nameplates on the welder; contact Harbor Freight Tools for replacements if missing.",
+    "Do not weld on a pressurized or closed cylinder.",
+    "Keep cylinders away from any electrical circuits, including welding circuits.",
+    "Keep protective cap in place over the valve except when the cylinder is in use.",
+    "Protect gas cylinders from heat, being struck, physical damage, slag, flames, sparks, and arcs."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "Cylinders can explode when damaged.",
+    "Any welder that cannot be controlled with the switch is dangerous and must be repaired.",
+    "Carrying or energizing welders that have the switch on invites accidents.",
+    "Welders are dangerous in the hands of untrained users.",
+    "Use of the welder for operations different from those intended could result in a hazardous situation.",
+    "Many accidents are caused by poorly maintained welders.",
+    "Do not allow an electrode holder, electrode, welding torch, or welding wire to touch the cylinder."
+  ],
+  "related_topics": [
+    "gas-shielded-welding-setup",
+    "welder-maintenance-inspection",
+    "electrical-safety-requirements",
+    "mig-wire-and-accessories"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 5,
+      "element_id": "welder-use-and-care"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 5,
+      "element_id": "maintenance"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 5,
+      "element_id": "gas-shielded-welding-cylinder-safety"
+    }
+  ],
+  "query_terms": [
+    "welder safety rules",
+    "cylinder safety welding",
+    "welder maintenance instructions",
+    "gas shielded welding cylinder",
+    "unplug before maintenance",
+    "welder use and care",
+    "pipe thawing prohibition",
+    "pressurized cylinder welding",
+    "welder switch safety",
+    "Harbor Freight welder maintenance",
+    "welding gas cylinder handling",
+    "OmniPro 220 safety"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "article_id": "omnipro-220-safety-overview-and-introduction",
+  "title": "OmniPro 220 Safety Overview and General Introduction",
+  "summary": "This section introduces the Vulcan OmniPro 220 Multiprocess Welding System owner's manual and its purpose. It covers the table of contents, warning symbol definitions, and general safety rules for operating the welder. Users are directed to read all safety warnings before use to avoid serious injury or death.",
+  "key_facts": [
+    "The OmniPro 220 is a multiprocess welding system, item number 57812.",
+    "The manual covers Safety, Specifications, Controls, MIG/Flux-Cored, TIG/Stick, Welding Tips, Maintenance, Parts List, and Warranty.",
+    "Failure to follow warnings and instructions may result in electric shock, fire, and/or serious injury.",
+    "Children and bystanders must be kept away while operating the welder.",
+    "The welder must be placed on a stable location before use.",
+    "Never leave the welder unattended while energized; turn power off if you have to leave.",
+    "Do not operate a welder while tired or under the influence of drugs, alcohol, or medication.",
+    "Avoid unintentional starting; be prepared to begin work before turning on the welder.",
+    "Keep proper footing and balance at all times during operation.",
+    "Operators must read manufacturer's instructions, MSDS's, employer's safety practices, and ANSI Z49.1 before use.",
+    "Common sense and caution must be supplied by the operator and cannot be built into the product.",
+    "Write the product's Date Code or month and year of purchase in the back of the manual."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "Read all Safety warnings and instructions. Failure to follow the warnings and instructions may result in electric shock, fire and/or serious injury.",
+    "Indicates a hazardous situation which, if not avoided, will result in death or serious injury.",
+    "Indicates a hazardous situation which, if not avoided, could result in death or serious injury.",
+    "Indicates a hazardous situation which, if not avoided, could result in minor or moderate injury.",
+    "If it falls while plugged in, severe injury, electric shock, or fire may result.",
+    "A moment of inattention while operating welders may result in serious personal injury.",
+    "Read this material before using this product. Failure to do so can result in serious injury."
+  ],
+  "related_topics": [
+    "mig-flux-cored-wire-welding-setup",
+    "tig-stick-welding-setup",
+    "omnipro-220-specifications",
+    "omnipro-220-maintenance"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 1,
+      "element_id": "cover-page-omnipro-220"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 2,
+      "element_id": "table-of-contents-and-safety-warnings"
+    }
+  ],
+  "query_terms": [
+    "OmniPro 220 safety",
+    "multiprocess welder safety instructions",
+    "Vulcan OmniPro 220 manual",
+    "welder general safety rules",
+    "harbor freight welder safety",
+    "OmniPro 220 introduction",
+    "welding safety warnings",
+    "ANSI Z49.1 welder safety",
+    "electric shock fire welder warning",
+    "57812 owner manual",
+    "welder unattended safety",
+    "OmniPro 220 table of contents"
+  ]
+}

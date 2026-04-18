@@ -1,0 +1,52 @@
+{
+  "article_id": "wire-weld-penetration-and-defect-troubleshooting",
+  "title": "Wire Weld Penetration and Common Defect Solutions",
+  "summary": "This section covers troubleshooting weld quality issues for MIG and flux-cored wire welding, including excess penetration, burn-through, inadequate penetration, weld not adhering, and slag formation. It provides possible causes and solutions for each defect type. Visual profile views accompany each defect description.",
+  "key_facts": [
+    "Excess penetration or burn-through can be caused by workpiece overheating or travel speed too slow.",
+    "Reducing wire feed speed and decreasing weld current addresses workpiece overheating.",
+    "Inadequate penetration can result from incorrect welding technique or insufficient weld heat.",
+    "Maintain 1/2 inch or less contact-tip-to-work distance (CTWD) for proper penetration.",
+    "Keep arc on the leading edge of the weld puddle for proper penetration.",
+    "Thick workpieces should be beveled, allowed a slight gap, and welded in several passes.",
+    "Slag is a necessary part of a flux-cored wire weld and shields the weld from impurities.",
+    "Clean off slag with a chipping hammer and wire brush after welding.",
+    "Gas-shielded MIG welds are protected by shielding gas and do not need slag.",
+    "Weld not adhering can be caused by incorrect technique, insufficient heat, dirty workpiece, or narrow gap.",
+    "Clean workpiece down to bare metal to address weld adhesion issues from a dirty workpiece.",
+    "Pausing briefly at sides during weave bead helps prevent weld adhesion problems."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "Clamp workpieces securely.",
+    "Make tack welds to hold workpieces.",
+    "Weld a small portion and allow to cool before proceeding."
+  ],
+  "related_topics": [
+    "mig-wire-feed-speed-settings",
+    "flux-cored-wire-welding-setup",
+    "weld-current-and-heat-control",
+    "mig-gun-technique-and-angles"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 36,
+      "element_id": "wire-weld-penetration-section"
+    }
+  ],
+  "query_terms": [
+    "weld penetration problems",
+    "burn through welding fix",
+    "inadequate weld penetration",
+    "weld not adhering",
+    "slag on weld",
+    "flux core slag removal",
+    "MIG weld defects troubleshooting",
+    "weld drooping underneath",
+    "CTWD contact tip to work distance",
+    "weld not sticking to workpiece",
+    "increase weld penetration",
+    "weave bead technique"
+  ]
+}

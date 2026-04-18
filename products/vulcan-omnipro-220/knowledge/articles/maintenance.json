@@ -1,0 +1,72 @@
+{
+  "article_id": "mig-gun-nozzle-contact-tip-maintenance",
+  "title": "MIG Gun Nozzle and Contact Tip Inspection Cleaning",
+  "summary": "This section covers routine maintenance procedures for the Vulcan OmniPro 220, including pre-use inspections, periodic interior cleaning, and storage. It provides detailed steps for inspecting and cleaning the MIG Gun Nozzle and Contact Tip, as well as replacing the LCD Screen Cover.",
+  "key_facts": [
+    "Inspect the general condition of the Welder before each use.",
+    "A qualified technician should periodically blow out interior dust with compressed air.",
+    "Store the Welder in a clean and dry location after every use.",
+    "Clean and inspect the MIG Gun Contact Tip and Nozzle before each use.",
+    "The Contact Tip hole should be an even circle, not oblong or bulged.",
+    "Replace the Contact Tip if any problems are noted, selecting the correct size for the wire used.",
+    "The Nozzle end should be flat and even; replace if uneven, chipped, melted, or cracked.",
+    "Clean the inside of the Contact Tip with a tip cleaner sold separately.",
+    "Check that the Contact Tip is the proper type for the wire size used.",
+    "Insert the new LCD Screen Cover into the Screen Frame with the gap facing downward.",
+    "Reinstall the Screen Frame into the Display slot with the top end placed in first."
+  ],
+  "procedure_steps": [
+    {
+      "procedure": "MIG Gun Nozzle and Contact Tip Inspection and Cleaning",
+      "steps": [
+        "1. Make sure the entire MIG Gun is completely cool and the Power Cord is unplugged from the electrical outlet before proceeding.",
+        "2. Pull the Nozzle to remove it.",
+        "3. Scrub the interior of the Nozzle clean with a wire brush.",
+        "4. Examine the end of the Nozzle. If the end is uneven, chipped, melted, cracked, or otherwise damaged, replace the Nozzle.",
+        "5. Unscrew the Contact Tip counterclockwise and slide it off the welding wire to remove.",
+        "6. Scrub the outside of the Tip clean with a wire brush. Clean out the inside of the tip with a tip cleaner (sold separately). Check that the Tip is the proper type for the wire size used.",
+        "7. Examine the shape of the hole at the end of the Contact Tip. It should be an even circle; it should not be oblong or have any bulges in it.",
+        "8. If any problems are noted, replace the Contact Tip. Select a new Tip of the correct size for the welding wire used.",
+        "9. Reinstall the Tip and securely reinstall the Nozzle as well."
+      ]
+    },
+    {
+      "procedure": "Replacing the LCD Screen Cover",
+      "steps": [
+        "1. Carefully pry the frame off of the Display by inserting a flathead screwdriver (sold separately) into one of the side slots.",
+        "2. Insert a new Screen Cover into the Screen Frame with the gap facing downward.",
+        "3. Insert the frame back into the slot on the Display with the top end being placed in first."
+      ]
+    }
+  ],
+  "warnings": [
+    "TO PREVENT SERIOUS INJURY, FIRE AND BURNS: Unplug the Welder, rest the tool on a heat-proof, electrically non-conductive surface, and allow all parts of the Welder to cool thoroughly before service."
+  ],
+  "related_topics": [
+    "mig-gun-setup",
+    "welding-wire-selection",
+    "duty-cycle-specs",
+    "welder-storage-guidelines"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 41,
+      "element_id": "maintenance-section"
+    }
+  ],
+  "query_terms": [
+    "MIG gun nozzle cleaning",
+    "contact tip inspection",
+    "replace contact tip",
+    "nozzle maintenance",
+    "welder maintenance",
+    "LCD screen cover replacement",
+    "MIG gun care",
+    "tip cleaner",
+    "before each use inspection",
+    "compressed air interior cleaning",
+    "contact tip size",
+    "OmniPro 220 maintenance"
+  ]
+}

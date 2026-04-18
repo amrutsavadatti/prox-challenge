@@ -1,0 +1,78 @@
+{
+  "article_id": "mig-flux-core-wire-spool-installation-setup",
+  "title": "MIG Flux-Cored Wire Spool Installation and Setup",
+  "summary": "This section covers the step-by-step procedure for installing 1-2 pound and 10-12 pound wire spools into the Vulcan OmniPro 220 welder. It also describes how to configure the feed roller to match wire type and diameter. Proper spool tension and clockwise unwinding orientation are emphasized to prevent feeding problems.",
+  "key_facts": [
+    "Turn the Power Switch OFF and unplug the Welder before setup.",
+    "Remove protective foam and cardboard from the Welder before setup.",
+    "Wire Spool must be set to unwind clockwise to prevent wire feed problems.",
+    "If Wire Spool spins freely, the Wingnut is too loose.",
+    "A loose Wingnut causes welding wire to unravel and unspool, causing tangling and feeding problems.",
+    "1-2 pound spool mounts directly over the Spool Spindle against the Spool Brake Pad.",
+    "10-12 pound spool requires a Spool Adapter placed over the Spool Spindle first.",
+    "The pin on the Spool Adapter must line up with the hole in the 10-12 pound Spool.",
+    "After installing a 10-12 pound spool, screw the Spool Knob into the Spool Adapter.",
+    "Turn the Feed Tensioner knob counterclockwise to loosen and release the Idler Arm.",
+    "The Feed Roller must match both wire type (solid core or flux-cored) and wire diameter.",
+    "Solid core wire uses a V-Groove Feed Roller; flux-cored wire uses a Knurled Groove Feed Roller."
+  ],
+  "procedure_steps": [
+    "1. Turn the Power Switch OFF and unplug the Welder before proceeding.",
+    "2. Pull up on the Door Latch, then open the Door.",
+    "3. (1-2 lb spool) Remove the Wingnut and Spacer. If replacing a Spool, remove the old Spool and all remaining wire from the liners.",
+    "4. Place the new Wire Spool over the Spool Spindle and against the Spool Brake Pad so that it will unwind clockwise.",
+    "5. Replace the Spacer over the Spool Spindle and secure the Spool in place with the Wingnut.",
+    "6. (10-12 lb spool) Remove the Wingnut and Spacer. If replacing a Spool, remove the old Spool and all remaining wire from the liners.",
+    "7. Place the Spool Adapter over the Spool Spindle and against the Spool Brake Pad.",
+    "8. Place the new Wire Spool over the Adapter, line up the pin on the Adapter with the hole in the Spool, and set the Spool to unwind clockwise.",
+    "9. Replace the Spacer over the Spool Spindle and secure the Spool in place with the Wingnut.",
+    "10. Screw the Spool Knob into the Spool Adapter.",
+    "11. Turn the Feed Tensioner knob counterclockwise to loosen it enough to pull it down to remove tension; the spring-loaded Idler Arm will move up.",
+    "12a. Unscrew the Feed Roller Knob counterclockwise.",
+    "12b. Remove the Feed Roller Knob to expose the Feed Roller.",
+    "12c. Flip or replace the Feed Roller as needed; confirm it is correct for wire type and that the number showing matches the wire diameter on the Spool.",
+    "12d. Screw the Feed Roller Knob back into place to secure the Feed Roller."
+  ],
+  "warnings": [
+    "TO PREVENT SERIOUS INJURY FROM ACCIDENTAL OPERATION: Turn the Power Switch off and unplug the Welder before setup.",
+    "Read the ENTIRE IMPORTANT SAFETY INFORMATION section at the beginning of this manual including all text under subheadings therein before set up or use of this product.",
+    "Notice: If Wire Spool can spin freely, Wingnut is too loose. This will cause the welding wire to unravel and unspool which can cause tangling and feeding problems."
+  ],
+  "related_topics": [
+    "wire-feed-tension-adjustment",
+    "mig-polarity-setup",
+    "feed-roller-selection",
+    "flux-cored-wire-welding-setup"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 10,
+      "element_id": "wire-spool-installation-1-2lb"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 11,
+      "element_id": "wire-spool-installation-10-12lb"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 12,
+      "element_id": "feed-roller-instructions"
+    }
+  ],
+  "query_terms": [
+    "wire spool installation",
+    "how to load wire spool OmniPro 220",
+    "MIG wire setup",
+    "flux cored wire installation",
+    "feed roller selection solid core flux core",
+    "spool brake pad wingnut tension",
+    "wire unraveling feeding problem",
+    "feed tensioner idler arm",
+    "wire spool clockwise unwind",
+    "10-12 pound spool adapter",
+    "change wire spool welder",
+    "feed roller knob wire diameter"
+  ]
+}

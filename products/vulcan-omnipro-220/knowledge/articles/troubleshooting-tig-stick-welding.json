@@ -1,0 +1,56 @@
+{
+  "article_id": "tig-stick-troubleshooting-and-wiring-schematic",
+  "title": "TIG Stick Troubleshooting and Wiring Schematic",
+  "summary": "This section covers common TIG and Stick welding problems, their possible causes, and likely solutions. It also includes a full wiring schematic for the Vulcan OmniPro 220 welder. Safety precautions are emphasized before any diagnostic or repair work.",
+  "key_facts": [
+    "Shut off the welder and disconnect from power before adjusting, cleaning, or repairing.",
+    "Discharge the electrode to ground before any maintenance or repair.",
+    "A tripped thermal protection device can cause the welder to not function when switched on.",
+    "Reducing welding duration or frequency helps reduce wear related to thermal protection trips.",
+    "A faulty or improperly connected trigger requires a qualified technician to inspect and replace.",
+    "The ground clamp must be attached to the workpiece for the welder to function.",
+    "Shielding gas must be connected to the welder for proper TIG operation.",
+    "If the LCD does not light, verify voltage at the outlet and check the outlet connection.",
+    "Check circuit breaker or GFCI devices if the outlet is unpowered before resetting.",
+    "Do not use an extension cord; use only the supplied power cord or identical replacement.",
+    "Incorrect line voltage causes weak arc strength; a licensed electrician must remedy insufficient voltage.",
+    "Low shielding gas causes an unstable welding arc; replace the shielding gas cylinder."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "Be CERTAIN to shut off the Welder, disconnect it from power, and discharge the electrode to ground before adjusting, cleaning, or repairing the unit.",
+    "Follow all safety precautions whenever diagnosing or servicing the equipment."
+  ],
+  "related_topics": [
+    "duty-cycle-specs",
+    "input-power-specifications",
+    "shielding-gas-setup",
+    "welder-maintenance"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 44,
+      "element_id": "troubleshooting-tig-stick"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 45,
+      "element_id": "wiring-schematic"
+    }
+  ],
+  "query_terms": [
+    "TIG welder not working",
+    "stick welding troubleshooting",
+    "welder won't turn on",
+    "unstable welding arc",
+    "weak arc strength",
+    "LCD display not lighting",
+    "thermal protection tripped",
+    "wiring schematic OmniPro 220",
+    "shielding gas not connected",
+    "extension cord welder",
+    "ground clamp troubleshooting",
+    "welder circuit breaker tripped"
+  ]
+}

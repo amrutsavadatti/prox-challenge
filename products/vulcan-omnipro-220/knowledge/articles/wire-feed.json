@@ -1,0 +1,67 @@
+{
+  "article_id": "gun-cable-wire-feed-flux-cored-polarity-setup",
+  "title": "Gun Cable Installation and Flux-Cored Polarity Setup",
+  "summary": "This section covers the installation of the Gun Cable Connector and Wire Feed Control Cable into the welder. It also describes the correct DCEN polarity setup for flux-cored (gasless) welding, including proper cable routing and socket connections.",
+  "key_facts": [
+    "Loosen the Knob on the Wire Feed mechanism before inserting the Gun Cable Connector.",
+    "The Gun Cable Connector must be fully inserted into the Wire Feed socket.",
+    "If the Connector is not fully inserted, the gas connection will leak.",
+    "A leaking gas connection prevents shielding gas from reaching the welding arc.",
+    "Do not overtighten the Knob to prevent damage.",
+    "The Wire Feed Control Cable plug fits into the Socket in one specific orientation only.",
+    "Tighten the lock ring on the Wire Feed Control Cable plug after connecting.",
+    "DCEN stands for Direct Current Electrode Negative.",
+    "For flux-cored (gasless) welding, plug the Ground Clamp Cable into the Positive (+) Socket.",
+    "For flux-cored (gasless) welding, plug the Wire Feed Power Cable into the Negative (–) Socket.",
+    "Twist cables clockwise all the way to lock them in place."
+  ],
+  "procedure_steps": [
+    {
+      "step": 13,
+      "instruction": "Loosen the Knob on the Wire Feed mechanism, then insert the Gun Cable Connector through the hole on the Welder front and into the socket on the Wire Feed."
+    },
+    {
+      "step": 14,
+      "instruction": "Ensure that the Gun Cable Connector is fully inserted into the socket on the Wire Feed mechanism, then tighten the Knob securely. Do not overtighten."
+    },
+    {
+      "step": 15,
+      "instruction": "Insert the Wire Feed Control Cable through the hole on the Welder front and connect it to the Wire Feed Control Socket inside the machine, then tighten the lock ring on the Cable plug. Note the plug fits into the Socket in one specific orientation only."
+    },
+    {
+      "step": 16,
+      "instruction": "For DCEN flux-cored (gasless) welding: Plug Ground Clamp Cable into Positive (+) Socket. Plug Wire Feed Power Cable into Negative (–) Socket. Twist cables clockwise all the way to lock in place."
+    }
+  ],
+  "warnings": [
+    "If Connector is not fully inserted, the gas connection will leak, preventing shielding gas from reaching the welding arc.",
+    "NOTICE: To prevent damage, do not overtighten the Knob."
+  ],
+  "related_topics": [
+    "mig-polarity-setup",
+    "shielding-gas-connection",
+    "wire-feed-mechanism-setup",
+    "dcen-dcep-polarity"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 13,
+      "element_id": "steps-13-16-gun-cable-polarity-setup"
+    }
+  ],
+  "query_terms": [
+    "gun cable connector installation",
+    "wire feed control cable setup",
+    "flux-cored polarity setup",
+    "DCEN welding setup",
+    "gasless welding polarity",
+    "ground clamp positive socket",
+    "wire feed power cable negative socket",
+    "shielding gas leak connector",
+    "lock ring wire feed cable",
+    "twist cable clockwise lock",
+    "Gun Cable Connector fully inserted",
+    "Omnipro 220 flux core setup"
+  ]
+}

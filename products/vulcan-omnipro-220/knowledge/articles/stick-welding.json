@@ -1,0 +1,79 @@
+{
+  "article_id": "stick-welding-setup-and-operation",
+  "title": "Stick Welding Setup and Operation Procedure",
+  "summary": "This section covers the complete procedure for setting up and operating the Vulcan OmniPro 220 in Stick welding mode. It includes control panel navigation, electrode settings, arc ignition techniques, and post-weld shutdown steps. Safety requirements and optional settings such as Hot Start and Arc Force are also addressed.",
+  "key_facts": [
+    "The welder must be plugged into a properly grounded, GFCI protected 120 VAC (20 amp) or 240 V outlet.",
+    "The circuit must be equipped with a delayed action-type circuit breaker or fuses.",
+    "When not held, the Electrode Holder must rest on a nonconductive, nonflammable surface.",
+    "The Main Control Knob selects electrode type on the LCD display screen.",
+    "The Left Knob sets electrode diameter and the Right Knob sets material thickness.",
+    "Turning the Right Knob to ON energizes the Electrode Holder and presents Open Circuit Voltage.",
+    "Hot Start adjusts amperage at the start of the weld.",
+    "Arc Force adjusts weld penetration and smoothness.",
+    "Up to 5 different configurations can be saved using the Save Setting option.",
+    "After arc ignition, lift the electrode the same distance as the diameter of the bare metal end.",
+    "Tilt the electrode back 10 to 20 degrees after the arc ignites.",
+    "Initial settings may need adjustment after stopping and carefully inspecting the weld."
+  ],
+  "procedure_steps": [
+    "1. Turn the Power Switch to the OFF position, then plug the welder into a properly grounded, GFCI protected, 120 VAC (20 amp rated) or 240 V outlet with a delayed action-type circuit breaker or fuses.",
+    "2. Set Electrode Holder down on a nonconductive, nonflammable surface away from any grounded objects.",
+    "3. Turn the Power Switch ON.",
+    "4. Press the Home Button on the Control Panel.",
+    "5. Turn the Main Control Knob until the Stick process appears on the LCD display screen.",
+    "6. Press the Main Control Knob to select the STICK process.",
+    "7a. Set Polarity: Plug cables in according to the screen.",
+    "7b. Set Electrode type: Turn the Main Control Knob to set electrode type.",
+    "7c. Set Electrode Diameter and Material Thickness: Turn Left Knob to set electrode diameter; Turn Right Knob to set material thickness.",
+    "7d. Auto Weld Settings: Turn Left Knob to adjust output amperage; Turn Right Knob to ON to energize Electrode Holder.",
+    "7e. Optional Settings: Press Main Control Knob to enter Optional Settings; turn to desired setting; press to select; turn to adjust. Available options: Hot Start, Arc Force, Recall Setting, Save Setting.",
+    "8. Place the bare metal end of the Stick Electrode inside the jaws of the Electrode Holder.",
+    "9. Stroke the workpiece lightly to ignite the arc (tap, stroke, or strike like a match).",
+    "10a. After arc ignites, lift the electrode off the workpiece the same distance as the diameter of the bare metal end.",
+    "10b. Tilt the electrode back 10 to 20 degrees.",
+    "10c. Drag the electrode to the back end of the weld puddle to deposit material as needed.",
+    "11. When finished welding, lift the electrode from the workpiece, then set Electrode Holder down on a nonconductive, nonflammable surface away from any grounded objects.",
+    "12. Turn the Power Switch OFF.",
+    "13. To prevent accidents after use: allow welder to cool down; unplug power cord from outlet; remove Ground Clamp; disconnect Electrode Holder and Ground Cables.",
+    "14. Clean, then store welder and its accessories indoors out of children's reach."
+  ],
+  "warnings": [
+    "TO PREVENT SERIOUS INJURY AND DEATH: Do not weld without Grounding Clamp.",
+    "When the operator is not holding the Electrode Holder, it must be sitting on a nonconductive, nonflammable surface.",
+    "WARNING! TO PREVENT SERIOUS INJURY: Welder is now energized and Open Circuit Voltage is present.",
+    "WARNING! TO PREVENT SERIOUS INJURY: Protective gear must be worn when using the Welder; minimum shade number 10 full face shield (or welding mask), ear protection, welding gloves, sleeves and apron, NIOSH-approved respirator, and fire resistant work clothes without pockets should be worn when welding. Light from the arc can cause permanent damage to the eyes and skin. Do not breathe arc fumes."
+  ],
+  "related_topics": [
+    "duty-cycle-specs",
+    "strike-test-procedure",
+    "mig-polarity-setup",
+    "welder-controls-overview"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 32,
+      "element_id": "stick-welding-steps-1-7"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 33,
+      "element_id": "stick-welding-steps-8-14"
+    }
+  ],
+  "query_terms": [
+    "stick welding setup",
+    "how to stick weld OmniPro 220",
+    "electrode holder energize",
+    "arc ignition technique",
+    "hot start arc force settings",
+    "stick electrode diameter setting",
+    "SMAW procedure",
+    "stick weld polarity",
+    "open circuit voltage warning",
+    "stick welding shutdown procedure",
+    "save welding settings",
+    "OmniPro 220 stick mode"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "article_id": "wire-weld-defect-diagnosis-and-stick-penetration",
+  "title": "Wire Weld Defect Diagnosis and Stick Penetration",
+  "summary": "These pages cover troubleshooting common wire weld defects including porosity, excessive spatter, crooked beads, and burn-through. They also address stick weld heat control and penetration adjustment, with example weld diagrams illustrating current, speed, and arc length effects.",
+  "key_facts": [
+    "Porosity can be caused by incorrect polarity, insufficient shielding gas, dirty workpiece, or inconsistent travel speed.",
+    "Excessive spatter that is grainy and large indicates a problem; fine spatter is normal.",
+    "Incorrect polarity causes both porosity and excessive spatter in wire welding.",
+    "CTWD too long can cause porosity, excessive spatter, and crooked or wavy beads.",
+    "Burn-through occurs when base material melts away, leaving a hole in the weld.",
+    "To fix burn-through, reduce current and/or wire feed speed, and increase travel speed.",
+    "Crooked or wavy beads can result from inaccurate welding, inconsistent travel speed, or excessive CTWD.",
+    "Use two hands or rest hand on a steady surface to improve welding accuracy.",
+    "Increasing current and welding more slowly increases workpiece heat and penetration.",
+    "Decreasing current and welding more quickly reduces workpiece heat and limits penetration.",
+    "Stick welds have a coat of slag over them until cleaned; clean welds first.",
+    "Shielding gas issues should be addressed by increasing flow, cleaning the nozzle, and maintaining proper CTWD."
+  ],
+  "procedure_steps": [],
+  "warnings": [],
+  "related_topics": [
+    "mig-polarity-setup",
+    "shielding-gas-flow-settings",
+    "ctwd-contact-tip-to-work-distance",
+    "stick-weld-current-adjustment"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 37,
+      "element_id": "wire-weld-defect-diagnosis"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 38,
+      "element_id": "stick-weld-heat-penetration-diagnosis"
+    }
+  ],
+  "query_terms": [
+    "wire weld porosity causes",
+    "excessive spatter troubleshooting",
+    "burn-through fix mig welding",
+    "crooked wavy weld bead",
+    "stick weld penetration control",
+    "too much heat welding",
+    "insufficient shielding gas porosity",
+    "CTWD too long problems",
+    "wire feed speed spatter",
+    "stick weld current too low",
+    "weld diagnosis chart",
+    "slag stick weld cleaning"
+  ]
+}

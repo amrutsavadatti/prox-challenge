@@ -1,0 +1,86 @@
+{
+  "article_id": "stick-weld-troubleshooting-defects-solutions",
+  "title": "Stick Weld Defects Causes and Solutions Guide",
+  "summary": "These pages cover common stick welding defects including penetration issues, porosity, spatter, burn-through, slag, crooked beads, and weld adhesion problems. Each defect is presented with a profile view and a list of possible causes with corrective actions. This section helps operators diagnose and resolve weld quality problems.",
+  "key_facts": [
+    "Excess penetration or burn-through is caused by workpiece overheating or welding speed too slow.",
+    "Inadequate penetration can result from incorrect technique, insufficient heat, or thick workpieces.",
+    "Slag shields the weld from impurities and must be cleaned off with a chipping hammer and wire brush.",
+    "Porosity is caused by a dirty workpiece, unclean fill material, or inconsistent welding speed.",
+    "A crooked or wavy bead results from inaccurate welding or inconsistent welding speed.",
+    "Fine spatter is normal; grainy and large spatter indicates a problem.",
+    "Excessive spatter is caused by a dirty workpiece or unclean fill material.",
+    "Burn-through occurs when base material melts away, leaving a hole in the weld.",
+    "Weld not adhering properly shows gaps between weld and previous bead or workpiece.",
+    "Bend at joint is caused by improper clamping or excessive heat during welding.",
+    "Thick workpieces should be beveled, allowed a slight gap, and welded in several passes.",
+    "Tack welds can be made to hold workpieces and prevent bending at the joint."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "Slag is a necessary part of a stick weld. It shields the weld from impurities. Clean off the slag with the Chipping Hammer and Wire Brush after welding.",
+    "Make certain that fill material and Electrode are clean and free from oil, coatings, and other residues."
+  ],
+  "related_topics": [
+    "stick-weld-current-settings",
+    "stick-weld-technique-angles",
+    "workpiece-preparation-cleaning",
+    "duty-cycle-specs"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 39,
+      "element_id": "stick-weld-penetration"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 39,
+      "element_id": "stick-weld-not-adhering"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 39,
+      "element_id": "stick-weld-bend-at-joint"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 40,
+      "element_id": "stick-weld-slag"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 40,
+      "element_id": "stick-weld-porosity"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 40,
+      "element_id": "stick-weld-crooked-wavy-bead"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 40,
+      "element_id": "stick-weld-excessive-spatter"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 40,
+      "element_id": "stick-weld-burn-through"
+    }
+  ],
+  "query_terms": [
+    "stick weld burn through fix",
+    "stick welding porosity causes",
+    "weld not adhering to workpiece",
+    "stick weld excessive spatter solution",
+    "inadequate penetration stick welding",
+    "stick weld crooked bead",
+    "slag removal after stick welding",
+    "stick weld bend at joint",
+    "stick welding troubleshooting",
+    "weld defects and solutions",
+    "stick weld dirty workpiece",
+    "how to fix weld porosity"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "article_id": "tig-welding-setup-and-procedure",
+  "title": "TIG Welding Setup and Operating Procedure",
+  "summary": "This section covers the full TIG welding procedure for the Vulcan OmniPro 220, from initial gas and power setup through arc initiation, welding technique, and post-weld shutdown. It includes required control panel settings, torch handling technique, and safe storage steps. Critical safety warnings regarding electrical hazards, asphyxiation risks, and protective gear are detailed throughout.",
+  "key_facts": [
+    "TIG welding is a complicated process requiring experience and skill beyond this manual's scope.",
+    "Set flow gauge SCFH to the value indicated on the Settings Chart inside the Welder door.",
+    "Set SCFH shielding gas flow between 10 and 25.",
+    "Plug the Welder into a properly grounded, GFCI-protected 120 VAC (20 amp) or 240 V outlet.",
+    "The circuit must be equipped with a delayed action-type circuit breaker or fuses.",
+    "Turn Left Knob to set rod diameter; turn Right Knob to set material thickness.",
+    "Turn Left Knob to adjust output amperage; turn Right Knob to ON to energize TIG Torch.",
+    "Maintain Tungsten Electrode distance from workpiece between 1 and 1.5 times the electrode diameter.",
+    "Tilt Torch backward about 10–15 degrees from vertical when welding puddle is hot enough.",
+    "Remove TIG Rod each time the Electrode is advanced but do not remove it from the gas shield.",
+    "Metal work bench must be grounded when TIG welding.",
+    "Up to 5 different configurations can be saved using the Save Setting option."
+  ],
+  "procedure_steps": [
+    "1. Open gas cylinder's valve all the way.",
+    "2. Set Flow Gauge to SCFH value indicated on the Settings Chart on the inside of the Welder door.",
+    "3. Turn the Power Switch to the OFF position, then plug the Welder into a properly grounded, GFCI protected, 120 VAC (20 amp rated) outlet or 240 V outlet.",
+    "4. Set TIG Torch down on nonconductive, nonflammable surface away from any grounded objects.",
+    "5. Turn the Power Switch ON.",
+    "6. Press Home Button on Control Panel.",
+    "7. Turn Main Control Knob until TIG process appears on LCD display screen.",
+    "8. Press Main Control Knob to select TIG process.",
+    "9a. Adjust Polarity and Gas Settings: Plug cables in according to screen, connect gas according to screen, set SCFH between 10-25.",
+    "9b. Set Rod Diameter and Material Thickness: Turn Left Knob to set rod diameter, turn Right Knob to set material thickness.",
+    "9c. Auto Weld Settings: Turn Left Knob to adjust output amperage, turn Right Knob to ON to energize TIG Torch.",
+    "9d. Optional: Press Main Control Knob to enter Optional Settings and adjust as desired (Recall Setting or Save Setting).",
+    "10. Hold TIG Torch in one gloved hand and the TIG Rod (sold separately) in other gloved hand.",
+    "11. Open valve on TIG Torch to start gas flow.",
+    "12. To initiate welding arc, push Foot Pedal and touch Electrode to work piece and lift. If not using Foot Pedal, touch Electrode to work piece and lift.",
+    "13. When welding puddle is hot enough, tilt Torch backward about 10-15 degrees from vertical and move it back slightly. Add TIG Rod material as needed to the front end of the weld puddle.",
+    "14. Alternate between pushing the torch/weld puddle and adding the TIG Rod material.",
+    "15. When finished welding, release the Foot Pedal but keep Torch on weld puddle until weld solidifies. If not using Foot Pedal, pull Torch away from work piece until welding arc is broken, then return the gas coverage until weld solidifies.",
+    "16. Close valve on TIG Torch and turn Right Knob to OFF to turn off power to TIG Torch.",
+    "17. Set TIG Torch down on nonconductive, nonflammable surface away from any grounded objects.",
+    "18. Turn the Power Switch OFF.",
+    "19. To prevent accidents after use: allow Welder to cool down; unplug Welder's power cord from outlet; remove Ground Clamp from workpiece or table; disconnect TIG Torch, Ground and Foot Pedal Cables; close gas cylinder's valve securely, remove regulator and replace cap; disconnect Gas Hose from Welder; store and secure gas cylinder; clean then store Welder and its accessories indoors out of children's reach."
+  ],
+  "warnings": [
+    "TO PREVENT SERIOUS INJURY AND DEATH: Do not weld without Grounding Clamp. When the operator is not holding the Torch, it must be sitting on a nonconductive, nonflammable surface. Only hold TIG Rod with an electrically insulated welding glove.",
+    "TO PREVENT DEATH FROM ASPHYXIATION: Do not open gas without proper ventilation. Fix gas leaks immediately. Shielding gas can displace air and cause rapid loss of consciousness and death. Shielding gas without carbon dioxide can be even more hazardous because asphyxiation can start without feeling shortness of breath.",
+    "WARNING! TO PREVENT SERIOUS INJURY: Welder is now energized and Open Circuit Voltage is present.",
+    "WARNING! TO PREVENT SERIOUS INJURY: Protective gear must be worn when using the Welder; minimum shade number 10 full face shield (or welding mask), ear protection, welding gloves, sleeves and apron, NIOSH-approved respirator, and fire resistant work clothes without pockets should be worn when welding. Light from the arc can cause permanent damage to the eyes and skin. Do not breathe arc fumes.",
+    "WARNING! TO PREVENT SERIOUS INJURY: Metal work bench must be grounded when TIG welding."
+  ],
+  "related_topics": [
+    "duty-cycle-specs",
+    "strike-test-procedure",
+    "shielding-gas-setup",
+    "mig-polarity-setup"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 30,
+      "element_id": "tig-welding-setup-steps-1-9"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 31,
+      "element_id": "tig-welding-steps-10-19-warnings"
+    }
+  ],
+  "query_terms": [
+    "TIG welding setup",
+    "TIG welding procedure",
+    "how to TIG weld OmniPro 220",
+    "TIG torch setup",
+    "shielding gas flow rate TIG",
+    "tungsten electrode distance",
+    "TIG rod technique",
+    "TIG welding shutdown steps",
+    "TIG welder polarity settings",
+    "TIG welding safety",
+    "energize TIG torch",
+    "foot pedal TIG welding"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "article_id": "basic-wire-welding-technique-mig-procedure",
+  "title": "Basic Wire Welding Technique and Shutdown Procedure",
+  "summary": "This section covers the fundamental MIG wire welding technique including bead types, gun angles, and contact tip distance. It also details the proper shutdown, cooling, and wire/gas storage steps after welding is complete. Duty cycle guidelines and thermal overload behavior are also addressed.",
+  "key_facts": [
+    "A stringer bead is made by drawing wire in a steady straight line.",
+    "A weave bead is made by drawing wire back and forth across the joint.",
+    "Butt welds require a 90-degree wire angle into the joint.",
+    "Fillet welds require a 45-degree wire angle into the joint.",
+    "Solid wire with shielding gas uses a push angle of 0-15 degrees away from weld direction.",
+    "Flux-cored wire without gas uses a drag angle of 0-15 degrees toward weld direction.",
+    "Contact Tip to Work Distance (CTWD) must remain within 1/2 inch of the work surface.",
+    "At 120 VAC, duty cycle is 40% use at 100 A over 10 continuous minutes.",
+    "At 240 VAC, duty cycle is 25% use at 200 A over 10 continuous minutes.",
+    "If overheated, the LCD warning screen appears and the unit automatically shuts down.",
+    "Allow the Welder to cool with the Power Switch on so the internal fan aids cooling.",
+    "When respooling wire, hold it securely as it tends to unravel once it clears the feeder."
+  ],
+  "procedure_steps": [
+    "1. Press and hold Trigger and contact the area to be welded with electrode wire to ignite arc.",
+    "2. For a narrow weld, draw wire in a steady straight line (stringer bead); for a wider weld, draw wire back and forth across the joint (weave bead).",
+    "3. Direct the welding wire straight into the joint: 90° for butt welds, 45° for fillet welds.",
+    "4. For MIG welding with solid wire and shielding gas, tilt MIG Gun 0-15° away from the direction of welding (push angle).",
+    "5. When using flux-cored wire without shielding gas, tilt MIG Gun 0-15° in the direction of welding (drag angle).",
+    "6. Keep the Contact Tip within 1/2 inch of the work surface (CTWD).",
+    "7. After welding a test weld on scrap for a few seconds, stop and examine the weld; make adjustments as needed and follow duty cycle guidelines.",
+    "8. When welding is complete, set the MIG Gun down on a heat-proof, electrically non-conductive surface and turn the Power Switch OFF.",
+    "9. Allow Welder to cool down, then unplug the Power Cord.",
+    "10. Remove Ground Clamp from workpiece or table and disconnect MIG Gun.",
+    "11. Respool wire by clipping wire, removing gas nozzle/contact tip, releasing Idler Arm on Wire Feed mechanism, and rotating Wire Spool counterclockwise while securely holding the wire.",
+    "12. MIG ONLY: Close shielding gas cylinder valve securely, remove Regulator and replace cap, disconnect Gas Hose from Welder, and store and secure gas cylinder."
+  ],
+  "warnings": [
+    "CAUTION! Weld will be hot, do not touch.",
+    "Should this occur, rest the MIG Gun on an electrically non-conductive, heat‑proof surface, such as a concrete slab, away from the ground clamp.",
+    "Be sure to securely hold wire as it is being respooled because the end of wire has a tendency to quickly unravel once it clears the wire feeder.",
+    "When normal operation resumes, use shorter welding periods and longer rest periods to help prevent needless wear."
+  ],
+  "related_topics": [
+    "duty-cycle-specs",
+    "mig-polarity-setup",
+    "flux-cored-wire-setup",
+    "shielding-gas-setup"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 22,
+      "element_id": "basic-wire-welding-technique-p22"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 23,
+      "element_id": "basic-wire-welding-technique-p23"
+    }
+  ],
+  "query_terms": [
+    "MIG welding technique",
+    "stringer bead weave bead",
+    "push angle drag angle",
+    "contact tip to work distance CTWD",
+    "flux-cored wire angle",
+    "butt weld fillet weld angle",
+    "MIG gun angle",
+    "welding shutdown procedure",
+    "respool wire",
+    "thermal overload cooling",
+    "duty cycle MIG welder",
+    "shielding gas cylinder storage"
+  ]
+}

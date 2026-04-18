@@ -1,0 +1,60 @@
+{
+  "article_id": "omnipro-220-specifications-and-controls-overview",
+  "title": "OmniPro 220 Specifications and Controls Overview",
+  "summary": "This section covers the electrical and welding specifications for MIG, TIG, and Stick modes at both 120V and 240V inputs. It also identifies all front panel and interior controls and their locations. Weldable materials, duty cycles, wire capacity, and socket assignments are detailed.",
+  "key_facts": [
+    "MIG welding current ranges from 30–140 A at 120V and 30–220 A at 240V.",
+    "MIG duty cycle is 40% at 100 A on 120V and 25% at 200 A on 240V.",
+    "MIG supports solid core wire 0.025\", 0.030\", 0.035\" and flux cored 0.030\", 0.035\", 0.045\".",
+    "Wire spool capacity is up to 12 lb and wire speed ranges from 50–500 IPM.",
+    "TIG welding current ranges from 10–125 A at 120V and 10–175 A at 240V.",
+    "TIG weldable materials include mild steel, stainless steel, and chrome moly.",
+    "Stick welding current ranges from 10–80 A at 120V and 10–175 A at 240V.",
+    "Maximum OCV is 86 VDC across MIG, TIG, and Stick modes.",
+    "MIG weldable materials include mild steel, stainless steel, and aluminum with optional spool gun.",
+    "Front panel includes Power Switch, Control Knob, LCD Display, Left Knob, Right Knob, and Home/Back Buttons.",
+    "Interior controls include Cold Wire Feed Switch, Feed Tensioner, Wire Feed Mechanism, and Foot Pedal Socket.",
+    "Optional spool gun gas hose connects to the dedicated Spool Gun Gas Outlet on the front panel."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "Note: When using an optional Spool Gun (sold separately), connect the Spool Gun gas hose to the Spool Gun Gas Outlet."
+  ],
+  "related_topics": [
+    "mig-polarity-setup",
+    "duty-cycle-specs",
+    "spool-gun-setup",
+    "tig-stick-mode-setup"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 7,
+      "element_id": "specifications-table"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 8,
+      "element_id": "front-panel-controls"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 9,
+      "element_id": "interior-controls"
+    }
+  ],
+  "query_terms": [
+    "OmniPro 220 specifications",
+    "MIG TIG Stick duty cycle",
+    "welding current range 120V 240V",
+    "wire speed IPM",
+    "weldable materials OmniPro",
+    "front panel controls layout",
+    "interior wire feed controls",
+    "spool gun gas outlet",
+    "maximum OCV 86 VDC",
+    "wire spool capacity",
+    "foot pedal socket location",
+    "flux cored wire size"
+  ]
+}

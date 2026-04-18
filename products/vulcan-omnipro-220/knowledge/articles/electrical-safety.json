@@ -1,0 +1,67 @@
+{
+  "article_id": "electrical-fire-safety-welding-omnipro-220",
+  "title": "Electrical and Fire Safety for Welding Operations",
+  "summary": "This section covers critical electrical shock prevention and fire safety requirements for operating the Vulcan OmniPro 220 welder. It provides mandatory precautions to prevent electrocution, fire ignition, and related hazards. All rules are required safety practices, not optional guidelines.",
+  "key_facts": [
+    "Electric shock can kill; turn off and disconnect power before setting down torch or electrode holder.",
+    "Do not touch energized electrical parts; wear dry, insulating gloves at all times.",
+    "Connect to grounded, GFCI-protected power supply only.",
+    "Do not use the welder near water, damp objects, or outdoors.",
+    "People with pacemakers should consult their physician before use.",
+    "Do not expose the welder to rain or wet conditions as it increases electric shock risk.",
+    "Never use the cord for carrying, pulling, or unplugging the welder.",
+    "Clear all combustible materials within a 35-foot (10-meter) radius of the work area.",
+    "Keep an ABC-type fire extinguisher near the work area at all times.",
+    "Do not weld in atmospheres containing dangerously reactive or flammable liquids, gases, vapors, or dust.",
+    "After welding, inspect thoroughly for evidence of fire; smoke or flame may not be immediately visible.",
+    "Do not apply heat to containers that held unknown or combustible substances without cleaning and purging first."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "ELECTRIC SHOCK can KILL.",
+    "ARC AND SLAG can cause fire.",
+    "Do not touch energized electrical parts. Wear dry, insulating gloves. Do not touch electrode holder, electrode, welding torch, or welding wire with bare hand. Do not wear wet or damaged gloves.",
+    "Do not use outdoors.",
+    "Do not use near water or damp objects.",
+    "People with pacemakers should consult their physician(s) before use. Electromagnetic fields in close proximity to heart pacemaker could cause pacemaker interference or pacemaker failure.",
+    "Do not expose welders to rain or wet conditions. Water entering a welder will increase the risk of electric shock.",
+    "Do not abuse the cord. Never use the cord for carrying, pulling or unplugging the welder. Keep cord away from heat, oil, sharp edges or moving parts. Damaged or entangled cords increase the risk of electric shock.",
+    "THIS WELDING MACHINE MUST BE CONNECTED TO POWER SOURCE IN ACCORDANCE WITH APPLICABLE ELECTRICAL CODES.",
+    "Do not operate welders in atmospheres containing dangerously reactive or flammable liquids, gases, vapors, or dust.",
+    "Do not weld or cut on materials having a combustible coating or combustible internal structure, as in walls or ceilings, without an approved method for eliminating the hazard.",
+    "Do not dispose of hot slag in containers holding combustible materials.",
+    "Do not apply heat to a container that has held an unknown substance or a combustible material whose contents, when heated, can produce flammable or explosive vapors. Clean and purge containers before applying heat. Vent closed containers, including castings, before preheating, welding, or cutting."
+  ],
+  "related_topics": [
+    "grounding-and-power-connection-setup",
+    "work-area-preparation-welding",
+    "fire-watch-procedures-welding",
+    "welder-maintenance-safety"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 4,
+      "element_id": "electrical-safety-section"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 4,
+      "element_id": "fire-safety-section"
+    }
+  ],
+  "query_terms": [
+    "electric shock welding safety",
+    "fire safety welding",
+    "welding grounding requirements",
+    "GFCI protected welder",
+    "pacemaker welding warning",
+    "flammable materials welding precautions",
+    "welding cord safety",
+    "fire extinguisher welding",
+    "combustible materials welding",
+    "welder outdoor use restriction",
+    "slag fire hazard",
+    "welding atmosphere safety"
+  ]
+}

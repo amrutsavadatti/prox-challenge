@@ -1,0 +1,74 @@
+{
+  "article_id": "grounding-extension-cords-symbology-safety",
+  "title": "Grounding, Extension Cords, and Welder Symbology",
+  "summary": "This section covers proper grounding wire connection requirements, restrictions on extension and replacement cords, and the meaning of symbols used on the welder. It includes critical safety warnings about electric shock from incorrect grounding and prohibited cord modifications.",
+  "key_facts": [
+    "The green wire inside the cord must be the only wire connected to the Welder's grounding system.",
+    "The green grounding wire must never be attached to an electrically live terminal.",
+    "Never leave the grounding wire disconnected or modify either Power Cord Plug in any way.",
+    "Do not use an extension cord on this welder.",
+    "Use only one of the supplied power cords or an identical replacement cord.",
+    "Do not install a thinner or longer cord on this welder.",
+    "Do not patch cords of any length together; patches may allow moisture to penetrate insulation.",
+    "If the plug will not fit the outlet, have a proper outlet installed by a qualified electrician.",
+    "Do not use the welder if the power cord or plug is damaged; have it repaired before use.",
+    "Reconnection for a different electric circuit must be made by qualified service personnel.",
+    "Welding processes may interfere with pacemakers; consult a doctor before use.",
+    "Wear a welding helmet with a properly rated filter lens to protect against arc ray hazard."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "TO PREVENT ELECTRIC SHOCK AND DEATH FROM INCORRECT GROUNDING WIRE CONNECTION: Check with a qualified electrician if you are in doubt as to whether the outlet is properly grounded.",
+    "Do not use the welder if the power cord or plug is damaged. If damaged, have it repaired by a service facility before use.",
+    "If the plug will not fit the outlet, have a proper outlet installed by a qualified electrician, do not use adapter plugs.",
+    "Never leave the grounding wire disconnected or modify either Power Cord Plug in any way.",
+    "Do not patch cords of any length together for this item, patches may allow moisture to penetrate the insulation, resulting in electric shock.",
+    "Electric Shock Hazard. Do not touch energized parts.",
+    "Inhalation Hazard. Keep head out of fumes and use proper ventilation.",
+    "Fire Hazard. Keep flammable materials away during welding. Spatter can cause accidental fires.",
+    "Arc Ray Hazard. Wear welding helmet with properly rated filter lens.",
+    "Pacemaker Hazard. Welding processes may interfere with pacemakers. Consult doctor before use."
+  ],
+  "related_topics": [
+    "power-cord-replacement",
+    "electric-shock-prevention",
+    "welder-setup-and-controls",
+    "duty-cycle-specs"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 6,
+      "element_id": "grounding-section"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 6,
+      "element_id": "extension-cords-section"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 6,
+      "element_id": "replacement-cords-section"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 6,
+      "element_id": "symbology-section"
+    }
+  ],
+  "query_terms": [
+    "grounding wire connection",
+    "extension cord welder",
+    "replacement power cord",
+    "electric shock prevention",
+    "welder symbols meaning",
+    "green grounding wire",
+    "pacemaker welding hazard",
+    "arc ray hazard",
+    "welder plug outlet",
+    "cord patching danger",
+    "overheat shutdown indicator",
+    "welding safety symbols"
+  ]
+}

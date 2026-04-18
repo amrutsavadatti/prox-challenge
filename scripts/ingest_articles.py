@@ -82,26 +82,63 @@ Source pages:
 {page_text}"""
 
 
-def is_major_heading(text: str) -> bool:
-    first_line = text.split("\n")[0].strip()
-    words = first_line.split()
-    if not words:
+def _first_line(page: dict) -> str:
+    block_text = page["blocks"][0]["text"] if page["blocks"] else page["text"]
+    return block_text.split("\n")[0].strip()
+
+
+def is_continuation(first_line: str) -> bool:
+    """True when this line is a mid-document continuation, not a new section."""
+    # Numbered step: "27. To check...", "4.  Turn..."
+    if re.match(r"^\d+[\.\)]\s", first_line):
+        return True
+    # Lettered sub-step: "d. Optional settings", "e. Optional..."
+    if re.match(r"^[a-z][\.\)]\s", first_line):
+        return True
+    # Inline safety callout (standalone or leading): "DANGER", "IMPORTANT Securely hold..."
+    if re.match(r"^(IMPORTANT|DANGER|WARNING|NOTE|CAUTION)\b", first_line):
+        return True
+    # Non-word / trademark first character: "®", "©", "™"
+    if re.match(r"^[®©™\W\d]", first_line):
+        return True
+    return False
+
+
+def is_major_heading(first_line: str) -> bool:
+    """True when this line signals a genuine top-level section break."""
+    if not first_line or is_continuation(first_line):
         return False
+    # All-caps section title (e.g. "SPECIFICATIONS", "MAINTENANCE")
     if first_line.isupper():
         return True
-    if len(words) < 6:
-        return True
+    # Contains a known major-section keyword
     if any(kw in first_line.upper() for kw in SECTION_KEYWORDS):
         return True
     return False
 
 
 def make_slug(pages: list[dict]) -> str:
-    first_block_text = pages[0]["blocks"][0]["text"] if pages[0]["blocks"] else pages[0]["text"]
-    first_line = first_block_text.split("\n")[0].strip()
-    words = re.sub(r"[^a-zA-Z0-9\s]", " ", first_line).split()[:4]
-    slug = "-".join(w.lower() for w in words if w)
-    return slug or f"page-{pages[0]['page']}"
+    """Derive slug from the first non-continuation heading in the cluster."""
+    for page in pages:
+        block_text = page["blocks"][0]["text"] if page["blocks"] else page["text"]
+        lines = [l.strip() for l in block_text.split("\n") if l.strip()]
+        for line in lines:
+            if is_continuation(line):
+                break  # rest of this page is also continuation content
+            # Strip parentheticals and apostrophes, then take first 4 words
+            cleaned = re.sub(r"\([^)]*\)", "", line)
+            cleaned = re.sub(r"[\u2018\u2019\u02bc']", "", cleaned)
+            words = re.sub(r"[^a-zA-Z0-9\s]", " ", cleaned).split()
+            if len(words) < 2 and len(lines) > 1:
+                # Single-word heading — grab next line too for a richer slug
+                next_cleaned = re.sub(r"[^a-zA-Z0-9\s]", " ", lines[1]).split()
+                words = (words + next_cleaned)[:4]
+            else:
+                words = words[:4]
+            slug = "-".join(w.lower() for w in words if w)
+            if slug:
+                return slug
+    return f"page-{pages[0]['page']}"
 
 
 def cluster_pages(pages: list[dict]) -> list[dict]:
@@ -111,10 +148,12 @@ def cluster_pages(pages: list[dict]) -> list[dict]:
     current_words = 0
 
     for page in pages:
-        first_block_text = page["blocks"][0]["text"] if page["blocks"] else page["text"]
+        line = _first_line(page)
+        cont = is_continuation(line)
 
-        if current:
-            hit_heading = is_major_heading(first_block_text)
+        if current and not cont:
+            # Only non-continuation pages can trigger a cluster break
+            hit_heading = is_major_heading(line)
             hit_word_limit = (current_words + page["word_count"]) > MAX_CLUSTER_WORDS
             hit_page_limit = len(current) >= MAX_CLUSTER_PAGES
 
@@ -123,6 +162,8 @@ def cluster_pages(pages: list[dict]) -> list[dict]:
                 current = []
                 current_words = 0
 
+        # Continuation pages always attach to whatever is current (even if it tips
+        # over the word limit), so they never become orphan single-page clusters.
         current.append(page)
         current_words += page["word_count"]
 

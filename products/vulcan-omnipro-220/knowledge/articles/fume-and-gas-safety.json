@@ -1,0 +1,62 @@
+{
+  "article_id": "fume-gas-arc-ray-safety-warnings",
+  "title": "Fume, Gas, and Arc Ray Safety Warnings",
+  "summary": "This section covers inhalation hazards from welding and plasma cutting fumes, including associated diseases and required ventilation measures. It also details arc ray hazards to eyes and skin, with specific personal protective equipment requirements. Both sections provide mandatory safety controls for safe welding operation.",
+  "key_facts": [
+    "Welding and plasma cutting produce toxic fumes classified as an inhalation hazard.",
+    "Exposure to welding exhaust fumes can increase risk of larynx and lung cancer.",
+    "Welding fumes may be linked to heart disease, ulcers, kidney damage, and respiratory diseases.",
+    "Welding fumes may be linked to early onset of Parkinson's Disease and reproductive organ damage.",
+    "Use natural or forced air ventilation and a NIOSH-approved respirator to reduce illness risk.",
+    "Do not use welder near degreasing or painting operations.",
+    "Follow OSHA Permissible Exposure Limits (PELs) and ACGIH Threshold Limit Values (TLVs) for fumes.",
+    "Arc rays can injure eyes and burn skin.",
+    "Wear ANSI-approved welding eye protection with at least a number 10 shade lens rating.",
+    "Wear leather leggings and fire-resistant shoes or boots during use.",
+    "Keep clothing free of grease, oil, solvents, or any flammable substances.",
+    "When welding overhead or in confined spaces, wear flame-resistant ear plugs or ear muffs."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "INHALATION HAZARD: Welding and Plasma Cutting produce toxic fumes.",
+    "ARC RAYS can injure eyes and burn skin.",
+    "Work in a confined area only if it is well-ventilated, or while wearing an air-supplied respirator.",
+    "Do not breathe exhaust fumes.",
+    "Keep head out of fumes.",
+    "Do not use near degreasing or painting operations.",
+    "Keep clothing free of grease, oil, solvents, or any flammable substances. Wear dry, insulating gloves and protective clothing.",
+    "Do not wear pants with cuffs, shirts with open pockets, or any clothing that can catch and hold molten metal or sparks."
+  ],
+  "related_topics": [
+    "ventilation-requirements",
+    "personal-protective-equipment",
+    "fire-prevention-safety",
+    "confined-space-welding"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 3,
+      "element_id": "fume-gas-safety"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 3,
+      "element_id": "arc-ray-safety"
+    }
+  ],
+  "query_terms": [
+    "welding fume safety",
+    "inhalation hazard welding",
+    "arc ray eye protection",
+    "toxic fumes plasma cutting",
+    "NIOSH respirator welding",
+    "ventilation welding area",
+    "welding protective clothing",
+    "lens shade rating welding",
+    "welding cancer risk",
+    "confined space welding safety",
+    "OSHA PEL welding fumes",
+    "welding fume diseases"
+  ]
+}

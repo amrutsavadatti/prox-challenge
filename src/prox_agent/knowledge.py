@@ -105,12 +105,15 @@ class KnowledgeBase:
         self.duty_cycles = self._load_json(self.knowledge_dir / "tables" / "duty_cycles.json")["rows"]
         self.polarity_setups = self._load_json(self.knowledge_dir / "tables" / "polarity_setups.json")["rows"]
         self.troubleshooting_guides = self._load_json(self.knowledge_dir / "tables" / "troubleshooting_guides.json")["rows"]
-        self.visual_index = self._load_json(self.knowledge_dir / "images" / "visual_index.json")
+        self.visual_index = self._load_visual_index()
+        self.articles = self._load_articles()
         self.ocr_records = self._load_ocr_records()
         self._search_tokens = [self._tokens(page["text"]) for page in self.pages]
         self._bm25 = BM25Okapi(self._search_tokens)
         self._ocr_tokens = [self._tokens(record["text"]) for record in self.ocr_records]
         self._ocr_bm25 = BM25Okapi(self._ocr_tokens) if self._ocr_tokens else None
+        self._article_tokens = [self._tokens(self._article_search_text(a)) for a in self.articles]
+        self._article_bm25 = BM25Okapi(self._article_tokens) if self._article_tokens else None
 
     def search_manual(self, query: str, limit: int = 5) -> list[dict[str, Any]]:
         expanded = self._expand_query(query)
@@ -194,6 +197,23 @@ class KnowledgeBase:
                 matches.append((float(score), row))
         return [row for _, row in sorted(matches, key=lambda item: item[0], reverse=True)]
 
+    def search_articles(self, query: str, limit: int = 3) -> list[dict[str, Any]]:
+        if not self.articles or self._article_bm25 is None:
+            return []
+        expanded = self._expand_query(query)
+        tokens = self._tokens(expanded)
+        bm25_scores = self._article_bm25.get_scores(tokens)
+        ranked: list[tuple[float, dict[str, Any]]] = []
+        for i, article in enumerate(self.articles):
+            fuzzy_score = fuzz.partial_ratio(
+                expanded.lower(), self._article_search_text(article).lower()
+            ) / 20.0
+            final = float(bm25_scores[i]) + fuzzy_score
+            if final > 0:
+                ranked.append((final, article))
+        ranked.sort(key=lambda x: x[0], reverse=True)
+        return [a for _, a in ranked[:limit]]
+
     def get_manual_image(self, query: str, limit: int = 3) -> list[dict[str, Any]]:
         expanded = self._expand_query(query)
         results: list[tuple[float, dict[str, Any]]] = []
@@ -203,6 +223,33 @@ class KnowledgeBase:
             if score >= 35:
                 results.append((float(score), item))
         return [item for _, item in sorted(results, key=lambda row: row[0], reverse=True)[:limit]]
+
+    def _load_visual_index(self) -> list[dict[str, Any]]:
+        full = self.knowledge_dir / "images" / "visual_index_full.json"
+        fallback = self.knowledge_dir / "images" / "visual_index.json"
+        return self._load_json(full if full.exists() else fallback)
+
+    def _load_articles(self) -> list[dict[str, Any]]:
+        articles_dir = self.knowledge_dir / "articles"
+        if not articles_dir.exists():
+            return []
+        articles = []
+        for path in sorted(articles_dir.glob("*.json")):
+            try:
+                articles.append(self._load_json(path))
+            except Exception:
+                pass
+        return articles
+
+    @staticmethod
+    def _article_search_text(article: dict[str, Any]) -> str:
+        return " ".join([
+            article.get("title", ""),
+            article.get("summary", ""),
+            " ".join(article.get("key_facts", [])),
+            " ".join(article.get("warnings", [])),
+            " ".join(article.get("query_terms", [])),
+        ])
 
     def _load_pages(self) -> list[dict[str, Any]]:
         pages: list[dict[str, Any]] = []

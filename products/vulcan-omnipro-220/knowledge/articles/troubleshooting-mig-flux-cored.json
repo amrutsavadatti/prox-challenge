@@ -1,0 +1,51 @@
+{
+  "article_id": "troubleshooting-mig-flux-cored-welding-problems",
+  "title": "MIG Flux-Cored Welding Troubleshooting Common Problems",
+  "summary": "This section provides a troubleshooting guide for common MIG and Flux-Cored welding problems on the Vulcan OmniPro 220. It covers issues including wire feed failures, bird's nest wire tangles, unstable arc, and weak arc strength. Each problem lists possible causes and likely solutions.",
+  "key_facts": [
+    "Shut off the welder and disconnect from power before adjusting, cleaning, or repairing.",
+    "Discharge the MIG Gun to ground before any adjustment or repair.",
+    "Insufficient wire feed pressure causes the wire feed motor to run without proper wire feeding.",
+    "Incorrect wire feed roller size can prevent wire from feeding properly.",
+    "A bird's nest during operation can be caused by excess wire feed pressure.",
+    "Incorrect Contact Tip size can cause a bird's nest during operation.",
+    "A severely bent gun cable can prevent the wire feed mechanism from feeding wire.",
+    "DCEP polarity is required for MIG welding; DCEN is required for Flux-Cored self-shielded welding.",
+    "Gas flow rate should be set according to the Settings Chart to ensure proper gas coverage.",
+    "Do not use an extension cord on this welder; use only the supplied power cords.",
+    "Incorrect line voltage causing weak arc strength requires a licensed electrician to remedy.",
+    "Follow all safety precautions whenever diagnosing or servicing the equipment."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "Be CERTAIN to shut off the Welder, disconnect it from power, and discharge the MIG Gun to ground before adjusting, cleaning, or repairing the unit.",
+    "Follow all safety precautions whenever diagnosing or servicing the equipment."
+  ],
+  "related_topics": [
+    "mig-polarity-setup",
+    "wire-feed-roller-setup",
+    "mig-gun-cable-connector-installation",
+    "duty-cycle-specs"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 42,
+      "element_id": "troubleshooting-mig-flux-cored"
+    }
+  ],
+  "query_terms": [
+    "wire feed motor runs but wire does not feed",
+    "bird's nest welding wire",
+    "wire stops during welding",
+    "unstable welding arc MIG",
+    "weak arc strength welder",
+    "MIG flux-cored troubleshooting",
+    "incorrect polarity MIG flux-cored",
+    "extension cord welder",
+    "wire feed pressure adjustment",
+    "contact tip size MIG",
+    "gun liner clogged",
+    "MIG gun cable connector"
+  ]
+}

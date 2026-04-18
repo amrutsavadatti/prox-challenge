@@ -1,0 +1,104 @@
+{
+  "article_id": "tig-torch-assembly-tungsten-sharpening-stick-setup",
+  "title": "TIG Torch Assembly, Tungsten Sharpening, Stick Setup",
+  "summary": "This section covers how to sharpen a tungsten electrode, assemble a TIG torch, and set up the welder for Stick welding. It includes safety requirements for grinding electrodes and step-by-step instructions for both TIG torch assembly and Stick cable connections.",
+  "key_facts": [
+    "Dedicate a fine grit grinding wheel exclusively to electrode grinding to avoid contamination.",
+    "Pull electrode from the front of the torch; pulling from rear damages the Collet.",
+    "Snap off contaminated electrode end using pliers above the contaminated section.",
+    "Grinding direction must be parallel to the length of the electrode.",
+    "The conical tip portion should be 2-1/2 times as long as the electrode diameter.",
+    "Electrode must protrude 1/8 to 1/4 inch beyond the Ceramic Nozzle.",
+    "Collet and Collet Body sizes must match the Tungsten Electrode size.",
+    "Consult the Settings Chart on top of the welder for proper Tungsten Electrode size.",
+    "For Stick setup, plug Ground Clamp Cable into the Negative Socket.",
+    "For Stick setup, plug Electrode Holder Cable into the Positive Socket.",
+    "Twist both cable connectors clockwise all the way to lock in place.",
+    "The power cord plug will only fit into the Power Input Socket one way."
+  ],
+  "procedure_steps": [
+    {
+      "procedure": "Sharpen Tungsten Electrode",
+      "steps": [
+        "1. Shut off the welder and wait until Electrode and Torch have cooled enough to handle.",
+        "2. Remove Back Cap. Pull Electrode from front of Torch.",
+        "3. If Electrode is contaminated, use pliers to grip above contaminated section and snap off the end.",
+        "4. Lightly press Electrode tip against the grinding wheel at an angle; rotate until a blunt point is formed. Grinding direction must be parallel to length of Electrode.",
+        "5. The conical portion of the ideal tip will be 2-1/2 times as long as the Electrode diameter.",
+        "6. Re-insert Electrode into Collet with tip protruding 1/8\"-1/4\" beyond the Ceramic Nozzle, then re-tighten the Back Cap."
+      ]
+    },
+    {
+      "procedure": "Assemble TIG Torch",
+      "steps": [
+        "1. Consult Settings Chart on top of welder to determine proper Tungsten Electrode size.",
+        "2. Match Collet and Collet Body sizes to Tungsten Electrode size.",
+        "3. Thread Collet Body into the front of the Torch.",
+        "4. Make sure Ceramic Nozzle size is appropriate for application.",
+        "5. Thread Ceramic Nozzle onto Collet Body.",
+        "6. Insert Collet into back of Torch and into Collet Body.",
+        "7. Insert Tungsten Electrode into Collet on front of Torch.",
+        "8. Lock Electrode in place with Back Cap. Electrode should protrude 1/8\" to 1/4\" beyond the Ceramic Nozzle."
+      ]
+    },
+    {
+      "procedure": "Stick Setup - Connect Cables",
+      "steps": [
+        "1. Plug Ground Clamp Cable into Negative Socket. Twist clockwise all the way to lock in place.",
+        "2. Plug Electrode Holder Cable into Positive Socket. Twist clockwise all the way to lock in place."
+      ]
+    },
+    {
+      "procedure": "Stick Setup - Connect Power Cord",
+      "steps": [
+        "1. Plug either 120 VAC or 240 VAC Power Cord into Power Input Socket. Note: Plug will only fit one way."
+      ]
+    }
+  ],
+  "warnings": [
+    "WARNING! TO PREVENT SERIOUS INJURY: Some Electrodes may have materials added to them that are hazardous to breathe. Wear a respirator and ANSI-approved Safety goggles when grinding an Electrode.",
+    "WARNING! TO PREVENT SERIOUS INJURY FROM ACCIDENTAL OPERATION: Do not plug cord into wall outlet at this time."
+  ],
+  "related_topics": [
+    "tig-polarity-setup",
+    "stick-polarity-setup",
+    "settings-chart-reference",
+    "duty-cycle-specs"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 26,
+      "element_id": "sharpen-tungsten-electrode"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 26,
+      "element_id": "assemble-tig-torch"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 27,
+      "element_id": "stick-setup-connect-cables"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 27,
+      "element_id": "stick-setup-connect-power-cord"
+    }
+  ],
+  "query_terms": [
+    "sharpen tungsten electrode",
+    "grind tungsten TIG",
+    "assemble TIG torch",
+    "tungsten protrusion nozzle",
+    "stick welding cable setup",
+    "electrode holder positive socket",
+    "ground clamp negative socket",
+    "collet body assembly",
+    "tungsten contamination",
+    "TIG torch collet size",
+    "stick setup omnipro 220",
+    "plug power cord welder"
+  ]
+}

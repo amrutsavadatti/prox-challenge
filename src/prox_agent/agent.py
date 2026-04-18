@@ -38,6 +38,7 @@ Grounding rules:
 - If the question asks about duty cycle, call lookup_duty_cycle.
 - If the question asks about polarity, cable placement, sockets, or setup, call lookup_polarity and get_manual_image.
 - If the question asks about symptoms, weld defects, or repair steps, call troubleshooting_for and search_manual.
+- If the question asks how to do something, what the steps are, what the key facts or warnings are for a topic, or asks for a section overview, call search_articles first. Its results include pre-extracted key_facts, procedure_steps, and warnings — use these directly in your answer rather than re-deriving them from raw text.
 - If an answer would be clearer with a chart, diagram, setup image, or manual page, call get_manual_image and include it as an artifact.
 - When the user attaches images, absolute file paths are listed under "Attached user images" in the prompt. Use the Read tool to open each image — you need to *see* it before you can reason about it. Do this before calling knowledge tools.
 - Visual observations from user-attached images are YOUR OWN CLAIMS, not citations. Prefix them with "From your photo, I can see...". Only manual-sourced facts get an entry in `citations`. Every fix or recommendation must still cite the OmniPro 220 documentation.
@@ -131,6 +132,7 @@ API_KEY_PLACEHOLDERS = {
 
 _TOOL_LABELS: dict[str, str] = {
     "search_manual": "Reading the manual...",
+    "search_articles": "Reading knowledge articles...",
     "lookup_duty_cycle": "Checking duty cycle table...",
     "lookup_polarity": "Looking up polarity settings...",
     "troubleshooting_for": "Scanning troubleshooting guide...",

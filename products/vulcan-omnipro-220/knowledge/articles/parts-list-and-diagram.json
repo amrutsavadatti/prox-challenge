@@ -1,0 +1,55 @@
+{
+  "article_id": "parts-list-and-assembly-diagram",
+  "title": "Parts List and Assembly Diagram Reference",
+  "summary": "This section provides a numbered parts list and corresponding assembly diagram for the Vulcan OmniPro 220 welder. It serves as a reference tool for identifying components, with 61 listed parts ranging from covers and PCBs to IGBTs and power cords. The manufacturer expressly states that all repairs and parts replacements should be performed by certified and licensed technicians.",
+  "key_facts": [
+    "The parts list and assembly diagram are provided as a reference tool only.",
+    "All repairs and parts replacements should be undertaken by certified and licensed technicians.",
+    "The buyer assumes all risk and liability arising out of repairs or replacement parts installation.",
+    "The unit includes two power cords: a 120 VAC power cord (part 55) and a 240 VAC power cord (part 61).",
+    "The unit contains 6 IGBTs (part 46) and 2 IGBT Radiators (parts 50 and 52).",
+    "The unit includes a Main PCB (part 38), Control PCB (part 39), and Remote Control PCB (part 11).",
+    "The unit contains 2 Bridge Rectifiers (part 51) and a Bridge Rectifier Heatsink (part 47).",
+    "Some parts are listed and shown for illustration purposes only and are not available individually as replacement parts.",
+    "Parts may not be interchangeable.",
+    "Specify UPC 193175422590 when ordering parts.",
+    "The unit includes a Solenoid Valve (part 35) and an Output Inductor (part 33).",
+    "The unit includes a Wire Feeder (part 12) and a MIG Welding Torch (part 19)."
+  ],
+  "procedure_steps": [],
+  "warnings": [
+    "THE MANUFACTURER AND/OR DISTRIBUTOR HAS PROVIDED THE PARTS LIST AND ASSEMBLY DIAGRAM IN THIS MANUAL AS A REFERENCE TOOL ONLY. NEITHER THE MANUFACTURER OR DISTRIBUTOR MAKES ANY REPRESENTATION OR WARRANTY OF ANY KIND TO THE BUYER THAT HE OR SHE IS QUALIFIED TO MAKE ANY REPAIRS TO THE PRODUCT, OR THAT HE OR SHE IS QUALIFIED TO REPLACE ANY PARTS OF THE PRODUCT. IN FACT, THE MANUFACTURER AND/OR DISTRIBUTOR EXPRESSLY STATES THAT ALL REPAIRS AND PARTS REPLACEMENTS SHOULD BE UNDERTAKEN BY CERTIFIED AND LICENSED TECHNICIANS, AND NOT BY THE BUYER. THE BUYER ASSUMES ALL RISK AND LIABILITY ARISING OUT OF HIS OR HER REPAIRS TO THE ORIGINAL PRODUCT OR REPLACEMENT PARTS THERETO, OR ARISING OUT OF HIS OR HER INSTALLATION OF REPLACEMENT PARTS THERETO."
+  ],
+  "related_topics": [
+    "maintenance-and-servicing",
+    "technical-support-contact",
+    "mig-welding-setup",
+    "welder-component-overview"
+  ],
+  "source_refs": [
+    {
+      "doc_id": "owner-manual",
+      "page": 46,
+      "element_id": "parts-list"
+    },
+    {
+      "doc_id": "owner-manual",
+      "page": 47,
+      "element_id": "assembly-diagram"
+    }
+  ],
+  "query_terms": [
+    "parts list",
+    "assembly diagram",
+    "replacement parts",
+    "OmniPro 220 parts",
+    "welder components",
+    "part numbers",
+    "PCB replacement",
+    "IGBT welder part",
+    "welder repair parts",
+    "wire feeder part number",
+    "power cord part",
+    "ordering replacement parts"
+  ]
+}
