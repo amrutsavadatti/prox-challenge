@@ -224,34 +224,71 @@ async def chat_voice_stream(
             yield f"data: {json.dumps({'type': 'error', 'message': 'empty transcript'})}\n\n"
             return
 
-        # TTS runs in parallel with the final text_delta events.
-        # ask_claude_stream emits a `tts_start` event before `done` — we kick off
-        # TTS as an asyncio task at that point so it overlaps with the frontend
-        # rendering the last word-chunks.
-        tts_task: asyncio.Task[list[bytes]] | None = None
-
         async def _collect_tts(spoken: str, instructions: str | None) -> list[bytes]:
             chunks: list[bytes] = []
             async for chunk in synthesize_stream(spoken, instructions=instructions):
                 chunks.append(chunk)
             return chunks
 
+        def _sentence_end(text: str) -> int:
+            """Return index after first sentence boundary (min 20 chars), or -1."""
+            for i in range(20, len(text)):
+                c = text[i]
+                if c in ".!?" and (i + 1 >= len(text) or text[i + 1] in " \n"):
+                    return i + 1
+                if c == "\n" and i + 1 < len(text) and text[i + 1] == "\n":
+                    return i + 2
+            return -1
+
+        # Sentence-level TTS: start a TTS task for each complete sentence as it
+        # arrives so audio and text overlap. Tasks run concurrently; we drain
+        # them in order after `done` to guarantee correct playback sequence.
+        tts_tasks: list[asyncio.Task[list[bytes]]] = []
+        tts_instructions: str | None = None
+        sentence_buf = ""
         final: dict[str, Any] | None = None
+
         try:
             async for event in ask_claude_stream(
                 transcript,
                 max_turns=max_turns,
                 history=history_turns,
             ):
-                if event.get("type") == "tts_start":
-                    # Start TTS now — don't yield this internal event to the client.
-                    tts_task = asyncio.create_task(
-                        _collect_tts(event.get("spoken", ""), event.get("instructions"))
-                    )
-                else:
-                    yield f"data: {json.dumps(event)}\n\n"
-                    if event.get("type") == "done":
-                        final = event
+                etype = event.get("type")
+
+                if etype == "tts_start":
+                    # Capture voice instructions; flush any remaining buffer as
+                    # the last TTS chunk. Don't forward this internal event.
+                    tts_instructions = event.get("instructions")
+                    if sentence_buf.strip():
+                        spoken, _ = prepare_for_speech(sentence_buf.strip(), [])
+                        if spoken.strip():
+                            tts_tasks.append(asyncio.create_task(
+                                _collect_tts(spoken, tts_instructions)
+                            ))
+                        sentence_buf = ""
+                    continue
+
+                if etype == "text_delta":
+                    sentence_buf += str(event.get("text", ""))
+                    # Extract and enqueue complete sentences immediately.
+                    while True:
+                        idx = _sentence_end(sentence_buf)
+                        if idx == -1:
+                            break
+                        sentence = sentence_buf[:idx].strip()
+                        sentence_buf = sentence_buf[idx:].lstrip("\n ")
+                        if sentence:
+                            spoken, _ = prepare_for_speech(sentence, [])
+                            if spoken.strip():
+                                tts_tasks.append(asyncio.create_task(
+                                    _collect_tts(spoken, tts_instructions)
+                                ))
+
+                yield f"data: {json.dumps(event)}\n\n"
+                if etype == "done":
+                    final = event
+
         except MissingAPIKeyError:
             final = answer_local(transcript)
             final["type"] = "done"
@@ -264,35 +301,35 @@ async def chat_voice_stream(
         if not final:
             return
 
-        # Await the TTS task (already running in parallel); fall back to a fresh
-        # call if it wasn't started (e.g. local fallback path).
-        try:
-            if tts_task is not None:
-                audio_chunks = await tts_task
-            else:
-                spoken, instructions = prepare_for_speech(
-                    str(final.get("answer_markdown") or ""),
-                    list(final.get("safety_flags") or []),
-                )
-                if not spoken.strip():
-                    return
-                audio_chunks = await _collect_tts(spoken, None)
-        except VoiceConfigError as exc:
-            yield f"data: {json.dumps({'type': 'tts_error', 'message': str(exc)})}\n\n"
-            return
-        except Exception as exc:
-            yield f"data: {json.dumps({'type': 'tts_error', 'message': str(exc)})}\n\n"
-            return
+        # Fallback: if no sentence tasks were queued (e.g. local path), synthesise
+        # the full answer in one shot.
+        if not tts_tasks:
+            spoken, instructions = prepare_for_speech(
+                str(final.get("answer_markdown") or ""),
+                list(final.get("safety_flags") or []),
+            )
+            if spoken.strip():
+                tts_tasks.append(asyncio.create_task(_collect_tts(spoken, instructions)))
 
-        if not audio_chunks:
-            return
+        # Drain tasks in submission order — guarantees sentences play in sequence.
+        for task in tts_tasks:
+            try:
+                audio_chunks = await task
+            except VoiceConfigError as exc:
+                yield f"data: {json.dumps({'type': 'tts_error', 'message': str(exc)})}\n\n"
+                return
+            except Exception as exc:
+                yield f"data: {json.dumps({'type': 'tts_error', 'message': str(exc)})}\n\n"
+                continue
+            if audio_chunks:
+                payload = {
+                    "type": "audio_chunk",
+                    "mime": "audio/mpeg",
+                    "data_b64": base64.b64encode(b"".join(audio_chunks)).decode("ascii"),
+                }
+                yield f"data: {json.dumps(payload)}\n\n"
 
-        payload = {
-            "type": "audio",
-            "mime": "audio/mpeg",
-            "data_b64": base64.b64encode(b"".join(audio_chunks)).decode("ascii"),
-        }
-        yield f"data: {json.dumps(payload)}\n\n"
+        yield f"data: {json.dumps({'type': 'audio_end'})}\n\n"
 
     return StreamingResponse(
         event_generator(),

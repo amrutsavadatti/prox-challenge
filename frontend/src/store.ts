@@ -55,6 +55,12 @@ let activeAbortController: AbortController | null = null;
 let audioCtx: AudioContext | null = null;
 let currentSource: AudioBufferSourceNode | null = null;
 
+// Sequential audio queue — chunks arrive per-sentence; play them in order.
+const audioQueue: string[] = [];
+let audioQueuePlaying = false;
+// Called when the queue drains completely.
+let onQueueDrained: (() => void) | null = null;
+
 function getAudioContext(): AudioContext {
   if (!audioCtx || audioCtx.state === 'closed') {
     audioCtx = new (window.AudioContext ?? (window as any).webkitAudioContext)();
@@ -70,6 +76,47 @@ export function unlockAudioContext() {
 function stopCurrentAudio() {
   try { currentSource?.stop(); } catch { /* already stopped */ }
   currentSource = null;
+  audioQueue.length = 0;
+  audioQueuePlaying = false;
+  onQueueDrained = null;
+}
+
+function _playNextInQueue() {
+  if (audioQueue.length === 0) {
+    audioQueuePlaying = false;
+    onQueueDrained?.();
+    onQueueDrained = null;
+    return;
+  }
+  const b64 = audioQueue.shift()!;
+  let bytes: ArrayBuffer;
+  try {
+    bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0)).buffer;
+  } catch {
+    _playNextInQueue();
+    return;
+  }
+  const ctx = getAudioContext();
+  if (ctx.state === 'suspended') ctx.resume();
+  ctx.decodeAudioData(bytes).then((buffer) => {
+    stopCurrentAudio();
+    audioQueuePlaying = true;
+    const src = ctx.createBufferSource();
+    src.buffer = buffer;
+    src.connect(ctx.destination);
+    src.onended = () => { currentSource = null; _playNextInQueue(); };
+    src.start(0);
+    currentSource = src;
+  }).catch(() => _playNextInQueue());
+}
+
+function enqueueAudio(b64: string, onDrained: () => void) {
+  onQueueDrained = onDrained;
+  audioQueue.push(b64);
+  if (!audioQueuePlaying) {
+    audioQueuePlaying = true;
+    _playNextInQueue();
+  }
 }
 
 function playAudioFromBase64(b64: string, _mime: string, onEnd?: () => void, onError?: (msg: string) => void) {
@@ -481,7 +528,20 @@ export const useStore = create<AppState>()(persist((set, get) => ({
                   artifactPanelOpen: artifacts.length > 0 ? true : s.artifactPanelOpen,
                 };
               });
+            } else if (event.type === 'audio_chunk') {
+              // Sentence-level audio: enqueue and play sequentially.
+              // First chunk triggers isPlayingAudio; queue draining clears it.
+              if (!get().isPlayingAudio) {
+                set({ isPlayingAudio: true, audioError: null });
+              }
+              enqueueAudio(
+                String(event.data_b64 ?? ''),
+                () => set({ isPlayingAudio: false }),
+              );
+            } else if (event.type === 'audio_end') {
+              // All chunks have been sent; playback will finish naturally.
             } else if (event.type === 'audio') {
+              // Legacy single-chunk path (fallback).
               set({ isPlayingAudio: true, audioError: null });
               playAudioFromBase64(
                 String(event.data_b64 ?? ''),
