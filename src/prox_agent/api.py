@@ -252,10 +252,10 @@ async def chat_voice_stream(
         if not spoken.strip():
             return
 
-        audio_b64_parts: list[str] = []
+        audio_chunks: list[bytes] = []
         try:
             async for chunk in synthesize_stream(spoken, instructions=instructions):
-                audio_b64_parts.append(base64.b64encode(chunk).decode("ascii"))
+                audio_chunks.append(chunk)
         except VoiceConfigError as exc:
             yield f"data: {json.dumps({'type': 'tts_error', 'message': str(exc)})}\n\n"
             return
@@ -263,10 +263,11 @@ async def chat_voice_stream(
             yield f"data: {json.dumps({'type': 'tts_error', 'message': str(exc)})}\n\n"
             return
 
+        # Encode all bytes in one pass — per-chunk encoding breaks base64 alignment.
         payload = {
             "type": "audio",
             "mime": "audio/mpeg",
-            "data_b64": "".join(audio_b64_parts),
+            "data_b64": base64.b64encode(b"".join(audio_chunks)).decode("ascii"),
         }
         yield f"data: {json.dumps(payload)}\n\n"
 

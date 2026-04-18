@@ -24,12 +24,14 @@ interface AppState {
   isStreaming: boolean;
   streamingStatus: string | null;
   streamingMessageId: string | null;
+  isPlayingAudio: boolean;
 
   createChat: () => string;
   setActiveChat: (id: string) => void;
   deleteChat: (id: string) => void;
   sendMessage: (content: string, images?: AttachedImage[]) => void;
   sendVoiceMessage: (audio: Blob, mime: string) => void;
+  unlockAudio: () => void;
   stopPlayback: () => void;
   setActiveArtifact: (artifact: Artifact | null) => void;
   closeArtifact: (id: string) => void;
@@ -40,28 +42,55 @@ interface AppState {
 let nextId = 1;
 const uid = () => `${Date.now()}-${nextId++}`;
 
-let currentAudio: HTMLAudioElement | null = null;
-let currentAudioUrl: string | null = null;
+// ---------------------------------------------------------------------------
+// Audio playback — uses Web Audio API so the context can be unlocked during
+// the mic button press (a user gesture) and stays unlocked for the async TTS
+// response that arrives several seconds later.
+// ---------------------------------------------------------------------------
+let audioCtx: AudioContext | null = null;
+let currentSource: AudioBufferSourceNode | null = null;
+let onAudioEndCb: (() => void) | null = null;
 
-function stopCurrentAudio() {
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.src = '';
-    currentAudio = null;
+function getAudioContext(): AudioContext {
+  if (!audioCtx || audioCtx.state === 'closed') {
+    audioCtx = new (window.AudioContext ?? (window as any).webkitAudioContext)();
   }
-  if (currentAudioUrl) {
-    URL.revokeObjectURL(currentAudioUrl);
-    currentAudioUrl = null;
-  }
+  return audioCtx;
 }
 
-function playAudioFromBase64(b64: string, mime: string) {
+export function unlockAudioContext() {
+  const ctx = getAudioContext();
+  if (ctx.state === 'suspended') ctx.resume();
+}
+
+function stopCurrentAudio() {
+  try { currentSource?.stop(); } catch { /* already stopped */ }
+  currentSource = null;
+  onAudioEndCb = null;
+}
+
+function playAudioFromBase64(b64: string, _mime: string, onEnd?: () => void) {
   stopCurrentAudio();
-  const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
-  const blob = new Blob([bytes], { type: mime || 'audio/mpeg' });
-  currentAudioUrl = URL.createObjectURL(blob);
-  currentAudio = new Audio(currentAudioUrl);
-  currentAudio.play().catch(() => {});
+  if (!b64) return;
+  const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0)).buffer;
+  const ctx = getAudioContext();
+  if (ctx.state === 'suspended') ctx.resume();
+  ctx.decodeAudioData(bytes).then((buffer) => {
+    stopCurrentAudio();
+    const src = ctx.createBufferSource();
+    src.buffer = buffer;
+    src.connect(ctx.destination);
+    src.onended = () => {
+      currentSource = null;
+      onEnd?.();
+    };
+    src.start(0);
+    currentSource = src;
+    onAudioEndCb = onEnd ?? null;
+  }).catch((err) => {
+    console.warn('Audio decode failed:', err);
+    onEnd?.();
+  });
 }
 
 export const useStore = create<AppState>()(persist((set, get) => ({
@@ -74,6 +103,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
   isStreaming: false,
   streamingStatus: null,
   streamingMessageId: null,
+  isPlayingAudio: false,
 
   createChat: () => {
     const id = uid();
@@ -275,7 +305,12 @@ export const useStore = create<AppState>()(persist((set, get) => ({
     })();
   },
 
-  stopPlayback: () => stopCurrentAudio(),
+  unlockAudio: () => unlockAudioContext(),
+
+  stopPlayback: () => {
+    stopCurrentAudio();
+    set({ isPlayingAudio: false });
+  },
 
   sendVoiceMessage: (audio, mime) => {
     const state = get();
@@ -419,7 +454,12 @@ export const useStore = create<AppState>()(persist((set, get) => ({
                 };
               });
             } else if (event.type === 'audio') {
-              playAudioFromBase64(String(event.data_b64 ?? ''), String(event.mime ?? 'audio/mpeg'));
+              set({ isPlayingAudio: true });
+              playAudioFromBase64(
+                String(event.data_b64 ?? ''),
+                String(event.mime ?? 'audio/mpeg'),
+                () => set({ isPlayingAudio: false }),
+              );
             } else if (event.type === 'tts_error') {
               console.warn('TTS failed:', event.message);
             } else if (event.type === 'error') {
@@ -428,22 +468,29 @@ export const useStore = create<AppState>()(persist((set, get) => ({
           }
         }
       } catch (err: any) {
-        const errContent = `Error: ${err?.message ?? 'Voice request failed'}`;
-        set((s) => ({
-          chats: s.chats.map((c) =>
-            c.id === chatId
-              ? {
-                  ...c,
-                  messages: c.messages.map((m) =>
-                    m.id === streamingMsgId ? { ...m, content: errContent } : m
-                  ),
-                }
-              : c
-          ),
-          isStreaming: false,
-          streamingStatus: null,
-          streamingMessageId: null,
-        }));
+        // Only overwrite message content if the answer hasn't arrived yet.
+        // Post-answer errors (TTS failures) must not clobber already-rendered text.
+        if (!answerReceived) {
+          const errContent = `Error: ${err?.message ?? 'Voice request failed'}`;
+          set((s) => ({
+            chats: s.chats.map((c) =>
+              c.id === chatId
+                ? {
+                    ...c,
+                    messages: c.messages.map((m) =>
+                      m.id === streamingMsgId ? { ...m, content: errContent } : m
+                    ),
+                  }
+                : c
+            ),
+            isStreaming: false,
+            streamingStatus: null,
+            streamingMessageId: null,
+          }));
+        } else {
+          set({ isStreaming: false, streamingStatus: null, streamingMessageId: null });
+          console.warn('Voice post-answer error:', err?.message);
+        }
       }
     })();
   },

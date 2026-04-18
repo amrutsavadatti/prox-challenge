@@ -22,12 +22,38 @@ interface Props {
 export function VoiceButton({ disabled }: Props) {
   const sendVoiceMessage = useStore((s) => s.sendVoiceMessage);
   const stopPlayback = useStore((s) => s.stopPlayback);
+  const unlockAudio = useStore((s) => s.unlockAudio);
   const [isRecording, setIsRecording] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const streamRef = useRef<MediaStream | null>(null);
   const mimeRef = useRef<string>('');
+
+  // Ctrl+Space hold-to-talk
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.code === 'Space' && !e.repeat) {
+        e.preventDefault();
+        if (!isRecording && !disabled) {
+          unlockAudio();
+          void start();
+        }
+      }
+    };
+    const onKeyUp = (e: KeyboardEvent) => {
+      if (e.code === 'Space' && isRecording) {
+        e.preventDefault();
+        stop();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    window.addEventListener('keyup', onKeyUp);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+      window.removeEventListener('keyup', onKeyUp);
+    };
+  }, [isRecording, disabled]);
 
   useEffect(() => {
     return () => {
@@ -38,6 +64,7 @@ export function VoiceButton({ disabled }: Props) {
 
   const start = async () => {
     setError(null);
+    unlockAudio(); // unlock AudioContext while we're inside a user gesture
     stopPlayback();
 
     if (!navigator.mediaDevices?.getUserMedia) {
@@ -92,7 +119,7 @@ export function VoiceButton({ disabled }: Props) {
         onClick={toggle}
         disabled={disabled && !isRecording}
         aria-label={isRecording ? 'Stop recording' : 'Record voice message'}
-        title={isRecording ? 'Stop' : 'Hold to record (click to start, click again to send)'}
+        title={isRecording ? 'Release Ctrl+Space or click to send' : 'Click or hold Ctrl+Space to record'}
         className={
           isRecording
             ? 'shrink-0 w-8 h-8 rounded-lg bg-red-500 text-white flex items-center justify-center animate-pulse'

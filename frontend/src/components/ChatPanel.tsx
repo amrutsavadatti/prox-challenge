@@ -10,6 +10,7 @@ import {
   Paperclip,
   X,
   Download,
+  Volume2,
 } from 'lucide-react';
 import type { Artifact, Citation, AttachedImage } from '@/types';
 import { AlertTriangle } from 'lucide-react';
@@ -243,7 +244,7 @@ function readImageAsDataUrl(file: File): Promise<string> {
 }
 
 export function ChatPanel() {
-  const { chats, activeChatId, sendMessage, isStreaming, streamingStatus, streamingMessageId, sidebarOpen, toggleSidebar, setActiveArtifact } = useStore();
+  const { chats, activeChatId, sendMessage, isStreaming, streamingStatus, streamingMessageId, isPlayingAudio, stopPlayback, sidebarOpen, toggleSidebar, setActiveArtifact } = useStore();
   const [input, setInput] = useState('');
   const [pendingImages, setPendingImages] = useState<AttachedImage[]>([]);
   const [isDragging, setIsDragging] = useState(false);
@@ -459,6 +460,15 @@ export function ChatPanel() {
               <Paperclip size={16} />
             </button>
             <VoiceButton disabled={isStreaming} />
+            {isPlayingAudio && (
+              <button
+                onClick={stopPlayback}
+                title="Stop audio"
+                className="shrink-0 w-8 h-8 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center hover:bg-orange-500/30 transition-colors"
+              >
+                <Volume2 size={16} className="animate-pulse" />
+              </button>
+            )}
             <textarea
               ref={textareaRef}
               value={input}
