@@ -108,7 +108,7 @@ function MessageBubble({
             {images.map((img) => (
               <img
                 key={img.id}
-                src={img.dataUrl}
+                src={img.dataUrl ?? (img.serverUrl ? `${API_BASE}${img.serverUrl}` : undefined)}
                 alt={img.name}
                 className="max-h-48 max-w-[240px] rounded-xl border border-border object-cover"
               />
@@ -154,7 +154,21 @@ function MessageBubble({
                 prose-td:border prose-td:border-border prose-td:px-2 prose-td:py-1
                 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:bg-muted-foreground/10 prose-code:before:content-none prose-code:after:content-none
                 prose-strong:text-foreground">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    code({ className, children, ...props }) {
+                      const lang = /language-(\w+)/.exec(className ?? '')?.[1];
+                      if (lang === 'mermaid') {
+                        // Diagram is rendered in the artifact panel — suppress raw code here
+                        return null;
+                      }
+                      return <code className={className} {...props}>{children}</code>;
+                    },
+                  }}
+                >
+                  {content}
+                </ReactMarkdown>
               </div>
               {isStreaming && streamingStatus && (
                 <div className="flex items-center gap-1.5 mt-2 pt-2 border-t border-border/40">
@@ -269,27 +283,39 @@ export function ChatPanel() {
       setAttachError('Only image files are supported.');
       return;
     }
-    const next: AttachedImage[] = [];
+    setAttachError(null);
+
     for (const file of files) {
       if (file.size > MAX_IMAGE_BYTES) {
         setAttachError(`${file.name} is larger than 8 MB.`);
         continue;
       }
+
+      // Add placeholder immediately so the user sees something
+      const tempId = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      let dataUrl: string;
       try {
-        const dataUrl = await readImageAsDataUrl(file);
-        next.push({
-          id: `${Date.now()}-${Math.random().toString(36).slice(2)}`,
-          name: file.name,
-          mimeType: file.type,
-          dataUrl,
-        });
+        dataUrl = await readImageAsDataUrl(file);
       } catch {
         setAttachError(`Could not read ${file.name}.`);
+        continue;
       }
-    }
-    if (next.length > 0) {
-      setPendingImages((cur) => [...cur, ...next]);
-      setAttachError(null);
+      setPendingImages((cur) => [...cur, { id: tempId, name: file.name, mimeType: file.type, dataUrl }]);
+
+      // Upload to server; swap data URL for server URL on success
+      try {
+        const form = new FormData();
+        form.append('image', file);
+        const res = await fetch(`${API_BASE}/upload`, { method: 'POST', body: form });
+        if (!res.ok) throw new Error(`Upload failed (${res.status})`);
+        const { url } = await res.json() as { url: string };
+        setPendingImages((cur) => cur.map((img) =>
+          img.id === tempId ? { ...img, dataUrl: undefined, serverUrl: url } : img
+        ));
+      } catch (e: any) {
+        setAttachError(`Upload failed for ${file.name}: ${(e as Error)?.message ?? e}`);
+        setPendingImages((cur) => cur.filter((img) => img.id !== tempId));
+      }
     }
   };
 
@@ -315,6 +341,7 @@ export function ChatPanel() {
   const handleSend = () => {
     const trimmed = input.trim();
     if ((!trimmed && pendingImages.length === 0) || isStreaming) return;
+    if (pendingImages.some((img) => !img.serverUrl)) return; // still uploading
     sendMessage(trimmed || '(image attached)', pendingImages);
     setInput('');
     setPendingImages([]);
@@ -435,22 +462,39 @@ export function ChatPanel() {
 
           {pendingImages.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-2">
-              {pendingImages.map((img) => (
-                <div key={img.id} className="relative group">
-                  <img
-                    src={img.dataUrl}
-                    alt={img.name}
-                    className="h-16 w-16 rounded-lg border border-border object-cover"
-                  />
-                  <button
-                    onClick={() => removePendingImage(img.id)}
-                    className="absolute -top-1.5 -right-1.5 p-0.5 rounded-full bg-background border border-border opacity-80 hover:opacity-100 hover:bg-destructive hover:text-destructive-foreground transition"
-                    aria-label={`Remove ${img.name}`}
-                  >
-                    <X size={12} />
-                  </button>
-                </div>
-              ))}
+              {pendingImages.map((img) => {
+                const src = img.dataUrl ?? (img.serverUrl ? `${API_BASE}${img.serverUrl}` : undefined);
+                const uploading = !img.serverUrl;
+                return (
+                  <div key={img.id} className="relative group">
+                    {src ? (
+                      <img
+                        src={src}
+                        alt={img.name}
+                        className={`h-16 w-16 rounded-lg border border-border object-cover ${uploading ? 'opacity-50' : ''}`}
+                      />
+                    ) : (
+                      <div className="h-16 w-16 rounded-lg border border-border bg-muted flex items-center justify-center">
+                        <Loader2 size={18} className="text-muted-foreground animate-spin" />
+                      </div>
+                    )}
+                    {uploading && (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Loader2 size={14} className="text-white animate-spin drop-shadow" />
+                      </div>
+                    )}
+                    {!uploading && (
+                      <button
+                        onClick={() => removePendingImage(img.id)}
+                        className="absolute -top-1.5 -right-1.5 p-0.5 rounded-full bg-background border border-border opacity-80 hover:opacity-100 hover:bg-destructive hover:text-destructive-foreground transition"
+                        aria-label={`Remove ${img.name}`}
+                      >
+                        <X size={12} />
+                      </button>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           )}
 

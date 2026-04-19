@@ -22,7 +22,8 @@ export interface AttachedImage {
   id: string;
   name: string;
   mimeType: string;
-  dataUrl: string;
+  dataUrl?: string;   // local preview only — never persisted
+  serverUrl?: string; // /uploads/... path returned by POST /upload
 }
 
 export interface Message {

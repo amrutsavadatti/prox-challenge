@@ -99,7 +99,9 @@ function _playNextInQueue() {
   const ctx = getAudioContext();
   if (ctx.state === 'suspended') ctx.resume();
   ctx.decodeAudioData(bytes).then((buffer) => {
-    stopCurrentAudio();
+    // Stop only the previous source node — do NOT clear the queue
+    try { currentSource?.stop(); } catch { /* already stopped */ }
+    currentSource = null;
     audioQueuePlaying = true;
     const src = ctx.createBufferSource();
     src.buffer = buffer;
@@ -213,7 +215,10 @@ export const useStore = create<AppState>()(persist((set, get) => ({
       id: uid(),
       role: 'user' as const,
       content,
-      images: images.length > 0 ? images : undefined,
+      // Strip dataUrl before storing — serverUrl is used for display after upload
+      images: images.length > 0
+        ? images.map(({ dataUrl: _drop, ...rest }) => rest)
+        : undefined,
       timestamp: new Date(),
     };
 
@@ -249,7 +254,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
       images: images.map((img) => ({
         name: img.name,
         mime_type: img.mimeType,
-        data_url: img.dataUrl,
+        server_url: img.serverUrl,
       })),
     });
 
@@ -272,6 +277,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
         const decoder = new TextDecoder();
         let buffer = '';
 
+        let receivedDone = false;
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;
@@ -304,6 +310,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
             } else if (event.type === 'tool_call') {
               set({ streamingStatus: event.label });
             } else if (event.type === 'done') {
+              receivedDone = true;
               const artifacts = parseArtifacts(Array.isArray(event.artifacts) ? event.artifacts : []);
               // Finalize: replace streaming placeholder with full structured message
               set((s) => {
@@ -343,6 +350,27 @@ export const useStore = create<AppState>()(persist((set, get) => ({
               throw new Error(event.message ?? 'Unknown stream error');
             }
           }
+        }
+
+        // Stream closed without a 'done' event (backend crash, network drop, etc.)
+        if (!receivedDone && get().streamingMessageId === streamingMsgId) {
+          set((s) => ({
+            chats: s.chats.map((c) =>
+              c.id === chatId
+                ? {
+                    ...c,
+                    messages: c.messages.map((m) =>
+                      m.id === streamingMsgId
+                        ? { ...m, content: m.content || 'Error: Response stream ended unexpectedly. Please try again.' }
+                        : m
+                    ),
+                  }
+                : c
+            ),
+            isStreaming: false,
+            streamingStatus: null,
+            streamingMessageId: null,
+          }));
         }
       } catch (err: any) {
         activeAbortController = null;

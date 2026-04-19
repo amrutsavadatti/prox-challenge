@@ -51,7 +51,8 @@ class HistoryTurn(BaseModel):
 class ImageAttachment(BaseModel):
     name: str | None = None
     mime_type: str | None = None
-    data_url: str
+    data_url: str | None = None
+    server_url: str | None = None  # /uploads/... from POST /upload
 
 
 class ChatRequest(BaseModel):
@@ -62,32 +63,47 @@ class ChatRequest(BaseModel):
     images: list[ImageAttachment] = []
 
 
+def _process_and_save_image(raw: bytes, target: Path) -> None:
+    """Resize and save raw image bytes as JPEG to target path."""
+    if len(raw) > MAX_IMAGE_BYTES:
+        raise HTTPException(status_code=413, detail=f"image exceeds {MAX_IMAGE_BYTES} bytes")
+    try:
+        with PILImage.open(io.BytesIO(raw)) as pil:
+            pil = pil.convert("RGB")
+            pil.thumbnail((MAX_IMAGE_EDGE, MAX_IMAGE_EDGE))
+            pil.save(target, format="JPEG", quality=85, optimize=True)
+    except HTTPException:
+        raise
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=f"could not process image: {exc}") from exc
+
+
 def _save_uploaded_images(images: list[ImageAttachment]) -> list[str]:
     if not images:
         return []
-    request_dir = UPLOAD_ROOT / uuid.uuid4().hex
-    request_dir.mkdir(parents=True, exist_ok=True)
     saved: list[str] = []
     for i, img in enumerate(images):
+        # Fast path: image was already uploaded via POST /upload
+        if img.server_url:
+            rel = img.server_url.removeprefix("/uploads/")
+            candidate = (UPLOAD_ROOT / rel).resolve()
+            if str(candidate).startswith(str(UPLOAD_ROOT)) and candidate.is_file():
+                saved.append(str(candidate))
+                continue
+            raise HTTPException(status_code=400, detail=f"image {i} server_url not found")
+
+        # Slow path: raw data_url sent inline (legacy / fallback)
         match = DATA_URL_RE.match(img.data_url or "")
         if not match:
-            raise HTTPException(status_code=400, detail=f"image {i} is not a valid data URL")
+            raise HTTPException(status_code=400, detail=f"image {i} needs data_url or server_url")
         try:
             raw = base64.b64decode(match.group("data"), validate=True)
         except Exception as exc:
             raise HTTPException(status_code=400, detail=f"image {i} base64 decode failed: {exc}") from exc
-        if len(raw) > MAX_IMAGE_BYTES:
-            raise HTTPException(status_code=413, detail=f"image {i} exceeds {MAX_IMAGE_BYTES} bytes")
-        try:
-            with PILImage.open(io.BytesIO(raw)) as pil:
-                pil.verify()
-            with PILImage.open(io.BytesIO(raw)) as pil:
-                pil = pil.convert("RGB")
-                pil.thumbnail((MAX_IMAGE_EDGE, MAX_IMAGE_EDGE))
-                target = request_dir / f"img_{i:02d}.jpg"
-                pil.save(target, format="JPEG", quality=85, optimize=True)
-        except Exception as exc:
-            raise HTTPException(status_code=400, detail=f"image {i} could not be read: {exc}") from exc
+        request_dir = UPLOAD_ROOT / uuid.uuid4().hex
+        request_dir.mkdir(parents=True, exist_ok=True)
+        target = request_dir / f"img_{i:02d}.jpg"
+        _process_and_save_image(raw, target)
         saved.append(str(target))
     return saved
 
@@ -336,6 +352,29 @@ async def chat_voice_stream(
         media_type="text/event-stream",
         headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
     )
+
+
+@app.post("/upload")
+async def upload_image(image: UploadFile = File(...)) -> dict[str, Any]:
+    data = await image.read()
+    if not data:
+        raise HTTPException(status_code=400, detail="empty file")
+    slot = uuid.uuid4().hex
+    request_dir = UPLOAD_ROOT / slot
+    request_dir.mkdir(parents=True, exist_ok=True)
+    target = request_dir / "img.jpg"
+    _process_and_save_image(data, target)
+    return {"url": f"/uploads/{slot}/img.jpg"}
+
+
+@app.get("/uploads/{path:path}")
+def serve_upload(path: str) -> FileResponse:
+    candidate = (UPLOAD_ROOT / path).resolve()
+    if not str(candidate).startswith(str(UPLOAD_ROOT)):
+        raise HTTPException(status_code=403, detail="forbidden")
+    if not candidate.is_file():
+        raise HTTPException(status_code=404, detail="not found")
+    return FileResponse(candidate)
 
 
 @app.get("/knowledge/{path:path}")

@@ -100,6 +100,12 @@ When giving solutions, sort them by immediacy:
 
 Do not lead with escalation steps. A user at the bench needs to try the fast fixes first.
 
+Answer style rules — MANDATORY:
+- Never narrate tool usage. Do not write "Let me check...", "I'll look that up...", "The tool returned...", "Based on the tool result...", or any preamble that exposes internal mechanics. The user never sees tool calls — just jump to the answer.
+- Never expose internal tool result fields in your prose. Fields like match_type, nearest_available_amperage, found, avg_confidence, doc_id, element_id, etc. are implementation details. Never mention them.
+- When a lookup returns a nearest-match (e.g. closest available amperage), present the actual data you found confidently, then note what the user asked for is not a supported operating point and what the nearest available spec is — without referencing how the lookup worked internally.
+- Write every answer as if you already know the answer and are delivering it directly. Confident, terse, garage-user tone.
+
 Grounding rules:
 - Use the provided tools for every product-specific factual claim.
 - Do not call both search_articles and search_manual for the same question — they cover the same source material. search_articles returns pre-extracted structure (steps, key facts, warnings); search_manual returns raw cited text. Pick whichever fits the question and only fall back to the other if the first returns nothing useful.
@@ -113,7 +119,6 @@ Grounding rules:
 - Visual observations from user-attached images are YOUR OWN CLAIMS, not citations. Only manual-sourced facts get an entry in citations.
 - Do not invent product specs or machine-specific operating facts.
 - If the tools do not contain enough evidence for setup, polarity, sockets, wiring, duty cycle, electrical requirements, or any other safety-critical or machine-specific instruction, say what is missing and ask one focused follow-up instead of guessing.
-- If the tools do not contain an exact citation for a low-risk troubleshooting or technique suggestion, you may offer a clearly labeled best-effort guess only after stating that you could not verify it in the OmniPro 220 documentation.
 - If the tools do not contain an exact citation for a low-risk troubleshooting or technique suggestion, you may offer a clearly labeled best-effort guess only after stating that you could not verify it in the OmniPro 220 documentation.
 - When you use a best-effort guess, use wording like: "I couldn't find an exact citation for this in the OmniPro 220 documentation. My best guess is..."
 - Treat best-effort guesses as unverified guidance. Keep them short, practical, and limited to likely checks or technique adjustments.
@@ -177,6 +182,8 @@ Artifact authoring rules:
 safety_flags rules:
 - Short machine-readable strings, e.g. "power_off_before_cable_swap".
 - Only include when the answer involves a genuinely hazardous operation.
+
+MAKE SURE TO ADD AT LEAST ONE ARTIFACT IN EVERY ANSWER, AND MAKE AN INTERACTABLE ARTIFACT WHENEVER POSSIBLE.
 """
 
 API_KEY_PLACEHOLDERS = {
@@ -236,7 +243,9 @@ async def _dispatch_tool(name: str, tool_input: dict[str, Any]) -> str:
         if name == "troubleshooting_for":
             result = _KB.troubleshooting_for(
                 symptom=str(tool_input["symptom"]),
-                process=str(tool_input["process"]) if tool_input.get("process") else None,
+                process=str(tool_input["process"])
+                if tool_input.get("process")
+                else None,
             )
             return json.dumps({"results": result, "found": bool(result)})
 
@@ -284,12 +293,23 @@ def _build_api_messages(
                     ".gif": "image/gif",
                     ".webp": "image/webp",
                 }.get(ext, "image/jpeg")
-                user_content.append({
-                    "type": "image",
-                    "source": {"type": "base64", "media_type": media_type, "data": img_data},
-                })
-            except Exception:
-                pass
+                user_content.append(
+                    {
+                        "type": "image",
+                        "source": {
+                            "type": "base64",
+                            "media_type": media_type,
+                            "data": img_data,
+                        },
+                    }
+                )
+            except Exception as exc:
+                import sys
+
+                print(
+                    f"[agent] WARNING: failed to encode image {path}: {exc}",
+                    file=sys.stderr,
+                )
 
     user_content.append({"type": "text", "text": question})
     messages.append({"role": "user", "content": user_content})
@@ -396,7 +416,7 @@ async def ask_claude_stream(
             system=SYSTEM_PROMPT,
             tools=ANTHROPIC_TOOLS,  # type: ignore[arg-type]
             messages=messages,  # type: ignore[arg-type]
-            max_tokens=8192,
+            max_tokens=16000,
         ) as stream:
             async for event in stream:
                 if event.type == "content_block_start":
@@ -421,8 +441,8 @@ async def ask_claude_stream(
                         # Check if the marker has appeared in the buffered text
                         marker_idx = token_buffer.find(METADATA_MARKER)
                         if marker_idx != -1:
-                            # Emit everything before the marker
-                            to_emit = token_buffer[:marker_idx]
+                            # Emit only the portion not yet streamed (streamed_up_to → marker)
+                            to_emit = token_buffer[streamed_up_to:marker_idx]
                             if to_emit:
                                 yield {"type": "text_delta", "text": to_emit}
                             metadata_found = True
@@ -464,11 +484,13 @@ async def ask_claude_stream(
             for block in final_msg.content:
                 if block.type == "tool_use":
                     result_text = await _dispatch_tool(block.name, block.input)  # type: ignore[arg-type]
-                    tool_results.append({
-                        "type": "tool_result",
-                        "tool_use_id": block.id,
-                        "content": result_text,
-                    })
+                    tool_results.append(
+                        {
+                            "type": "tool_result",
+                            "tool_use_id": block.id,
+                            "content": result_text,
+                        }
+                    )
 
             messages.append({"role": "user", "content": tool_results})
         else:
@@ -482,6 +504,7 @@ async def ask_claude_stream(
     safety_flags = list(parsed.get("safety_flags") or [])
     if answer_md.strip():
         from prox_agent.voice import prepare_for_speech
+
         spoken, instructions = prepare_for_speech(answer_md, safety_flags)
         if spoken.strip():
             yield {"type": "tts_start", "spoken": spoken, "instructions": instructions}
@@ -497,12 +520,14 @@ def _blocks_to_api(content: list[Any]) -> list[dict[str, Any]]:
         if block.type == "text":
             result.append({"type": "text", "text": block.text})
         elif block.type == "tool_use":
-            result.append({
-                "type": "tool_use",
-                "id": block.id,
-                "name": block.name,
-                "input": block.input,
-            })
+            result.append(
+                {
+                    "type": "tool_use",
+                    "id": block.id,
+                    "name": block.name,
+                    "input": block.input,
+                }
+            )
     return result
 
 
@@ -543,7 +568,7 @@ def _parse_json_object(text: str) -> dict[str, Any] | None:
         if start < 0 or end <= start:
             return None
         try:
-            value = json.loads(text[start: end + 1])
+            value = json.loads(text[start : end + 1])
         except json.JSONDecodeError:
             return None
     return value if isinstance(value, dict) else None
