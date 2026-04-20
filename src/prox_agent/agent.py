@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 import base64
+import html
 import json
 import os
+import re
+import unicodedata
 from collections.abc import AsyncGenerator
 from pathlib import Path
 from typing import Any
@@ -178,6 +181,12 @@ Artifact authoring rules:
 - For duty-cycle answers, always emit a type="interactive" calculator whose default values match the exact row from lookup_duty_cycle.
 - For troubleshooting, emit type="mermaid" rooted in the tool output's check list.
 - When the user asks "show me X" (a figure, diagram, schematic, panel), emit type="image" with the URL.
+- Mermaid safety rules:
+  - You may use any Mermaid features supported by the renderer.
+  - Preserve valid Mermaid structure. Do NOT simplify or flatten the diagram unless the source is empty.
+  - Normalize smart punctuation to plain Mermaid-safe equivalents: curly quotes to straight quotes, en/em dashes to `-`, unicode minus to `-`, non-breaking spaces to normal spaces.
+  - In node labels, edge labels, subgraph titles, note text, and other human-readable text segments, escape characters that commonly break parsing by using Mermaid-safe entities when needed, especially raw `"` inside labels.
+  - Keep Mermaid syntax tokens intact. Only sanitize human-readable text, not the diagram structure.
 
 safety_flags rules:
 - Short machine-readable strings, e.g. "power_off_before_cable_swap".
@@ -340,6 +349,165 @@ def _parse_response(accumulated_text: str) -> dict[str, Any]:
     }
 
 
+def _finalize_response_payload(payload: dict[str, Any]) -> dict[str, Any]:
+    normalized = normalize_response_contract(payload)
+    artifacts = normalized.get("artifacts", [])
+    if isinstance(artifacts, list):
+        normalized["artifacts"] = [
+            _sanitize_normalized_artifact(artifact) for artifact in artifacts
+        ]
+    return normalized
+
+
+def _sanitize_normalized_artifact(artifact: Any) -> dict[str, Any]:
+    if not isinstance(artifact, dict):
+        return {
+            "id": "markdown:artifact:1",
+            "type": "markdown",
+            "title": "Artifact",
+            "summary": "Artifact",
+            "content": "",
+        }
+    if artifact.get("type") != "mermaid":
+        return artifact
+
+    sanitized = dict(artifact)
+    sanitized["content"] = _sanitize_mermaid_source(
+        str(artifact.get("content") or ""),
+        title=str(artifact.get("title") or ""),
+        summary=str(artifact.get("summary") or ""),
+    )
+    return sanitized
+
+
+def _sanitize_mermaid_source(source: str, *, title: str, summary: str) -> str:
+    normalized = _normalize_mermaid_text(source)
+    if not normalized.strip():
+        return _fallback_mermaid_source(title=title, summary=summary)
+
+    sanitized_lines = [_sanitize_mermaid_line(line) for line in normalized.splitlines()]
+    sanitized = "\n".join(sanitized_lines).strip()
+    return sanitized or _fallback_mermaid_source(title=title, summary=summary)
+
+
+def _fallback_mermaid_source(*, title: str, summary: str) -> str:
+    label = _sanitize_mermaid_text_segment(title or summary or "Diagram")
+    return f'flowchart TD\n    n0["{label}"]'
+
+
+def _sanitize_mermaid_line(line: str) -> str:
+    stripped = line.strip()
+    if not stripped or stripped.startswith("%%"):
+        return line
+
+    line = _sanitize_mermaid_shape_labels(line)
+    line = re.sub(
+        r"\|([^|\n]+)\|",
+        lambda match: f"|{_sanitize_mermaid_text_segment(match.group(1))}|",
+        line,
+    )
+
+    if "@{" in line:
+        line = re.sub(
+            r'(\blabel\s*:\s*")([^"\n]*?)(")',
+            lambda match: (
+                f'{match.group(1)}{_sanitize_mermaid_text_segment(match.group(2))}{match.group(3)}'
+            ),
+            line,
+        )
+
+    note_match = re.match(r"^(\s*note\b[^:]*:\s*)(.*)$", line, flags=re.IGNORECASE)
+    if note_match is not None:
+        return (
+            f"{note_match.group(1)}"
+            f"{_sanitize_mermaid_text_segment(note_match.group(2))}"
+        )
+
+    subgraph_match = re.match(r"^(\s*subgraph\s+)(.+)$", line, flags=re.IGNORECASE)
+    if subgraph_match is not None and not re.search(r"[\[\(\{]", subgraph_match.group(2)):
+        return (
+            f"{subgraph_match.group(1)}"
+            f"{_sanitize_mermaid_text_segment(subgraph_match.group(2))}"
+        )
+
+    return line
+
+
+def _sanitize_mermaid_shape_labels(line: str) -> str:
+    patterns = (
+        (r"\(\(([^()\n]*)\)\)", "((", "))"),
+        (r"\[\[([^\[\]\n]*)\]\]", "[[", "]]"),
+        (r"\[\(([^()\n]*)\)\]", "[(", ")]"),
+        (r"\(\[([^\[\]\n]*)\]\)", "([", "])"),
+        (r"\{\{([^{}\n]*)\}\}", "{{", "}}"),
+        (r"\[/([^\n]*?)/\]", "[/", "/]"),
+        (r"\[\\([^\n]*?)\\\]", "[\\", "\\]"),
+        (r"\[/([^\n]*?)\\\]", "[/", "\\]"),
+        (r"\[\\([^\n]*?)/\]", "[\\", "/]"),
+        (r"\[([^\[\]\n]*)\]", "[", "]"),
+        (r"\(([^()\n]*)\)", "(", ")"),
+    )
+
+    if "@{" not in line:
+        patterns += ((r"\{([^{}\n]*)\}", "{", "}"),)
+
+    for pattern, opener, closer in patterns:
+        line = re.sub(
+            pattern,
+            lambda match: (
+                f"{opener}{_sanitize_mermaid_text_segment(match.group(1))}{closer}"
+            ),
+            line,
+        )
+    return line
+
+
+def _sanitize_mermaid_text_segment(text: str) -> str:
+    value = _normalize_mermaid_text(text)
+    value = re.sub(r"[\x00-\x08\x0B\x0C\x0E-\x1F]", " ", value)
+    value = re.sub(r"&(?!(?:#\d+|#x[0-9A-Fa-f]+|[A-Za-z][A-Za-z0-9]+);)", "&amp;", value)
+    replacements = {
+        '"': "&quot;",
+        "#": "&#35;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "[": "&#91;",
+        "]": "&#93;",
+        "{": "&#123;",
+        "}": "&#125;",
+        "|": "&#124;",
+    }
+    for old, new in replacements.items():
+        value = value.replace(old, new)
+    return value
+
+
+def _normalize_mermaid_text(text: str) -> str:
+    text = html.unescape(text or "")
+    replacements = {
+        "\u00a0": " ",
+        "\u2010": "-",
+        "\u2011": "-",
+        "\u2012": "-",
+        "\u2013": "-",
+        "\u2014": "-",
+        "\u2018": "'",
+        "\u2019": "'",
+        "\u201c": '"',
+        "\u201d": '"',
+        "\u2022": "-",
+        "\u2192": "->",
+        "\u2212": "-",
+        "\u00bc": "1/4",
+        "\u00bd": "1/2",
+        "\u00be": "3/4",
+    }
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+    text = unicodedata.normalize("NFKC", text)
+    return re.sub(r"[\u200B-\u200D\uFEFF]", "", text)
+
+
 async def ask_claude(
     question: str,
     *,
@@ -373,7 +541,7 @@ async def ask_claude(
         return {k: v for k, v in done_event.items() if k != "type"}
 
     parsed = _parse_response("".join(accumulated))
-    return normalize_response_contract(parsed)
+    return _finalize_response_payload(parsed)
 
 
 async def ask_claude_stream(
@@ -497,7 +665,7 @@ async def ask_claude_stream(
             break
 
     parsed = _parse_response(full_text)
-    parsed = normalize_response_contract(parsed)
+    parsed = _finalize_response_payload(parsed)
 
     # Emit tts_start before done so voice endpoint can start TTS in parallel.
     answer_md = str(parsed.get("answer_markdown") or "")
