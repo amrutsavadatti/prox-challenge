@@ -25,6 +25,45 @@ The answer path is grounded. Product-specific factual claims are expected to com
 
 ## Quick Setup
 
+### One-command setup
+
+The repo includes bootstrap scripts that install the required toolchain, copy `.env.example` to `.env`, and install backend/frontend dependencies.
+
+macOS/Linux:
+
+```bash
+./scripts/setup.sh
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\setup.ps1
+```
+
+Windows CMD:
+
+```bat
+scripts\setup.bat
+```
+
+What the script sets up:
+
+- `Python 3.12` via `uv`
+- `Node 20.19.0` via `Volta`
+- backend dependencies via `uv sync`
+- frontend dependencies via `npm install`
+- `.env` copied from `.env.example` if it does not already exist
+
+After it finishes, open `.env` and add your API keys, then start the backend and frontend as shown below.
+
+After running the setup script:
+
+1. Close the current shell or terminal session completely.
+2. Open a fresh terminal.
+3. Fill in `.env` with your API keys.
+4. Run the backend and frontend commands shown below.
+
 ### Prerequisites
 
 - Python 3.12+
@@ -70,14 +109,37 @@ cd ..
 
 Start the backend:
 
+macOS/Linux:
+
 ```bash
 PYTHONPATH=src uv run uvicorn prox_agent.api:app --port 8000 --reload
 ```
 
+Windows PowerShell:
+
+```powershell
+$env:PYTHONPATH = "src"; uv run uvicorn prox_agent.api:app --port 8000 --reload
+```
+
+Windows CMD:
+
+```bat
+set PYTHONPATH=src && uv run uvicorn prox_agent.api:app --port 8000 --reload
+```
+
 Start the frontend in a second terminal:
+
+macOS/Linux or Windows CMD:
 
 ```bash
 cd frontend
+npm run dev
+```
+
+Windows PowerShell:
+
+```powershell
+Set-Location frontend
 npm run dev
 ```
 
@@ -91,8 +153,22 @@ The frontend talks to `http://localhost:8000` by default. If your backend is els
 
 ### 4. Optional smoke test
 
+macOS/Linux:
+
 ```bash
 PYTHONPATH=src uv run python -m prox_agent.cli smoke
+```
+
+Windows PowerShell:
+
+```powershell
+$env:PYTHONPATH = "src"; uv run python -m prox_agent.cli smoke
+```
+
+Windows CMD:
+
+```bat
+set PYTHONPATH=src && uv run python -m prox_agent.cli smoke
 ```
 
 This validates the local knowledge bundle, deterministic lookups, OCR-backed retrieval, and image retrieval before using the full app.
