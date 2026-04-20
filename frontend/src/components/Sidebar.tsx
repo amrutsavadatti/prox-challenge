@@ -109,11 +109,11 @@ export function Sidebar() {
       {/* Footer */}
       <div className="p-3 border-t border-sidebar-border">
         <div className="flex items-center gap-2 px-2">
-          <div className="w-7 h-7 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white text-xs font-bold">
-            P
+          <div className="w-7 h-7 rounded-full bg-gradient-to-br from-red-700 via-orange-600 to-yellow-500 flex items-center justify-center text-white text-xs font-bold shadow-[0_0_10px_rgba(255,100,50,0.6)]">
+            M
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium truncate">Product Assistant</p>
+            <p className="text-sm font-medium truncate">MARS</p>
             <p className="text-xs text-muted-foreground">
               Made by Amrut with ❤️
             </p>
