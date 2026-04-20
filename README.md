@@ -1,6 +1,7 @@
 # Vulcan OmniPro 220 Multimodal Product Agent
 
-###Watch the Demo video by clicking link below:
+### Watch the Demo video by clicking link below:
+
 [MARS:Machine Assistance & Resolution System](https://youtu.be/yuOQoFR6Lp0) Demo
 
 This is my submission for the Prox founding engineer challenge.
