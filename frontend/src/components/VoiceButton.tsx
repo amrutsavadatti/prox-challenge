@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Mic, Square } from 'lucide-react';
 import { useStore } from '@/store';
 
@@ -17,6 +17,12 @@ function pickMime(): string {
 
 interface Props {
   disabled?: boolean;
+}
+
+function getErrorMessage(error: unknown, fallback: string): string {
+  if (error instanceof Error && error.message) return error.message;
+  if (typeof error === 'string' && error) return error;
+  return fallback;
 }
 
 export function VoiceButton({ disabled }: Props) {
@@ -45,32 +51,7 @@ export function VoiceButton({ disabled }: Props) {
     };
   }, []);
 
-  // Ctrl+Space hold-to-talk
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.code === 'Space' && !e.repeat) {
-        e.preventDefault();
-        if (!isRecording && !disabled) {
-          unlockAudio();
-          void start();
-        }
-      }
-    };
-    const onKeyUp = (e: KeyboardEvent) => {
-      if (e.code === 'Space' && isRecording) {
-        e.preventDefault();
-        stop();
-      }
-    };
-    window.addEventListener('keydown', onKeyDown);
-    window.addEventListener('keyup', onKeyUp);
-    return () => {
-      window.removeEventListener('keydown', onKeyDown);
-      window.removeEventListener('keyup', onKeyUp);
-    };
-  }, [isRecording, disabled]);
-
-  const start = async () => {
+  const start = useCallback(async () => {
     setError(null);
     unlockAudio();
     stopPlayback();
@@ -98,16 +79,40 @@ export function VoiceButton({ disabled }: Props) {
       rec.start();
       recorderRef.current = rec;
       setIsRecording(true);
-    } catch (err: any) {
-      setError(err?.message ?? 'Mic permission denied');
+    } catch (error: unknown) {
+      setError(getErrorMessage(error, 'Mic permission denied'));
     }
-  };
+  }, [sendVoiceMessage, stopPlayback, unlockAudio]);
 
-  const stop = () => {
+  const stop = useCallback(() => {
     recorderRef.current?.stop();
     recorderRef.current = null;
     setIsRecording(false);
-  };
+  }, []);
+
+  // Ctrl+Space hold-to-talk
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.code === 'Space' && !e.repeat) {
+        e.preventDefault();
+        if (!isRecording && !disabled) {
+          void start();
+        }
+      }
+    };
+    const onKeyUp = (e: KeyboardEvent) => {
+      if (e.code === 'Space' && isRecording) {
+        e.preventDefault();
+        stop();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    window.addEventListener('keyup', onKeyUp);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+      window.removeEventListener('keyup', onKeyUp);
+    };
+  }, [disabled, isRecording, start, stop]);
 
   const toggle = () => {
     if (disabled && !isRecording) return;

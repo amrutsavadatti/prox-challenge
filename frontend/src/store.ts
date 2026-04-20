@@ -1,17 +1,66 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import type { Chat, Artifact, Citation, AttachedImage } from './types';
+import type { Chat, Artifact, ArtifactType, Citation, AttachedImage } from './types';
 
-const API_BASE = (import.meta as any).env?.VITE_API_BASE ?? 'http://localhost:8000';
+const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8000';
 
-function parseArtifacts(raw: any[]): Artifact[] {
-  return raw.map((a: any) => ({
-    id: String(a.id ?? `artifact-${Math.random().toString(36).slice(2)}`),
-    title: String(a.title ?? 'Artifact'),
-    type: a.type,
-    content: typeof a.content === 'string' ? a.content : JSON.stringify(a.content ?? ''),
-    language: a.language,
-  }));
+const artifactTypes: ArtifactType[] = ['code', 'html', 'markdown', 'mermaid', 'table', 'json', 'image', 'interactive'];
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null;
+}
+
+function isArtifactType(value: unknown): value is ArtifactType {
+  return typeof value === 'string' && artifactTypes.includes(value as ArtifactType);
+}
+
+function getErrorMessage(error: unknown, fallback: string): string {
+  if (error instanceof Error && error.message) return error.message;
+  if (typeof error === 'string' && error) return error;
+  return fallback;
+}
+
+function parseArtifacts(raw: unknown[]): Artifact[] {
+  return raw.map((item) => {
+    const artifact = isRecord(item) ? item : {};
+    return {
+      id: typeof artifact.id === 'string' ? artifact.id : `artifact-${Math.random().toString(36).slice(2)}`,
+      title: typeof artifact.title === 'string' ? artifact.title : 'Artifact',
+      type: isArtifactType(artifact.type) ? artifact.type : 'json',
+      content: typeof artifact.content === 'string' ? artifact.content : JSON.stringify(artifact.content ?? ''),
+      language: typeof artifact.language === 'string' ? artifact.language : undefined,
+    };
+  });
+}
+
+function parseCitations(raw: unknown): Citation[] {
+  if (!Array.isArray(raw)) return [];
+  return raw.flatMap((item) => {
+    if (!isRecord(item)) return [];
+    return [{
+      doc_id: typeof item.doc_id === 'string' ? item.doc_id : undefined,
+      source_doc: typeof item.source_doc === 'string' ? item.source_doc : undefined,
+      page: typeof item.page === 'number' ? item.page : undefined,
+      element_id: typeof item.element_id === 'string' ? item.element_id : undefined,
+      source_kind: typeof item.source_kind === 'string' ? item.source_kind : undefined,
+      page_image: typeof item.page_image === 'string' ? item.page_image : undefined,
+      excerpt: typeof item.excerpt === 'string' ? item.excerpt : undefined,
+    }];
+  });
+}
+
+function parseSafetyFlags(raw: unknown): string[] {
+  if (!Array.isArray(raw)) return [];
+  return raw.filter((item): item is string => typeof item === 'string');
+}
+
+function parseStreamEvent(dataLine: string): Record<string, unknown> | null {
+  try {
+    const value = JSON.parse(dataLine.slice(6)) as unknown;
+    return isRecord(value) ? value : null;
+  } catch {
+    return null;
+  }
 }
 
 interface AppState {
@@ -61,9 +110,17 @@ let audioQueuePlaying = false;
 // Called when the queue drains completely.
 let onQueueDrained: (() => void) | null = null;
 
+type WindowWithWebkitAudioContext = Window & typeof globalThis & {
+  webkitAudioContext?: typeof AudioContext;
+};
+
 function getAudioContext(): AudioContext {
+  const AudioContextCtor = window.AudioContext ?? (window as WindowWithWebkitAudioContext).webkitAudioContext;
+  if (!AudioContextCtor) {
+    throw new Error('Web Audio API not supported');
+  }
   if (!audioCtx || audioCtx.state === 'closed') {
-    audioCtx = new (window.AudioContext ?? (window as any).webkitAudioContext)();
+    audioCtx = new AudioContextCtor();
   }
   return audioCtx;
 }
@@ -127,8 +184,8 @@ function playAudioFromBase64(b64: string, _mime: string, onEnd?: () => void, onE
   let bytes: ArrayBuffer;
   try {
     bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0)).buffer;
-  } catch (e: any) {
-    onError?.(`Base64 decode failed: ${e?.message}`);
+  } catch (error: unknown) {
+    onError?.(`Base64 decode failed: ${getErrorMessage(error, 'Unknown error')}`);
     onEnd?.();
     return;
   }
@@ -145,9 +202,9 @@ function playAudioFromBase64(b64: string, _mime: string, onEnd?: () => void, onE
     };
     src.start(0);
     currentSource = src;
-  }).catch((err: any) => {
-    console.warn('Audio decode failed:', err);
-    onError?.(`Audio decode failed: ${err?.message ?? err}`);
+  }).catch((error: unknown) => {
+    console.warn('Audio decode failed:', error);
+    onError?.(`Audio decode failed: ${getErrorMessage(error, 'Unknown error')}`);
     onEnd?.();
   });
 }
@@ -217,7 +274,12 @@ export const useStore = create<AppState>()(persist((set, get) => ({
       content,
       // Strip dataUrl before storing — serverUrl is used for display after upload
       images: images.length > 0
-        ? images.map(({ dataUrl: _drop, ...rest }) => rest)
+        ? images.map((image) => ({
+            id: image.id,
+            name: image.name,
+            mimeType: image.mimeType,
+            serverUrl: image.serverUrl,
+          }))
         : undefined,
       timestamp: new Date(),
     };
@@ -289,8 +351,8 @@ export const useStore = create<AppState>()(persist((set, get) => ({
           for (const part of parts) {
             const dataLine = part.split('\n').find((l) => l.startsWith('data: '));
             if (!dataLine) continue;
-            let event: any;
-            try { event = JSON.parse(dataLine.slice(6)); } catch { continue; }
+            const event = parseStreamEvent(dataLine);
+            if (!event) continue;
 
             if (event.type === 'text_delta') {
               set((s) => ({
@@ -308,7 +370,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
                 ),
               }));
             } else if (event.type === 'tool_call') {
-              set({ streamingStatus: event.label });
+              set({ streamingStatus: typeof event.label === 'string' ? event.label : null });
             } else if (event.type === 'done') {
               receivedDone = true;
               const artifacts = parseArtifacts(Array.isArray(event.artifacts) ? event.artifacts : []);
@@ -329,8 +391,8 @@ export const useStore = create<AppState>()(persist((set, get) => ({
                                   // Use streamed text if it matches; fall back to JSON answer_markdown
                                   content: m.content || finalContent,
                                   artifacts,
-                                  citations: Array.isArray(event.citations) ? event.citations as Citation[] : [],
-                                  safetyFlags: Array.isArray(event.safety_flags) ? event.safety_flags as string[] : [],
+                                  citations: parseCitations(event.citations),
+                                  safetyFlags: parseSafetyFlags(event.safety_flags),
                                 }
                               : m
                           ),
@@ -347,7 +409,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
                 };
               });
             } else if (event.type === 'error') {
-              throw new Error(event.message ?? 'Unknown stream error');
+              throw new Error(getErrorMessage(event.message, 'Unknown stream error'));
             }
           }
         }
@@ -372,14 +434,14 @@ export const useStore = create<AppState>()(persist((set, get) => ({
             streamingMessageId: null,
           }));
         }
-      } catch (err: any) {
+      } catch (error: unknown) {
         activeAbortController = null;
-        if (err?.name === 'AbortError') {
+        if (error instanceof DOMException && error.name === 'AbortError') {
           // User cancelled — keep whatever text streamed so far, just stop.
           set({ isStreaming: false, streamingStatus: null, streamingMessageId: null });
           return;
         }
-        const errContent = `Error: ${err?.message ?? 'Request failed'}`;
+        const errContent = `Error: ${getErrorMessage(error, 'Request failed')}`;
         set((s) => ({
           chats: s.chats.map((c) =>
             c.id === chatId
@@ -477,8 +539,8 @@ export const useStore = create<AppState>()(persist((set, get) => ({
           for (const part of parts) {
             const dataLine = part.split('\n').find((l) => l.startsWith('data: '));
             if (!dataLine) continue;
-            let event: any;
-            try { event = JSON.parse(dataLine.slice(6)); } catch { continue; }
+            const event = parseStreamEvent(dataLine);
+            if (!event) continue;
 
             if (event.type === 'transcript') {
               const transcript = String(event.text ?? '').trim() || '(no speech detected)';
@@ -518,7 +580,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
                 ),
               }));
             } else if (event.type === 'tool_call') {
-              set({ streamingStatus: event.label });
+              set({ streamingStatus: typeof event.label === 'string' ? event.label : null });
             } else if (event.type === 'error' && answerReceived) {
               console.warn('Voice post-answer error (TTS?):', event.message);
             } else if (event.type === 'done') {
@@ -539,8 +601,8 @@ export const useStore = create<AppState>()(persist((set, get) => ({
                                   ...m,
                                   content: m.content || finalContent,
                                   artifacts,
-                                  citations: Array.isArray(event.citations) ? event.citations as Citation[] : [],
-                                  safetyFlags: Array.isArray(event.safety_flags) ? event.safety_flags as string[] : [],
+                                  citations: parseCitations(event.citations),
+                                  safetyFlags: parseSafetyFlags(event.safety_flags),
                                 }
                               : m
                           ),
@@ -581,20 +643,20 @@ export const useStore = create<AppState>()(persist((set, get) => ({
               console.warn('TTS failed:', event.message);
               set({ audioError: `Audio unavailable: ${event.message ?? 'TTS error'}` });
             } else if (event.type === 'error') {
-              throw new Error(event.message ?? 'voice stream error');
+              throw new Error(getErrorMessage(event.message, 'voice stream error'));
             }
           }
         }
-      } catch (err: any) {
+      } catch (error: unknown) {
         activeAbortController = null;
-        if (err?.name === 'AbortError') {
+        if (error instanceof DOMException && error.name === 'AbortError') {
           set({ isStreaming: false, streamingStatus: null, streamingMessageId: null });
           return;
         }
         // Only overwrite message content if the answer hasn't arrived yet.
         // Post-answer errors (TTS failures) must not clobber already-rendered text.
         if (!answerReceived) {
-          const errContent = `Error: ${err?.message ?? 'Voice request failed'}`;
+          const errContent = `Error: ${getErrorMessage(error, 'Voice request failed')}`;
           set((s) => ({
             chats: s.chats.map((c) =>
               c.id === chatId
@@ -612,7 +674,7 @@ export const useStore = create<AppState>()(persist((set, get) => ({
           }));
         } else {
           set({ isStreaming: false, streamingStatus: null, streamingMessageId: null });
-          console.warn('Voice post-answer error:', err?.message);
+          console.warn('Voice post-answer error:', getErrorMessage(error, 'Voice request failed'));
         }
       }
     })();

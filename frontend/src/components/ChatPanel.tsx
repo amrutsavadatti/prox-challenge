@@ -19,7 +19,13 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { VoiceButton } from './VoiceButton';
 
-const API_BASE = (import.meta as any).env?.VITE_API_BASE ?? 'http://localhost:8000';
+const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8000';
+
+function getErrorMessage(error: unknown, fallback: string): string {
+  if (error instanceof Error && error.message) return error.message;
+  if (typeof error === 'string' && error) return error;
+  return fallback;
+}
 
 function getArtifactExtension(artifact: Artifact): string {
   switch (artifact.type) {
@@ -312,8 +318,8 @@ export function ChatPanel() {
         setPendingImages((cur) => cur.map((img) =>
           img.id === tempId ? { ...img, dataUrl: undefined, serverUrl: url } : img
         ));
-      } catch (e: any) {
-        setAttachError(`Upload failed for ${file.name}: ${(e as Error)?.message ?? e}`);
+      } catch (error: unknown) {
+        setAttachError(`Upload failed for ${file.name}: ${getErrorMessage(error, 'Upload failed')}`);
         setPendingImages((cur) => cur.filter((img) => img.id !== tempId));
       }
     }
@@ -325,18 +331,19 @@ export function ChatPanel() {
 
   const activeChat = chats.find((c) => c.id === activeChatId);
   const messages = activeChat?.messages ?? [];
+  const messageCount = messages.length;
 
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
-  }, [messages.length, isStreaming]);
+  }, [messageCount, isStreaming]);
 
   useEffect(() => {
-    if (activeChatId && messages.length === 0) {
+    if (activeChatId && messageCount === 0) {
       textareaRef.current?.focus();
     }
-  }, [activeChatId]);
+  }, [activeChatId, messageCount]);
 
   const handleSend = () => {
     const trimmed = input.trim();

@@ -21,6 +21,8 @@ import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import ReactMarkdown from 'react-markdown';
 import type { Artifact } from '@/types';
 
+const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8000';
+
 function getArtifactIcon(type: string) {
   switch (type) {
     case 'code': return <Code2 size={14} />;
@@ -196,7 +198,6 @@ function renderArtifactContent(artifact: Artifact) {
     case 'json':
       return <JsonViewer content={artifact.content} />;
     case 'image': {
-      const API_BASE = (import.meta as any).env?.VITE_API_BASE ?? 'http://localhost:8000';
       const src = /^https?:\/\//i.test(artifact.content)
         ? artifact.content
         : `${API_BASE}${artifact.content.startsWith('/') ? '' : '/'}${artifact.content}`;
