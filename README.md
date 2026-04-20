@@ -1,5 +1,8 @@
 # Vulcan OmniPro 220 Multimodal Product Agent
 
+###Watch the Demo video by clicking link below:
+[MARS:Machine Assistance & Resolution System](https://youtu.be/yuOQoFR6Lp0) Demo
+
 This is my submission for the Prox founding engineer challenge.
 
 The project is a multimodal assistant for the Vulcan OmniPro 220 welder. It answers grounded questions using the owner manual, quick-start guide, selection chart, targeted OCR over visual pages, curated structured tables, and a chat UI that can return not just text, but also images, tables, Mermaid flows, interactive HTML artifacts, and optional voice responses.
