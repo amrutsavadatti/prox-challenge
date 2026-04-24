@@ -353,6 +353,28 @@ The frontend is a React + Vite app with:
 
 This matters because for this product, the right answer format often is not a paragraph. A polarity answer should show a diagram. A troubleshooting answer should often be a flow. A settings answer can be more useful as a structured artifact than as plain prose.
 
+## Tool Screenshots
+
+### Home
+
+<img src="frontend/src/assets/home.png" alt="Home screen" width="900" />
+
+### Manual View
+
+<img src="frontend/src/assets/manual.png" alt="Manual view" width="900" />
+
+### Widgets
+
+<img src="frontend/src/assets/widgets.png" alt="Widgets view" width="900" />
+
+### Wiring Diagram
+
+<img src="frontend/src/assets/wiring.png" alt="Wiring diagram" width="900" />
+
+### Mermaid Chat Flow
+
+<img src="frontend/src/assets/flowchart.png" alt="Mermaid chat flow" width="900" />
+
 ## Key Design Decisions
 
 ### 1. Pay parsing cost offline, not at request time
